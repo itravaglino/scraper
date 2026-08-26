@@ -65,7 +65,7 @@ POLARITY_LABELS_ES = {
 # More specific patterns first. Brand-level fallback is applied later.
 # 2026: Fitbit Air is a current model in public coverage.
 MODEL_PATTERNS: list[tuple[str, list[str]]] = [
-    ("Fitbit Air", [r"\bfitbit\s*air\b", r"\bthe air\b(?=.{0,40}fitbit)"]),
+    ("Fitbit Air", [r"\bfitbit\s*air\b"]),
     ("Charge 6", [r"\bcharge\s*6\b", r"\bfitbit\s*c6\b"]),
     ("Charge 5", [r"\bcharge\s*5\b"]),
     ("Charge 4", [r"\bcharge\s*4\b"]),
@@ -76,16 +76,15 @@ MODEL_PATTERNS: list[tuple[str, list[str]]] = [
     ("Versa 3", [r"\bversa\s*3\b"]),
     ("Versa 2", [r"\bversa\s*2\b"]),
     ("Versa Lite", [r"\bversa\s*lite\b"]),
-    ("Versa", [r"\bfitbit\s*versa\b", r"(?<!vice )\bversa\b"]),
+    ("Versa", [r"\bfitbit\s*versa\b"]),
     ("Sense 2", [r"\bsense\s*2\b"]),
-    # Avoid English "make sense" / "in a sense".
-    ("Sense", [r"\bfitbit\s*sense\b", r"(?<!make )(?<!makes )(?<!made )(?<!a )\bsense\b(?!\s+of\b)(?!\s*\d)"]),
+    ("Sense", [r"\bfitbit\s*sense\b"]),
     ("Inspire 3", [r"\binspire\s*3\b"]),
     ("Inspire 2", [r"\binspire\s*2\b"]),
-    ("Inspire", [r"\bfitbit\s*inspire\b", r"\binspire\b"]),
-    ("Luxe", [r"\bfitbit\s*luxe\b", r"\bluxe\b"]),
+    ("Inspire", [r"\bfitbit\s*inspire\b"]),
+    ("Luxe", [r"\bfitbit\s*luxe\b"]),
     ("Ace 3", [r"\bace\s*3\b", r"\bace\s*lte\b"]),
-    ("Ace", [r"\bfitbit\s*ace\b", r"\bace\b"]),
+    ("Ace", [r"\bfitbit\s*ace\b"]),
     ("Pixel Watch 3", [r"\bpixel\s*watch\s*3\b", r"\bpw3\b"]),
     ("Pixel Watch 2", [r"\bpixel\s*watch\s*2\b", r"\bpw2\b"]),
     ("Pixel Watch", [r"\bgoogle\s*pixel\s*watch\b", r"\bpixel\s*watch\b"]),
@@ -97,8 +96,36 @@ MODEL_PATTERNS: list[tuple[str, list[str]]] = [
     ("Flex", [r"\bfitbit\s*flex\b"]),
 ]
 
-# Generic "Charge" / "Versa" should not fire on every English sentence.
-WEAK_MODEL_LABELS = {"Charge", "Versa", "Sense", "Inspire", "Ace"}
+# Family names that need an explicit Fitbit/Pixel cue when unscoped.
+WEAK_MODEL_LABELS = {"Charge", "Versa", "Sense", "Inspire", "Ace", "Luxe", "Ionic", "Alta", "Flex"}
+
+# mala requires this confidence; alta needs CONF_ALTA plus a title defect.
+CONF_MALA = 0.5
+CONF_ALTA = 0.75
+
+# Open defect / hard failure in the TITLE (not a Reddit footer).
+STRONG_DEFECT_CUES = [
+    "bricked", "bootloop", "won't turn on", "wont turn on",
+    "won't sync", "wont sync", "won't charge", "wont charge",
+    "not working", "doesn't work", "doesnt work", "stopped working",
+    "battery drain", "no sincroniza", "no funciona", "no carga",
+    "no enciende", "no conecta", "se apaga", "dead on arrival",
+    "ne fonctionne pas", "funktioniert nicht", "não funciona", "nao funciona",
+    "non funziona", "kaputt", "defekt", "défaut", "defaut", "difetto",
+    "guasto", "defeito", "falha", "故障", "不具合",
+    "still broken", "update broke",
+]
+
+COMPARISON_TITLE_CUES = [
+    "vs", "versus", "compared to", "comparo", "comparativa",
+    "alongside", "roundup", "hands-on", "hands on", "i wore both",
+    "final verdict", "whoop", "agptek",
+]
+
+TUTORIAL_TITLE_CUES = [
+    "tutorial", "step-by-step", "step by step", "how to replace",
+    "replacement tutorial", "diy repair", "#shorts",
+]
 
 CATEGORY_KEYWORDS: dict[str, list[str]] = {
     "bateria": [
@@ -247,7 +274,7 @@ FIX_HEADLINE_CUES = [
     "bug fix", "google has fixed", "fitbit has fixed", "fitbit fixed",
     "update fixes", "update that fixes", "released a fix", "rolling out a fix",
     "corrigido", "corrigem", "resolvido", "correção", "correcao",
-    "corrigé", "corrige le", "correctif", "résolu", "patch notes",
+    "corrigé", "corrige le", "corrige", "correctif", "résolu", "patch notes",
     "behoben", "gefixt", "update behebt", "fehlerbehebung",
     "risolto", "corretto", "aggiornamento risolve",
     "修正", "修复", "解決",
@@ -393,7 +420,7 @@ BRAND_CUES = [
 COMPETITOR_CUES = [
     "oneplus watch", "oneplus", "galaxy watch", "galaxy watch ultra",
     "samsung galaxy watch", "samsung watch", "garmin", "apple watch",
-    "huawei watch", "amazfit", "whoop", "xiaomi watch", "mi watch",
+    "huawei watch", "huawei", "amazfit", "whoop", "agptek", "xiaomi watch", "mi watch",
     "coros", "suunto", "polar vantage", "withings", "framework laptop",
     "chromecast", "eyeref", "nothing watch", "cmf watch", "oppo watch",
     "realme watch", "honor watch", "ticwatch", "fossil gen",

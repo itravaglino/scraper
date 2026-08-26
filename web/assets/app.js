@@ -44,6 +44,19 @@
   let lastFiltered = [];
   let loaded = false;
 
+  function clusterPolarity(c) {
+    const p = c.polarity || "revisar";
+    if (p === "mala" && typeof c.confidence === "number" && c.confidence < 0.5) {
+      return "revisar";
+    }
+    return p;
+  }
+
+  function confBadge(c) {
+    if (typeof c.confidence !== "number") return "";
+    return `<span class="badge conf">Confianza ${Math.round(c.confidence * 100)}%</span>`;
+  }
+
   function loadTriage() {
     try {
       return JSON.parse(localStorage.getItem(TRIAGE_KEY) || "{}");
@@ -174,15 +187,15 @@
     const counts = { mala: 0, buena: 0, revisar: 0 };
     const alta = { n: 0 };
     for (const c of inTime) {
-      const p = c.polarity || "revisar";
+      const p = clusterPolarity(c);
       counts[p] = (counts[p] || 0) + (c.count || 0);
       if (p === "mala" && c.severity === "alta") alta.n += c.count || 0;
     }
     const kpis = [
-      [counts.mala, "Malas noticias", "mala", "Reportes negativos en la ventana de tiempo. No incluye elogios ni arreglos."],
+      [counts.mala, "Malas noticias", "mala", "Defectos abiertos con confianza ≥ 50%. Título pesa más que el cuerpo. No incluye elogios ni comparativas."],
       [counts.buena, "Buenas noticias", "buena", "Elogios, parches y arreglos en la misma ventana."],
-      [counts.revisar, "Para revisar", "revisar", "Casos mixtos o ambiguos. No se les asigna gravedad."],
-      [alta.n, "Gravedad alta (malas)", "alta", "Subconjunto de malas con señales de brick, recall, sobrecalentamiento o pérdida de datos."],
+      [counts.revisar, "Para revisar", "revisar", "Ambiguos, baja confianza o sin cue de producto. No se les asigna gravedad alta."],
+      [alta.n, "Gravedad alta (malas)", "alta", "Solo malas de alta confianza con defecto abierto en el título (brick, no enciende, recall)."],
     ];
     $("kpis").innerHTML = kpis
       .map(
@@ -191,7 +204,7 @@
             <b>${n}</b><span>${label}</span></button>`
       )
       .join("") +
-      `<p class="kpi-defs">Los números respetan el filtro de tiempo. Mes = últimos 30 días de <em>fecha del ítem</em>, no de la corrida. Gravedad solo en malas.</p>`;
+      `<p class="kpi-defs">Los números respetan el filtro de tiempo. Mes = últimos 30 días de <em>fecha del ítem</em>. Casos negativos ocultan malas con confianza &lt; 50% (van a Revisar). Gravedad alta exige defecto en el título.</p>`;
 
     $("sev-wrap").classList.toggle("hidden", state.polarity !== "mala");
 
@@ -304,7 +317,8 @@
     state.triage = tri;
 
     const filtered = inTime.filter((c) => {
-      if ((c.polarity || "revisar") !== state.polarity) return false;
+      const pol = clusterPolarity(c);
+      if (pol !== state.polarity) return false;
       if (model && !(c.models || []).includes(model)) return false;
       if (cat && c.category_label !== cat) return false;
       if (state.polarity === "mala" && sev && c.severity !== sev) return false;
@@ -396,6 +410,7 @@
           <p class="case-meta">${escapeHtml(pubDate(c.last_report_at, zone))} · ${escapeHtml(impactLabel(c))} · ${c.count} reporte${c.count === 1 ? "" : "s"}</p>
           <div class="badges">
             ${polBadge}
+            ${confBadge(c)}
             <span class="badge">${c.count} reporte${c.count === 1 ? "" : "s"}</span>
             <span class="badge">${c.recurring ? "Recurrente" : "Nuevo"}</span>
             ${(c.models || []).map((m) => `<span class="badge">${escapeHtml(m)}</span>`).join("")}

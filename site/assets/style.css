@@ -333,7 +333,7 @@ h1 {
 .badge.sev-media { color: var(--media); }
 .badge.sev-baja { color: var(--baja); }
 .badge.pol-buena { color: var(--buena); }
-.badge.pol-revisar { color: var(--revisar); }
+.badge.conf { color: var(--ink); letter-spacing: 0; text-transform: none; }
 .quote {
   margin: 0 0 8px;
   padding: 10px 12px;
