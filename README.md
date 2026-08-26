@@ -1,6 +1,6 @@
 # Panel de incidencias Fitbit
 
-Scraper diario de **fallas, defectos, bugs y opiniones públicas** sobre relojes Fitbit (Charge, Versa, Sense, Inspire, Luxe, Ace, Fitbit Air y Pixel Watch cuando aplica). El resultado es un tablero web para que un equipo de producto vea patrones, juzgue si un reporte se ve real y abra el enlace a la fuente.
+Scraper diario de **fallas, defectos, bugs y opiniones públicas** sobre productos Fitbit (Charge, Versa, Sense, Inspire, Luxe, Ace, Fitbit Air, básculas Aria y Pixel Watch cuando aplica). El resultado es un tablero web para que un equipo de producto vea **casos negativos** separados de **buenas noticias**, juzgue si un reporte se ve real y abra el enlace a la fuente.
 
 **Tablero en vivo:** [https://itravaglino.github.io/scraper/](https://itravaglino.github.io/scraper/)
 
@@ -8,16 +8,19 @@ Zona horaria: `America/Buenos_Aires`. La corrida automática arranca todos los d
 
 ## Cómo usarlo
 
-1. Abrí el tablero. Arriba está la fecha de la última corrida, un resumen (nuevos vs recurrentes, modelos, gravedad) y los grupos de incidencias.
-2. Cada grupo trae citas de ejemplo, etiquetas de modelo y links a Reddit, App Store, noticias o Hacker News.
-3. En este navegador podés marcar **Parece real**, **Hay que verificar** o **Descartar** y dejar una nota. Eso se guarda en `localStorage` (no hay backend ni login).
-4. Los JSON/CSV históricos quedan en [`data/`](data/).
+1. Abrí el tablero. El control **Ejecutar ahora** dispara el workflow de GitHub Actions (un clic en el panel; en GitHub confirmá *Run workflow*). No hay token en el frontend.
+2. Las pestañas **Casos negativos** / **Buenas noticias** / **Revisar** son el corte principal. La gravedad alta/media/baja **solo** aplica a malas; una noticia positiva nunca lleva “gravedad media”.
+3. Filtrá por **día / semana / mes / trimestre / año**. Cada grupo es un caso (modelo × tema × polaridad) con citas, fuente, fecha, idioma y link.
+4. En este navegador podés marcar **Parece real**, **Hay que verificar** o **Descartar**. Eso se guarda en `localStorage`.
+5. Los JSON/CSV históricos quedan en [`data/`](data/).
 
 ## Cómo disparar una corrida ahora
 
-En GitHub: **Actions → “Scrape y dashboard Fitbit” → Run workflow**.
+Desde el tablero: **Ejecutar ahora** → en GitHub, **Run workflow**.
 
-Eso vuelve a scrapear fuentes públicas, regenera el sitio y lo publica en GitHub Pages. No hace falta dejar una computadora encendida.
+O en el repo: **Actions → “Scrape y dashboard Fitbit” → Run workflow**.
+
+Eso vuelve a scrapear fuentes públicas, regenera el sitio y lo publica en GitHub Pages. El panel se actualiza cuando termina el deploy. En el tablero, **Actualizar datos** relee `latest.json`.
 
 En local (Python 3.11+; no hay dependencias de PyPI):
 
@@ -30,16 +33,18 @@ Luego serví la carpeta `site/` (por ejemplo `python3 -m http.server -d site 800
 
 ## Qué recolecta
 
-Solo fuentes **públicas**, sin login y sin API keys:
+Solo fuentes **públicas**, sin login y sin API keys. Búsquedas en español, inglés, portugués, francés, alemán, italiano y japonés (términos localizados: bug, falla, problema, défaut, Defekt, 故障, etc.):
 
 | Fuente | Cómo |
 | --- | --- |
-| Reddit `r/fitbit`, `r/GooglePixelWatch`, `r/WearOS` | RSS/Atom público (el JSON de Reddit suele devolver 403) |
-| App Store | RSS de reseñas de *Google Health (Fitbit)* y *Fitbit Ace* |
-| Google News | RSS de búsquedas EN/ES sobre fallas |
+| Reddit `r/fitbit`, búsqueda global, `r/GooglePixelWatch`, `r/WearOS`, `r/smartwatch`, `r/fitness` | RSS/Atom público (el JSON de Reddit suele devolver 403) |
+| YouTube, TikTok, Instagram | RSS de búsqueda pública (`site:`), sin login ni APIs no oficiales |
+| Web / foros | RSS de búsqueda pública |
+| App Store | RSS de reseñas de *Google Health (Fitbit)* y *Fitbit Ace* (varios países) |
+| Google News | RSS localizado (EN, ES, PT, FR, DE, IT, JA) |
 | Hacker News | API pública de Algolia |
 
-Si una fuente falla, se saltea y el resto del reporte se genera igual. Hay pausa entre pedidos y un `User-Agent` identificable.
+Si una fuente falla (403/429), se marca *skip* y el resto del reporte se genera igual. Hay pausa entre pedidos y un `User-Agent` identificable.
 
 **No** se entra a cuentas, **no** se evaden paywalls y **no** se piden secretos para v1.
 
