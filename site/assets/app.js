@@ -216,15 +216,36 @@
 
     $("source-list").innerHTML = (data.sources || [])
       .map((s) => {
-        const st = s.state || (s.ok ? "ok" : "error");
-        const cls = st === "ok" ? "ok" : st === "skip" ? "skip" : "bad";
-        const detail = s.ok
-          ? `${s.kept}/${s.fetched}`
-          : s.error || st;
+        const err = String(s.error || "");
+        const limited = /429|límite de peticiones|limitado|omitida:/i.test(err);
+        let st = "error";
+        let cls = "bad";
+        if (s.ok) {
+          st = "ok";
+          cls = "ok";
+        } else if (limited) {
+          st = "limitado";
+          cls = "skip";
+        } else if (s.state === "skip") {
+          st = "omitida";
+          cls = "skip";
+        }
+        const detail = s.ok ? `${s.kept}/${s.fetched}` : err || st;
         const kind = KIND_ES[s.kind] ? ` · ${KIND_ES[s.kind]}` : "";
         return `<li><span><span class="pill ${cls}">${escapeHtml(st)}</span>${escapeHtml((s.label || s.id) + kind)}</span><span class="${cls}">${escapeHtml(String(detail))}</span></li>`;
       })
       .join("");
+    const src = data.sources || [];
+    const nOk = src.filter((s) => s.ok).length;
+    const nLim = src.filter((s) => {
+      const err = String(s.error || "");
+      return !s.ok && (/429|límite de peticiones|limitado|omitida:/i.test(err) || s.state === "skip");
+    }).length;
+    const nErr = src.filter((s) => !s.ok && s.state === "error").length;
+    const sumEl = $("source-summary");
+    if (sumEl) {
+      sumEl.textContent = `${nOk} ok · ${nLim} limitada${nLim === 1 ? "" : "s"} · ${nErr} error${nErr === 1 ? "" : "es"}`;
+    }
 
     const q = $("q").value.trim().toLowerCase();
     const model = $("f-model").value;
