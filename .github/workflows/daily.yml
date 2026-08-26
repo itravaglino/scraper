@@ -29,6 +29,8 @@ jobs:
       contents: write
       pages: write
       id-token: write
+    outputs:
+      pages_ready: ${{ steps.setup-pages.outcome }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -65,7 +67,9 @@ jobs:
           fi
 
       - name: Setup Pages
+        id: setup-pages
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        continue-on-error: true
         uses: actions/configure-pages@v5
         with:
           # Creates the Pages site on first run when the token is allowed to.
@@ -76,14 +80,30 @@ jobs:
           token: ${{ secrets.PAGES_TOKEN != '' && secrets.PAGES_TOKEN || github.token }}
 
       - name: Upload site
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        if: >-
+          github.event_name != 'pull_request' &&
+          github.ref == 'refs/heads/main' &&
+          steps.setup-pages.outcome == 'success'
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
 
+      - name: Pages not enabled yet
+        if: >-
+          github.event_name != 'pull_request' &&
+          github.ref == 'refs/heads/main' &&
+          steps.setup-pages.outcome != 'success'
+        run: |
+          echo "::warning::GitHub Pages is not enabled. GITHUB_TOKEN cannot create it."
+          echo "One click: https://github.com/${{ github.repository }}/settings/pages → Source: GitHub Actions"
+          echo "Then re-run this workflow. A static snapshot is already on the gh-pages branch."
+
   deploy:
     needs: build
-    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    if: >-
+      github.event_name != 'pull_request' &&
+      github.ref == 'refs/heads/main' &&
+      needs.build.outputs.pages_ready == 'success'
     runs-on: ubuntu-latest
     permissions:
       pages: write
