@@ -37,16 +37,30 @@ Solo fuentes **públicas**, sin login y sin API keys. Búsquedas en español, in
 
 | Fuente | Cómo |
 | --- | --- |
-| Reddit `r/fitbit`, búsqueda global, `r/GooglePixelWatch`, `r/WearOS`, `r/smartwatch`, `r/fitness` | RSS/Atom público (el JSON de Reddit suele devolver 403) |
+| Reddit `r/fitbit`, `r/GooglePixelWatch`, búsqueda global Fitbit | RSS público, 3 llamadas en serie |
 | YouTube, TikTok, Instagram | RSS de búsqueda pública (`site:`), sin login ni APIs no oficiales |
 | Web / foros | RSS de búsqueda pública |
 | App Store | RSS de reseñas de *Google Health (Fitbit)* y *Fitbit Ace* (varios países) |
 | Google News | RSS localizado (EN, ES, PT, FR, DE, IT, JA) |
 | Hacker News | API pública de Algolia |
 
-Si una fuente falla (403/429), se marca *skip* y el resto del reporte se genera igual. Hay pausa entre pedidos y un `User-Agent` identificable.
+Si una fuente falla (403/429), se marca **limitado** (no un RuntimeError) y el resto del reporte se genera igual. Reddit se consulta en serie (pocas feeds, pausa 8s, un reintento con Retry-After).
 
 **No** se entra a cuentas, **no** se evaden paywalls y **no** se piden secretos para v1.
+
+## Cómo leer el tablero (ops)
+
+| Control | Qué significa |
+| --- | --- |
+| **Ejecutar ahora** | Abre el workflow de Actions. No hay token en el frontend. |
+| **Tiempo (Mes default)** | Filtra por **fecha del ítem**, no por cuándo corrimos el scrape. La corrida guarda ~90 días; Mes = 30. Recs de 2018 no aparecen en Mes. |
+| **Casos negativos / Buenas / Revisar** | Polaridad. La gravedad alta/media/baja **solo** aplica a malas. |
+| **Exportar CSV** | Los casos de la vista filtrada (columnas: id, polarity, severity, models, category, published_at, source, title, url, count, language, impact). |
+| **Copiar vista** | URL con `p` (polaridad), `t` (días), `s` (gravedad), `m` (modelo), `q` (búsqueda). |
+| **ok / limitado / error** | Salud de fuentes de esta corrida. **limitado** = HTTP 429 (típico Reddit). Esa fuente se omitió; no tumba el job. |
+| **Gráfico** | Al pie de página. Misma data en la tabla accesible debajo. |
+
+La primera pintura del HTML ya trae casos del último mes (seed + preview). No debería verse “No hay casos” mientras carga el JSON.
 
 ## Si Pages o Actions no publican
 
