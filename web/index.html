@@ -68,6 +68,15 @@
           <button type="button" data-range="all">Todo</button>
         </div>
       </div>
+      <div class="seg" id="sev-wrap" role="group" aria-label="Gravedad">
+        <span class="seg-label">Gravedad</span>
+        <div class="seg-opts" id="f-sev">
+          <button type="button" data-sev="" class="on">Todas</button>
+          <button type="button" data-sev="alta">Alta</button>
+          <button type="button" data-sev="media">Media</button>
+          <button type="button" data-sev="baja">Baja</button>
+        </div>
+      </div>
       <label class="search">
         <span>Buscar</span>
         <input id="q" type="search" placeholder="batería, Sense 2, sincronización…" autocomplete="off">
@@ -79,15 +88,6 @@
       <label>
         <span>Categoría</span>
         <select id="f-cat"><option value="">Todas</option></select>
-      </label>
-      <label id="sev-wrap">
-        <span>Gravedad (solo malas)</span>
-        <select id="f-sev">
-          <option value="">Todas</option>
-          <option value="alta">Alta</option>
-          <option value="media">Media</option>
-          <option value="baja">Baja</option>
-        </select>
       </label>
       <label>
         <span>Fuente</span>
@@ -115,6 +115,33 @@
           <option value="discard">Descartar</option>
         </select>
       </label>
+    </section>
+
+    <section class="chart-panel" aria-label="Gráfico por gravedad">
+      <div class="chart-head">
+        <div>
+          <h2>Casos negativos por gravedad</h2>
+          <p class="chart-sub" id="chart-sub">Barras apiladas Alta / Media / Baja. Respeta los filtros de arriba.</p>
+        </div>
+        <label class="chart-dim">
+          <span>Agrupar por</span>
+          <select id="f-chart">
+            <option value="categoria" selected>Categoría</option>
+            <option value="modelo">Modelo</option>
+            <option value="fuente">Fuente</option>
+            <option value="tiempo">Tiempo (día)</option>
+          </select>
+        </label>
+      </div>
+      <div class="chart-legend" id="chart-legend">
+        <span><i class="swatch alta"></i> Alta</span>
+        <span><i class="swatch media"></i> Media</span>
+        <span><i class="swatch baja"></i> Baja</span>
+      </div>
+      <div class="chart-frame">
+        <svg id="sev-chart" viewBox="0 0 720 280" role="img" aria-label="Gráfico de gravedad"></svg>
+        <p id="chart-empty" class="chart-empty hidden">El gráfico de gravedad aplica a casos negativos. Cambiá a esa pestaña o ampliá el período.</p>
+      </div>
     </section>
 
     <section class="layout">

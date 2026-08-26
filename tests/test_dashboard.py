@@ -14,10 +14,15 @@ class DashboardContractTests(unittest.TestCase):
         self.assertIn("Ejecutar ahora", html)
         self.assertIn("Casos negativos", html)
         self.assertIn("Buenas noticias", html)
+        self.assertIn("Gravedad", html)
+        self.assertIn("sev-chart", html)
+        self.assertIn("Agrupar por", html)
         self.assertIn('{"__SEED__":true}', html)
         self.assertIn("actions/workflows/daily.yml", html)
         js = Path("web/assets/app.js").read_text(encoding="utf-8")
         self.assertIn("workflow_runs", js)
+        self.assertIn("drawSevChart", js)
+        self.assertIn("Impacto: n/d", js)
         self.assertNotRegex(js, r"github_pat_|ghp_[A-Za-z0-9]|GITHUB_TOKEN")
 
     def test_generate_site_embeds_seed(self):

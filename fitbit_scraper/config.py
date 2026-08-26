@@ -615,11 +615,30 @@ LANG_MARKERS: dict[str, tuple[str, ...]] = {
 }
 
 # Reports must look Fitbit/watch related unless the source is already scoped.
+# Do not treat generic "Wear OS" as Fitbit — that leaks OnePlus/Galaxy apps.
 BRAND_CUES = [
-    "fitbit", "google health", "pixel watch", "versa", "charge 5", "charge 6",
-    "inspire", "sense 2", "luxe", "fitbit ace", "wear os", "aria",
-    "fitbit scale", "báscula", "bascula", "fitbit ionic", "fitbit alta",
-    "fitbit flex", "fitbit air",
+    "fitbit", "google health", "pixel watch", "google pixel watch",
+    "fitbit ace", "fitbit scale", "báscula fitbit", "bascula fitbit",
+    "fitbit ionic", "fitbit alta", "fitbit flex", "fitbit air",
+    "fitbit versa", "fitbit charge", "fitbit inspire", "fitbit sense",
+    "fitbit luxe", "fitbit aria",
+]
+
+# Other watch/tech products. If these are the title subject and Fitbit is not, drop.
+COMPETITOR_CUES = [
+    "oneplus watch", "oneplus", "galaxy watch", "galaxy watch ultra",
+    "samsung galaxy watch", "samsung watch", "garmin", "apple watch",
+    "huawei watch", "amazfit", "whoop", "xiaomi watch", "mi watch",
+    "coros", "suunto", "polar vantage", "withings", "framework laptop",
+    "chromecast", "eyeref", "nothing watch", "cmf watch", "oppo watch",
+    "realme watch", "honor watch", "ticwatch", "fossil gen",
+    "pixel phone", "pixel 6", "pixel 7", "pixel 8", "pixel 9", "pixel 10",
+]
+
+ROUNDUP_CUES = [
+    "best smartwatches", "best fitness watches", "best watches of",
+    "top 10 watches", "top 5 fitness", "roundup", "every smartwatch",
+    "mejores relojes", "mejores smartwatch", "comparativa de relojes",
 ]
 
 STOPWORDS = {

@@ -10,6 +10,7 @@ from collections import defaultdict
 
 from .classify import CATEGORY_LABELS_ES, SEVERITY_RANK
 from .config import LANG_LABELS_ES, MAX_QUOTES_PER_CLUSTER, MAX_REPORTS_PER_CLUSTER, POLARITY_LABELS_ES
+from .engagement import format_engagement
 from .textutil import sha1
 
 POLARITY_RANK = {"mala": 3, "revisar": 2, "buena": 1}
@@ -39,6 +40,39 @@ def _severity_of(group: list[dict], polarity: str) -> str | None:
     return best or "baja"
 
 
+def _eng_rank(report: dict) -> int:
+    eng = report.get("engagement") or {}
+    total = 0
+    for key in ("score", "comments", "views"):
+        val = eng.get(key)
+        if isinstance(val, (int, float)):
+            total += int(val) if key != "views" else int(val) // 100
+    return total
+
+
+def _sum_engagement(group: list[dict]) -> dict:
+    score = comments = views = 0
+    known_score = known_comments = known_views = False
+    for r in group:
+        eng = r.get("engagement") or {}
+        if eng.get("score") is not None:
+            score += int(eng["score"])
+            known_score = True
+        if eng.get("comments") is not None:
+            comments += int(eng["comments"])
+            known_comments = True
+        if eng.get("views") is not None:
+            views += int(eng["views"])
+            known_views = True
+    packed = {
+        "score": score if known_score else None,
+        "comments": comments if known_comments else None,
+        "views": views if known_views else None,
+    }
+    packed["label"] = format_engagement(packed)
+    return packed
+
+
 def _cluster_title(polarity: str, cat: str, model: str) -> str:
     cat_label = CATEGORY_LABELS_ES.get(cat, cat)
     if polarity == "buena":
@@ -66,6 +100,7 @@ def cluster_reports(reports: list[dict], previous_index: dict | None = None) -> 
         ranked = sorted(
             group,
             key=lambda x: (
+                -_eng_rank(x),
                 -SEVERITY_RANK.get(x.get("severity") or "info", 0),
                 -(len(x.get("text") or "")),
             ),
@@ -82,9 +117,11 @@ def cluster_reports(reports: list[dict], previous_index: dict | None = None) -> 
                     "source": r.get("source_label"),
                     "source_kind": r.get("source_kind") or r.get("source"),
                     "title": r.get("title"),
-                    "created_at": r.get("created_at"),
+                    "created_at": r.get("created_at") or r.get("published_at"),
                     "language": r.get("language"),
                     "model": (r.get("models") or [None])[0],
+                    "engagement": r.get("engagement"),
+                    "engagement_label": (r.get("engagement") or {}).get("label") or r.get("engagement_label"),
                 }
             )
             if len(quotes) >= MAX_QUOTES_PER_CLUSTER:
@@ -96,7 +133,8 @@ def cluster_reports(reports: list[dict], previous_index: dict | None = None) -> 
                 "url": r.get("url"),
                 "source": r.get("source_label"),
                 "source_kind": r.get("source_kind") or r.get("source"),
-                "created_at": r.get("created_at"),
+                "created_at": r.get("created_at") or r.get("published_at"),
+                "published_at": r.get("published_at") or r.get("created_at"),
                 "severity": r.get("severity"),
                 "sentiment": r.get("sentiment"),
                 "polarity": r.get("polarity") or polarity,
@@ -104,6 +142,8 @@ def cluster_reports(reports: list[dict], previous_index: dict | None = None) -> 
                 "language_label": r.get("language_label"),
                 "models": r.get("models") or [],
                 "star_rating": r.get("star_rating"),
+                "engagement": r.get("engagement"),
+                "engagement_label": (r.get("engagement") or {}).get("label") or r.get("engagement_label"),
             }
             for r in ranked[:MAX_REPORTS_PER_CLUSTER]
         ]
@@ -114,7 +154,13 @@ def cluster_reports(reports: list[dict], previous_index: dict | None = None) -> 
                     models.append(m)
         if model not in models:
             models.insert(0, model)
-        sources = sorted({r.get("source_label") or r.get("source") for r in group if r.get("source_label") or r.get("source")})
+        sources = sorted(
+            {
+                r.get("source_label") or r.get("source")
+                for r in group
+                if r.get("source_label") or r.get("source")
+            }
+        )
         kinds = []
         langs = []
         for r in group:
@@ -124,8 +170,9 @@ def cluster_reports(reports: list[dict], previous_index: dict | None = None) -> 
             lg = r.get("language")
             if lg and lg not in langs:
                 langs.append(lg)
-        dates = [r.get("created_at") for r in group if r.get("created_at")]
+        dates = [r.get("created_at") or r.get("published_at") for r in group if r.get("created_at") or r.get("published_at")]
         severity = _severity_of(group, polarity)
+        engagement = _sum_engagement(group)
         cluster = {
             "id": cid,
             "title": _cluster_title(polarity, cat, model),
@@ -143,6 +190,8 @@ def cluster_reports(reports: list[dict], previous_index: dict | None = None) -> 
             "first_seen": prev.get("first_seen"),
             "last_report_at": max(dates) if dates else None,
             "seen_runs": int(prev.get("seen_runs") or 0) + 1,
+            "engagement": engagement,
+            "engagement_label": engagement.get("label"),
             "quotes": quotes,
             "sources": sources,
             "reports": compact,
@@ -161,6 +210,7 @@ def cluster_reports(reports: list[dict], previous_index: dict | None = None) -> 
         key=lambda c: (
             -POLARITY_RANK.get(c.get("polarity") or "revisar", 0),
             -SEVERITY_RANK.get(c.get("severity") or "info", 0),
+            -_eng_rank({"engagement": c.get("engagement") or {}}),
             -c["count"],
             c["category_label"],
         )
