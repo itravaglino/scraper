@@ -46,7 +46,7 @@
 
   function clusterPolarity(c) {
     const p = c.polarity || "revisar";
-    if (p === "mala" && typeof c.confidence === "number" && c.confidence < 0.5) {
+    if (p === "mala" && typeof c.confidence === "number" && c.confidence < 0.25) {
       return "revisar";
     }
     return p;
@@ -192,7 +192,7 @@
       if (p === "mala" && c.severity === "alta") alta.n += c.count || 0;
     }
     const kpis = [
-      [counts.mala, "Malas noticias", "mala", "Defectos abiertos con confianza ≥ 50%. Título pesa más que el cuerpo. No incluye elogios ni comparativas."],
+      [counts.mala, "Malas noticias", "mala", "Defectos con lenguaje claro en el título (no sincroniza, outage, broken…). Confianza baja sin patrón de defecto va a Revisar."],
       [counts.buena, "Buenas noticias", "buena", "Elogios, parches y arreglos en la misma ventana."],
       [counts.revisar, "Para revisar", "revisar", "Ambiguos, baja confianza o sin cue de producto. No se les asigna gravedad alta."],
       [alta.n, "Gravedad alta (malas)", "alta", "Solo malas de alta confianza con defecto abierto en el título (brick, no enciende, recall)."],
@@ -204,7 +204,7 @@
             <b>${n}</b><span>${label}</span></button>`
       )
       .join("") +
-      `<p class="kpi-defs">Los números respetan el filtro de tiempo. Mes = últimos 30 días de <em>fecha del ítem</em>. Casos negativos ocultan malas con confianza &lt; 50% (van a Revisar). Gravedad alta exige defecto en el título.</p>`;
+      `<p class="kpi-defs">Los números respetan el filtro de tiempo. Mes = últimos 30 días de <em>fecha del ítem</em>. Casos negativos ocultan solo malas con confianza &lt; 25% y sin defecto en el título. Gravedad alta exige brick/recall/no enciende en el título.</p>`;
 
     $("sev-wrap").classList.toggle("hidden", state.polarity !== "mala");
 
