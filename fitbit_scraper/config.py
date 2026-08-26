@@ -99,25 +99,38 @@ MODEL_PATTERNS: list[tuple[str, list[str]]] = [
 # Family names that need an explicit Fitbit/Pixel cue when unscoped.
 WEAK_MODEL_LABELS = {"Charge", "Versa", "Sense", "Inspire", "Ace", "Luxe", "Ionic", "Alta", "Flex"}
 
-# mala requires this confidence; alta needs CONF_ALTA plus a title defect.
-CONF_MALA = 0.5
+# Show malas from this confidence up. Hide only very-low scores with no title defect.
+# Alta still needs CONF_ALTA plus a title defect (bricked / no enciende / recall).
+CONF_MALA = 0.3
+CONF_HIDE = 0.25
 CONF_ALTA = 0.75
 
-# Open defect / hard failure in the TITLE (not a Reddit footer).
+# Headline defect language → polarity mala even around 0.3–0.5 confidence.
+# Word-boundary matching; do not add stems like "broke" (false hit: "I broke this down").
 STRONG_DEFECT_CUES = [
     "bricked", "bootloop", "won't turn on", "wont turn on",
     "won't sync", "wont sync", "won't charge", "wont charge",
-    "not working", "doesn't work", "doesnt work", "stopped working",
+    "not working", "isn't working", "isnt working", "isn’t working",
+    "doesn't work", "doesnt work", "stopped working",
+    "not syncing", "not sync", "no longer syncs",
+    "outage", "widespread outage", "blank screen",
+    "broken", "defective", "defectuoso",
     "battery drain", "no sincroniza", "no funciona", "no carga",
     "no enciende", "no conecta", "se apaga", "dead on arrival",
     "ne fonctionne pas", "funktioniert nicht", "não funciona", "nao funciona",
     "non funziona", "kaputt", "defekt", "défaut", "defaut", "difetto",
-    "guasto", "defeito", "falha", "故障", "不具合",
-    "still broken", "update broke",
+    "guasto", "defeito", "falha", "falla", "故障", "不具合",
+    "still broken", "update broke", "so many bugs",
+    "didn't collect", "did not collect", "didn’t collect",
+    "taking forever to sync", "forever to sync",
+    "returning the", "returned my", "almost returned",
+    "problem with the", "battery issue", "sync issue", "syncing issue",
+    "won't connect", "wont connect", "won't open", "pairing fails",
+    "keeps turning off", "stop sync", "stuck on screen",
 ]
 
 COMPARISON_TITLE_CUES = [
-    "vs", "versus", "compared to", "comparo", "comparativa",
+    "vs", "compared to", "comparo", "comparativa",
     "alongside", "roundup", "hands-on", "hands on", "i wore both",
     "final verdict", "whoop", "agptek",
 ]

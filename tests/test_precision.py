@@ -95,14 +95,63 @@ class GoldFalsePositiveTests(unittest.TestCase):
             source_scoped=False,
         )
         self.assertNotEqual(info.get("severity"), "alta")
-        if info.get("keep"):
-            self.assertNotEqual(info.get("polarity"), "mala")
+        # Defect language in the title belongs in Casos negativos, never as alta.
+        self.assertTrue(info["keep"])
+        self.assertEqual(info["polarity"], "mala")
+
+    def test_headline_outage_is_mala(self):
+        info = classify(
+            "Fitbit not syncing as Google Health confirms widespread outage",
+            "Google Health is down for some users.",
+            source_scoped=False,
+        )
+        self.assertTrue(info["keep"])
+        self.assertEqual(info["polarity"], "mala")
+        self.assertNotEqual(info.get("severity"), "alta")
+
+    def test_broken_sleep_tracking_is_mala(self):
+        info = classify(
+            "I almost returned my Google Fitbit Air for broken sleep tracking until I changed one setting",
+            "A settings tweak fixed tracking for this reviewer.",
+            source_scoped=False,
+        )
+        self.assertTrue(info["keep"])
+        self.assertEqual(info["polarity"], "mala")
+        self.assertNotEqual(info.get("severity"), "alta")
+
+    def test_defective_battery_headline_is_mala(self):
+        info = classify(
+            "I was convinced my Google Fitbit Air's battery was defective until I changed these settings",
+            "Android Police walkthrough.",
+            source_scoped=False,
+        )
+        self.assertTrue(info["keep"])
+        self.assertEqual(info["polarity"], "mala")
+        self.assertNotEqual(info.get("severity"), "alta")
+
+    def test_isnt_working_this_week_is_mala(self):
+        info = classify(
+            "Fitbit isn’t working and I’m not tech savvy someone please help me!!",
+            "Hi my Fitbit is two years old and it stopped syncing this week.",
+            source_scoped=True,
+        )
+        self.assertTrue(info["keep"])
+        self.assertEqual(info["polarity"], "mala")
+
+    def test_sleep_data_not_collected_is_mala(self):
+        info = classify(
+            "Fitbit Air didn’t collect sleep data last night. Is it a common issue?",
+            "Posted in r/fitbit this morning.",
+            source_scoped=True,
+        )
+        self.assertTrue(info["keep"])
+        self.assertEqual(info["polarity"], "mala")
 
     def test_real_charge6_drain_still_mala(self):
         info = classify("Charge 6 battery drain", "It dies after a few hours")
         self.assertTrue(info["keep"])
         self.assertEqual(info["polarity"], "mala")
-        self.assertGreaterEqual(info["confidence"], 0.5)
+        self.assertGreaterEqual(info["confidence"], 0.3)
         self.assertIsNotNone(info["severity"])
         self.assertNotEqual(info["severity"], "alta")
 
@@ -111,6 +160,16 @@ class GoldFalsePositiveTests(unittest.TestCase):
         self.assertEqual(info["polarity"], "mala")
         self.assertEqual(info["severity"], "alta")
         self.assertGreaterEqual(info["confidence"], 0.75)
+
+    def test_not_missing_data_is_not_mala(self):
+        info = classify(
+            "Fitbit Air: Zero Sleep Is Not Missing Data",
+            "Due to a medical condition I often cannot sleep. Zero sleep is not missing data.",
+            source_scoped=True,
+            star_rating=2,
+        )
+        self.assertNotEqual(info.get("polarity"), "mala")
+        self.assertNotEqual(info.get("severity"), "alta")
 
 
 class ModelPrecisionTests(unittest.TestCase):

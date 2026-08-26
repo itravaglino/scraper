@@ -115,9 +115,25 @@ def _is_comparison_title(title_low: str) -> bool:
         return True
     return bool(
         re.search(
-            r"\bvs\.?\b|\bversus\b|\balongside\b|\bi wore both\b|"
+            r"\bvs\.?\b|\balongside\b|\bi wore both\b|"
             r"\bafter \d+ days wearing\b|\bfinal verdict\b",
             title_low,
+        )
+    )
+
+
+def _title_denies_defect(title_low: str) -> bool:
+    """Headline that explicitly says it is NOT a defect (e.g. 'is not missing data')."""
+    return any(
+        p in title_low
+        for p in (
+            "not missing",
+            "is not missing",
+            "isn't missing",
+            "isn’t missing",
+            "not a bug",
+            "not a defect",
+            "false alarm",
         )
     )
 
@@ -150,48 +166,37 @@ def _decide_polarity(
     tutorial = _hits(title_low, TUTORIAL_TITLE_CUES) > 0
     mixed = _hits(title_low, MIXED_CUES) > 0 or _hits(body_low, MIXED_CUES) > 0
 
+    if _title_denies_defect(title_low) and not title_open:
+        if w_pos >= w_neg:
+            return "buena"
+        return "revisar"
     if star_rating is not None and star_rating <= 2:
         if title_fix and star_rating >= 2 and w_pos > w_neg:
             return "buena"
         return "mala"
     if title_fix and not title_open:
         return "buena"
+    if title_def and not title_fix:
+        return "mala"
     if (comparison or tutorial) and not title_open:
         if w_pos > w_neg:
             return "buena"
         return "revisar"
-    if title_def and not title_fix:
-        return "mala"
     if star_rating is not None and star_rating >= 4 and w_pos >= w_neg:
         return "buena"
     if w_pos >= 6 and w_neg == 0:
         return "buena"
-    if w_pos > w_neg and not title_def:
+    if w_pos > w_neg:
         return "buena"
-    if w_neg >= 6 and w_pos == 0 and (title_neg or title_def):
+    if title_neg >= 2 and not title_fix:
         return "mala"
-    if w_neg > w_pos and not title_fix:
-        if title_neg or title_def or (neg_body >= 2 and cat_scores and title_pos == 0):
-            return "mala"
-        return "revisar"
     if mixed and (w_pos or w_neg or cat_scores):
         return "revisar"
     if title_pos and title_neg:
         return "revisar"
-    if _hits(title_low, REVIEW_CUES) and not _hits(title_low, SEVERITY_HIGH) and w_neg <= 3:
+    if _hits(title_low, REVIEW_CUES) and w_neg <= 3:
         if w_pos > 0:
             return "buena"
-        return "revisar"
-    issue_signal = (
-        title_neg
-        or title_def
-        or _hits(title_low, NEWS_ISSUE_CUES)
-        or (neg_body >= 2 and title_pos == 0)
-        or (star_rating is not None and star_rating <= 3)
-    )
-    if cat_scores and issue_signal and w_pos == 0:
-        return "mala"
-    if cat_scores and w_pos == 0 and w_neg == 0:
         return "revisar"
     return "revisar"
 
@@ -332,6 +337,7 @@ def classify(
     )
     title_def = _title_defect(title_low)
     comparison = _is_comparison_title(title_low)
+    tutorial = _hits(title_low, TUTORIAL_TITLE_CUES) > 0
 
     if topic_reason == "comunidad_sin_producto" and star_rating is None:
         if polarity == "mala" and not title_def:
@@ -427,7 +433,9 @@ def classify(
             severity = "baja"
         if star_rating == 1 and severity == "baja":
             severity = "media"
-        if conf < CONF_MALA:
+        if tutorial and severity == "alta":
+            severity = "media"
+        if not title_def and conf < CONF_MALA:
             polarity = "revisar"
             severity = None
             sentiment = "mixto"
