@@ -25,6 +25,10 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -63,6 +67,10 @@ jobs:
       - name: Setup Pages
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         uses: actions/configure-pages@v5
+        with:
+          # Creates the Pages site on first run (source = GitHub Actions).
+          enablement: true
+          token: ${{ github.token }}
 
       - name: Upload site
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
@@ -74,6 +82,9 @@ jobs:
     needs: build
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
