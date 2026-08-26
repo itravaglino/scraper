@@ -365,7 +365,7 @@ CATEGORY_KEYWORDS: dict[str, list[str]] = {
     ],
     "software": [
         "firmware", "crash", "crashes", "crashing", "bug", "bugs", "buggy",
-        "glitch", "freeze", "frozen", "reboot", "restart loop", "bootloop",
+        "glitch", "freeze", "frozen", "reboots", "rebooted", "restart loop", "bootloop",
         "se cierra", "actualización fall", "won't open", "wont open",
         "force close", "login failed", "can't log in", "watch face",
         "missing data", "lost data", "sleep data", "no registra",
@@ -436,8 +436,9 @@ SEVERITY_HIGH = [
 ]
 SEVERITY_MEDIUM = [
     "drain", "dies after", "won't sync", "wont sync", "inaccurate",
-    "crash", "crashes", "broken band", "cracked", "gps", "not charging",
-    "loop", "freeze", "rebooting", "se descarga", "no sincroniza",
+    "crash", "crashes", "broken band", "cracked", "gps drift", "no gps",
+    "gps lost", "not charging", "restart loop", "bootloop", "freeze",
+    "keeps rebooting", "se descarga", "no sincroniza",
     "se bloque", "plante", "stürzt", "absturz", "não sincroniza",
     "si blocca", "non si sincronizza",
 ]
@@ -500,6 +501,12 @@ OPEN_DEFECT_CUES = [
     "immer noch", "immer noch kaputt", "nicht behoben",
     "ancora non", "non ancora risolto", "ancora rotto",
     "まだ直", "还没修",
+]
+
+REVIEW_CUES = [
+    "review", "reviewed", "reseña", "resena", "unboxing", "hands-on", "hands on",
+    "first look", "primeras impresiones", "vale la pena", "worth it",
+    "test de la", "im test", "recensione",
 ]
 
 MIXED_CUES = [

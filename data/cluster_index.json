@@ -2,7 +2,7 @@
   "clusters": {
     "4be965130ece0b97": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
+      "seen_runs": 5,
       "peak_count": 1,
       "title": "Sincronización · Versa 4",
       "category": "sincronizacion",
@@ -11,8 +11,8 @@
     },
     "432a27b741668212": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
-      "peak_count": 3,
+      "seen_runs": 5,
+      "peak_count": 4,
       "title": "Sincronización · Fitbit Air",
       "category": "sincronizacion",
       "polarity": "mala",
@@ -20,25 +20,16 @@
     },
     "99e1b254910383f7": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
-      "peak_count": 3,
+      "seen_runs": 5,
+      "peak_count": 14,
       "title": "Software / app · Sin modelo",
       "category": "software",
       "polarity": "mala",
       "last_seen": "2026-08-26"
     },
-    "0ed2f41a815f7ec7": {
-      "first_seen": "2026-08-26",
-      "seen_runs": 3,
-      "peak_count": 2,
-      "title": "Buena noticia · Sincronización · Fitbit Air",
-      "category": "sincronizacion",
-      "polarity": "buena",
-      "last_seen": "2026-08-26"
-    },
     "8a624bd81c3b02fe": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
+      "seen_runs": 5,
       "peak_count": 1,
       "title": "Sincronización · Inspire 2",
       "category": "sincronizacion",
@@ -47,7 +38,7 @@
     },
     "b0bda40377f11e27": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
+      "seen_runs": 5,
       "peak_count": 3,
       "title": "Software / app · Fitbit Air",
       "category": "software",
@@ -56,8 +47,8 @@
     },
     "a0e03716e65abac2": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
-      "peak_count": 1,
+      "seen_runs": 5,
+      "peak_count": 2,
       "title": "Batería · Inspire 3",
       "category": "bateria",
       "polarity": "mala",
@@ -65,26 +56,17 @@
     },
     "b9ddfe0b044f0707": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
+      "seen_runs": 5,
       "peak_count": 1,
       "title": "Sincronización · Charge 6",
       "category": "sincronizacion",
       "polarity": "mala",
       "last_seen": "2026-08-26"
     },
-    "c658e3daa6873bb4": {
-      "first_seen": "2026-08-26",
-      "seen_runs": 4,
-      "peak_count": 2,
-      "title": "Revisar · Ritmo cardíaco · Sin modelo",
-      "category": "ritmo_cardiaco",
-      "polarity": "revisar",
-      "last_seen": "2026-08-26"
-    },
     "588b5dfe766c9ef0": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
-      "peak_count": 1,
+      "seen_runs": 5,
+      "peak_count": 15,
       "title": "Buena noticia · Sincronización · Sin modelo",
       "category": "sincronizacion",
       "polarity": "buena",
@@ -92,35 +74,17 @@
     },
     "f8c6d5cd5d8324d5": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
-      "peak_count": 1,
+      "seen_runs": 5,
+      "peak_count": 3,
       "title": "Buena noticia · Pantalla · Fitbit Air",
       "category": "pantalla",
       "polarity": "buena",
       "last_seen": "2026-08-26"
     },
-    "938de4aa2e936a34": {
-      "first_seen": "2026-08-26",
-      "seen_runs": 4,
-      "peak_count": 2,
-      "title": "Revisar · Pantalla · Sin modelo",
-      "category": "pantalla",
-      "polarity": "revisar",
-      "last_seen": "2026-08-26"
-    },
-    "f489fb18e2cb14cd": {
-      "first_seen": "2026-08-26",
-      "seen_runs": 4,
-      "peak_count": 2,
-      "title": "Revisar · Calidad / hardware · Fitbit Air",
-      "category": "calidad",
-      "polarity": "revisar",
-      "last_seen": "2026-08-26"
-    },
     "0d943fa6493a839b": {
       "first_seen": "2026-08-26",
-      "seen_runs": 4,
-      "peak_count": 1,
+      "seen_runs": 6,
+      "peak_count": 9,
       "title": "Revisar · Ritmo cardíaco · Fitbit Air",
       "category": "ritmo_cardiaco",
       "polarity": "revisar",
@@ -128,35 +92,125 @@
     },
     "8fec44ee4ee339ac": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
+      "seen_runs": 5,
       "peak_count": 1,
       "title": "Buena noticia · Sincronización · Sense 2",
       "category": "sincronizacion",
       "polarity": "buena",
       "last_seen": "2026-08-26"
     },
-    "8b95ca055ac7afe7": {
+    "05ad3797c4de0a62": {
       "first_seen": "2026-08-26",
-      "seen_runs": 4,
-      "peak_count": 2,
-      "title": "Revisar · Correa · Fitbit Air",
-      "category": "correa",
-      "polarity": "revisar",
+      "seen_runs": 5,
+      "peak_count": 14,
+      "title": "Sincronización · Sin modelo",
+      "category": "sincronizacion",
+      "polarity": "mala",
       "last_seen": "2026-08-26"
     },
-    "22670fc4fada9a53": {
+    "a89534236f03bf97": {
       "first_seen": "2026-08-26",
-      "seen_runs": 4,
-      "peak_count": 1,
-      "title": "Revisar · Sincronización · Pixel Watch 2",
+      "seen_runs": 2,
+      "peak_count": 11,
+      "title": "Revisar · Sincronización · Fitbit Air",
       "category": "sincronizacion",
       "polarity": "revisar",
       "last_seen": "2026-08-26"
     },
+    "0977247f30f00e53": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Revisar · Carga · Charge 6",
+      "category": "carga",
+      "polarity": "revisar",
+      "last_seen": "2026-08-26"
+    },
+    "6b91c6cc9546edab": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 6,
+      "title": "Buena noticia · Batería · Sin modelo",
+      "category": "bateria",
+      "polarity": "buena",
+      "last_seen": "2026-08-26"
+    },
+    "1e479e0aa5a872a0": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 2,
+      "title": "GPS · Sin modelo",
+      "category": "gps",
+      "polarity": "mala",
+      "last_seen": "2026-08-26"
+    },
+    "72910a562446294e": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Buena noticia · Ritmo cardíaco · Versa 4",
+      "category": "ritmo_cardiaco",
+      "polarity": "buena",
+      "last_seen": "2026-08-26"
+    },
+    "0ed2f41a815f7ec7": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 5,
+      "peak_count": 4,
+      "title": "Buena noticia · Sincronización · Fitbit Air",
+      "category": "sincronizacion",
+      "polarity": "buena",
+      "last_seen": "2026-08-26"
+    },
+    "d94309a3ce538c17": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Pantalla · Inspire 3",
+      "category": "pantalla",
+      "polarity": "mala",
+      "last_seen": "2026-08-26"
+    },
+    "7f1c6694200fc3da": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 11,
+      "title": "Elogio · Fitbit Air",
+      "category": "opinion",
+      "polarity": "buena",
+      "last_seen": "2026-08-26"
+    },
+    "c9328ff5c7a201aa": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Buena noticia · Ritmo cardíaco · Sin modelo",
+      "category": "ritmo_cardiaco",
+      "polarity": "buena",
+      "last_seen": "2026-08-26"
+    },
+    "19a711330ca772ff": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 4,
+      "title": "Buena noticia · Correa · Fitbit Air",
+      "category": "correa",
+      "polarity": "buena",
+      "last_seen": "2026-08-26"
+    },
+    "111a2f9a13fdb8d9": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 3,
+      "title": "Buena noticia · Batería · Fitbit Air",
+      "category": "bateria",
+      "polarity": "buena",
+      "last_seen": "2026-08-26"
+    },
     "ae7674f123a8c356": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
-      "peak_count": 9,
+      "seen_runs": 5,
+      "peak_count": 10,
       "title": "Calidad / hardware · Sin modelo",
       "category": "calidad",
       "polarity": "mala",
@@ -164,71 +218,287 @@
     },
     "6449a81d6734a90e": {
       "first_seen": "2026-08-26",
-      "seen_runs": 4,
-      "peak_count": 4,
+      "seen_runs": 6,
+      "peak_count": 5,
       "title": "Revisar · Sincronización · Sin modelo",
       "category": "sincronizacion",
       "polarity": "revisar",
       "last_seen": "2026-08-26"
     },
-    "c646ce985cbea837": {
+    "575ea4f24043b174": {
       "first_seen": "2026-08-26",
-      "seen_runs": 4,
-      "peak_count": 1,
-      "title": "Revisar · Sincronización · Sense",
-      "category": "sincronizacion",
-      "polarity": "revisar",
-      "last_seen": "2026-08-26"
-    },
-    "b47c029958657f6d": {
-      "first_seen": "2026-08-26",
-      "seen_runs": 3,
-      "peak_count": 1,
-      "title": "Ritmo cardíaco · Inspire 3",
-      "category": "ritmo_cardiaco",
+      "seen_runs": 2,
+      "peak_count": 4,
+      "title": "Batería · Charge 5",
+      "category": "bateria",
       "polarity": "mala",
       "last_seen": "2026-08-26"
     },
-    "fbcce0df83d33f93": {
+    "2daa0111fad70244": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
-      "peak_count": 2,
-      "title": "Calidad / hardware · Pixel Watch",
+      "seen_runs": 1,
+      "peak_count": 1,
+      "title": "Revisar · Calidad / hardware · Ace 3",
       "category": "calidad",
+      "polarity": "revisar",
+      "last_seen": "2026-08-26"
+    },
+    "618ce6a8a6f1baab": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Correa · Sin modelo",
+      "category": "correa",
       "polarity": "mala",
       "last_seen": "2026-08-26"
     },
     "b54a8c43985dc5e6": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
-      "peak_count": 1,
+      "seen_runs": 5,
+      "peak_count": 3,
       "title": "Sincronización · Pixel Watch",
       "category": "sincronizacion",
       "polarity": "mala",
       "last_seen": "2026-08-26"
     },
-    "3de09105d9d62aab": {
+    "926817c0da1e67a0": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
-      "peak_count": 1,
-      "title": "Buena noticia · Batería · Pixel Watch 2",
+      "seen_runs": 1,
+      "peak_count": 3,
+      "title": "Revisar · Software / app · Sin modelo",
+      "category": "software",
+      "polarity": "revisar",
+      "last_seen": "2026-08-26"
+    },
+    "8a2ba38fb98a2189": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 5,
+      "peak_count": 2,
+      "title": "Software / app · Pixel Watch 3",
+      "category": "software",
+      "polarity": "mala",
+      "last_seen": "2026-08-26"
+    },
+    "f7b48f3d6affaac0": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 7,
+      "title": "Pantalla · Sin modelo",
+      "category": "pantalla",
+      "polarity": "mala",
+      "last_seen": "2026-08-26"
+    },
+    "057e12f9bd2e3e63": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 2,
+      "title": "Buena noticia · Batería · Pixel Watch",
       "category": "bateria",
       "polarity": "buena",
       "last_seen": "2026-08-26"
     },
-    "05ad3797c4de0a62": {
+    "20a27aba0051082f": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
-      "peak_count": 2,
-      "title": "Sincronización · Sin modelo",
-      "category": "sincronizacion",
+      "seen_runs": 2,
+      "peak_count": 3,
+      "title": "Buena noticia · Software / app · Pixel Watch",
+      "category": "software",
+      "polarity": "buena",
+      "last_seen": "2026-08-26"
+    },
+    "d6f28d7e8c77449e": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 3,
+      "title": "Revisar · Batería · Sin modelo",
+      "category": "bateria",
+      "polarity": "revisar",
+      "last_seen": "2026-08-26"
+    },
+    "7004b04a47856460": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 5,
+      "peak_count": 1,
+      "title": "Buena noticia · Calidad / hardware · Pixel Watch",
+      "category": "calidad",
+      "polarity": "buena",
+      "last_seen": "2026-08-26"
+    },
+    "6df499425e7c10be": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 1,
+      "peak_count": 1,
+      "title": "Revisar · Calidad / hardware · Sin modelo",
+      "category": "calidad",
+      "polarity": "revisar",
+      "last_seen": "2026-08-26"
+    },
+    "08778e829e2cc83c": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Revisar · Ritmo cardíaco · Charge 6",
+      "category": "ritmo_cardiaco",
+      "polarity": "revisar",
+      "last_seen": "2026-08-26"
+    },
+    "edbdb967e62246e9": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Pantalla · Luxe",
+      "category": "pantalla",
       "polarity": "mala",
+      "last_seen": "2026-08-26"
+    },
+    "1ec8bc8286b8309e": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Buena noticia · Batería · Versa 3",
+      "category": "bateria",
+      "polarity": "buena",
+      "last_seen": "2026-08-26"
+    },
+    "e619deac833b0ce2": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 2,
+      "title": "Revisar · Batería · Charge 6",
+      "category": "bateria",
+      "polarity": "revisar",
+      "last_seen": "2026-08-26"
+    },
+    "b092ae0789d04bb0": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Elogio · Inspire 3",
+      "category": "opinion",
+      "polarity": "buena",
+      "last_seen": "2026-08-26"
+    },
+    "8152af2bb281f0e4": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Elogio · Charge 5",
+      "category": "opinion",
+      "polarity": "buena",
+      "last_seen": "2026-08-26"
+    },
+    "c38c7171cb788393": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 5,
+      "title": "Elogio · Sin modelo",
+      "category": "opinion",
+      "polarity": "buena",
+      "last_seen": "2026-08-26"
+    },
+    "ee23408ba03ac4dd": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Elogio · Versa 4",
+      "category": "opinion",
+      "polarity": "buena",
+      "last_seen": "2026-08-26"
+    },
+    "5e57963ae69075fd": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Elogio · Ionic",
+      "category": "opinion",
+      "polarity": "buena",
+      "last_seen": "2026-08-26"
+    },
+    "c50cfc09c2b69bfc": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Buena noticia · Carga · Charge 5",
+      "category": "carga",
+      "polarity": "buena",
+      "last_seen": "2026-08-26"
+    },
+    "90c6204c52d7e736": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Carga · Sin modelo",
+      "category": "carga",
+      "polarity": "mala",
+      "last_seen": "2026-08-26"
+    },
+    "402b532907d62ffa": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 7,
+      "title": "Elogio · Pixel Watch",
+      "category": "opinion",
+      "polarity": "buena",
+      "last_seen": "2026-08-26"
+    },
+    "52f60c45d7b1c0a1": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Buena noticia · Piel / alergia · Versa 4",
+      "category": "piel",
+      "polarity": "buena",
+      "last_seen": "2026-08-26"
+    },
+    "ce8469d34842968c": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Buena noticia · Batería · Charge 6",
+      "category": "bateria",
+      "polarity": "buena",
+      "last_seen": "2026-08-26"
+    },
+    "0ce40010a4b11efd": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 5,
+      "peak_count": 4,
+      "title": "Correa · Fitbit Air",
+      "category": "correa",
+      "polarity": "mala",
+      "last_seen": "2026-08-26"
+    },
+    "471b6bbb447a394c": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Buena noticia · Calidad / hardware · Fitbit Air",
+      "category": "calidad",
+      "polarity": "buena",
+      "last_seen": "2026-08-26"
+    },
+    "c29e9d9be96984d8": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 2,
+      "title": "Pantalla · Fitbit Air",
+      "category": "pantalla",
+      "polarity": "mala",
+      "last_seen": "2026-08-26"
+    },
+    "f69763038d8800a3": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Buena noticia · Batería · Versa 4",
+      "category": "bateria",
+      "polarity": "buena",
       "last_seen": "2026-08-26"
     },
     "544cf56429f05d88": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
-      "peak_count": 1,
+      "seen_runs": 5,
+      "peak_count": 3,
       "title": "Calidad / hardware · Fitbit Air",
       "category": "calidad",
       "polarity": "mala",
@@ -236,133 +506,259 @@
     },
     "ea9cf59639fb749d": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
+      "seen_runs": 5,
       "peak_count": 1,
       "title": "Buena noticia · Sincronización · Pixel Watch",
       "category": "sincronizacion",
       "polarity": "buena",
       "last_seen": "2026-08-26"
     },
-    "8a2ba38fb98a2189": {
+    "fb593bcdeaeb1fc5": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
+      "seen_runs": 2,
       "peak_count": 1,
-      "title": "Software / app · Pixel Watch 3",
+      "title": "Buena noticia · Software / app · Fitbit Air",
       "category": "software",
-      "polarity": "mala",
+      "polarity": "buena",
+      "last_seen": "2026-08-26"
+    },
+    "a2fdd7189bb88c73": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Buena noticia · Ritmo cardíaco · Alta",
+      "category": "ritmo_cardiaco",
+      "polarity": "buena",
+      "last_seen": "2026-08-26"
+    },
+    "ce7dc0642c3840dd": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 1,
+      "peak_count": 1,
+      "title": "Revisar · GPS · Fitbit Air",
+      "category": "gps",
+      "polarity": "revisar",
       "last_seen": "2026-08-26"
     },
     "c2bba7e2ff929160": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
-      "peak_count": 1,
+      "seen_runs": 5,
+      "peak_count": 4,
       "title": "Software / app · Pixel Watch",
       "category": "software",
       "polarity": "mala",
       "last_seen": "2026-08-26"
     },
-    "0ce40010a4b11efd": {
+    "607453ce3cb14342": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
+      "seen_runs": 1,
       "peak_count": 1,
-      "title": "Correa · Fitbit Air",
-      "category": "correa",
-      "polarity": "mala",
+      "title": "Revisar · Software / app · Pixel Watch",
+      "category": "software",
+      "polarity": "revisar",
       "last_seen": "2026-08-26"
     },
-    "7004b04a47856460": {
+    "bb15218c4df2e368": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
-      "peak_count": 1,
-      "title": "Buena noticia · Calidad / hardware · Pixel Watch",
-      "category": "calidad",
+      "seen_runs": 2,
+      "peak_count": 2,
+      "title": "Buena noticia · Software / app · Sin modelo",
+      "category": "software",
       "polarity": "buena",
       "last_seen": "2026-08-26"
     },
-    "ba35e0e21694217d": {
+    "94dd8dad7c2f48e3": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
-      "peak_count": 3,
-      "title": "Piel / alergia · Sin modelo",
-      "category": "piel",
-      "polarity": "mala",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Elogio · Sense",
+      "category": "opinion",
+      "polarity": "buena",
       "last_seen": "2026-08-26"
     },
-    "d01dc459a4a1eeb5": {
+    "1c069621fe1c7178": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
+      "seen_runs": 2,
       "peak_count": 1,
-      "title": "Buena noticia · Software / app · Pixel Watch 2",
-      "category": "software",
+      "title": "Buena noticia · Correa · Ace 3",
+      "category": "correa",
       "polarity": "buena",
       "last_seen": "2026-08-26"
     },
     "aa497ad14f9783d5": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
-      "peak_count": 2,
+      "seen_runs": 5,
+      "peak_count": 7,
       "title": "Batería · Sin modelo",
       "category": "bateria",
       "polarity": "mala",
       "last_seen": "2026-08-26"
     },
+    "3840d019c12580e9": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 2,
+      "title": "Batería · Versa 3",
+      "category": "bateria",
+      "polarity": "mala",
+      "last_seen": "2026-08-26"
+    },
+    "5a27e45fda4f4b6e": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Calidad / hardware · Sense",
+      "category": "calidad",
+      "polarity": "mala",
+      "last_seen": "2026-08-26"
+    },
+    "6a6b48f9e1130132": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 2,
+      "title": "Software / app · Pixel Watch 2",
+      "category": "software",
+      "polarity": "mala",
+      "last_seen": "2026-08-26"
+    },
+    "db26a8161c68810f": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Buena noticia · Ritmo cardíaco · Pixel Watch",
+      "category": "ritmo_cardiaco",
+      "polarity": "buena",
+      "last_seen": "2026-08-26"
+    },
+    "09dda58d47ab276e": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Buena noticia · Pantalla · Sin modelo",
+      "category": "pantalla",
+      "polarity": "buena",
+      "last_seen": "2026-08-26"
+    },
     "b7358f7e214cb126": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
+      "seen_runs": 5,
       "peak_count": 1,
       "title": "Calidad / hardware · Versa 3",
       "category": "calidad",
       "polarity": "mala",
       "last_seen": "2026-08-26"
     },
-    "3ff9dac9b96fec5e": {
+    "e29bbcdd2996a0f5": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
-      "peak_count": 1,
-      "title": "Buena noticia · Calidad / hardware · Versa 3",
-      "category": "calidad",
-      "polarity": "buena",
-      "last_seen": "2026-08-26"
-    },
-    "3c7b46bd49916c2e": {
-      "first_seen": "2026-08-26",
-      "seen_runs": 3,
-      "peak_count": 1,
-      "title": "Calidad / hardware · Ionic",
+      "seen_runs": 2,
+      "peak_count": 2,
+      "title": "Calidad / hardware · Charge 5",
       "category": "calidad",
       "polarity": "mala",
       "last_seen": "2026-08-26"
     },
-    "926817c0da1e67a0": {
+    "c3578c8ec75eb72a": {
       "first_seen": "2026-08-26",
-      "seen_runs": 4,
-      "peak_count": 4,
-      "title": "Revisar · Software / app · Sin modelo",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Pantalla · Charge 4",
+      "category": "pantalla",
+      "polarity": "mala",
+      "last_seen": "2026-08-26"
+    },
+    "5620c0ee7d1ef5a7": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Batería · Sense",
+      "category": "bateria",
+      "polarity": "mala",
+      "last_seen": "2026-08-26"
+    },
+    "485d3925ee0734ce": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 2,
+      "title": "Correa · Charge 4",
+      "category": "correa",
+      "polarity": "mala",
+      "last_seen": "2026-08-26"
+    },
+    "3cf4aad02684f335": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Ritmo cardíaco · Sense",
+      "category": "ritmo_cardiaco",
+      "polarity": "mala",
+      "last_seen": "2026-08-26"
+    },
+    "bbde6509764c81b9": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Software / app · Versa 2",
       "category": "software",
-      "polarity": "revisar",
+      "polarity": "mala",
+      "last_seen": "2026-08-26"
+    },
+    "524e93aa05f04741": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Software / app · Inspire 3",
+      "category": "software",
+      "polarity": "mala",
+      "last_seen": "2026-08-26"
+    },
+    "629d981949b723e3": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Buena noticia · Sincronización · Versa",
+      "category": "sincronizacion",
+      "polarity": "buena",
+      "last_seen": "2026-08-26"
+    },
+    "b1ccee97b46cd041": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Buena noticia · Sincronización · Versa 3",
+      "category": "sincronizacion",
+      "polarity": "buena",
+      "last_seen": "2026-08-26"
+    },
+    "933353a4f5ddc9c2": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Elogio · Pixel Watch 3",
+      "category": "opinion",
+      "polarity": "buena",
       "last_seen": "2026-08-26"
     },
     "9da68f8819e46cfc": {
       "first_seen": "2026-08-26",
-      "seen_runs": 4,
-      "peak_count": 1,
+      "seen_runs": 6,
+      "peak_count": 2,
       "title": "Revisar · Carga · Sin modelo",
       "category": "carga",
       "polarity": "revisar",
       "last_seen": "2026-08-26"
     },
-    "ce01fff9f447f1de": {
+    "e606811fca0c4d3a": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
+      "seen_runs": 2,
       "peak_count": 1,
-      "title": "Sincronización · Versa",
-      "category": "sincronizacion",
-      "polarity": "mala",
+      "title": "Buena noticia · Correa · Pixel Watch 3",
+      "category": "correa",
+      "polarity": "buena",
       "last_seen": "2026-08-26"
     },
     "8b67d350526f4c92": {
       "first_seen": "2026-08-26",
-      "seen_runs": 3,
+      "seen_runs": 5,
       "peak_count": 1,
       "title": "Batería · Ace",
       "category": "bateria",

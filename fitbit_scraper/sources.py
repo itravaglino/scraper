@@ -134,7 +134,7 @@ def _scrape_rss_collection(feeds: list[dict], default_source: str, default_kind:
     results = []
     for feed in feeds:
         kind = feed.get("kind") or default_kind
-        scoped = bool(feed.get("scoped", kind in {"reddit", "youtube", "tiktok", "instagram", "itunes"}))
+        scoped = bool(feed.get("scoped", kind in {"reddit", "itunes"}))
 
         lang_hint = feed.get("lang")
 

@@ -151,7 +151,23 @@ class ClassifyTests(unittest.TestCase):
         self.assertEqual(info["polarity"], "buena")
         self.assertIsNone(info["severity"])
 
-    def test_japanese_fault_detected(self):
+    def test_gps_review_is_not_gravedad_media(self):
+        info = classify(
+            "Fitbit Charge 4 Review! - It has GPS! But Is it any good for runners?",
+            "Unboxing and first look at the GPS band.",
+            source_scoped=False,
+        )
+        self.assertNotEqual(info["polarity"], "mala")
+        self.assertIsNone(info["severity"])
+
+    def test_english_screenless_launch_not_a_defect(self):
+        info = classify(
+            "Google is officially rebooting its wearable strategy with Fitbit Air, a lightweight, screenless fitness tracker",
+            "The screen-free band competes with Whoop.",
+            source_scoped=False,
+        )
+        self.assertFalse(info["keep"])
+        self.assertNotEqual(info.get("severity"), "media")
         info = classify(
             "Fitbit Charge 6 故障",
             "同期の不具合でバッテリーがすぐ切れる",

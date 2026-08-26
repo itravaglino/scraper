@@ -24,6 +24,7 @@ from .config import (
     OPEN_DEFECT_CUES,
     POLARITY_LABELS_ES,
     POSITIVE_CUES,
+    REVIEW_CUES,
     SCREEN_NEGATIONS,
     SEVERITY_HIGH,
     SEVERITY_MEDIUM,
@@ -123,6 +124,10 @@ def _decide_polarity(
     if mixed and (pos or neg or cat_scores):
         return "revisar"
     if pos and neg:
+        return "revisar"
+    if _hits(title_low, REVIEW_CUES) and not _hits(full_low, SEVERITY_HIGH) and neg <= 1:
+        if pos > 0:
+            return "buena"
         return "revisar"
     # Category keywords alone (e.g. "battery" in a feature article) are not a defect.
     issue_signal = (
@@ -254,7 +259,7 @@ def classify(
     else:
         keep = bool(
             (source_scoped and brand_hit and (cat_scores or pos or neg or star_rating is not None))
-            or (brand_hit and cat_scores and _hits(low, MIXED_CUES))
+            or (brand_hit and cat_scores)
         )
 
     if polarity == "buena":
