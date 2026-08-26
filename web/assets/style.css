@@ -186,6 +186,7 @@ h1 {
 .sources .ok { color: var(--buena); }
 .sources .skip { color: var(--media); }
 .sources .bad { color: var(--alta); }
+.source-summary { color: var(--muted); font-size: 0.82rem; margin: 0 0 8px; }
 .pill {
   font-size: 0.68rem;
   text-transform: uppercase;

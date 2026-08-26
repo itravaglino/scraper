@@ -50,105 +50,38 @@ HN_QUERIES = [
 ]
 
 
+def _reddit_sub_rss(sub: str) -> str:
+    return f"https://www.reddit.com/r/{sub}/.rss"
+
+
 def reddit_feeds() -> list[dict]:
+    """Few serial Reddit calls. One scoped sub + one global search beats 12× 429."""
+    global_q = (
+        "fitbit (bug OR broken OR drain OR sync OR crash OR battery OR firmware "
+        "OR recall OR falla OR problema OR defeito OR panne OR defekt OR "
+        f"{PRAISE})"
+    )
     return [
         {
-            "id": "reddit_fitbit_search",
+            "id": "reddit_fitbit",
             "label": "Reddit r/fitbit",
             "scoped": True,
             "lang": "en",
-            "url": _reddit("r/fitbit/search.rss", f"battery OR sync OR broken OR bug OR charge OR crash OR gps OR band OR screen OR drain OR firmware OR scale OR aria OR falla OR problema OR defeito OR panne", True),
-        },
-        {
-            "id": "reddit_fitbit_praise",
-            "label": "Reddit r/fitbit (elogios / arreglos)",
-            "scoped": True,
-            "lang": "en",
-            "url": _reddit("r/fitbit/search.rss", PRAISE, True),
-        },
-        {
-            "id": "reddit_global_search",
-            "label": "Reddit (búsqueda Fitbit)",
-            "scoped": False,
-            "lang": "en",
-            "url": _reddit("search.rss", f"fitbit ({BUG_EN} OR falla OR defect OR defeito OR panne OR defekt)", False),
-        },
-        {
-            "id": "reddit_global_praise",
-            "label": "Reddit (elogios Fitbit)",
-            "scoped": False,
-            "lang": "en",
-            "url": _reddit("search.rss", f"fitbit ({PRAISE})", False),
-        },
-        {
-            "id": "reddit_global_es",
-            "label": "Reddit (Fitbit ES)",
-            "scoped": False,
-            "lang": "es",
-            "url": _reddit("search.rss", f"fitbit ({BUG_ES})", False),
-        },
-        {
-            "id": "reddit_global_pt",
-            "label": "Reddit (Fitbit PT)",
-            "scoped": False,
-            "lang": "pt",
-            "url": _reddit("search.rss", f"fitbit ({BUG_PT})", False),
-        },
-        {
-            "id": "reddit_global_fr",
-            "label": "Reddit (Fitbit FR)",
-            "scoped": False,
-            "lang": "fr",
-            "url": _reddit("search.rss", f"fitbit ({BUG_FR})", False),
+            "url": _reddit_sub_rss("fitbit"),
         },
         {
             "id": "reddit_pixel_watch",
             "label": "Reddit r/GooglePixelWatch",
             "scoped": True,
             "lang": "en",
-            "url": _reddit("r/GooglePixelWatch/search.rss", "fitbit OR bug OR battery OR sync OR broken", True),
+            "url": _reddit_sub_rss("GooglePixelWatch"),
         },
         {
-            "id": "reddit_wearos",
-            "label": "Reddit r/WearOS",
+            "id": "reddit_global_search",
+            "label": "Reddit (búsqueda Fitbit)",
             "scoped": False,
             "lang": "en",
-            "url": _reddit("r/WearOS/search.rss", 'fitbit OR "pixel watch" (bug OR battery OR broken OR sync)', True),
-        },
-        {
-            "id": "reddit_smartwatch",
-            "label": "Reddit r/smartwatch",
-            "scoped": False,
-            "lang": "en",
-            "url": _reddit("r/smartwatch/search.rss", "fitbit (bug OR broken OR battery OR sync OR falla)", True),
-        },
-        {
-            "id": "reddit_smartwatches",
-            "label": "Reddit r/smartwatches",
-            "scoped": False,
-            "lang": "en",
-            "url": _reddit("r/smartwatches/search.rss", "fitbit (bug OR battery OR broken OR sync OR review)", True),
-        },
-        {
-            "id": "reddit_fitness",
-            "label": "Reddit r/fitness",
-            "scoped": False,
-            "lang": "en",
-            "url": _reddit("r/fitness/search.rss", "fitbit (broken OR bug OR stopped OR sync OR battery)", True),
-        },
-        {
-            "id": "reddit_android",
-            "label": "Reddit r/Android",
-            "scoped": False,
-            "lang": "en",
-            "url": _reddit("r/Android/search.rss", "fitbit (bug OR battery OR sync OR broken OR google health)", True),
-        },
-        {
-            "id": "reddit_googlepixel",
-            "label": "Reddit r/GooglePixel",
-            "scoped": False,
-            "lang": "en",
-            "url": _reddit("r/GooglePixel/search.rss", "fitbit OR \"pixel watch\" (bug OR battery OR sync OR broken)", True),
+            "url": _reddit("search.rss", global_q, False),
         },
     ]
 
