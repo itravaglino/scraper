@@ -1,13 +1,13 @@
 {
   "run_id": "2026-08-26",
-  "generated_at": "2026-08-26T16:48:49-03:00",
+  "generated_at": "2026-08-26T16:53:23-03:00",
   "summary": {
     "reports": 141,
     "clusters": 53,
     "clusters_mala": 29,
     "clusters_buena": 18,
-    "new_clusters": 6,
-    "recurring_clusters": 47,
+    "new_clusters": 0,
+    "recurring_clusters": 53,
     "by_model": {
       "Fitbit Air": 71,
       "Sin modelo": 42,

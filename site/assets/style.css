@@ -218,8 +218,10 @@ h1 {
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: 16px;
-  padding: 16px 18px 12px;
-  margin-bottom: 22px;
+  padding: 18px 18px 28px;
+  margin-top: 32px;
+  margin-bottom: 8px;
+  overflow: visible;
 }
 .chart-head {
   display: flex;
@@ -241,8 +243,9 @@ h1 {
 }
 .chart-legend {
   display: flex;
+  flex-wrap: wrap;
   gap: 14px;
-  margin: 12px 0 8px;
+  margin: 12px 0 10px;
   font-size: 0.78rem;
   color: var(--muted);
 }
@@ -256,8 +259,17 @@ h1 {
 .swatch.alta { background: var(--alta); }
 .swatch.media { background: var(--media); }
 .swatch.baja { background: var(--baja); }
-.chart-frame { position: relative; }
-#sev-chart { width: 100%; height: auto; display: block; }
+.chart-frame {
+  position: relative;
+  overflow: visible;
+  min-height: 280px;
+}
+#sev-chart {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
 .chart-empty { color: var(--muted); font-size: 0.85rem; padding: 24px 0; }
 .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
 .badge {

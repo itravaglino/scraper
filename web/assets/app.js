@@ -461,6 +461,17 @@
       .slice(0, 12);
   }
 
+  function wrapAxisLabel(text, max = 16) {
+    const s = String(text || "").trim();
+    if (s.length <= max) return [s];
+    const cut = s.lastIndexOf(" ", max);
+    const i = cut >= 8 ? cut : max;
+    const first = s.slice(0, i).trim();
+    let rest = s.slice(i).trim();
+    if (rest.length > max) rest = rest.slice(0, max - 1) + "…";
+    return [first, rest].filter(Boolean);
+  }
+
   function drawSevChart(filtered, zone) {
     const svg = $("sev-chart");
     const empty = $("chart-empty");
@@ -477,17 +488,17 @@
       svg.innerHTML = "";
       return;
     }
-    const W = 720;
-    const H = 280;
-    const padL = 42;
-    const padR = 12;
-    const padT = 16;
-    const padB = 64;
+    const W = 760;
+    const H = 420;
+    const padL = 56;
+    const padR = 36;
+    const padT = 20;
+    const padB = 140;
     const max = Math.max(1, ...rows.map((r) => r.total));
     const innerW = W - padL - padR;
     const innerH = H - padT - padB;
-    const gap = 8;
-    const barW = Math.max(18, innerW / rows.length - gap);
+    const gap = 10;
+    const barW = Math.max(22, innerW / rows.length - gap);
     const colors = { baja: "#7a9bb8", media: "#d4a017", alta: "#e07a6a" };
     const ticks = 4;
     let grid = "";
@@ -495,7 +506,7 @@
       const val = Math.round((max * (ticks - i)) / ticks);
       const y = padT + (innerH * i) / ticks;
       grid += `<line x1="${padL}" x2="${W - padR}" y1="${y}" y2="${y}" stroke="rgba(236,231,220,0.12)"/>`;
-      grid += `<text x="${padL - 6}" y="${y + 4}" text-anchor="end" fill="#9a9488" font-size="11">${val}</text>`;
+      grid += `<text x="${padL - 8}" y="${y + 4}" text-anchor="end" fill="#9a9488" font-size="11">${val}</text>`;
     }
     let bars = "";
     rows.forEach((row, i) => {
@@ -507,10 +518,17 @@
         y -= h;
         bars += `<rect x="${x}" y="${y}" width="${barW}" height="${h}" fill="${colors[sev]}"><title>${escapeHtml(row.label)} · ${sev} ${row[sev]}</title></rect>`;
       }
-      const lbl = row.label.length > 14 ? row.label.slice(0, 13) + "…" : row.label;
-      bars += `<text x="${x + barW / 2}" y="${H - 10}" text-anchor="end" transform="rotate(-32 ${x + barW / 2} ${H - 10})" fill="#9a9488" font-size="11">${escapeHtml(lbl)}</text>`;
+      const cx = x + barW / 2;
+      const ty = padT + innerH + 16;
+      const lines = wrapAxisLabel(row.label, 18);
+      bars += `<text transform="rotate(-48 ${cx} ${ty})" text-anchor="end" fill="#c6bfb3" font-size="11">`;
+      lines.forEach((line, li) => {
+        bars += `<tspan x="${cx}" dy="${li === 0 ? 0 : 13}">${escapeHtml(line)}</tspan>`;
+      });
+      bars += `</text>`;
     });
     svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+    svg.setAttribute("overflow", "visible");
     svg.innerHTML = grid + bars;
   }
 

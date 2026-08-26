@@ -117,33 +117,6 @@
       </label>
     </section>
 
-    <section class="chart-panel" aria-label="Gráfico por gravedad">
-      <div class="chart-head">
-        <div>
-          <h2>Casos negativos por gravedad</h2>
-          <p class="chart-sub" id="chart-sub">Barras apiladas Alta / Media / Baja. Respeta los filtros de arriba.</p>
-        </div>
-        <label class="chart-dim">
-          <span>Agrupar por</span>
-          <select id="f-chart">
-            <option value="categoria" selected>Categoría</option>
-            <option value="modelo">Modelo</option>
-            <option value="fuente">Fuente</option>
-            <option value="tiempo">Tiempo (día)</option>
-          </select>
-        </label>
-      </div>
-      <div class="chart-legend" id="chart-legend">
-        <span><i class="swatch alta"></i> Alta</span>
-        <span><i class="swatch media"></i> Media</span>
-        <span><i class="swatch baja"></i> Baja</span>
-      </div>
-      <div class="chart-frame">
-        <svg id="sev-chart" viewBox="0 0 720 280" role="img" aria-label="Gráfico de gravedad"></svg>
-        <p id="chart-empty" class="chart-empty hidden">El gráfico de gravedad aplica a casos negativos. Cambiá a esa pestaña o ampliá el período.</p>
-      </div>
-    </section>
-
     <section class="layout">
       <aside class="side">
         <h2>Modelos mencionados</h2>
@@ -167,6 +140,33 @@
           No hay casos en esta vista con los filtros actuales.
         </p>
       </main>
+    </section>
+
+    <section class="chart-panel" aria-label="Gráfico por gravedad">
+      <div class="chart-head">
+        <div>
+          <h2>Casos negativos por gravedad</h2>
+          <p class="chart-sub" id="chart-sub">Barras apiladas Alta / Media / Baja. Respeta los filtros de arriba.</p>
+        </div>
+        <label class="chart-dim">
+          <span>Agrupar por</span>
+          <select id="f-chart">
+            <option value="categoria" selected>Categoría</option>
+            <option value="modelo">Modelo</option>
+            <option value="fuente">Fuente</option>
+            <option value="tiempo">Tiempo (día)</option>
+          </select>
+        </label>
+      </div>
+      <div class="chart-legend" id="chart-legend">
+        <span><i class="swatch alta"></i> Alta</span>
+        <span><i class="swatch media"></i> Media</span>
+        <span><i class="swatch baja"></i> Baja</span>
+      </div>
+      <div class="chart-frame">
+        <svg id="sev-chart" viewBox="0 0 760 420" role="img" aria-label="Gráfico de gravedad"></svg>
+        <p id="chart-empty" class="chart-empty hidden">El gráfico de gravedad aplica a casos negativos. Cambiá a esa pestaña o ampliá el período.</p>
+      </div>
     </section>
 
     <footer class="foot">
