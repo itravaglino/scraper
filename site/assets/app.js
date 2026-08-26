@@ -110,10 +110,10 @@
   }
 
   function inRange(iso, rangeDays) {
-    if (rangeDays == null) return true;
-    if (!iso) return rangeDays >= 365;
+    if (rangeDays == null) return !!iso && !Number.isNaN(Date.parse(iso));
+    if (!iso) return false;
     const t = Date.parse(iso);
-    if (Number.isNaN(t)) return rangeDays >= 365;
+    if (Number.isNaN(t)) return false;
     return Date.now() - t <= rangeDays * 86400000;
   }
 
@@ -146,7 +146,9 @@
 
     $("run-stamp").dateTime = data.generated_at || "";
     $("run-stamp").textContent = fmtStamp(data.generated_at, zone);
-    $("run-zone").textContent = `${zone} · corrida ${data.run_id || "—"}`;
+    $("run-zone").textContent = data.scrape_window_days
+      ? `${zone} · corrida ${data.run_id || "—"} · ventana scrape ${data.scrape_window_days} días`
+      : `${zone} · corrida ${data.run_id || "—"}`;
 
     const runUrl =
       data.run_workflow_url ||
