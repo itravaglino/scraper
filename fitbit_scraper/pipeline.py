@@ -16,8 +16,9 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+from .classify import classify
 from .cluster import cluster_reports
-from .config import HISTORY_KEEP_DAYS, TIMEZONE
+from .config import GITHUB_REPO, GITHUB_WORKFLOW_FILE, HISTORY_KEEP_DAYS, TIMEZONE
 from .generate_site import generate_site
 from .sources import scrape_all
 from .textutil import normalize
@@ -74,36 +75,79 @@ def _dedupe(reports: list[dict]) -> list[dict]:
     return [by_url[k] for k in ordered]
 
 
+def _reclassify(reports: list[dict]) -> list[dict]:
+    """Backfill polarity / language / severity on stored reports (skip-fetch)."""
+    out = []
+    for r in reports:
+        info = classify(
+            r.get("title") or "",
+            r.get("text") or "",
+            source_scoped=True,
+            star_rating=r.get("star_rating"),
+            lang_hint=r.get("language") if r.get("language") not in {None, "", "und"} else None,
+        )
+        rec = dict(r)
+        rec["models"] = info["models"] or rec.get("models") or []
+        rec["categories"] = info["categories"] or rec.get("categories") or []
+        rec["primary_category"] = info["primary_category"] or rec.get("primary_category") or "opinion"
+        rec["severity"] = info["severity"]
+        rec["sentiment"] = info["sentiment"]
+        rec["polarity"] = info["polarity"]
+        rec["polarity_label"] = info["polarity_label"]
+        rec["language"] = info.get("language") or rec.get("language") or "und"
+        rec["language_label"] = info.get("language_label")
+        rec["badges"] = info.get("badges") or []
+        rec["reason"] = info.get("reason") or rec.get("reason")
+        rec.setdefault("source_kind", rec.get("source") or "web")
+        out.append(rec)
+    return out
+
+
 def _summarize(reports: list[dict], clusters: list[dict]) -> dict:
     by_model = Counter()
     by_sev = Counter()
     by_cat = Counter()
     by_source = Counter()
+    by_kind = Counter()
+    by_polarity = Counter()
+    by_language = Counter()
     for r in reports:
         models = r.get("models") or ["Sin modelo"]
         for m in models:
             by_model[m] += 1
-        by_sev[r.get("severity") or "info"] += 1
+        polarity = r.get("polarity") or "revisar"
+        by_polarity[polarity] += 1
+        if polarity == "mala" and r.get("severity"):
+            by_sev[r["severity"]] += 1
         by_cat[r.get("primary_category") or "opinion"] += 1
         by_source[r.get("source_label") or r.get("source")] += 1
+        by_kind[r.get("source_kind") or r.get("source") or "web"] += 1
+        by_language[r.get("language") or "und"] += 1
     new_c = sum(1 for c in clusters if not c.get("recurring"))
     rec_c = sum(1 for c in clusters if c.get("recurring"))
+    mala_c = sum(1 for c in clusters if c.get("polarity") == "mala")
+    buena_c = sum(1 for c in clusters if c.get("polarity") == "buena")
     return {
         "reports": len(reports),
         "clusters": len(clusters),
+        "clusters_mala": mala_c,
+        "clusters_buena": buena_c,
         "new_clusters": new_c,
         "recurring_clusters": rec_c,
         "by_model": dict(by_model.most_common(12)),
         "by_severity": dict(by_sev),
+        "by_polarity": dict(by_polarity),
+        "by_language": dict(by_language),
         "by_category": dict(by_cat),
         "by_source": dict(by_source),
+        "by_kind": dict(by_kind),
     }
 
 
 def _write_csv(reports: list[dict], path: Path) -> None:
     fields = [
-        "id", "created_at", "source", "source_label", "models", "primary_category",
-        "severity", "sentiment", "star_rating", "title", "url",
+        "id", "created_at", "source", "source_kind", "source_label", "models", "primary_category",
+        "polarity", "severity", "sentiment", "language", "star_rating", "title", "url",
     ]
     with path.open("w", encoding="utf-8", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=fields)
@@ -145,7 +189,7 @@ def run(fetch: bool = True) -> dict:
         reports = previous.get("reports") or []
         source_statuses = previous.get("sources") or []
 
-    reports = _dedupe(reports)
+    reports = _reclassify(_dedupe(reports))
     unique_by_label = Counter(r.get("source_label") for r in reports)
     for status in source_statuses:
         if status.get("ok"):
@@ -168,6 +212,9 @@ def run(fetch: bool = True) -> dict:
         "generated_at_utc": utc.isoformat(timespec="seconds"),
         "timezone": TIMEZONE,
         "run_id": run_date,
+        "github_repo": GITHUB_REPO,
+        "github_workflow": GITHUB_WORKFLOW_FILE,
+        "run_workflow_url": f"https://github.com/{GITHUB_REPO}/actions/workflows/{GITHUB_WORKFLOW_FILE}",
         "sources": source_statuses,
         "summary": _summarize(reports, clusters),
         "clusters": clusters,

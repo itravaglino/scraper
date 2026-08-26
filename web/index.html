@@ -3,35 +3,71 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Panel de incidencias Fitbit</title>
-  <meta name="description" content="Tablero diario de fallas, defectos y opiniones públicas sobre relojes Fitbit.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='12' width='64' height='64' fill='%2309131f'/%3E%3Ccircle cx='32' cy='32' r='14' fill='none' stroke='%232dd4bf' stroke-width='6'/%3E%3C/svg%3E">
+  <base href="./">
+  <title>Panel Fitbit · casos y noticias</title>
+  <meta name="description" content="Tablero diario de casos negativos y buenas noticias públicas sobre productos Fitbit.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='12' width='64' height='64' fill='%230f1419'/%3E%3Ccircle cx='32' cy='32' r='14' fill='none' stroke='%23c4a574' stroke-width='6'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
+<body data-repo="itravaglino/scraper" data-workflow="daily.yml">
   <div class="page">
     <header class="mast">
       <div>
-        <p class="kicker">Scraper público · relojes Fitbit</p>
-        <h1>Qué está fallando hoy</h1>
+        <p class="kicker">Investigación pública · productos Fitbit</p>
+        <h1>Casos y señales de mercado</h1>
         <p class="lede">
-          Agrupa quejas y opiniones públicas para que un equipo de producto
-          vea patrones, juzgue si se ven reales y vuelva a la fuente.
+          Separa <strong>malas noticias</strong> (fallas, recalls, quejas) de
+          <strong>buenas noticias</strong> (elogios, arreglos). Cada grupo es un
+          caso: un modelo × un tema, no un cajón de “gravedad media”.
         </p>
       </div>
-      <div class="mast-meta" id="run-meta">
-        <span class="pulse" aria-hidden="true"></span>
-        <div>
-          <div class="meta-label">Última ejecución</div>
-          <time id="run-stamp">Cargando…</time>
-          <div class="meta-sub" id="run-zone">America/Buenos_Aires</div>
+      <aside class="run-card" aria-label="Ejecutar scrape">
+        <div class="run-card-top">
+          <span class="pulse" aria-hidden="true"></span>
+          <div>
+            <div class="meta-label">Últimos datos en el tablero</div>
+            <time id="run-stamp">Cargando…</time>
+            <div class="meta-sub" id="run-zone">America/Buenos_Aires</div>
+          </div>
         </div>
-      </div>
+        <p class="run-actions-status" id="actions-status">Consultando GitHub Actions…</p>
+        <div class="run-btns">
+          <a
+            class="btn-run"
+            id="btn-run"
+            href="https://github.com/itravaglino/scraper/actions/workflows/daily.yml"
+            target="_blank"
+            rel="noopener"
+          >Ejecutar ahora</a>
+          <button type="button" class="btn-ghost" id="btn-refresh">Actualizar datos</button>
+        </div>
+        <p class="run-help" id="run-help">
+          Un clic abre Actions. Ahí tocá <b>Run workflow</b> → <b>Run workflow</b>.
+          No hay token en esta página. El panel se refresca solo cuando termina el deploy.
+        </p>
+      </aside>
     </header>
 
     <section class="kpis" id="kpis" aria-label="Resumen"></section>
 
+    <nav class="polarity-tabs" aria-label="Polaridad">
+      <button type="button" class="tab on" data-polarity="mala" id="tab-mala">Casos negativos</button>
+      <button type="button" class="tab" data-polarity="buena" id="tab-buena">Buenas noticias</button>
+      <button type="button" class="tab" data-polarity="revisar" id="tab-revisar">Revisar</button>
+    </nav>
+
     <section class="toolbar" aria-label="Filtros">
+      <div class="seg" role="group" aria-label="Ventana de tiempo">
+        <span class="seg-label">Tiempo</span>
+        <div class="seg-opts" id="f-range">
+          <button type="button" data-range="1">Día</button>
+          <button type="button" data-range="7">Semana</button>
+          <button type="button" data-range="30" class="on">Mes</button>
+          <button type="button" data-range="90">Trimestre</button>
+          <button type="button" data-range="365">Año</button>
+          <button type="button" data-range="all">Todo</button>
+        </div>
+      </div>
       <label class="search">
         <span>Buscar</span>
         <input id="q" type="search" placeholder="batería, Sense 2, sincronización…" autocomplete="off">
@@ -44,15 +80,22 @@
         <span>Categoría</span>
         <select id="f-cat"><option value="">Todas</option></select>
       </label>
-      <label>
-        <span>Gravedad</span>
+      <label id="sev-wrap">
+        <span>Gravedad (solo malas)</span>
         <select id="f-sev">
           <option value="">Todas</option>
           <option value="alta">Alta</option>
           <option value="media">Media</option>
           <option value="baja">Baja</option>
-          <option value="info">Info / positivo</option>
         </select>
+      </label>
+      <label>
+        <span>Fuente</span>
+        <select id="f-kind"><option value="">Todas</option></select>
+      </label>
+      <label>
+        <span>Idioma</span>
+        <select id="f-lang"><option value="">Todos</option></select>
       </label>
       <label>
         <span>Estado</span>
@@ -81,37 +124,39 @@
         <h2>Fuentes de esta corrida</h2>
         <ul id="source-list" class="sources"></ul>
         <p class="hint">
-          Las marcas «parece real / verificar» se guardan solo en este navegador
-          (no hay backend). Los JSON históricos viven en el repositorio.
+          Las marcas «parece real / verificar» se guardan solo en este navegador.
+          Gravedad alta/media/baja aplica únicamente a casos negativos.
         </p>
         <p><a class="dl" href="data/latest.json" download>Descargar JSON</a></p>
       </aside>
       <main>
         <div class="list-head">
-          <h2 id="list-title">Incidencias agrupadas</h2>
+          <h2 id="list-title">Casos negativos</h2>
           <p id="list-count"></p>
         </div>
         <div id="clusters" class="clusters"></div>
         <p id="empty" class="empty hidden">
-          No hay grupos con esos filtros. Probá limpiar la búsqueda o esperá
-          la próxima corrida diaria.
+          No hay casos en esta vista con los filtros actuales.
         </p>
       </main>
     </section>
 
     <footer class="foot">
       <p>
-        Solo fuentes públicas (Reddit RSS, reseñas de App Store, Google News, Hacker News).
-        No es telemetría oficial de Fitbit. Un reporte viral no prueba un defecto.
+        Solo fuentes públicas (Reddit, YouTube/TikTok/Instagram vía búsqueda pública,
+        web, App Store, Hacker News). No es telemetría oficial de Fitbit.
+        Un reporte viral no prueba un defecto.
       </p>
       <p>
         Sitio:
         <a href="https://itravaglino.github.io/scraper/">itravaglino.github.io/scraper</a>
         · código:
         <a href="https://github.com/itravaglino/scraper">github.com/itravaglino/scraper</a>
+        · corrida diaria 08:00 America/Buenos_Aires
       </p>
     </footer>
   </div>
+  <script>window.FITBIT_SEED={"__SEED__":true};</script>
   <script src="assets/app.js"></script>
 </body>
 </html>

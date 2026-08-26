@@ -37,7 +37,7 @@ def fetch_bytes(url: str, accept: str = "*/*") -> tuple[Optional[bytes], Optiona
     headers = {
         "User-Agent": USER_AGENT,
         "Accept": accept,
-        "Accept-Language": "es-AR,es;q=0.9,en;q=0.8",
+        "Accept-Language": "es-AR,es;q=0.9,en;q=0.8,pt;q=0.7,fr;q=0.6,de;q=0.6,it;q=0.6,ja;q=0.5",
     }
     last_error: Optional[str] = None
     for attempt in range(1, REQUEST_RETRIES + 1):

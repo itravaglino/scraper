@@ -9,6 +9,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 WEB_SRC = ROOT / "web"
 SITE_DIR = ROOT / "site"
+SEED_MARK = '{"__SEED__":true}'
+
+
+def _dashboard_payload(latest: dict) -> dict:
+    """Inline copy used when fetch('data/latest.json') fails on GitHub Pages."""
+    return {k: v for k, v in latest.items() if k != "reports"}
 
 
 def generate_site(latest: dict, dest: Path | None = None) -> Path:
@@ -26,8 +32,14 @@ def generate_site(latest: dict, dest: Path | None = None) -> Path:
             shutil.copy2(item, target)
     data_dir = dest / "data"
     data_dir.mkdir(exist_ok=True)
-    (data_dir / "latest.json").write_text(
-        json.dumps(latest, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
+    payload = json.dumps(latest, ensure_ascii=False, indent=2)
+    (data_dir / "latest.json").write_text(payload, encoding="utf-8")
+
+    index = dest / "index.html"
+    html = index.read_text(encoding="utf-8")
+    seed = json.dumps(_dashboard_payload(latest), ensure_ascii=False, separators=(",", ":"))
+    seed = seed.replace("<", "\\u003c")
+    if SEED_MARK not in html:
+        raise RuntimeError("index.html missing seed placeholder")
+    index.write_text(html.replace(SEED_MARK, seed), encoding="utf-8")
     return dest
