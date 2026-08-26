@@ -116,12 +116,11 @@ def _reclassify(reports: list[dict]) -> list[dict]:
         rec["reason"] = info.get("reason") or rec.get("reason")
         rec.setdefault("source_kind", rec.get("source") or "web")
         rec["published_at"] = rec.get("published_at") or rec.get("created_at")
-        if not rec.get("engagement") or not rec.get("engagement_label"):
-            prev = rec.get("engagement") if isinstance(rec.get("engagement"), dict) else {}
-            rec["engagement"] = pack_engagement(
-                **merge_engagement(prev, parse_engagement_text(f"{rec.get('title') or ''}\n{rec.get('text') or ''}"))
-            )
-            rec["engagement_label"] = rec["engagement"].get("label")
+        prev = rec.get("engagement") if isinstance(rec.get("engagement"), dict) else {}
+        rec["engagement"] = pack_engagement(
+            **merge_engagement(prev, parse_engagement_text(f"{rec.get('title') or ''}\n{rec.get('text') or ''}"))
+        )
+        rec["engagement_label"] = rec["engagement"].get("label")
         out.append(rec)
     return out
 

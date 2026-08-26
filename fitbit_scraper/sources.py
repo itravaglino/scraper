@@ -274,7 +274,7 @@ def scrape_hn() -> list[dict]:
             {
                 "query": q["query"],
                 "hitsPerPage": "30",
-                "tags": "(story,comment)",
+                "tags": "story",
             }
         )
         url = f"https://hn.algolia.com/api/v1/search_by_date?{params}"
