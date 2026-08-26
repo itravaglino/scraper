@@ -30,6 +30,7 @@ from .config import (
     SEVERITY_MEDIUM,
 )
 from .models import detect_models
+from .relevance import is_fitbit_subject
 
 CATEGORY_LABELS_ES = {
     "bateria": "Batería",
@@ -150,12 +151,32 @@ def classify(
     source_scoped: bool = True,
     star_rating: int | None = None,
     lang_hint: str | None = None,
+    url: str = "",
 ) -> dict:
     text = f"{title or ''}\n{body or ''}"
     low = text.lower()
     title_low = (title or "").lower()
     models = detect_models(text)
     lang = detect_language(text, hint=lang_hint)
+
+    on_topic, topic_reason = is_fitbit_subject(
+        title, body, url, source_scoped=source_scoped
+    )
+    if not on_topic:
+        return {
+            "keep": False,
+            "models": models,
+            "categories": [],
+            "primary_category": None,
+            "severity": None,
+            "sentiment": "neutral",
+            "polarity": "revisar",
+            "polarity_label": POLARITY_LABELS_ES["revisar"],
+            "language": lang,
+            "language_label": LANG_LABELS_ES.get(lang, lang),
+            "badges": [],
+            "reason": topic_reason,
+        }
 
     cat_scores: dict[str, int] = {}
     for cat, words in CATEGORY_KEYWORDS.items():

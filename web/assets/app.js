@@ -29,6 +29,8 @@
   const state = {
     polarity: "mala",
     range: 30,
+    sev: "",
+    chartBy: "categoria",
   };
 
   function loadTriage() {
@@ -54,12 +56,34 @@
   }
 
   function fmtShort(iso, zone) {
-    if (!iso) return "sin fecha";
+    if (!iso) return "";
     const d = new Date(iso);
-    if (Number.isNaN(d.getTime())) return iso;
+    if (Number.isNaN(d.getTime())) return "";
     return new Intl.DateTimeFormat("es-AR", {
       timeZone: zone || "America/Buenos_Aires",
       dateStyle: "medium",
+    }).format(d);
+  }
+
+  function pubDate(iso, zone) {
+    const s = fmtShort(iso, zone);
+    return s ? `Publicado: ${s}` : "Fecha: n/d";
+  }
+
+  function impactLabel(obj) {
+    const label = obj && (obj.engagement_label || (obj.engagement && obj.engagement.label));
+    return label ? `Impacto: ${label}` : "Impacto: n/d";
+  }
+
+  function dayKey(iso, zone) {
+    if (!iso) return "sin fecha";
+    const d = new Date(iso);
+    if (Number.isNaN(d.getTime())) return "sin fecha";
+    return new Intl.DateTimeFormat("es-AR", {
+      timeZone: zone || "America/Buenos_Aires",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
     }).format(d);
   }
 
@@ -203,7 +227,7 @@
     const q = $("q").value.trim().toLowerCase();
     const model = $("f-model").value;
     const cat = $("f-cat").value;
-    const sev = $("f-sev").value;
+    const sev = state.sev;
     const rec = $("f-rec").value;
     const tri = $("f-triage").value;
     const kind = $("f-kind").value;
@@ -249,8 +273,9 @@
         const quotes = (c.quotes || [])
           .map((qt) => {
             const meta = [
+              pubDate(qt.created_at, zone),
+              impactLabel(qt),
               qt.source,
-              qt.created_at ? fmtShort(qt.created_at, zone) : "",
               qt.model,
               qt.language,
             ]
@@ -263,8 +288,9 @@
         const more = (c.reports || [])
           .map((r) => {
             const bits = [
+              pubDate(r.created_at || r.published_at, zone),
+              impactLabel(r),
               r.source,
-              r.created_at ? fmtShort(r.created_at, zone) : "",
               (r.models || [])[0],
               r.language_label || r.language,
             ]
@@ -289,6 +315,7 @@
           .join("");
         return `<article class="card ${escapeHtml(cardClass)}" data-id="${escapeHtml(c.id)}">
           <h3>${escapeHtml(c.title)}</h3>
+          <p class="case-meta">${escapeHtml(pubDate(c.last_report_at, zone))} · ${escapeHtml(impactLabel(c))} · ${c.count} reporte${c.count === 1 ? "" : "s"}</p>
           <div class="badges">
             ${polBadge}
             <span class="badge">${c.count} reporte${c.count === 1 ? "" : "s"}</span>
@@ -309,6 +336,8 @@
         </article>`;
       })
       .join("");
+
+    drawSevChart(filtered, zone);
   }
 
   let cached = null;
@@ -372,10 +401,103 @@
       });
   }
 
+  function setSev(sev) {
+    state.sev = sev || "";
+    [...$("f-sev").querySelectorAll("button")].forEach((b) => {
+      b.classList.toggle("on", (b.dataset.sev || "") === state.sev);
+    });
+  }
+
+  function chartBuckets(filtered, zone) {
+    const by = state.chartBy || "categoria";
+    const map = new Map();
+    for (const c of filtered) {
+      if ((c.polarity || "revisar") !== "mala") continue;
+      const reports = c.reports && c.reports.length ? c.reports : [c];
+      for (const r of reports) {
+        const sev = r.severity || c.severity || "baja";
+        if (!["alta", "media", "baja"].includes(sev)) continue;
+        let key;
+        if (by === "modelo") {
+          key = (r.models && r.models[0]) || (c.models || [])[0] || "Sin modelo";
+        } else if (by === "fuente") {
+          const k = r.source_kind || (c.source_kinds || [])[0] || "web";
+          key = KIND_ES[k] || k;
+        } else if (by === "tiempo") {
+          key = dayKey(r.created_at || r.published_at || c.last_report_at, zone);
+        } else {
+          key = c.category_label || "Otra";
+        }
+        if (!map.has(key)) map.set(key, { alta: 0, media: 0, baja: 0 });
+        map.get(key)[sev] += 1;
+      }
+    }
+    return [...map.entries()]
+      .map(([label, sevs]) => ({ label, ...sevs, total: sevs.alta + sevs.media + sevs.baja }))
+      .sort((a, b) => (state.chartBy === "tiempo" ? a.label.localeCompare(b.label) : b.total - a.total))
+      .slice(0, 12);
+  }
+
+  function drawSevChart(filtered, zone) {
+    const svg = $("sev-chart");
+    const empty = $("chart-empty");
+    const sub = $("chart-sub");
+    if (!svg) return;
+    const malaView = state.polarity === "mala";
+    const rows = malaView ? chartBuckets(filtered, zone) : [];
+    const labels = { categoria: "categoría", modelo: "modelo", fuente: "fuente", tiempo: "día" };
+    sub.textContent = malaView
+      ? `Barras apiladas Alta / Media / Baja por ${labels[state.chartBy] || "categoría"}. Respeta tiempo, modelo, fuente e idioma.`
+      : "La gravedad no se aplica a buenas noticias ni a Revisar. Abrí Casos negativos para ver el gráfico.";
+    empty.classList.toggle("hidden", malaView && rows.length > 0);
+    if (!malaView || !rows.length) {
+      svg.innerHTML = "";
+      return;
+    }
+    const W = 720;
+    const H = 280;
+    const padL = 42;
+    const padR = 12;
+    const padT = 16;
+    const padB = 64;
+    const max = Math.max(1, ...rows.map((r) => r.total));
+    const innerW = W - padL - padR;
+    const innerH = H - padT - padB;
+    const gap = 8;
+    const barW = Math.max(18, innerW / rows.length - gap);
+    const colors = { baja: "#7a9bb8", media: "#d4a017", alta: "#e07a6a" };
+    const ticks = 4;
+    let grid = "";
+    for (let i = 0; i <= ticks; i++) {
+      const val = Math.round((max * (ticks - i)) / ticks);
+      const y = padT + (innerH * i) / ticks;
+      grid += `<line x1="${padL}" x2="${W - padR}" y1="${y}" y2="${y}" stroke="rgba(236,231,220,0.12)"/>`;
+      grid += `<text x="${padL - 6}" y="${y + 4}" text-anchor="end" fill="#9a9488" font-size="11">${val}</text>`;
+    }
+    let bars = "";
+    rows.forEach((row, i) => {
+      const x = padL + i * (barW + gap) + gap / 2;
+      let y = padT + innerH;
+      for (const sev of ["baja", "media", "alta"]) {
+        const h = (row[sev] / max) * innerH;
+        if (h <= 0) continue;
+        y -= h;
+        bars += `<rect x="${x}" y="${y}" width="${barW}" height="${h}" fill="${colors[sev]}"><title>${escapeHtml(row.label)} · ${sev} ${row[sev]}</title></rect>`;
+      }
+      const lbl = row.label.length > 14 ? row.label.slice(0, 13) + "…" : row.label;
+      bars += `<text x="${x + barW / 2}" y="${H - 10}" text-anchor="end" transform="rotate(-32 ${x + barW / 2} ${H - 10})" fill="#9a9488" font-size="11">${escapeHtml(lbl)}</text>`;
+    });
+    svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+    svg.innerHTML = grid + bars;
+  }
+
   function bind() {
-    ["q", "f-model", "f-cat", "f-sev", "f-rec", "f-triage", "f-kind", "f-lang"].forEach((id) => {
+    ["q", "f-model", "f-cat", "f-rec", "f-triage", "f-kind", "f-lang", "f-chart"].forEach((id) => {
       $(id).addEventListener("input", () => cached && render(cached));
-      $(id).addEventListener("change", () => cached && render(cached));
+      $(id).addEventListener("change", () => {
+        if (id === "f-chart") state.chartBy = $("f-chart").value;
+        if (cached) render(cached);
+      });
     });
     document.querySelectorAll(".polarity-tabs .tab").forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -391,13 +513,19 @@
       [...$("f-range").querySelectorAll("button")].forEach((b) => b.classList.toggle("on", b === btn));
       if (cached) render(cached);
     });
+    $("f-sev").addEventListener("click", (ev) => {
+      const btn = ev.target.closest("button[data-sev]");
+      if (!btn) return;
+      setSev(btn.dataset.sev);
+      if (cached) render(cached);
+    });
     $("kpis").addEventListener("click", (ev) => {
       const btn = ev.target.closest("[data-kpi]");
       if (!btn) return;
       const key = btn.dataset.kpi;
       if (key === "alta") {
         state.polarity = "mala";
-        $("f-sev").value = "alta";
+        setSev("alta");
       } else if (key === "mala" || key === "buena" || key === "revisar") {
         state.polarity = key;
       }

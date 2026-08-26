@@ -19,6 +19,7 @@ from zoneinfo import ZoneInfo
 from .classify import classify
 from .cluster import cluster_reports
 from .config import GITHUB_REPO, GITHUB_WORKFLOW_FILE, HISTORY_KEEP_DAYS, TIMEZONE
+from .engagement import merge_engagement, pack_engagement, parse_engagement_text
 from .generate_site import generate_site
 from .sources import scrape_all
 from .textutil import normalize
@@ -75,17 +76,32 @@ def _dedupe(reports: list[dict]) -> list[dict]:
     return [by_url[k] for k in ordered]
 
 
+def _community_scoped(report: dict) -> bool:
+    label = (report.get("source_label") or "").lower()
+    kind = report.get("source_kind") or report.get("source")
+    if kind == "itunes":
+        return True
+    if "r/fitbit" in label:
+        return True
+    if "googlepixelwatch" in label:
+        return True
+    return False
+
+
 def _reclassify(reports: list[dict]) -> list[dict]:
-    """Backfill polarity / language / severity on stored reports (skip-fetch)."""
+    """Backfill polarity / language / severity and drop off-topic rows."""
     out = []
     for r in reports:
         info = classify(
             r.get("title") or "",
             r.get("text") or "",
-            source_scoped=True,
+            source_scoped=_community_scoped(r),
             star_rating=r.get("star_rating"),
             lang_hint=r.get("language") if r.get("language") not in {None, "", "und"} else None,
+            url=r.get("url") or "",
         )
+        if not info["keep"]:
+            continue
         rec = dict(r)
         rec["models"] = info["models"] or rec.get("models") or []
         rec["categories"] = info["categories"] or rec.get("categories") or []
@@ -99,6 +115,13 @@ def _reclassify(reports: list[dict]) -> list[dict]:
         rec["badges"] = info.get("badges") or []
         rec["reason"] = info.get("reason") or rec.get("reason")
         rec.setdefault("source_kind", rec.get("source") or "web")
+        rec["published_at"] = rec.get("published_at") or rec.get("created_at")
+        if not rec.get("engagement") or not rec.get("engagement_label"):
+            prev = rec.get("engagement") if isinstance(rec.get("engagement"), dict) else {}
+            rec["engagement"] = pack_engagement(
+                **merge_engagement(prev, parse_engagement_text(f"{rec.get('title') or ''}\n{rec.get('text') or ''}"))
+            )
+            rec["engagement_label"] = rec["engagement"].get("label")
         out.append(rec)
     return out
 
@@ -147,7 +170,8 @@ def _summarize(reports: list[dict], clusters: list[dict]) -> dict:
 def _write_csv(reports: list[dict], path: Path) -> None:
     fields = [
         "id", "created_at", "source", "source_kind", "source_label", "models", "primary_category",
-        "polarity", "severity", "sentiment", "language", "star_rating", "title", "url",
+        "polarity", "severity", "sentiment", "language", "star_rating",
+        "engagement_label", "title", "url",
     ]
     with path.open("w", encoding="utf-8", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=fields)

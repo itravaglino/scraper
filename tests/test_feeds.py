@@ -28,6 +28,8 @@ class FeedTests(unittest.TestCase):
         self.assertIn("reddit.com", items[0]["url"])
         self.assertIn("Apple Health", items[0]["text"])
         self.assertTrue(items[0]["created_at"].startswith("2026-08-26"))
+        self.assertIn("engagement", items[0])
+        self.assertIsNone(items[0]["engagement"]["score"])
 
     def test_strip_html(self):
         self.assertEqual(strip_html("<div>Hola <b>Fitbit</b></div>"), "Hola Fitbit")

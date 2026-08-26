@@ -16,9 +16,10 @@ from .config import (
     REDDIT_FEEDS,
     SOCIAL_SEARCH_FEEDS,
 )
+from .engagement import merge_engagement, pack_engagement, parse_engagement_text
 from .feeds import parse_feed
 from .httputil import fetch_text
-from .textutil import sha1, strip_html
+from .textutil import parse_datetime, sha1, strip_html
 
 log = logging.getLogger("fitbit_scraper.sources")
 
@@ -59,6 +60,7 @@ def _report(
     source_scoped: bool = True,
     source_kind: str = "web",
     lang_hint: str | None = None,
+    engagement: dict | None = None,
     meta: dict | None = None,
 ) -> dict | None:
     info = classify(
@@ -67,11 +69,14 @@ def _report(
         source_scoped=source_scoped,
         star_rating=star_rating,
         lang_hint=lang_hint,
+        url=url,
     )
     if not info["keep"]:
         return None
     kind = infer_source_kind(url, title, source_kind)
     rid = sha1(source, extra_id or url, title)
+    text_eng = parse_engagement_text(f"{title}\n{text}")
+    eng = pack_engagement(**merge_engagement(engagement, text_eng))
     return {
         "id": rid,
         "source": source,
@@ -81,6 +86,7 @@ def _report(
         "title": (title or "")[:240],
         "text": (text or "")[:1800],
         "created_at": created_at,
+        "published_at": created_at,
         "author": (author or "")[:80],
         "models": info["models"],
         "categories": info["categories"],
@@ -93,6 +99,8 @@ def _report(
         "language_label": info.get("language_label"),
         "badges": info.get("badges") or [],
         "star_rating": star_rating,
+        "engagement": eng,
+        "engagement_label": eng.get("label"),
         "reason": info["reason"],
         "meta": meta or {},
     }
@@ -163,6 +171,7 @@ def _scrape_rss_collection(feeds: list[dict], default_source: str, default_kind:
                     source_scoped=scoped,
                     source_kind=kind,
                     lang_hint=lang_hint,
+                    engagement=item.get("engagement"),
                 )
                 if rec:
                     kept.append(rec)
@@ -241,7 +250,7 @@ def scrape_itunes() -> list[dict]:
                         url=link or url,
                         title=title,
                         text=body,
-                        created_at=_itunes_label(entry, "updated") or None,
+                        created_at=parse_datetime(_itunes_label(entry, "updated")) or _itunes_label(entry, "updated") or None,
                         author=author,
                         extra_id=_itunes_label(entry, "id"),
                         star_rating=rating,
@@ -295,6 +304,10 @@ def scrape_hn() -> list[dict]:
                     source_scoped=False,
                     source_kind="hackernews",
                     lang_hint=q.get("lang") or "en",
+                    engagement={
+                        "score": hit.get("points"),
+                        "comments": hit.get("num_comments"),
+                    },
                 )
                 if rec:
                     kept.append(rec)
