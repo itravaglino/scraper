@@ -4,30 +4,31 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <base href="./">
-  <title>Panel Fitbit · casos y noticias</title>
-  <meta name="description" content="Tablero diario de casos negativos y buenas noticias públicas sobre productos Fitbit.">
+  <title>Panel Fitbit · operaciones de producto</title>
+  <meta name="description" content="Consola de operaciones: casos negativos y buenas noticias públicas sobre productos Fitbit.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='12' width='64' height='64' fill='%230f1419'/%3E%3Ccircle cx='32' cy='32' r='14' fill='none' stroke='%23c4a574' stroke-width='6'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="assets/style.css">
 </head>
-<body data-repo="itravaglino/scraper" data-workflow="daily.yml">
+<body data-repo="itravaglino/scraper" data-workflow="daily.yml" class="is-loading">
   <div class="page">
     <header class="mast">
       <div>
-        <p class="kicker">Investigación pública · productos Fitbit</p>
-        <h1>Casos y señales de mercado</h1>
+        <p class="kicker">Operaciones de producto · Fitbit</p>
+        <h1>Señales públicas</h1>
         <p class="lede">
-          Separa <strong>malas noticias</strong> (fallas, recalls, quejas) de
-          <strong>buenas noticias</strong> (elogios, arreglos). Cada grupo es un
-          caso: un modelo × un tema, no un cajón de “gravedad media”.
+          Casos agrupados por <strong>modelo × tema × polaridad</strong>.
+          La gravedad solo aplica a malas noticias. Fechas en
+          <strong>America/Buenos_Aires</strong>. Ventana de scrape
+          <strong>__WINDOW_DAYS__ días</strong> (el filtro Mes no mezcla décadas).
         </p>
       </div>
-      <aside class="run-card" aria-label="Ejecutar scrape">
+      <aside class="run-card" aria-label="Estado de la corrida">
         <div class="run-card-top">
           <span class="pulse" aria-hidden="true"></span>
           <div>
-            <div class="meta-label">Últimos datos en el tablero</div>
-            <time id="run-stamp">Cargando…</time>
-            <div class="meta-sub" id="run-zone">America/Buenos_Aires</div>
+            <div class="meta-label">Última corrida (ART)</div>
+            <time id="run-stamp" datetime="__GENERATED_AT__">__STAMP_TEXT__</time>
+            <div class="meta-sub" id="run-zone">America/Buenos_Aires · ventana __WINDOW_DAYS__ días</div>
           </div>
         </div>
         <p class="run-actions-status" id="actions-status">Consultando GitHub Actions…</p>
@@ -42,80 +43,92 @@
           <button type="button" class="btn-ghost" id="btn-refresh">Actualizar datos</button>
         </div>
         <p class="run-help" id="run-help">
-          Un clic abre Actions. Ahí tocá <b>Run workflow</b> → <b>Run workflow</b>.
-          No hay token en esta página. El panel se refresca solo cuando termina el deploy.
+          <b>Ejecutar ahora</b> abre Actions (sin token en esta página).
+          Confirmá <b>Run workflow</b>. El tablero cambia cuando Pages despliega.
         </p>
       </aside>
     </header>
 
-    <section class="kpis" id="kpis" aria-label="Resumen"></section>
-
-    <nav class="polarity-tabs" aria-label="Polaridad">
-      <button type="button" class="tab on" data-polarity="mala" id="tab-mala">Casos negativos</button>
-      <button type="button" class="tab" data-polarity="buena" id="tab-buena">Buenas noticias</button>
-      <button type="button" class="tab" data-polarity="revisar" id="tab-revisar">Revisar</button>
-    </nav>
-
-    <section class="toolbar" aria-label="Filtros">
-      <div class="seg" role="group" aria-label="Ventana de tiempo">
-        <span class="seg-label">Tiempo</span>
-        <div class="seg-opts" id="f-range">
-          <button type="button" data-range="1">Día</button>
-          <button type="button" data-range="7">Semana</button>
-          <button type="button" data-range="30" class="on">Mes</button>
-          <button type="button" data-range="90">Trimestre</button>
-          <button type="button" data-range="365">Año</button>
-          <button type="button" data-range="all">Todo</button>
-        </div>
-      </div>
-      <div class="seg" id="sev-wrap" role="group" aria-label="Gravedad">
-        <span class="seg-label">Gravedad</span>
-        <div class="seg-opts" id="f-sev">
-          <button type="button" data-sev="" class="on">Todas</button>
-          <button type="button" data-sev="alta">Alta</button>
-          <button type="button" data-sev="media">Media</button>
-          <button type="button" data-sev="baja">Baja</button>
-        </div>
-      </div>
-      <label class="search">
-        <span>Buscar</span>
-        <input id="q" type="search" placeholder="batería, Sense 2, sincronización…" autocomplete="off">
-      </label>
-      <label>
-        <span>Modelo</span>
-        <select id="f-model"><option value="">Todos</option></select>
-      </label>
-      <label>
-        <span>Categoría</span>
-        <select id="f-cat"><option value="">Todas</option></select>
-      </label>
-      <label>
-        <span>Fuente</span>
-        <select id="f-kind"><option value="">Todas</option></select>
-      </label>
-      <label>
-        <span>Idioma</span>
-        <select id="f-lang"><option value="">Todos</option></select>
-      </label>
-      <label>
-        <span>Estado</span>
-        <select id="f-rec">
-          <option value="">Nuevos y recurrentes</option>
-          <option value="new">Solo nuevos</option>
-          <option value="recurring">Solo recurrentes</option>
-        </select>
-      </label>
-      <label>
-        <span>Mi veredicto</span>
-        <select id="f-triage">
-          <option value="">Todos</option>
-          <option value="unset">Sin marcar</option>
-          <option value="real">Parece real</option>
-          <option value="check">Hay que verificar</option>
-          <option value="discard">Descartar</option>
-        </select>
-      </label>
+    <section class="ops-strip" id="ops-strip" aria-label="Salud de fuentes">
+      <span>Cargando salud de fuentes…</span>
     </section>
+
+    <section class="kpis" id="kpis" aria-label="Indicadores">
+      <p class="kpi-defs">Cargando indicadores del período…</p>
+    </section>
+
+    <div class="sticky-filters" id="sticky-filters">
+      <nav class="polarity-tabs" role="tablist" aria-label="Polaridad">
+        <button type="button" class="tab on" role="tab" aria-selected="true" aria-pressed="true" data-polarity="mala" id="tab-mala">Casos negativos</button>
+        <button type="button" class="tab" role="tab" aria-selected="false" aria-pressed="false" data-polarity="buena" id="tab-buena">Buenas noticias</button>
+        <button type="button" class="tab" role="tab" aria-selected="false" aria-pressed="false" data-polarity="revisar" id="tab-revisar">Revisar</button>
+      </nav>
+
+      <section class="toolbar" aria-label="Filtros">
+        <div class="seg" role="group" aria-label="Ventana de tiempo">
+          <span class="seg-label">Tiempo</span>
+          <div class="seg-opts" id="f-range">
+            <button type="button" data-range="1">Día</button>
+            <button type="button" data-range="7">Semana</button>
+            <button type="button" data-range="30" class="on" aria-pressed="true">Mes</button>
+            <button type="button" data-range="90">Trimestre</button>
+            <button type="button" data-range="365">Año</button>
+            <button type="button" data-range="all">Todo</button>
+          </div>
+        </div>
+        <div class="seg" id="sev-wrap" role="group" aria-label="Gravedad">
+          <span class="seg-label">Gravedad</span>
+          <div class="seg-opts" id="f-sev">
+            <button type="button" data-sev="" class="on" aria-pressed="true">Todas</button>
+            <button type="button" data-sev="alta">Alta</button>
+            <button type="button" data-sev="media">Media</button>
+            <button type="button" data-sev="baja">Baja</button>
+          </div>
+        </div>
+        <label class="search">
+          <span>Buscar</span>
+          <input id="q" type="search" placeholder="batería, Sense 2, sincronización…" autocomplete="off">
+        </label>
+        <label>
+          <span>Modelo</span>
+          <select id="f-model"><option value="">Todos</option></select>
+        </label>
+        <label>
+          <span>Categoría</span>
+          <select id="f-cat"><option value="">Todas</option></select>
+        </label>
+        <label>
+          <span>Fuente</span>
+          <select id="f-kind"><option value="">Todas</option></select>
+        </label>
+        <label>
+          <span>Idioma</span>
+          <select id="f-lang"><option value="">Todos</option></select>
+        </label>
+        <label>
+          <span>Estado</span>
+          <select id="f-rec">
+            <option value="">Nuevos y recurrentes</option>
+            <option value="new">Solo nuevos</option>
+            <option value="recurring">Solo recurrentes</option>
+          </select>
+        </label>
+        <label>
+          <span>Mi veredicto</span>
+          <select id="f-triage">
+            <option value="">Todos</option>
+            <option value="unset">Sin marcar</option>
+            <option value="real">Parece real</option>
+            <option value="check">Hay que verificar</option>
+            <option value="discard">Descartar</option>
+          </select>
+        </label>
+        <div class="toolbar-actions">
+          <button type="button" class="btn-ghost" id="btn-export">Exportar CSV</button>
+          <button type="button" class="btn-ghost" id="btn-copy-view">Copiar vista</button>
+        </div>
+      </section>
+    </div>
 
     <section class="layout">
       <aside class="side">
@@ -123,20 +136,26 @@
         <ol id="model-bars" class="bars"></ol>
         <h2>Fuentes de esta corrida</h2>
         <p class="source-summary" id="source-summary"></p>
-        <ul id="source-list" class="sources"></ul>
+        <details class="ops-details">
+          <summary>Detalle por fuente</summary>
+          <ul id="source-list" class="sources"></ul>
+        </details>
         <p class="hint">
-          Las marcas «parece real / verificar» se guardan solo en este navegador.
-          Gravedad alta/media/baja aplica únicamente a casos negativos.
+          <b>limitado</b> = la fuente devolvió HTTP 429 (Reddit u otra).
+          Se omitió esa consulta; el resto de la corrida sigue.
+          Veredictos se guardan solo en este navegador.
         </p>
         <p><a class="dl" href="data/latest.json" download>Descargar JSON</a></p>
       </aside>
       <main>
         <div class="list-head">
           <h2 id="list-title">Casos negativos</h2>
-          <p id="list-count"></p>
+          <p id="list-count">Cargando vista Mes…</p>
         </div>
-        <div id="clusters" class="clusters"></div>
-        <p id="empty" class="empty hidden">
+        <div id="clusters" class="clusters" aria-busy="true" aria-live="polite">
+          <!--STATIC_CASES-->
+        </div>
+        <p id="empty" class="empty" hidden>
           No hay casos en esta vista con los filtros actuales.
         </p>
       </main>
@@ -146,7 +165,7 @@
       <div class="chart-head">
         <div>
           <h2>Casos negativos por gravedad</h2>
-          <p class="chart-sub" id="chart-sub">Barras apiladas Alta / Media / Baja. Respeta los filtros de arriba.</p>
+          <p class="chart-sub" id="chart-sub">Barras apiladas Alta / Media / Baja. Respeta los filtros.</p>
         </div>
         <label class="chart-dim">
           <span>Agrupar por</span>
@@ -165,7 +184,14 @@
       </div>
       <div class="chart-frame">
         <svg id="sev-chart" viewBox="0 0 760 420" role="img" aria-label="Gráfico de gravedad"></svg>
-        <p id="chart-empty" class="chart-empty hidden">El gráfico de gravedad aplica a casos negativos. Cambiá a esa pestaña o ampliá el período.</p>
+        <p id="chart-empty" class="chart-empty" hidden>El gráfico de gravedad aplica a casos negativos. Abrí esa pestaña o ampliá el período.</p>
+      </div>
+      <div class="chart-table-wrap">
+        <table id="chart-table" class="chart-table">
+          <caption>Misma información que el gráfico (accesible con teclado y lectores de pantalla).</caption>
+          <thead><tr><th>Grupo</th><th>Alta</th><th>Media</th><th>Baja</th><th>Total</th></tr></thead>
+          <tbody></tbody>
+        </table>
       </div>
     </section>
 
@@ -185,6 +211,7 @@
     </footer>
   </div>
   <script>window.FITBIT_SEED={"__SEED__":true};</script>
+  <script src="assets/ops.js"></script>
   <script src="assets/app.js"></script>
 </body>
 </html>

@@ -31,7 +31,18 @@
     range: 30,
     sev: "",
     chartBy: "categoria",
+    model: "",
+    q: "",
+    cat: "",
+    kind: "",
+    lang: "",
+    rec: "",
+    triage: "",
   };
+
+  const Ops = window.FitbitOps || {};
+  let lastFiltered = [];
+  let loaded = false;
 
   function loadTriage() {
     try {
@@ -110,6 +121,7 @@
   }
 
   function inRange(iso, rangeDays) {
+    if (Ops.inRange) return Ops.inRange(iso, rangeDays, Date.now());
     if (rangeDays == null) return !!iso && !Number.isNaN(Date.parse(iso));
     if (!iso) return false;
     const t = Date.parse(iso);
@@ -166,21 +178,20 @@
       counts[p] = (counts[p] || 0) + (c.count || 0);
       if (p === "mala" && c.severity === "alta") alta.n += c.count || 0;
     }
-    // Prefer report-level polarity counts when the payload still has summary.
-    const pol = summary.by_polarity || {};
     const kpis = [
-      [counts.mala || pol.mala || 0, "Malas noticias", "mala"],
-      [counts.buena || pol.buena || 0, "Buenas noticias", "buena"],
-      [counts.revisar || pol.revisar || 0, "Para revisar", "revisar"],
-      [alta.n || summary.by_severity?.alta || 0, "Gravedad alta (malas)", "alta"],
+      [counts.mala, "Malas noticias", "mala", "Reportes negativos en la ventana de tiempo. No incluye elogios ni arreglos."],
+      [counts.buena, "Buenas noticias", "buena", "Elogios, parches y arreglos en la misma ventana."],
+      [counts.revisar, "Para revisar", "revisar", "Casos mixtos o ambiguos. No se les asigna gravedad."],
+      [alta.n, "Gravedad alta (malas)", "alta", "Subconjunto de malas con señales de brick, recall, sobrecalentamiento o pérdida de datos."],
     ];
     $("kpis").innerHTML = kpis
       .map(
-        ([n, label, key]) =>
-          `<button type="button" class="kpi ${key} ${state.polarity === key ? "on" : ""}" data-kpi="${key}">
+        ([n, label, key, tip]) =>
+          `<button type="button" class="kpi ${key} ${state.polarity === key || (key === "alta" && state.sev === "alta") ? "on" : ""}" data-kpi="${key}" title="${escapeHtml(tip)}">
             <b>${n}</b><span>${label}</span></button>`
       )
-      .join("");
+      .join("") +
+      `<p class="kpi-defs">Los números respetan el filtro de tiempo. Mes = últimos 30 días de <em>fecha del ítem</em>, no de la corrida. Gravedad solo en malas.</p>`;
 
     $("sev-wrap").classList.toggle("hidden", state.polarity !== "mala");
 
@@ -204,6 +215,20 @@
     fillSelect($("f-cat"), cats);
     fillSelect($("f-kind"), kinds, KIND_ES);
     fillSelect($("f-lang"), langs, langLabels);
+    const applySel = (id, key) => {
+      const el = $(id);
+      if (!el) return;
+      if ([...el.options].some((o) => o.value === state[key])) el.value = state[key];
+      else state[key] = el.value || "";
+    };
+    applySel("f-model", "model");
+    applySel("f-cat", "cat");
+    applySel("f-kind", "kind");
+    applySel("f-lang", "lang");
+    if ($("q") && document.activeElement !== $("q")) $("q").value = state.q || "";
+    if ($("f-rec")) $("f-rec").value = state.rec || "";
+    if ($("f-triage")) $("f-triage").value = state.triage || "";
+    if ($("f-chart")) $("f-chart").value = state.chartBy || "categoria";
 
     const maxModel = Math.max(1, ...Object.values(summary.by_model || { x: 1 }));
     $("model-bars").innerHTML = Object.entries(summary.by_model || {})
@@ -214,7 +239,32 @@
       )
       .join("");
 
-    $("source-list").innerHTML = (data.sources || [])
+    const src = data.sources || [];
+    const nOk = src.filter((s) => s.ok).length;
+    const nLim = src.filter((s) => {
+      const err = String(s.error || "");
+      return !s.ok && (/429|límite de peticiones|limitado|omitida:/i.test(err) || s.state === "skip");
+    }).length;
+    const nErr = src.filter((s) => !s.ok && s.state === "error").length;
+    const latencies = src.map((s) => s.latency_ms).filter((n) => typeof n === "number");
+    const p50 = latencies.length
+      ? latencies.slice().sort((a, b) => a - b)[Math.floor(latencies.length / 2)]
+      : null;
+    const ops = $("ops-strip");
+    if (ops) {
+      ops.innerHTML = `
+        <span class="ops-chip ok"><i class="ops-dot"></i>${nOk} ok</span>
+        <span class="ops-chip skip"><i class="ops-dot"></i>${nLim} limitado</span>
+        <span class="ops-chip bad"><i class="ops-dot"></i>${nErr} error</span>
+        <span>ventana scrape ${data.scrape_window_days || "—"} d</span>
+        <span>${escapeHtml(zone)}</span>
+        <span>latencia mediana ${p50 == null ? "n/d" : p50 + " ms"}</span>`;
+    }
+    const sumEl = $("source-summary");
+    if (sumEl) {
+      sumEl.textContent = `${nOk} ok · ${nLim} limitada${nLim === 1 ? "" : "s"} · ${nErr} error${nErr === 1 ? "" : "es"}`;
+    }
+    $("source-list").innerHTML = src
       .map((s) => {
         const err = String(s.error || "");
         const limited = /429|límite de peticiones|limitado|omitida:/i.test(err);
@@ -230,31 +280,28 @@
           st = "omitida";
           cls = "skip";
         }
-        const detail = s.ok ? `${s.kept}/${s.fetched}` : err || st;
+        const ms = typeof s.latency_ms === "number" ? ` · ${s.latency_ms} ms` : "";
+        const detail = (s.ok ? `${s.kept}/${s.fetched}` : err || st) + ms;
         const kind = KIND_ES[s.kind] ? ` · ${KIND_ES[s.kind]}` : "";
         return `<li><span><span class="pill ${cls}">${escapeHtml(st)}</span>${escapeHtml((s.label || s.id) + kind)}</span><span class="${cls}">${escapeHtml(String(detail))}</span></li>`;
       })
       .join("");
-    const src = data.sources || [];
-    const nOk = src.filter((s) => s.ok).length;
-    const nLim = src.filter((s) => {
-      const err = String(s.error || "");
-      return !s.ok && (/429|límite de peticiones|limitado|omitida:/i.test(err) || s.state === "skip");
-    }).length;
-    const nErr = src.filter((s) => !s.ok && s.state === "error").length;
-    const sumEl = $("source-summary");
-    if (sumEl) {
-      sumEl.textContent = `${nOk} ok · ${nLim} limitada${nLim === 1 ? "" : "s"} · ${nErr} error${nErr === 1 ? "" : "es"}`;
-    }
 
-    const q = $("q").value.trim().toLowerCase();
-    const model = $("f-model").value;
-    const cat = $("f-cat").value;
+    const q = ($("q") ? $("q").value : state.q || "").trim().toLowerCase();
+    state.q = $("q") ? $("q").value : state.q;
+    const model = $("f-model") ? $("f-model").value : state.model;
+    const cat = $("f-cat") ? $("f-cat").value : state.cat;
     const sev = state.sev;
-    const rec = $("f-rec").value;
-    const tri = $("f-triage").value;
-    const kind = $("f-kind").value;
-    const lang = $("f-lang").value;
+    const rec = $("f-rec") ? $("f-rec").value : state.rec;
+    const tri = $("f-triage") ? $("f-triage").value : state.triage;
+    const kind = $("f-kind") ? $("f-kind").value : state.kind;
+    const lang = $("f-lang") ? $("f-lang").value : state.lang;
+    state.model = model;
+    state.cat = cat;
+    state.kind = kind;
+    state.lang = lang;
+    state.rec = rec;
+    state.triage = tri;
 
     const filtered = inTime.filter((c) => {
       if ((c.polarity || "revisar") !== state.polarity) return false;
@@ -283,12 +330,20 @@
       return true;
     });
 
+    lastFiltered = filtered;
     $("list-title").textContent = POL_TITLE[state.polarity];
     const rangeTxt = RANGE_LABEL[state.range] || "mes";
-    $("list-count").textContent = `${filtered.length} casos · filtro ${rangeTxt} · ${inTime.length} grupos en el período`;
-    $("empty").classList.toggle("hidden", filtered.length > 0);
-    $("empty").textContent =
-      "No hay casos en esta vista con los filtros actuales. Probá otro período, otra pestaña (Buenas / Revisar) o limpiá la búsqueda.";
+    $("list-count").textContent = `${filtered.length} casos · ${rangeTxt} · ${inTime.length} grupos en el período · ventana scrape ${data.scrape_window_days || "—"} d`;
+    const empty = $("empty");
+    if (empty) {
+      empty.hidden = !loaded || filtered.length > 0;
+      if (loaded && !filtered.length) {
+        empty.textContent = inTime.length
+          ? `No hay ${POL_TITLE[state.polarity].toLowerCase()} con estos filtros en ${rangeTxt}. Probá otro período o limpiá la búsqueda.`
+          : `No hay casos fechados en ${rangeTxt}. La corrida guarda ${data.scrape_window_days || 90} días; el filtro Mes no incluye recalls viejos.`;
+      }
+    }
+    $("clusters").setAttribute("aria-busy", loaded ? "false" : "true");
 
     $("clusters").innerHTML = filtered
       .map((c) => {
@@ -351,9 +406,9 @@
           ${quotes}
           <details class="more"><summary>Enlaces a la fuente (${(c.reports || []).length})</summary>${more}</details>
           <div class="triage">
-            <button data-status="real" class="${t.status === "real" ? "on" : ""}">Parece real</button>
-            <button data-status="check" class="${t.status === "check" ? "on" : ""}">Hay que verificar</button>
-            <button data-status="discard" class="${t.status === "discard" ? "on" : ""}">Descartar</button>
+            <button type="button" data-status="real" class="${t.status === "real" ? "on" : ""}">Parece real</button>
+            <button type="button" data-status="check" class="${t.status === "check" ? "on" : ""}">Hay que verificar</button>
+            <button type="button" data-status="discard" class="${t.status === "discard" ? "on" : ""}">Descartar</button>
             <input data-note placeholder="Nota privada en este navegador" value="${escapeHtml(t.note || "")}">
           </div>
         </article>`;
@@ -361,12 +416,70 @@
       .join("");
 
     drawSevChart(filtered, zone);
+    syncUrl();
   }
 
   let cached = null;
 
+  function applyUrl() {
+    if (!Ops.parseState) return;
+    const parsed = Ops.parseState(location.search || location.hash || "");
+    Object.assign(state, parsed);
+  }
+
+  function syncUrl() {
+    if (!Ops.serializeState || !loaded) return;
+    const qs = Ops.serializeState(state);
+    const next = location.pathname + (qs ? "?" + qs : "");
+    if (next !== location.pathname + location.search) {
+      history.replaceState(null, "", next);
+    }
+    document.querySelectorAll(".polarity-tabs .tab").forEach((b) => {
+      const on = b.dataset.polarity === state.polarity;
+      b.classList.toggle("on", on);
+      b.setAttribute("aria-selected", on ? "true" : "false");
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+    [...$("f-range").querySelectorAll("button")].forEach((b) => {
+      const on = String(b.dataset.range) === String(state.range);
+      b.classList.toggle("on", on);
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+    setSev(state.sev);
+  }
+
+  function exportCsv() {
+    const csv = Ops.clustersToCsv ? Ops.clustersToCsv(lastFiltered) : "";
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "fitbit-casos.csv";
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }
+
+  function copyView() {
+    const url = `${location.origin}${location.pathname}?${Ops.serializeState ? Ops.serializeState(state) : ""}`;
+    const done = () => {
+      const btn = $("btn-copy-view");
+      if (!btn) return;
+      const prev = btn.textContent;
+      btn.textContent = "Vista copiada";
+      setTimeout(() => {
+        btn.textContent = prev;
+      }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(done).catch(done);
+    } else {
+      done();
+    }
+  }
+
   function applyData(data) {
     cached = data;
+    loaded = true;
+    document.body.classList.remove("is-loading");
     render(data);
   }
 
@@ -379,6 +492,7 @@
   }
 
   function boot() {
+    applyUrl();
     const seed = window.FITBIT_SEED;
     const usable = seed && !seed.__SEED__ && (seed.clusters || seed.reports);
     if (usable) applyData(seed);
@@ -386,12 +500,17 @@
       .then((data) => applyData(data))
       .catch((err) => {
         if (cached) return;
+        document.body.classList.remove("is-loading");
+        loaded = true;
         $("run-stamp").textContent = "No se pudo cargar data/latest.json";
-        $("empty").classList.remove("hidden");
-        $("empty").textContent =
+        const empty = $("empty");
+        empty.hidden = false;
+        empty.textContent =
           "El tablero no encontró datos. Ejecutá python3 run.py o usá Ejecutar ahora. (" +
           err.message +
           ")";
+        $("clusters").innerHTML = "";
+        $("clusters").setAttribute("aria-busy", "false");
       });
   }
 
@@ -427,7 +546,9 @@
   function setSev(sev) {
     state.sev = sev || "";
     [...$("f-sev").querySelectorAll("button")].forEach((b) => {
-      b.classList.toggle("on", (b.dataset.sev || "") === state.sev);
+      const on = (b.dataset.sev || "") === state.sev;
+      b.classList.toggle("on", on);
+      b.setAttribute("aria-pressed", on ? "true" : "false");
     });
   }
 
@@ -461,6 +582,27 @@
       .slice(0, 12);
   }
 
+  function fillChartTable(rows, malaView) {
+    const table = $("chart-table");
+    if (!table) return;
+    const body = table.querySelector("tbody");
+    if (!body) return;
+    if (!malaView) {
+      body.innerHTML = `<tr><td colspan="5">La gravedad no aplica a buenas noticias ni a Revisar.</td></tr>`;
+      return;
+    }
+    if (!rows.length) {
+      body.innerHTML = `<tr><td colspan="5">Sin casos negativos en esta vista.</td></tr>`;
+      return;
+    }
+    body.innerHTML = rows
+      .map(
+        (r) =>
+          `<tr><th scope="row">${escapeHtml(r.label)}</th><td>${r.alta}</td><td>${r.media}</td><td>${r.baja}</td><td>${r.total}</td></tr>`
+      )
+      .join("");
+  }
+
   function wrapAxisLabel(text, max = 16) {
     const s = String(text || "").trim();
     if (s.length <= max) return [s];
@@ -483,7 +625,8 @@
     sub.textContent = malaView
       ? `Barras apiladas Alta / Media / Baja por ${labels[state.chartBy] || "categoría"}. Respeta tiempo, modelo, fuente e idioma.`
       : "La gravedad no se aplica a buenas noticias ni a Revisar. Abrí Casos negativos para ver el gráfico.";
-    empty.classList.toggle("hidden", malaView && rows.length > 0);
+    if (empty) empty.hidden = !!(malaView && rows.length > 0);
+    fillChartTable(rows, malaView);
     if (!malaView || !rows.length) {
       svg.innerHTML = "";
       return;
@@ -547,6 +690,25 @@
         if (cached) render(cached);
       });
     });
+    const tablist = document.querySelector(".polarity-tabs");
+    if (tablist) {
+      tablist.addEventListener("keydown", (ev) => {
+        const tabs = [...tablist.querySelectorAll("[role='tab']")];
+        const i = tabs.indexOf(document.activeElement);
+        if (i < 0) return;
+        if (ev.key !== "ArrowRight" && ev.key !== "ArrowLeft" && ev.key !== "Home" && ev.key !== "End") {
+          return;
+        }
+        ev.preventDefault();
+        let next = i;
+        if (ev.key === "ArrowRight") next = (i + 1) % tabs.length;
+        if (ev.key === "ArrowLeft") next = (i - 1 + tabs.length) % tabs.length;
+        if (ev.key === "Home") next = 0;
+        if (ev.key === "End") next = tabs.length - 1;
+        tabs[next].focus();
+        tabs[next].click();
+      });
+    }
     $("f-range").addEventListener("click", (ev) => {
       const btn = ev.target.closest("button[data-range]");
       if (!btn) return;
@@ -590,6 +752,14 @@
     $("btn-run").addEventListener("click", () => {
       $("run-help").textContent =
         "Se abrió GitHub Actions. Tocá Run workflow (arriba a la derecha) y confirmá. Cuando el job termine y Pages despliegue, volvé y usá Actualizar datos.";
+    });
+    if ($("btn-export")) $("btn-export").addEventListener("click", exportCsv);
+    if ($("btn-copy-view")) $("btn-copy-view").addEventListener("click", copyView);
+    $("q").addEventListener("input", () => {
+      state.q = $("q").value;
+    });
+    $("f-model").addEventListener("change", () => {
+      state.model = $("f-model").value;
     });
     $("clusters").addEventListener("click", (ev) => {
       const btn = ev.target.closest("button[data-status]");

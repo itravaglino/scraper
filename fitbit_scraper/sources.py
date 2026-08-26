@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import logging
+import time
 from typing import Any, Callable
 
 from .classify import classify
@@ -130,8 +131,10 @@ def _run_source(source_id: str, label: str, fn: Callable[[], tuple[list[dict], i
         "fetched": 0,
         "kept": 0,
         "error": None,
+        "latency_ms": None,
         "reports": [],
     }
+    t0 = time.monotonic()
     try:
         reports, fetched = fn()
         status["ok"] = True
@@ -144,6 +147,7 @@ def _run_source(source_id: str, label: str, fn: Callable[[], tuple[list[dict], i
         status["error"] = public
         status["state"] = state
         log.warning("source failed %s: %s", source_id, public)
+    status["latency_ms"] = int((time.monotonic() - t0) * 1000)
     return status
 
 
@@ -213,6 +217,7 @@ def scrape_reddit() -> list[dict]:
                     "fetched": 0,
                     "kept": 0,
                     "error": "Omitida: Reddit limitado en esta corrida",
+                    "latency_ms": None,
                     "reports": [],
                 }
             )

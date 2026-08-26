@@ -52,6 +52,7 @@ class RedditPolitenessTests(unittest.TestCase):
         self.assertEqual(results[0]["error"], "Límite de peticiones (HTTP 429)")
         self.assertEqual(results[1]["error"], "Límite de peticiones (HTTP 429)")
         self.assertIn("Omitida", results[2]["error"])
+        self.assertIn("latency_ms", results[2])
 
 
 if __name__ == "__main__":
