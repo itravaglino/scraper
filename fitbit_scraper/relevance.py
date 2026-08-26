@@ -25,6 +25,7 @@ _WATCH_BRANDS = (
     "huawei",
     "amazfit",
     "whoop",
+    "agptek",
     "oneplus",
     "pixel watch",
     "withings",
@@ -105,9 +106,17 @@ def is_fitbit_subject(
         return False, "comparativa_genérica"
 
     title_or_url = _title_has_fitbit_subject(title) or _url_is_fitbit(url)
+    product_cue = bool(
+        _title_has_fitbit_subject(title)
+        or detect_models(title)
+        or _FITBIT_SUBJECT.search(body[:500] or "")
+        or detect_models(body[:500] or "")
+    )
 
     if source_scoped:
-        return True, "comunidad"
+        # Stay in the Fitbit community feed, but without a product cue the
+        # classifier must park the row in Revisar — never mala-alta.
+        return True, "comunidad" if product_cue else "comunidad_sin_producto"
 
     if not title_or_url:
         return False, "sin_sujeto_fitbit"

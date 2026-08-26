@@ -54,7 +54,8 @@ Si una fuente falla (403/429), se marca **limitado** (no un RuntimeError) y el r
 | --- | --- |
 | **Ejecutar ahora** | Abre el workflow de Actions. No hay token en el frontend. |
 | **Tiempo (Mes default)** | Filtra por **fecha del ítem**, no por cuándo corrimos el scrape. La corrida guarda ~90 días; Mes = 30. Recs de 2018 no aparecen en Mes. |
-| **Casos negativos / Buenas / Revisar** | Polaridad. La gravedad alta/media/baja **solo** aplica a malas. |
+| **Casos negativos / Buenas / Revisar** | Polaridad. La gravedad alta/media/baja **solo** aplica a malas. Malas con confianza &lt; 50% se parkean en **Revisar**. Alta exige un defecto abierto **en el título**. |
+| **Confianza** | 0–100% en cada tarjeta. El título pesa más que el cuerpo (un “problem” en el footer de Reddit no alcanza). |
 | **Exportar CSV** | Los casos de la vista filtrada (columnas: id, polarity, severity, models, category, published_at, source, title, url, count, language, impact). |
 | **Copiar vista** | URL con `p` (polaridad), `t` (días), `s` (gravedad), `m` (modelo), `q` (búsqueda). |
 | **ok / limitado / error** | Salud de fuentes de esta corrida. **limitado** = HTTP 429 (típico Reddit). Esa fuente se omitió; no tumba el job. |

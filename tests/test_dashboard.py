@@ -37,6 +37,8 @@ class DashboardContractTests(unittest.TestCase):
         self.assertIn("padB = 140", js)
         self.assertIn("FitbitOps", js)
         self.assertIn("exportCsv", js)
+        self.assertIn("clusterPolarity", js)
+        self.assertIn("Confianza", js)
         self.assertIn("Ops.serializeState(state)", js)
         self.assertNotRegex(js, r"github_pat_|ghp_[A-Za-z0-9]|GITHUB_TOKEN")
         ops = Path("web/assets/ops.js").read_text(encoding="utf-8")

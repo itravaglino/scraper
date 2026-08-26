@@ -68,6 +68,7 @@ def _preview_cards_html(latest: dict) -> str:
         for c in (latest.get("clusters") or [])
         if (c.get("polarity") or "revisar") == "mala"
         and _in_default_month(c.get("last_report_at"), generated)
+        and (c.get("confidence") is None or float(c.get("confidence") or 0) >= 0.5)
     ]
     if not clusters:
         clusters = [c for c in (latest.get("clusters") or []) if (c.get("polarity") or "") == "mala"][:6]

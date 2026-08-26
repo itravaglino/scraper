@@ -23,7 +23,7 @@ def _rep(i, title, text, cat="bateria", model="Charge 6", polarity="mala", sever
         "language": lang,
         "language_label": "Inglés" if lang == "en" else lang,
         "created_at": "2026-08-26T08:00:00-03:00",
-        "star_rating": None,
+        "confidence": 0.8,
     }
 
 
@@ -77,6 +77,46 @@ class ClusterTests(unittest.TestCase):
         ]
         clusters, _ = cluster_reports(reports, {"clusters": {}})
         self.assertEqual(len(clusters), 2)
+
+    def test_unrelated_sin_modelo_do_not_dumpster(self):
+        reports = [
+            _rep(
+                1,
+                "Whoop comparison final verdict",
+                "I wore both",
+                cat="calidad",
+                model="Sin modelo",
+                polarity="mala",
+                severity="baja",
+            ),
+            _rep(
+                2,
+                "Warranty replacement took months",
+                "hardware quality",
+                cat="calidad",
+                model="Sin modelo",
+                polarity="mala",
+                severity="alta",
+            ),
+        ]
+        reports[0]["confidence"] = 0.4
+        reports[1]["confidence"] = 0.82
+        clusters, _ = cluster_reports(reports, {"clusters": {}})
+        self.assertEqual(len(clusters), 2)
+
+    def test_severity_is_majority_not_max(self):
+        reports = [
+            _rep(1, "Charge 6 battery drain overnight", "dies at night", severity="media"),
+            _rep(2, "Charge 6 battery drain continues", "still dying", severity="media"),
+            _rep(3, "Charge 6 battery drain recall rumor", "someone said recall", severity="alta"),
+        ]
+        reports[0]["confidence"] = 0.8
+        reports[1]["confidence"] = 0.8
+        reports[2]["confidence"] = 0.3
+        clusters, _ = cluster_reports(reports, {"clusters": {}})
+        battery = [c for c in clusters if c["category"] == "bateria"][0]
+        self.assertEqual(battery["severity"], "media")
+        self.assertGreaterEqual(battery["count"], 2)
 
 
 if __name__ == "__main__":

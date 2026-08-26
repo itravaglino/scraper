@@ -111,6 +111,7 @@ def _reclassify(reports: list[dict]) -> list[dict]:
         rec["sentiment"] = info["sentiment"]
         rec["polarity"] = info["polarity"]
         rec["polarity_label"] = info["polarity_label"]
+        rec["confidence"] = info.get("confidence") or 0.0
         rec["language"] = info.get("language") or rec.get("language") or "und"
         rec["language_label"] = info.get("language_label")
         rec["badges"] = info.get("badges") or []
@@ -174,7 +175,7 @@ def _write_csv(reports: list[dict], path: Path) -> None:
     fields = [
         "id", "created_at", "source", "source_kind", "source_label", "models", "primary_category",
         "polarity", "severity", "sentiment", "language", "star_rating",
-        "engagement_label", "title", "url",
+        "confidence", "engagement_label", "title", "url",
     ]
     with path.open("w", encoding="utf-8", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=fields)
