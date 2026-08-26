@@ -5,6 +5,12 @@ on:
   schedule:
     - cron: "0 11 * * *"
   workflow_dispatch:
+    inputs:
+      window_days:
+        description: "Ventana de scrape en días (1=día, 7=semana, 30=mes, 90=trimestre). Default 90."
+        required: false
+        default: "90"
+        type: string
   pull_request:
   push:
     branches: [main]
@@ -35,7 +41,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0
+          persist-credentials: true
 
       - name: Python
         uses: actions/setup-python@v5
@@ -47,6 +54,8 @@ jobs:
 
       - name: Scrape público
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        env:
+          SCRAPE_WINDOW_DAYS: ${{ github.event.inputs.window_days || '90' }}
         run: python3 run.py -v
 
       - name: Rebuild site from committed data
@@ -60,11 +69,35 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data site
           if git diff --staged --quiet; then
-            echo "No data changes"
+            echo "No data changes to commit"
           else
-            git commit -m "datos: scrape diario Fitbit $(date -u +%Y-%m-%d)"
-            git push
+            git commit -m "datos: scrape diario Fitbit $(date -u +%Y-%m-%dT%H:%MZ)"
           fi
+          delay=4
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            if ! git rebase -X theirs origin/main; then
+              echo "::warning::rebase conflict on attempt ${attempt}; keeping scrape output"
+              git checkout --theirs -- data site || true
+              git add data site
+              if ! GIT_EDITOR=true git rebase --continue; then
+                git rebase --abort || true
+                echo "::warning::rebase aborted on attempt ${attempt}; retry in ${delay}s"
+                sleep "$delay"
+                delay=$((delay * 2))
+                continue
+              fi
+            fi
+            if git push origin HEAD:main; then
+              echo "Pushed scrape data on attempt ${attempt}"
+              exit 0
+            fi
+            echo "::warning::push rejected on attempt ${attempt} (main moved); retry in ${delay}s"
+            sleep "$delay"
+            delay=$((delay * 2))
+          done
+          echo "::warning::Could not push after retries; Pages will still deploy this job's site/"
+          exit 0
 
       - name: Setup Pages
         id: setup-pages

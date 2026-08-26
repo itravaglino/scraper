@@ -5,21 +5,15 @@ from __future__ import annotations
 import json
 import logging
 from typing import Any, Callable
-from urllib.parse import urlencode
 
 from .classify import classify
-from .config import (
-    HN_QUERIES,
-    ITUNES_APP_IDS,
-    ITUNES_COUNTRIES,
-    NEWS_FEEDS,
-    REDDIT_FEEDS,
-    SOCIAL_SEARCH_FEEDS,
-)
+from .config import ITUNES_APP_IDS, ITUNES_COUNTRIES
 from .engagement import merge_engagement, pack_engagement, parse_engagement_text
+from .feedlist import HN_QUERIES, hn_search_url, news_feeds, reddit_feeds, social_feeds
 from .feeds import parse_feed
 from .httputil import fetch_text
 from .textutil import parse_datetime, sha1, strip_html
+from .window import iso_in_window, parse_iso
 
 log = logging.getLogger("fitbit_scraper.sources")
 
@@ -73,6 +67,9 @@ def _report(
     )
     if not info["keep"]:
         return None
+    stamp = parse_iso(created_at)
+    if not iso_in_window(stamp):
+        return None
     kind = infer_source_kind(url, title, source_kind)
     rid = sha1(source, extra_id or url, title)
     text_eng = parse_engagement_text(f"{title}\n{text}")
@@ -85,8 +82,8 @@ def _report(
         "url": url,
         "title": (title or "")[:240],
         "text": (text or "")[:1800],
-        "created_at": created_at,
-        "published_at": created_at,
+        "created_at": stamp,
+        "published_at": stamp,
         "author": (author or "")[:80],
         "models": info["models"],
         "categories": info["categories"],
@@ -182,17 +179,17 @@ def _scrape_rss_collection(feeds: list[dict], default_source: str, default_kind:
 
 
 def scrape_reddit() -> list[dict]:
-    feeds = [{**f, "kind": "reddit"} for f in REDDIT_FEEDS]
+    feeds = [{**f, "kind": "reddit"} for f in reddit_feeds()]
     return _scrape_rss_collection(feeds, "reddit", "reddit")
 
 
 def scrape_news() -> list[dict]:
-    return _scrape_rss_collection(NEWS_FEEDS, "news", "news")
+    return _scrape_rss_collection(news_feeds(), "news", "news")
 
 
 def scrape_social() -> list[dict]:
     """YouTube / TikTok / Instagram via public search-engine RSS, no login."""
-    return _scrape_rss_collection(SOCIAL_SEARCH_FEEDS, "social", "web")
+    return _scrape_rss_collection(social_feeds(), "social", "web")
 
 
 def _itunes_label(entry: dict, key: str) -> str:
@@ -250,7 +247,7 @@ def scrape_itunes() -> list[dict]:
                         url=link or url,
                         title=title,
                         text=body,
-                        created_at=parse_datetime(_itunes_label(entry, "updated")) or _itunes_label(entry, "updated") or None,
+                        created_at=parse_datetime(_itunes_label(entry, "updated")),
                         author=author,
                         extra_id=_itunes_label(entry, "id"),
                         star_rating=rating,
@@ -270,16 +267,9 @@ def scrape_itunes() -> list[dict]:
 def scrape_hn() -> list[dict]:
     results = []
     for q in HN_QUERIES:
-        params = urlencode(
-            {
-                "query": q["query"],
-                "hitsPerPage": "30",
-                "tags": "story",
-            }
-        )
-        url = f"https://hn.algolia.com/api/v1/search_by_date?{params}"
+        url = hn_search_url(q["query"])
 
-        def _pull(url=url, label=q["label"]):
+        def _pull(url=url, label=q["label"], lang_hint=q.get("lang") or "en"):
             text, err = fetch_text(url, accept="application/json")
             if text is None:
                 raise RuntimeError(err or "sin respuesta")
@@ -303,7 +293,7 @@ def scrape_hn() -> list[dict]:
                     extra_id=object_id,
                     source_scoped=False,
                     source_kind="hackernews",
-                    lang_hint=q.get("lang") or "en",
+                    lang_hint=lang_hint,
                     engagement={
                         "score": hit.get("points"),
                         "comments": hit.get("num_comments"),

@@ -48,8 +48,13 @@ def fetch_bytes(url: str, accept: str = "*/*") -> tuple[Optional[bytes], Optiona
                 return resp.read(), None
         except urllib.error.HTTPError as exc:
             last_error = f"HTTP {exc.code} {exc.reason}"
-            # Reddit rate-limits aggressively; back off and retry.
-            if exc.code in {429, 503, 502} and attempt < REQUEST_RETRIES:
+            # One retry on 429/5xx then skip this source — never fail the job.
+            if exc.code == 429:
+                if attempt < 2:
+                    time.sleep(6)
+                    continue
+                break
+            if exc.code in {503, 502} and attempt < REQUEST_RETRIES:
                 time.sleep(4 * attempt)
                 continue
             if exc.code in {401, 403, 404}:

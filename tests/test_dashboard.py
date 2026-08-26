@@ -23,6 +23,7 @@ class DashboardContractTests(unittest.TestCase):
         self.assertIn("workflow_runs", js)
         self.assertIn("drawSevChart", js)
         self.assertIn("Impacto: n/d", js)
+        self.assertIn("scrape_window_days", js)
         self.assertNotRegex(js, r"github_pat_|ghp_[A-Za-z0-9]|GITHUB_TOKEN")
 
     def test_generate_site_embeds_seed(self):

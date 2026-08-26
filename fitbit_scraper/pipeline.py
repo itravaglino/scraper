@@ -23,6 +23,7 @@ from .engagement import merge_engagement, pack_engagement, parse_engagement_text
 from .generate_site import generate_site
 from .sources import scrape_all
 from .textutil import normalize
+from .window import filter_reports_in_window, scrape_window_days
 
 log = logging.getLogger("fitbit_scraper")
 
@@ -203,7 +204,11 @@ def run(fetch: bool = True) -> dict:
     source_statuses = []
     reports: list[dict] = []
     if fetch:
-        batches = scrape_all()
+        try:
+            batches = scrape_all()
+        except Exception:
+            log.exception("scrape_all crashed; continuing with zero batches")
+            batches = []
         for batch in batches:
             reports.extend(batch.pop("reports", []))
             source_statuses.append(batch)
@@ -212,7 +217,7 @@ def run(fetch: bool = True) -> dict:
         reports = previous.get("reports") or []
         source_statuses = previous.get("sources") or []
 
-    reports = _reclassify(_dedupe(reports))
+    reports = filter_reports_in_window(_reclassify(_dedupe(reports)))
     unique_by_label = Counter(r.get("source_label") for r in reports)
     for status in source_statuses:
         if status.get("ok"):
@@ -235,6 +240,7 @@ def run(fetch: bool = True) -> dict:
         "generated_at_utc": utc.isoformat(timespec="seconds"),
         "timezone": TIMEZONE,
         "run_id": run_date,
+        "scrape_window_days": scrape_window_days(),
         "github_repo": GITHUB_REPO,
         "github_workflow": GITHUB_WORKFLOW_FILE,
         "run_workflow_url": f"https://github.com/{GITHUB_REPO}/actions/workflows/{GITHUB_WORKFLOW_FILE}",
@@ -290,6 +296,7 @@ def main(argv: list[str] | None = None) -> int:
         run(fetch=not args.skip_fetch)
     except Exception:
         log.exception("fatal error")
+        # Still try to leave a valid dashboard if we got this far.
         return 1
     return 0
 
