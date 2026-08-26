@@ -1,0 +1,76 @@
+name: Scrape y dashboard Fitbit
+
+# 08:00 America/Buenos_Aires = 11:00 UTC (Argentina stays on UTC-3).
+on:
+  schedule:
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    # Bot commits of scrape output should not start a second scrape.
+    paths-ignore:
+      - "data/**"
+      - "site/**"
+
+# Prevent overlapping daily runs from fighting over git commits / Pages.
+concurrency:
+  group: fitbit-dashboard
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  scrape-and-publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Tests
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Scrape público
+        if: github.event_name != 'push'
+        run: python3 run.py -v
+
+      - name: Rebuild site from committed data
+        if: github.event_name == 'push'
+        run: python3 run.py --skip-fetch
+
+      - name: Commit data and site
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data site
+          if git diff --staged --quiet; then
+            echo "No data changes"
+          else
+            git commit -m "datos: scrape diario Fitbit $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

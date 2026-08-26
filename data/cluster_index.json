@@ -1,0 +1,252 @@
+{
+  "clusters": {
+    "62a688fce7ad5ad6": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 1,
+      "title": "Sincronización · Versa 4",
+      "category": "sincronizacion",
+      "last_seen": "2026-08-26"
+    },
+    "0733ade1cdca3f07": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 9,
+      "title": "Sincronización · Fitbit Air",
+      "category": "sincronizacion",
+      "last_seen": "2026-08-26"
+    },
+    "d11dc3b2c1350a47": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 5,
+      "title": "Software / app · Sin modelo",
+      "category": "software",
+      "last_seen": "2026-08-26"
+    },
+    "b7ec2746f75016ae": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 1,
+      "title": "Sincronización · Inspire 2",
+      "category": "sincronizacion",
+      "last_seen": "2026-08-26"
+    },
+    "189cdf5bff4e9a68": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 3,
+      "title": "Software / app · Fitbit Air",
+      "category": "software",
+      "last_seen": "2026-08-26"
+    },
+    "909a14d238d68fbd": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 1,
+      "title": "Batería · Inspire 3",
+      "category": "bateria",
+      "last_seen": "2026-08-26"
+    },
+    "3d01ae3af3006914": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 1,
+      "title": "Sincronización · Charge 6",
+      "category": "sincronizacion",
+      "last_seen": "2026-08-26"
+    },
+    "fd31c525e2fe9632": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 3,
+      "title": "Ritmo cardíaco · Sin modelo",
+      "category": "ritmo_cardiaco",
+      "last_seen": "2026-08-26"
+    },
+    "a746d8e685aa5877": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 14,
+      "title": "Sincronización · Sin modelo",
+      "category": "sincronizacion",
+      "last_seen": "2026-08-26"
+    },
+    "e0a9ffe265110afd": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 48,
+      "title": "Pantalla · Fitbit Air",
+      "category": "pantalla",
+      "last_seen": "2026-08-26"
+    },
+    "6689856627d95c50": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 9,
+      "title": "Pantalla · Sin modelo",
+      "category": "pantalla",
+      "last_seen": "2026-08-26"
+    },
+    "50aa38ad58fd9436": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 2,
+      "title": "Calidad / hardware · Fitbit Air",
+      "category": "calidad",
+      "last_seen": "2026-08-26"
+    },
+    "104c43f898fe48f5": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 1,
+      "title": "Ritmo cardíaco · Fitbit Air",
+      "category": "ritmo_cardiaco",
+      "last_seen": "2026-08-26"
+    },
+    "3c0b9af3d5f94f82": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 1,
+      "title": "Sincronización · Sense 2",
+      "category": "sincronizacion",
+      "last_seen": "2026-08-26"
+    },
+    "548f9b363f417ce5": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 3,
+      "title": "Correa · Fitbit Air",
+      "category": "correa",
+      "last_seen": "2026-08-26"
+    },
+    "7dce9c3de820b8ef": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 1,
+      "title": "Sincronización · Pixel Watch 2",
+      "category": "sincronizacion",
+      "last_seen": "2026-08-26"
+    },
+    "25fd197c8875197d": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 10,
+      "title": "Calidad / hardware · Sin modelo",
+      "category": "calidad",
+      "last_seen": "2026-08-26"
+    },
+    "7b35e931ad198f2b": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 1,
+      "title": "Sincronización · Sense",
+      "category": "sincronizacion",
+      "last_seen": "2026-08-26"
+    },
+    "4b5f9ddd3b049793": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 1,
+      "title": "Ritmo cardíaco · Inspire 3",
+      "category": "ritmo_cardiaco",
+      "last_seen": "2026-08-26"
+    },
+    "9990ff008febd629": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 3,
+      "title": "Calidad / hardware · Pixel Watch",
+      "category": "calidad",
+      "last_seen": "2026-08-26"
+    },
+    "27c2074010880160": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 3,
+      "title": "Sincronización · Pixel Watch",
+      "category": "sincronizacion",
+      "last_seen": "2026-08-26"
+    },
+    "4de563bbbfd64c0e": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 1,
+      "title": "Batería · Pixel Watch 2",
+      "category": "bateria",
+      "last_seen": "2026-08-26"
+    },
+    "70a9d6d9ea2f698e": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 1,
+      "title": "Software / app · Pixel Watch 3",
+      "category": "software",
+      "last_seen": "2026-08-26"
+    },
+    "e744a629b02ee29b": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 3,
+      "title": "Software / app · Pixel Watch",
+      "category": "software",
+      "last_seen": "2026-08-26"
+    },
+    "2e1099f9497eaaca": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 3,
+      "title": "Piel / alergia · Sin modelo",
+      "category": "piel",
+      "last_seen": "2026-08-26"
+    },
+    "019bf2c3ea5e1d64": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 1,
+      "title": "Software / app · Pixel Watch 2",
+      "category": "software",
+      "last_seen": "2026-08-26"
+    },
+    "e09db3cb167da204": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 9,
+      "title": "Batería · Sin modelo",
+      "category": "bateria",
+      "last_seen": "2026-08-26"
+    },
+    "7d2e69a2f90cd44b": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 2,
+      "title": "Calidad / hardware · Versa 3",
+      "category": "calidad",
+      "last_seen": "2026-08-26"
+    },
+    "f8ba4ff8f67929cc": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 2,
+      "title": "Carga · Sin modelo",
+      "category": "carga",
+      "last_seen": "2026-08-26"
+    },
+    "54017f6850865614": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 2,
+      "title": "Sincronización · Versa",
+      "category": "sincronizacion",
+      "last_seen": "2026-08-26"
+    },
+    "6d2e711fa25f758c": {
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "peak_count": 1,
+      "title": "Batería · Ace",
+      "category": "bateria",
+      "last_seen": "2026-08-26"
+    }
+  }
+}
