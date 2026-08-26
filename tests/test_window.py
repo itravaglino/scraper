@@ -84,8 +84,15 @@ class WindowTests(unittest.TestCase):
         for feed in social:
             self.assertTrue("when:" in feed["url"] or "when%3A" in feed["url"], feed["url"])
         reddit = reddit_feeds()
-        self.assertGreaterEqual(len(reddit), 12)
-        self.assertTrue(all("&t=" in f["url"] or "?t=" in f["url"] for f in reddit))
+        self.assertGreaterEqual(len(reddit), 2)
+        self.assertLessEqual(len(reddit), 4)
+        self.assertTrue(any("r/fitbit" in (f.get("url") or "") for f in reddit))
+        self.assertTrue(any("search.rss" in (f.get("url") or "") for f in reddit))
+        for feed in reddit:
+            self.assertTrue(
+                feed["url"].endswith(".rss") or "&t=" in feed["url"] or "?t=" in feed["url"],
+                feed["url"],
+            )
         hn = hn_search_url("fitbit")
         self.assertIn("numericFilters=", hn)
         self.assertTrue("created_at_i>" in hn or "created_at_i%3E" in hn)
@@ -97,6 +104,8 @@ class WindowTests(unittest.TestCase):
         status = _run_source("gnews_en", "Noticias", boom, kind="news")
         self.assertFalse(status["ok"])
         self.assertEqual(status["state"], "skip")
+        self.assertEqual(status["error"], "Límite de peticiones (HTTP 429)")
+        self.assertNotIn("RuntimeError", status["error"])
         self.assertEqual(status["reports"], [])
 
 

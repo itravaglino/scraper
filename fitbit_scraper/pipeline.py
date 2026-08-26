@@ -164,6 +164,9 @@ def _summarize(reports: list[dict], clusters: list[dict]) -> dict:
         "by_category": dict(by_cat),
         "by_source": dict(by_source),
         "by_kind": dict(by_kind),
+        "sources_ok": 0,
+        "sources_limited": 0,
+        "sources_error": 0,
     }
 
 
@@ -235,6 +238,11 @@ def run(fetch: bool = True) -> dict:
         idx = new_index["clusters"].get(c["id"]) or {}
         c["first_seen"] = idx.get("first_seen") or run_date
 
+    summary = _summarize(reports, clusters)
+    summary["sources_ok"] = sum(1 for s in source_statuses if s.get("ok"))
+    summary["sources_limited"] = sum(1 for s in source_statuses if s.get("state") == "skip")
+    summary["sources_error"] = sum(1 for s in source_statuses if s.get("state") == "error")
+
     payload = {
         "generated_at": now.isoformat(timespec="seconds"),
         "generated_at_utc": utc.isoformat(timespec="seconds"),
@@ -245,7 +253,7 @@ def run(fetch: bool = True) -> dict:
         "github_workflow": GITHUB_WORKFLOW_FILE,
         "run_workflow_url": f"https://github.com/{GITHUB_REPO}/actions/workflows/{GITHUB_WORKFLOW_FILE}",
         "sources": source_statuses,
-        "summary": _summarize(reports, clusters),
+        "summary": summary,
         "clusters": clusters,
         "reports": reports,
     }

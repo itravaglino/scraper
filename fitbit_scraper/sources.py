@@ -103,6 +103,23 @@ def _report(
     }
 
 
+def public_source_error(exc: BaseException) -> tuple[str, str]:
+    """Map a fetch failure to (state, sidebar message). Never leak RuntimeError."""
+    raw = str(exc)
+    low = raw.lower()
+    if "429" in low:
+        return "skip", "Límite de peticiones (HTTP 429)"
+    if "403" in low or "forbidden" in low:
+        return "skip", "Fuente no disponible (HTTP 403)"
+    if "401" in low:
+        return "skip", "Fuente no disponible (HTTP 401)"
+    if "404" in low:
+        return "skip", "Fuente no encontrada (HTTP 404)"
+    if "blocked" in low:
+        return "skip", "Fuente bloqueó la consulta"
+    return "error", raw[:180]
+
+
 def _run_source(source_id: str, label: str, fn: Callable[[], tuple[list[dict], int]], kind: str = "web") -> dict:
     status: dict[str, Any] = {
         "id": source_id,
@@ -123,64 +140,95 @@ def _run_source(source_id: str, label: str, fn: Callable[[], tuple[list[dict], i
         status["kept"] = len(reports)
         status["reports"] = reports
     except Exception as exc:  # noqa: BLE001
-        msg = f"{type(exc).__name__}: {exc}"
-        status["error"] = msg
-        low = msg.lower()
-        # 403/429/blocked are expected; the rest of the run continues.
-        if any(x in low for x in ("403", "429", "blocked", "forbidden", "401")):
-            status["state"] = "skip"
-        else:
-            status["state"] = "error"
-        log.warning("source failed %s: %s", source_id, exc)
+        state, public = public_source_error(exc)
+        status["error"] = public
+        status["state"] = state
+        log.warning("source failed %s: %s", source_id, public)
     return status
+
+
+def _rss_pull(feed: dict, default_source: str, default_kind: str) -> Callable[[], tuple[list[dict], int]]:
+    kind = feed.get("kind") or default_kind
+    scoped = bool(feed.get("scoped", kind in {"reddit", "itunes"}))
+    lang_hint = feed.get("lang")
+
+    def _pull(feed=feed, kind=kind, scoped=scoped, lang_hint=lang_hint):
+        xml, err = fetch_text(
+            feed["url"],
+            accept="application/atom+xml, application/rss+xml, application/xml, text/xml, */*",
+        )
+        if xml is None:
+            raise RuntimeError(err or "sin respuesta")
+        items = parse_feed(xml)
+        kept = []
+        for item in items:
+            url = item.get("url") or ""
+            if url.startswith("/r/"):
+                url = "https://www.reddit.com" + url
+            rec = _report(
+                source=default_source,
+                source_label=feed["label"],
+                url=url,
+                title=item.get("title") or "",
+                text=item.get("text") or "",
+                created_at=item.get("created_at"),
+                author=item.get("author") or "",
+                extra_id=item.get("id") or url,
+                source_scoped=scoped,
+                source_kind=kind,
+                lang_hint=lang_hint,
+                engagement=item.get("engagement"),
+            )
+            if rec:
+                kept.append(rec)
+        return kept, len(items)
+
+    return _pull
 
 
 def _scrape_rss_collection(feeds: list[dict], default_source: str, default_kind: str) -> list[dict]:
     results = []
     for feed in feeds:
         kind = feed.get("kind") or default_kind
-        scoped = bool(feed.get("scoped", kind in {"reddit", "itunes"}))
-
-        lang_hint = feed.get("lang")
-
-        def _pull(feed=feed, kind=kind, scoped=scoped, lang_hint=lang_hint):
-            xml, err = fetch_text(
-                feed["url"],
-                accept="application/atom+xml, application/rss+xml, application/xml, text/xml, */*",
-            )
-            if xml is None:
-                raise RuntimeError(err or "sin respuesta")
-            items = parse_feed(xml)
-            kept = []
-            for item in items:
-                url = item.get("url") or ""
-                if url.startswith("/r/"):
-                    url = "https://www.reddit.com" + url
-                rec = _report(
-                    source=default_source,
-                    source_label=feed["label"],
-                    url=url,
-                    title=item.get("title") or "",
-                    text=item.get("text") or "",
-                    created_at=item.get("created_at"),
-                    author=item.get("author") or "",
-                    extra_id=item.get("id") or url,
-                    source_scoped=scoped,
-                    source_kind=kind,
-                    lang_hint=lang_hint,
-                    engagement=item.get("engagement"),
-                )
-                if rec:
-                    kept.append(rec)
-            return kept, len(items)
-
-        results.append(_run_source(feed["id"], feed["label"], _pull, kind=kind))
+        results.append(
+            _run_source(feed["id"], feed["label"], _rss_pull(feed, default_source, default_kind), kind=kind)
+        )
     return results
 
 
 def scrape_reddit() -> list[dict]:
+    """Serial Reddit RSS. If two feeds are limited, skip the rest without more hits."""
     feeds = [{**f, "kind": "reddit"} for f in reddit_feeds()]
-    return _scrape_rss_collection(feeds, "reddit", "reddit")
+    results: list[dict] = []
+    limited_streak = 0
+    for feed in feeds:
+        if limited_streak >= 2:
+            results.append(
+                {
+                    "id": feed["id"],
+                    "label": feed["label"],
+                    "kind": "reddit",
+                    "ok": False,
+                    "state": "skip",
+                    "fetched": 0,
+                    "kept": 0,
+                    "error": "Omitida: Reddit limitado en esta corrida",
+                    "reports": [],
+                }
+            )
+            continue
+        status = _run_source(
+            feed["id"],
+            feed["label"],
+            _rss_pull(feed, "reddit", "reddit"),
+            kind="reddit",
+        )
+        if status.get("state") == "skip" and "429" in (status.get("error") or ""):
+            limited_streak += 1
+        else:
+            limited_streak = 0
+        results.append(status)
+    return results
 
 
 def scrape_news() -> list[dict]:
@@ -309,9 +357,11 @@ def scrape_hn() -> list[dict]:
 
 def scrape_all() -> list[dict]:
     batches = []
-    batches.extend(scrape_reddit())
     batches.extend(scrape_social())
     batches.extend(scrape_news())
     batches.extend(scrape_itunes())
     batches.extend(scrape_hn())
+    # Reddit last: few serial calls with a long pause so the rest of the net
+    # is not blocked, and Reddit is not burst at the start of the job.
+    batches.extend(scrape_reddit())
     return batches

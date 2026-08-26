@@ -16,11 +16,13 @@ USER_AGENT = (
 GITHUB_REPO = "itravaglino/scraper"
 GITHUB_WORKFLOW_FILE = "daily.yml"
 
-# Polite crawling: one request at a time, with extra pause for Reddit.
+# Polite crawling: one request at a time. Reddit is serial with a long gap.
 REQUEST_TIMEOUT_SEC = 25
 REQUEST_RETRIES = 3
 REQUEST_PAUSE_SEC = 1.2
-REDDIT_PAUSE_SEC = 3.2
+REDDIT_PAUSE_SEC = 8.0
+REDDIT_429_BACKOFF_SEC = 20.0
+REDDIT_429_MAX_WAIT_SEC = 60.0
 
 # Google Health (Fitbit) iOS app — the old id 462638147 was retired.
 ITUNES_APP_IDS = {

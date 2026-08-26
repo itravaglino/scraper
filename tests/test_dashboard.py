@@ -19,11 +19,18 @@ class DashboardContractTests(unittest.TestCase):
         self.assertIn("Agrupar por", html)
         self.assertIn('{"__SEED__":true}', html)
         self.assertIn("actions/workflows/daily.yml", html)
+        self.assertIn("source-summary", html)
+        self.assertLess(html.find('id="clusters"'), html.find("chart-panel"))
+        self.assertLess(html.find('id="clusters"'), html.find('id="sev-chart"'))
         js = Path("web/assets/app.js").read_text(encoding="utf-8")
         self.assertIn("workflow_runs", js)
         self.assertIn("drawSevChart", js)
         self.assertIn("Impacto: n/d", js)
         self.assertIn("scrape_window_days", js)
+        self.assertIn("limitado", js)
+        self.assertIn("source-summary", js)
+        self.assertIn("wrapAxisLabel", js)
+        self.assertIn("padB = 140", js)
         self.assertNotRegex(js, r"github_pat_|ghp_[A-Za-z0-9]|GITHUB_TOKEN")
 
     def test_generate_site_embeds_seed(self):
