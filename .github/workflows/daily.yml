@@ -68,9 +68,12 @@ jobs:
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         uses: actions/configure-pages@v5
         with:
-          # Creates the Pages site on first run (source = GitHub Actions).
+          # Creates the Pages site on first run when the token is allowed to.
+          # GITHUB_TOKEN cannot create a Pages site (GitHub restriction); a PAT
+          # in secrets.PAGES_TOKEN with repo scope can, or enable Pages once in
+          # Settings → Pages → Source: GitHub Actions.
           enablement: true
-          token: ${{ github.token }}
+          token: ${{ secrets.PAGES_TOKEN != '' && secrets.PAGES_TOKEN || github.token }}
 
       - name: Upload site
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'

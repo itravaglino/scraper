@@ -45,14 +45,23 @@ Si una fuente falla, se saltea y el resto del reporte se genera igual. Hay pausa
 
 ## Si Pages o Actions no publican
 
-GitHub a veces bloquea la primera publicación desde un agente o un PR. En ese caso, un clic alcanza:
+GitHub **no deja** que el `GITHUB_TOKEN` de Actions cree el sitio Pages
+(`Resource not accessible by integration`). Por eso el primer deploy puede
+fallar aunque el workflow tenga `enablement: true`.
 
-1. **Repo → Settings → Pages → Source:** `GitHub Actions`.
-2. **Settings → Actions → General → Workflow permissions:** *Read and write permissions*, y guardar.
-3. Si el entorno `github-pages` pide aprobación: **Settings → Environments → github-pages** y aprobá el deploy (o sacá los required reviewers).
-4. Volvé a **Actions → Run workflow** sobre la rama `main`.
+**Un clic (alcanza):**
+
+1. Abrí [Settings → Pages](https://github.com/itravaglino/scraper/settings/pages).
+2. En *Build and deployment* → *Source* elegí **GitHub Actions**.
+3. **Actions → “Scrape y dashboard Fitbit” → Run workflow** sobre `main`.
+
+Alternativa: en la misma pantalla, Source = **Deploy from a branch**, rama
+`gh-pages`, carpeta `/ (root)`. Ya hay un snapshot del tablero en esa rama.
 
 URL esperada: `https://itravaglino.github.io/scraper/`
+
+Si el entorno `github-pages` pide aprobación: Settings → Environments →
+github-pages y aprobá el deploy.
 
 ## Estructura
 
