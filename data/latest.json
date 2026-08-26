@@ -1,0 +1,3170 @@
+{
+  "generated_at": "2026-08-26T15:20:35-03:00",
+  "generated_at_utc": "2026-08-26T18:20:35+00:00",
+  "timezone": "America/Buenos_Aires",
+  "run_id": "2026-08-26",
+  "sources": [
+    {
+      "id": "reddit_fitbit_search",
+      "label": "Reddit r/fitbit (problemas)",
+      "ok": true,
+      "fetched": 25,
+      "kept": 19,
+      "error": null
+    },
+    {
+      "id": "reddit_fitbit_new",
+      "label": "Reddit r/fitbit (nuevos)",
+      "ok": true,
+      "fetched": 30,
+      "kept": 8,
+      "error": null
+    },
+    {
+      "id": "reddit_pixel_watch",
+      "label": "Reddit r/GooglePixelWatch",
+      "ok": true,
+      "fetched": 5,
+      "kept": 3,
+      "error": null
+    },
+    {
+      "id": "itunes_us_462638897",
+      "label": "App Store US · Google Health (Fitbit)",
+      "ok": true,
+      "fetched": 50,
+      "kept": 1,
+      "error": null
+    },
+    {
+      "id": "itunes_es_462638897",
+      "label": "App Store ES · Google Health (Fitbit)",
+      "ok": true,
+      "fetched": 50,
+      "kept": 1,
+      "error": null
+    },
+    {
+      "id": "itunes_ar_462638897",
+      "label": "App Store AR · Google Health (Fitbit)",
+      "ok": true,
+      "fetched": 50,
+      "kept": 1,
+      "error": null
+    },
+    {
+      "id": "itunes_us_1621113388",
+      "label": "App Store US · Fitbit Ace",
+      "ok": true,
+      "fetched": 50,
+      "kept": 0,
+      "error": null
+    },
+    {
+      "id": "itunes_es_1621113388",
+      "label": "App Store ES · Fitbit Ace",
+      "ok": true,
+      "fetched": 0,
+      "kept": 0,
+      "error": null
+    },
+    {
+      "id": "itunes_ar_1621113388",
+      "label": "App Store AR · Fitbit Ace",
+      "ok": true,
+      "fetched": 0,
+      "kept": 0,
+      "error": null
+    },
+    {
+      "id": "gnews_en",
+      "label": "Google News (EN)",
+      "ok": true,
+      "fetched": 100,
+      "kept": 25,
+      "error": null
+    },
+    {
+      "id": "gnews_es",
+      "label": "Google News (ES)",
+      "ok": true,
+      "fetched": 56,
+      "kept": 0,
+      "error": null
+    },
+    {
+      "id": "hn_fitbit",
+      "label": "Hacker News",
+      "ok": true,
+      "fetched": 30,
+      "kept": 1,
+      "error": null
+    },
+    {
+      "id": "hn_pixel_watch",
+      "label": "Hacker News Pixel Watch",
+      "ok": true,
+      "fetched": 30,
+      "kept": 4,
+      "error": null
+    }
+  ],
+  "summary": {
+    "reports": 63,
+    "clusters": 31,
+    "new_clusters": 0,
+    "recurring_clusters": 31,
+    "by_model": {
+      "Sin modelo": 28,
+      "Fitbit Air": 14,
+      "Pixel Watch": 6,
+      "Pixel Watch 2": 3,
+      "Sense": 3,
+      "Inspire 3": 2,
+      "Pixel Watch 3": 2,
+      "Versa 3": 2,
+      "Versa 4": 1,
+      "Inspire 2": 1,
+      "Charge 6": 1,
+      "Sense 2": 1
+    },
+    "by_severity": {
+      "baja": 40,
+      "media": 5,
+      "alta": 18
+    },
+    "by_category": {
+      "sincronizacion": 18,
+      "software": 10,
+      "bateria": 5,
+      "ritmo_cardiaco": 4,
+      "pantalla": 3,
+      "calidad": 17,
+      "correa": 2,
+      "piel": 3,
+      "carga": 1
+    },
+    "by_source": {
+      "Reddit r/fitbit (problemas)": 19,
+      "Reddit r/fitbit (nuevos)": 8,
+      "Reddit r/GooglePixelWatch": 3,
+      "App Store US · Google Health (Fitbit)": 1,
+      "App Store ES · Google Health (Fitbit)": 1,
+      "App Store AR · Google Health (Fitbit)": 1,
+      "Google News (EN)": 25,
+      "Hacker News": 1,
+      "Hacker News Pixel Watch": 4
+    }
+  },
+  "clusters": [
+    {
+      "id": "25fd197c8875197d",
+      "title": "Calidad / hardware · Sin modelo",
+      "category": "calidad",
+      "category_label": "Calidad / hardware",
+      "severity": "alta",
+      "models": [
+        "Sin modelo"
+      ],
+      "count": 10,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "Fitbit Recalls Ionic Smartwatches Due to Burn Hazard; One Million Sold in the U.S. | CPSC.gov U.S. Consumer Product Safety Commission (.gov)",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQRTNOb3NFTUp4Zk9UR1RDRE5QTDVmdlVhRjFVNjdQLVNVWllXMkFMZVI3azZUTnNWQ3V2YnpfUkp2MnV1bWxTM205UTJMUEw2UEthRno5NXFYT3FoRXFCZDJrRk5WbjRDakoteDMxV3llcVNDdmlheXlMcXBpbU1rNkNMOWFBZnNDQWJBLWRqbnBxdmpBQ1JfbFF1cDRXYVR3UTJxUTZvZlM3QUcweWxyMW9QTkc?oc=5",
+          "source": "Google News (EN)",
+          "title": "Fitbit Recalls Ionic Smartwatches Due to Burn Hazard; One Million Sold in the U.S. | CPSC.gov - U.S. Consumer Product Safety Commission (.gov)"
+        },
+        {
+          "text": "Fitbit issues battery overheating warning over two of its most popular watches – and it might compensate you if you're affected TechRadar",
+          "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxPTWhLSkVMSDMtNmRvdXlzdkUwalFDWDU5eWMyczVGVGVUNjZpemhzMkxWSTA4U2lDRlNJUjBBQ29naVBNM0xjdDhwa0c4R1VIcUUzQ3hwR1p0RVMzZXFSdlBTMWVBZzg3SGVnQWFrbjNxQUFfVkYyNWt3eFFpN051M2ItSVNVUm1LcU5ZNll6akN0bWdVZUNmTlFBU1p6alJTbDVxU3JoelpSYXk0YTFLaXdpcGVmVzNDRXpXZzZTVHRjNlhpWUZubHQ0TXdqWF9wcW9tUkI5bDFyNTBuSVFpb1B3VnVjUjQ5U2V6aEhfQi0xcFR2WGZ1cVZVS29wanJGeHdwY2ZETFhNdw?oc=5",
+          "source": "Google News (EN)",
+          "title": "Fitbit issues battery overheating warning over two of its most popular watches – and it might compensate you if you're affected - TechRadar"
+        },
+        {
+          "text": "These Fitbit models are overheating — see if yours is on the list to get $50 from Google Tom's Guide",
+          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxORnpwamFTS1ZzdWxoaGFDN2RWUjRoWHExLUhoTzBJOUFEQ1pHOFpiaUYwSVNqbTFGdWw0ZHZRSUtrRVh0TF9RSWNDOUNTaVBBZk9SdzJWbU1DeWFid1NLYnZFS1BfbF9nSk85d0lYLVJwV0dGMHRNUUpENWQ0Q2hRUWlXcFFtcjZxLWhKXy1kOGNlN3FLZkJMSk5vR2ZDcTZiRktkdVhnRVJIUDh5LVlxZkZlbmhlQXdWVWxQRUpqTXV5WTNlc290dUtpdzdLdnFRcmc?oc=5",
+          "source": "Google News (EN)",
+          "title": "These Fitbit models are overheating — see if yours is on the list to get $50 from Google - Tom's Guide"
+        }
+      ],
+      "sources": [
+        "Google News (EN)",
+        "Reddit r/fitbit (nuevos)"
+      ],
+      "reports": [
+        {
+          "id": "77e11af4d2d1cb0b",
+          "title": "Fitbit Recalls Ionic Smartwatches Due to Burn Hazard; One Million Sold in the U.S. | CPSC.gov - U.S. Consumer Product Safety Commission (.gov)",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQRTNOb3NFTUp4Zk9UR1RDRE5QTDVmdlVhRjFVNjdQLVNVWllXMkFMZVI3azZUTnNWQ3V2YnpfUkp2MnV1bWxTM205UTJMUEw2UEthRno5NXFYT3FoRXFCZDJrRk5WbjRDakoteDMxV3llcVNDdmlheXlMcXBpbU1rNkNMOWFBZnNDQWJBLWRqbnBxdmpBQ1JfbFF1cDRXYVR3UTJxUTZvZlM3QUcweWxyMW9QTkc?oc=5",
+          "source": "Google News (EN)",
+          "created_at": "2022-03-02T08:00:00+00:00",
+          "severity": "alta",
+          "sentiment": "negativo",
+          "star_rating": null
+        },
+        {
+          "id": "7bd46d0ef4f3fb34",
+          "title": "Fitbit issues battery overheating warning over two of its most popular watches – and it might compensate you if you're affected - TechRadar",
+          "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxPTWhLSkVMSDMtNmRvdXlzdkUwalFDWDU5eWMyczVGVGVUNjZpemhzMkxWSTA4U2lDRlNJUjBBQ29naVBNM0xjdDhwa0c4R1VIcUUzQ3hwR1p0RVMzZXFSdlBTMWVBZzg3SGVnQWFrbjNxQUFfVkYyNWt3eFFpN051M2ItSVNVUm1LcU5ZNll6akN0bWdVZUNmTlFBU1p6alJTbDVxU3JoelpSYXk0YTFLaXdpcGVmVzNDRXpXZzZTVHRjNlhpWUZubHQ0TXdqWF9wcW9tUkI5bDFyNTBuSVFpb1B3VnVjUjQ5U2V6aEhfQi0xcFR2WGZ1cVZVS29wanJGeHdwY2ZETFhNdw?oc=5",
+          "source": "Google News (EN)",
+          "created_at": "2025-01-22T08:00:00+00:00",
+          "severity": "alta",
+          "sentiment": "negativo",
+          "star_rating": null
+        },
+        {
+          "id": "6f5365f99a3710ce",
+          "title": "These Fitbit models are overheating — see if yours is on the list to get $50 from Google - Tom's Guide",
+          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxORnpwamFTS1ZzdWxoaGFDN2RWUjRoWHExLUhoTzBJOUFEQ1pHOFpiaUYwSVNqbTFGdWw0ZHZRSUtrRVh0TF9RSWNDOUNTaVBBZk9SdzJWbU1DeWFid1NLYnZFS1BfbF9nSk85d0lYLVJwV0dGMHRNUUpENWQ0Q2hRUWlXcFFtcjZxLWhKXy1kOGNlN3FLZkJMSk5vR2ZDcTZiRktkdVhnRVJIUDh5LVlxZkZlbmhlQXdWVWxQRUpqTXV5WTNlc290dUtpdzdLdnFRcmc?oc=5",
+          "source": "Google News (EN)",
+          "created_at": "2025-01-22T08:00:00+00:00",
+          "severity": "alta",
+          "sentiment": "negativo",
+          "star_rating": null
+        },
+        {
+          "id": "f2fa920ec416b845",
+          "title": "Fitbit has a battery overheating problem and here's what to do if you have one - Android Central",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxORE8yWEVHSG9IQlhJbmZmOFJJdEp0QzVRRWQwcUNNNmNBX21MMDdJWmlpY2FkTFBIT3RhZHZXdk51SDVFQ0dqNDc1b1lhV2ZkX2liVHgxNElkb29oSFptY3NaNXFmTDJkSWR3OEpJTU5Eb1ZwbENNNzBobjlMdWNTVk9ESUxfc0J2NzJhRWhkUXNtSTVDV3ExeVBEbXk4MWs?oc=5",
+          "source": "Google News (EN)",
+          "created_at": "2025-01-23T08:00:00+00:00",
+          "severity": "alta",
+          "sentiment": "negativo",
+          "star_rating": null
+        },
+        {
+          "id": "26694c0eecdf338b",
+          "title": "Fitbit Recalls Fitbit Ionic Smartwatches Due to Burn-Hazard, Offers Refund - DC Rainmaker",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBHR1Q3ZWhQdHp1NUpfTElpS0ZMQVJ5RU9JNFl6TnVGU0phaGxKa2xZUUticFAzOUtrSkhTeHY3cS1Nd2ZvVFN0SkM0OEF3T0FWNk1xS0xGZkZYU3V2Sy1jdGpRWmZ5bXA5N2ZYaExXMWtXanMyQkhB?oc=5",
+          "source": "Google News (EN)",
+          "created_at": "2022-03-02T08:00:00+00:00",
+          "severity": "alta",
+          "sentiment": "negativo",
+          "star_rating": null
+        },
+        {
+          "id": "dff8eabfa22a96c5",
+          "title": "Fitbit Fined More Than $12 Millions Over Recalled Watch That Burned Wearers - Forbes",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPWlY5RGJ6TFlfRWdsaERodnJxOU15QWFiWHA4alFmeHU5dm1nTzRnVjdYS1EzaTV4eUYyTllSdC1OcGt4Y0pPcXQzeHN2YzNSQVluOTFudENOcUtBMGNQTG0yMXNzQTE1V1U3YkF4SW40WExFU2h1ampmTlpablhDZTBkek1IdkUwOXo1U2MtRGR6Njc2QVZmZU5tQXNMMDFhU2V6N0VzUTJxUWdE?oc=5",
+          "source": "Google News (EN)",
+          "created_at": "2025-01-24T08:00:00+00:00",
+          "severity": "alta",
+          "sentiment": "negativo",
+          "star_rating": null
+        },
+        {
+          "id": "3e8b819023861c1f",
+          "title": "Google's anti-overheating update is causing Fitbit battery woes - Android Police",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQVjAwa3M4UENFd3E1MWJyMTNfVmlHVmFPZ2x3Y1NZam8wWlhDRVpITzR1S1JCVWxqYlR6d0c2eVFTZE9iOW5XZnB2dmNwSXM2UlhVWVQxRHQ4cmJsSVdiOEk0ZFJCOVM2TGJfbkJSUHYwSFhmMW5GX3dtN2ZaWjFDVElEd3gwWDBqQzhHS0VWeVY2YUdvak5QSA?oc=5",
+          "source": "Google News (EN)",
+          "created_at": "2025-02-21T08:00:00+00:00",
+          "severity": "alta",
+          "sentiment": "negativo",
+          "star_rating": null
+        },
+        {
+          "id": "9b35a4603e08e05a",
+          "title": "Certain Fitbit watches recalled over burn hazard; refund offered - WTOP News",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNb0FvZjVuRHNFLXNWa3c2ZEpHR3pSRmlZNTZWbHNTYm9JcGZZTVU5ZnlXZzNCVk5JR3Z5dEl6RWpHOGtZaUlmQkp0Nk81eGlJQ2RLaTdiaHlQYnVWSVRTdGpFNUtkTXd0S0h1TWNPa2g4bUZNNWdfSkRfSnN3NnAzT2hZTFUtbU1JUTlCY1RPSThnWF9jV2Rwdy0tYXNRQ2l6Vy1YYWFpWQ?oc=5",
+          "source": "Google News (EN)",
+          "created_at": "2022-03-02T08:00:00+00:00",
+          "severity": "alta",
+          "sentiment": "negativo",
+          "star_rating": null
+        },
+        {
+          "id": "bd06e808bc28b63b",
+          "title": "Fitbit recalls 1.7 million smartwatches over burn hazard - LiveNOW from FOX",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBIdkc4cVRHRDBqNktHd2FmRl9yYUpURTVjV2Q5Z1BLRU1ZVm1pTGlJVXdnTDhtZC13QTQ1UjBoVHhaMnRZbk5yaEhNSHdWSXRKNmxoTlhyaUZqcmI5T2dfc3pKMHlIemlmLXozMzExb2VUdGJkTFZiMFc0bzduY1XSAYQBQVVfeXFMUFBQUTVUbWVwcm5Jb1ZFWlc5dUlWTzZHN0F2djRyNTBlUFlfMEVyWXY0ZjlvVzJ3ZVQ4V016eUFRckI5cXVCSVpoRDB2VXhPR2Ftd09aUENuVmFxY3hjVTFBTlB3RE9tMldWZ2luN0xxa1RpWHBzYnhFSzdLNDRiNnNmakNq?oc=5",
+          "source": "Google News (EN)",
+          "created_at": "2025-01-24T08:00:00+00:00",
+          "severity": "alta",
+          "sentiment": "negativo",
+          "star_rating": null
+        },
+        {
+          "id": "3fc39ae102cc9b08",
+          "title": "Issues with sleep efficiency",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vyv1j4/issues_with_sleep_efficiency/",
+          "source": "Reddit r/fitbit (nuevos)",
+          "created_at": "2026-08-26T12:00:01+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "2e1099f9497eaaca",
+      "title": "Piel / alergia · Sin modelo",
+      "category": "piel",
+      "category_label": "Piel / alergia",
+      "severity": "alta",
+      "models": [
+        "Sin modelo"
+      ],
+      "count": 3,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "Fitbit Agrees to Pay $12 Million for Not Quickly Reporting Burn Risk With Watches (Published 2025) The New York Times",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPVlVQcHhENWJhN3JIX1N1d1RGTzdlaXNFTWhwMGR0ZDRud3Y1N0c5REVxSVowcHBQaDBGMl9uaklYT1dLOWplZ0MzeDVGNmxDWXpEUFhEZmJsTE1UTE9CUjcwLUZQcllLMzlQbGZOZy1JZ3IyOFlxVzJYV1MtbEdZYjdZRjV4aGprN05TNWpZUQ?oc=5",
+          "source": "Google News (EN)",
+          "title": "Fitbit Agrees to Pay $12 Million for Not Quickly Reporting Burn Risk With Watches (Published 2025) - The New York Times"
+        },
+        {
+          "text": "Google-owned Fitbit to pay $12.2 million after consumers were burned by smartwatches CBS News",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE04Q3NDVjAwRW43MWFsVWZfYjlrMmxSV00xdHBfbm80Ym93VFJOeEM3R0p0aVlvcGgwVFRRYVlyMHVuX0FvajktSVN2MG9aR1c1Q21wVmpQQzF1eUUtN2pEcy1GcHppLVU5a0VkakdxSTRIcEdS0gF6QVVfeXFMUExZV1EwNkY5ZWNzQVFyMEZkYXoxTVRzWC1rOFhySkxWTURBc05zOE9uLVFVMEE5SXZHaXFiZXVMLWdZejVVVDJlZzdySm1DWGNkcXRNekZaLXlTMkx0WGFLcTRuRFZ4cDBIUmtpUUJ2NlV2TGU0NlY3ZGc?oc=5",
+          "source": "Google News (EN)",
+          "title": "Google-owned Fitbit to pay $12.2 million after consumers were burned by smartwatches - CBS News"
+        },
+        {
+          "text": "Fitbit to pay $12.25 million over smartwatches that caused burns PIRG",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOWHNlS1ZEbDBpS2tZZzlqSEZYeVJCZ0tONnMydWV6WmxmQzBiZlI3anNycGVJeF81SnVXSVBzQ1lnMkZGdDJkaU9BNWJzS3RVV0QybTNteEQ2TXljeG03MjhXelFwbnJkT04tUXBRVEZwb3RPRkloYmdfTzM1S09vUThkaVFjX0owcERJRHRFQ29MWmpRWVl1OFBFRkFoQQ?oc=5",
+          "source": "Google News (EN)",
+          "title": "Fitbit to pay $12.25 million over smartwatches that caused burns - PIRG"
+        }
+      ],
+      "sources": [
+        "Google News (EN)"
+      ],
+      "reports": [
+        {
+          "id": "9ebf5d4373788965",
+          "title": "Fitbit Agrees to Pay $12 Million for Not Quickly Reporting Burn Risk With Watches (Published 2025) - The New York Times",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPVlVQcHhENWJhN3JIX1N1d1RGTzdlaXNFTWhwMGR0ZDRud3Y1N0c5REVxSVowcHBQaDBGMl9uaklYT1dLOWplZ0MzeDVGNmxDWXpEUFhEZmJsTE1UTE9CUjcwLUZQcllLMzlQbGZOZy1JZ3IyOFlxVzJYV1MtbEdZYjdZRjV4aGprN05TNWpZUQ?oc=5",
+          "source": "Google News (EN)",
+          "created_at": "2025-01-24T08:00:00+00:00",
+          "severity": "alta",
+          "sentiment": "negativo",
+          "star_rating": null
+        },
+        {
+          "id": "1e2b788aa07d19cb",
+          "title": "Google-owned Fitbit to pay $12.2 million after consumers were burned by smartwatches - CBS News",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE04Q3NDVjAwRW43MWFsVWZfYjlrMmxSV00xdHBfbm80Ym93VFJOeEM3R0p0aVlvcGgwVFRRYVlyMHVuX0FvajktSVN2MG9aR1c1Q21wVmpQQzF1eUUtN2pEcy1GcHppLVU5a0VkakdxSTRIcEdS0gF6QVVfeXFMUExZV1EwNkY5ZWNzQVFyMEZkYXoxTVRzWC1rOFhySkxWTURBc05zOE9uLVFVMEE5SXZHaXFiZXVMLWdZejVVVDJlZzdySm1DWGNkcXRNekZaLXlTMkx0WGFLcTRuRFZ4cDBIUmtpUUJ2NlV2TGU0NlY3ZGc?oc=5",
+          "source": "Google News (EN)",
+          "created_at": "2025-01-23T08:00:00+00:00",
+          "severity": "alta",
+          "sentiment": "negativo",
+          "star_rating": null
+        },
+        {
+          "id": "89a4e0f3cd0c336b",
+          "title": "Fitbit to pay $12.25 million over smartwatches that caused burns - PIRG",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOWHNlS1ZEbDBpS2tZZzlqSEZYeVJCZ0tONnMydWV6WmxmQzBiZlI3anNycGVJeF81SnVXSVBzQ1lnMkZGdDJkaU9BNWJzS3RVV0QybTNteEQ2TXljeG03MjhXelFwbnJkT04tUXBRVEZwb3RPRkloYmdfTzM1S09vUThkaVFjX0owcERJRHRFQ29MWmpRWVl1OFBFRkFoQQ?oc=5",
+          "source": "Google News (EN)",
+          "created_at": "2025-01-25T08:00:00+00:00",
+          "severity": "alta",
+          "sentiment": "negativo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "e09db3cb167da204",
+      "title": "Batería · Sin modelo",
+      "category": "bateria",
+      "category_label": "Batería",
+      "severity": "alta",
+      "models": [
+        "Sin modelo"
+      ],
+      "count": 2,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "Google bricked all of the old fitbit scales with a firmware that glitches out and drains the battery. There were tons of reports at the time, but the devices were out of warranty so they didn’t fix it.",
+          "url": "https://quantum5.ca/2026/08/16/fixing-bricked-amd-7040-series-framework-13-laptop-with-20-tools/",
+          "source": "Hacker News",
+          "title": "Fixing a bricked Framework laptop"
+        },
+        {
+          "text": "“Time to move on”: Fitbit owners fed up with battery problems, Google response Ars Technica",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPcktLbTJpU0xydTZNZkN0WDB1bERuTXhOdkdNOFBVOTkzbnFRZEtWb1JKUDNUQmNiMWxFWkdSci1ncDBScGg4SC00aU5iRDJ0SFIwZS0yM3RLZm9YREd2MDVhTUFrY1BETk1wUTlkMFFYTjV2cEw4RnFRbkNzTHpxcnlSd0ZpVFdLdHlwc0JGdnBLby0zLW5Kc3kyWklhVEExeDI4azZFTmtPd2VDbEdhTWowMlFfQQ?oc=5",
+          "source": "Google News (EN)",
+          "title": "“Time to move on”: Fitbit owners fed up with battery problems, Google response - Ars Technica"
+        }
+      ],
+      "sources": [
+        "Google News (EN)",
+        "Hacker News"
+      ],
+      "reports": [
+        {
+          "id": "e80007184791f265",
+          "title": "Fixing a bricked Framework laptop",
+          "url": "https://quantum5.ca/2026/08/16/fixing-bricked-amd-7040-series-framework-13-laptop-with-20-tools/",
+          "source": "Hacker News",
+          "created_at": "2026-08-18T14:12:28Z",
+          "severity": "alta",
+          "sentiment": "negativo",
+          "star_rating": null
+        },
+        {
+          "id": "cecb0964597dd51a",
+          "title": "“Time to move on”: Fitbit owners fed up with battery problems, Google response - Ars Technica",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPcktLbTJpU0xydTZNZkN0WDB1bERuTXhOdkdNOFBVOTkzbnFRZEtWb1JKUDNUQmNiMWxFWkdSci1ncDBScGg4SC00aU5iRDJ0SFIwZS0yM3RLZm9YREd2MDVhTUFrY1BETk1wUTlkMFFYTjV2cEw4RnFRbkNzTHpxcnlSd0ZpVFdLdHlwc0JGdnBLby0zLW5Kc3kyWklhVEExeDI4azZFTmtPd2VDbEdhTWowMlFfQQ?oc=5",
+          "source": "Google News (EN)",
+          "created_at": "2024-01-31T08:00:00+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "7d2e69a2f90cd44b",
+      "title": "Calidad / hardware · Versa 3",
+      "category": "calidad",
+      "category_label": "Calidad / hardware",
+      "severity": "alta",
+      "models": [
+        "Versa 3",
+        "Sense"
+      ],
+      "count": 2,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "Fitbit rolls out fix for Sense and Versa 3 overheating battery, offers $50 credit Android Authority",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFAwZWlqV1BVY1RZTVF0RHVheEU3R25ReUJwd1QzSDZnNUNUSGNnQzJERlo1TU5QOHNVXzlDSjJ0X1RPQUFpZi1XM3E4WlRrSlVOaHlCamNQSDNKRXlFM2owZ0s3eUhvV0dvRmJNNFRSZE1jLXVKV293REh3Vk1ZSFE?oc=5",
+          "source": "Google News (EN)",
+          "title": "Fitbit rolls out fix for Sense and Versa 3 overheating battery, offers $50 credit - Android Authority"
+        },
+        {
+          "text": "Fitbit Sense and Versa 3 users are reeling after Google's overheating fix Android Central",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdVRvMjEwUTNFZ05Rcl9hcnFubGdMSGNiYU5Wa18xbDU2U1N5d3FUMHJXVlptZzBUNVRCTWg1RTdZNXpsbXE0S1NQWmt1amNFZzZrdS1URE1TWGkxZmZ5aDNIbVVPeHo3c1FxZGdCUmIyYU1ZSEpadkFwdUR0aGpnZUx4Uy0tdXgzRHVROGdVZEktam52cGF6MG12MVJQQXNJVXpDOFgwSnQ?oc=5",
+          "source": "Google News (EN)",
+          "title": "Fitbit Sense and Versa 3 users are reeling after Google's overheating fix - Android Central"
+        }
+      ],
+      "sources": [
+        "Google News (EN)"
+      ],
+      "reports": [
+        {
+          "id": "c3972377b4270623",
+          "title": "Fitbit rolls out fix for Sense and Versa 3 overheating battery, offers $50 credit - Android Authority",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFAwZWlqV1BVY1RZTVF0RHVheEU3R25ReUJwd1QzSDZnNUNUSGNnQzJERlo1TU5QOHNVXzlDSjJ0X1RPQUFpZi1XM3E4WlRrSlVOaHlCamNQSDNKRXlFM2owZ0s3eUhvV0dvRmJNNFRSZE1jLXVKV293REh3Vk1ZSFE?oc=5",
+          "source": "Google News (EN)",
+          "created_at": "2025-01-22T08:00:00+00:00",
+          "severity": "alta",
+          "sentiment": "negativo",
+          "star_rating": null
+        },
+        {
+          "id": "cff49d962b69fa28",
+          "title": "Fitbit Sense and Versa 3 users are reeling after Google's overheating fix - Android Central",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdVRvMjEwUTNFZ05Rcl9hcnFubGdMSGNiYU5Wa18xbDU2U1N5d3FUMHJXVlptZzBUNVRCTWg1RTdZNXpsbXE0S1NQWmt1amNFZzZrdS1URE1TWGkxZmZ5aDNIbVVPeHo3c1FxZGdCUmIyYU1ZSEpadkFwdUR0aGpnZUx4Uy0tdXgzRHVROGdVZEktam52cGF6MG12MVJQQXNJVXpDOFgwSnQ?oc=5",
+          "source": "Google News (EN)",
+          "created_at": "2025-02-21T08:00:00+00:00",
+          "severity": "alta",
+          "sentiment": "negativo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "6d2e711fa25f758c",
+      "title": "Batería · Ace",
+      "category": "bateria",
+      "category_label": "Batería",
+      "severity": "alta",
+      "models": [
+        "Ace"
+      ],
+      "count": 1,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "The problem is that Google makes it hard to go all-in on their products even when you want to. I was an early user for Google Apps for Your Domain, which was a free version of what is now Google Workspace that you could use with custom domains. I signed up for Google Play Music w",
+          "url": "https://blog.google/products/google-nest/chromecast-history/",
+          "source": "Hacker News Pixel Watch",
+          "title": "Moments in Chromecast's history"
+        }
+      ],
+      "sources": [
+        "Hacker News Pixel Watch"
+      ],
+      "reports": [
+        {
+          "id": "18d3511b04ddfad9",
+          "title": "Moments in Chromecast's history",
+          "url": "https://blog.google/products/google-nest/chromecast-history/",
+          "source": "Hacker News Pixel Watch",
+          "created_at": "2024-08-06T15:30:42Z",
+          "severity": "alta",
+          "sentiment": "negativo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "4b5f9ddd3b049793",
+      "title": "Ritmo cardíaco · Inspire 3",
+      "category": "ritmo_cardiaco",
+      "category_label": "Ritmo cardíaco",
+      "severity": "alta",
+      "models": [
+        "Inspire 3"
+      ],
+      "count": 1,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "I’m thinking it might be right. Does this seem reasonable for 2 hours of advanced pickleball? (Fitbit inspire 3) Metric Result 🔥 Energy burned 1,326 cal (this seems unreasonable to me) 🏃 Distance 3.1 mi 👟 Steps 6,874 ❤️** Average heart rat e **141 bpm 📈 Cardio load 257 ⏱️** Zone ",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vyi1bz/ai_is_saying_that_my_wearable_is_probably/",
+          "source": "Reddit r/fitbit (nuevos)",
+          "title": "AI is saying that my “wearable” is probably exaggerating my progress"
+        }
+      ],
+      "sources": [
+        "Reddit r/fitbit (nuevos)"
+      ],
+      "reports": [
+        {
+          "id": "ef67ff8f1e290f17",
+          "title": "AI is saying that my “wearable” is probably exaggerating my progress",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vyi1bz/ai_is_saying_that_my_wearable_is_probably/",
+          "source": "Reddit r/fitbit (nuevos)",
+          "created_at": "2026-08-26T00:49:10+00:00",
+          "severity": "alta",
+          "sentiment": "negativo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "3c0b9af3d5f94f82",
+      "title": "Sincronización · Sense 2",
+      "category": "sincronizacion",
+      "category_label": "Sincronización",
+      "severity": "alta",
+      "models": [
+        "Sense 2"
+      ],
+      "count": 1,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "We recently bought a new Sense 2 to replace one that APPARENTLY had a dead battery. Straight out of the box it was unable to pair, and was experiencing the \"Sync to the fitbit app\" and wasn't able to factory reset. A couple of days after that, the ORIGINAL Sense 2 started doing t",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vxrq0u/how_to_unbrick_a_fitbit_stuck_on_sync_to_the/",
+          "source": "Reddit r/fitbit (problemas)",
+          "title": "How to unbrick a Fitbit stuck on \"Sync to the fitbit app\" and the red X"
+        }
+      ],
+      "sources": [
+        "Reddit r/fitbit (problemas)"
+      ],
+      "reports": [
+        {
+          "id": "369871953ed2c3a7",
+          "title": "How to unbrick a Fitbit stuck on \"Sync to the fitbit app\" and the red X",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vxrq0u/how_to_unbrick_a_fitbit_stuck_on_sync_to_the/",
+          "source": "Reddit r/fitbit (problemas)",
+          "created_at": "2026-08-25T06:20:31+00:00",
+          "severity": "alta",
+          "sentiment": "negativo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "0733ade1cdca3f07",
+      "title": "Sincronización · Fitbit Air",
+      "category": "sincronizacion",
+      "category_label": "Sincronización",
+      "severity": "media",
+      "models": [
+        "Fitbit Air"
+      ],
+      "count": 5,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "I use Fitbit air with an iPhone 12 mini with iOS 26.4.2. Everything has been running perfectly since I got my FBA a three weeks ago. It’s been great. The last days, since the latest app update of Google Health 5.06.01 so many things have stopped working. I can’t start activities ",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vyyamr/so_many_bugs_since_app_update_50601/",
+          "source": "Reddit r/fitbit (problemas)",
+          "title": "So many bugs since app update 5.06.01"
+        },
+        {
+          "text": "Hi, I am enjoying my Fitbit air and new Google health app, but to make experience even better, if some devs are reading, I would like to give some advice. In \"Zone min\" section, in information tab it says that recommend zone minutes is 150 for the entire week, but card is only sh",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vywt9t/feature_request/",
+          "source": "Reddit r/fitbit (problemas)",
+          "title": "Feature request"
+        },
+        {
+          "text": "I’ve been waiting for this functionality for a long time and was checking almost every day. Some time ago, I finally gave up and forgot about it. Then, today when I was about to manually enter my weight, I noticed that some data had started appearing in my Apple Health profile. I",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vyvane/fitbit_started_writing_data_to_apple_health/",
+          "source": "Reddit r/fitbit (nuevos)",
+          "title": "Fitbit started writing data to Apple Health 🏃‍♂️😴"
+        }
+      ],
+      "sources": [
+        "Reddit r/fitbit (nuevos)",
+        "Reddit r/fitbit (problemas)"
+      ],
+      "reports": [
+        {
+          "id": "4ac85547025f5e70",
+          "title": "So many bugs since app update 5.06.01",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vyyamr/so_many_bugs_since_app_update_50601/",
+          "source": "Reddit r/fitbit (problemas)",
+          "created_at": "2026-08-26T14:13:56+00:00",
+          "severity": "media",
+          "sentiment": "positivo",
+          "star_rating": null
+        },
+        {
+          "id": "ea33d4150f726215",
+          "title": "Feature request",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vywt9t/feature_request/",
+          "source": "Reddit r/fitbit (problemas)",
+          "created_at": "2026-08-26T13:15:47+00:00",
+          "severity": "baja",
+          "sentiment": "positivo",
+          "star_rating": null
+        },
+        {
+          "id": "7d6c0e994e48b225",
+          "title": "Fitbit started writing data to Apple Health 🏃‍♂️😴",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vyvane/fitbit_started_writing_data_to_apple_health/",
+          "source": "Reddit r/fitbit (nuevos)",
+          "created_at": "2026-08-26T12:11:13+00:00",
+          "severity": "baja",
+          "sentiment": "positivo",
+          "star_rating": null
+        },
+        {
+          "id": "19697e7461369700",
+          "title": "Apple Health sync",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vz2g61/apple_health_sync/",
+          "source": "Reddit r/fitbit (problemas)",
+          "created_at": "2026-08-26T16:45:21+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        },
+        {
+          "id": "a683463273558b78",
+          "title": "Fitbit Air run not syncing to Strava",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vxxhvr/fitbit_air_run_not_syncing_to_strava/",
+          "source": "Reddit r/fitbit (problemas)",
+          "created_at": "2026-08-25T11:45:57+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "a746d8e685aa5877",
+      "title": "Sincronización · Sin modelo",
+      "category": "sincronizacion",
+      "category_label": "Sincronización",
+      "severity": "media",
+      "models": [
+        "Sin modelo"
+      ],
+      "count": 4,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "Me despierto con 6.000 pasos y me dice que todos los hice a las 00hs. Durante el día pasa de la nada a 4.000 y después a 12.000. No reinicia el control de pasos a las 00hs. Hable con atención al cliente y me dieron 10.000 soluciones que no sirvieron para nada. Y por ultimo un mai",
+          "url": "https://itunes.apple.com/ar/review?id=462638897&type=Purple%20Software",
+          "source": "App Store AR · Google Health (Fitbit)",
+          "title": "No sincroniza todos los días los pasos."
+        },
+        {
+          "text": "Hello r/fitbit , We’ve been seeing a lot of posts from users who are unhappy with the Fitbit app, the move toward Google Health, recent app changes, missing features, syncing issues, or the overall direction of the platform. To keep the subreddit easier to browse and stop the inf",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vyd8ch/megathread_fitbit_google_health_alternatives_app/",
+          "source": "Reddit r/fitbit (problemas)",
+          "title": "MEGATHREAD: Fitbit / Google Health Alternatives, App Replacements, and Device Switching"
+        },
+        {
+          "text": "Light sleep on Apple watch appears as awake in Google health. submitted by /u/rackmanrog2 [link] [comentarios]",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vykrqp/fitbit_sleep_option/",
+          "source": "Reddit r/fitbit (nuevos)",
+          "title": "Fitbit sleep option"
+        }
+      ],
+      "sources": [
+        "App Store AR · Google Health (Fitbit)",
+        "Google News (EN)",
+        "Reddit r/fitbit (nuevos)",
+        "Reddit r/fitbit (problemas)"
+      ],
+      "reports": [
+        {
+          "id": "ffccb6a768abd852",
+          "title": "No sincroniza todos los días los pasos.",
+          "url": "https://itunes.apple.com/ar/review?id=462638897&type=Purple%20Software",
+          "source": "App Store AR · Google Health (Fitbit)",
+          "created_at": "2026-01-23T09:27:49-07:00",
+          "severity": "media",
+          "sentiment": "negativo",
+          "star_rating": 1
+        },
+        {
+          "id": "f74599018c1094d1",
+          "title": "MEGATHREAD: Fitbit / Google Health Alternatives, App Replacements, and Device Switching",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vyd8ch/megathread_fitbit_google_health_alternatives_app/",
+          "source": "Reddit r/fitbit (problemas)",
+          "created_at": "2026-08-25T21:30:49+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        },
+        {
+          "id": "3c55483dae4c9b03",
+          "title": "Fitbit sleep option",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vykrqp/fitbit_sleep_option/",
+          "source": "Reddit r/fitbit (nuevos)",
+          "created_at": "2026-08-26T02:51:56+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        },
+        {
+          "id": "b9b9859a319b1591",
+          "title": "Google Health: Fitbit, We have a problem. A design problem. - the5krunner",
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5lTVFJVVpIb0gyRnBCOVJXRTl2U2pKbE9YMTN5SmtQa2RFaWJTZ21pbmZydU4xZVMzS05kQWdUclNObklaMnN6T2ZPTnAtM0NkWU9uWE1CbVZpZlFpX05UVzZMMThzb29MR3hvUF8yM3FwSHNoRjE3OHpnQQ?oc=5",
+          "source": "Google News (EN)",
+          "created_at": "2026-05-28T07:00:00+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "d11dc3b2c1350a47",
+      "title": "Software / app · Sin modelo",
+      "category": "software",
+      "category_label": "Software / app",
+      "severity": "media",
+      "models": [
+        "Sin modelo"
+      ],
+      "count": 4,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "My take (launched Samsung Galaxy device series in the US, did work for Nokia/HTC/LG/etc.)... the ad business was always based on attention dominance through search. Android has performed its primary function - preventing the exclusive dominance of mobile including operator relati",
+          "url": "https://www.cnbc.com/2025/01/31/google-offers-voluntary-buyouts-to-hardware-and-platform-teams.html",
+          "source": "Hacker News Pixel Watch",
+          "title": "Google offers 'voluntary' buyouts to hardware and platform teams"
+        },
+        {
+          "text": "Google updated this app from a very useful and user friendly app with lots of great features to a cumbersome, useless app with many features missing or very difficult to use. You can no longer create a new food, you can only log foods previously logged on the old app or new ones ",
+          "url": "https://itunes.apple.com/es/review?id=462638897&type=Purple%20Software",
+          "source": "App Store ES · Google Health (Fitbit)",
+          "title": "Just awful"
+        },
+        {
+          "text": "Hi! So i'm not sure what the weekly cardio goal is based on because i reached it on the first day of the week, last week i hit about 350%. Context: i'm 192cm and about 103kg, kinda fit but a bit heavy. On monday i had a walk the dog, hyrox training and crossfit training. Is it ju",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vydbzj/weekly_cardio/",
+          "source": "Reddit r/fitbit (problemas)",
+          "title": "Weekly cardio"
+        }
+      ],
+      "sources": [
+        "App Store ES · Google Health (Fitbit)",
+        "Hacker News Pixel Watch",
+        "Reddit r/fitbit (problemas)"
+      ],
+      "reports": [
+        {
+          "id": "42d7f543ae88c2f8",
+          "title": "Google offers 'voluntary' buyouts to hardware and platform teams",
+          "url": "https://www.cnbc.com/2025/01/31/google-offers-voluntary-buyouts-to-hardware-and-platform-teams.html",
+          "source": "Hacker News Pixel Watch",
+          "created_at": "2025-02-01T22:05:28Z",
+          "severity": "media",
+          "sentiment": "negativo",
+          "star_rating": null
+        },
+        {
+          "id": "9a9fe06bfad2717f",
+          "title": "Just awful",
+          "url": "https://itunes.apple.com/es/review?id=462638897&type=Purple%20Software",
+          "source": "App Store ES · Google Health (Fitbit)",
+          "created_at": "2026-06-04T07:10:10-07:00",
+          "severity": "media",
+          "sentiment": "negativo",
+          "star_rating": 1
+        },
+        {
+          "id": "d28c63714cd72b59",
+          "title": "Weekly cardio",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vydbzj/weekly_cardio/",
+          "source": "Reddit r/fitbit (problemas)",
+          "created_at": "2026-08-25T21:34:42+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        },
+        {
+          "id": "49da46a34a8934d2",
+          "title": "Sleep efficiency",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vyxct7/sleep_efficiency/",
+          "source": "Reddit r/fitbit (problemas)",
+          "created_at": "2026-08-26T13:37:16+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "189cdf5bff4e9a68",
+      "title": "Software / app · Fitbit Air",
+      "category": "software",
+      "category_label": "Software / app",
+      "severity": "media",
+      "models": [
+        "Fitbit Air"
+      ],
+      "count": 3,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "Due to a medical condition, I often cannot sleep without prescribed sleep medication. Because I do not take it every day, my established sleep pattern is often to sleep every other day and sleep longer on the days when I do sleep. I previously used older Fitbit models, including ",
+          "url": "https://itunes.apple.com/us/review?id=462638897&type=Purple%20Software",
+          "source": "App Store US · Google Health (Fitbit)",
+          "title": "Fitbit Air: Zero Sleep Is Not Missing Data"
+        },
+        {
+          "text": "I am pretty sure the band was wrapped around wrist and it was a snug fit when i woke up. Sleep is the most important think i want to track 😭 submitted by /u/kafka_si_zindagi [link] [comentarios]",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vyquyw/fitbit_air_didnt_collect_sleep_data_last_night_is/",
+          "source": "Reddit r/fitbit (problemas)",
+          "title": "Fitbit Air didn’t collect sleep data last night. Is it a common issue?"
+        },
+        {
+          "text": "Fitbit Air: Google Confirms Two Unusual Bugs the5krunner",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBMMkY4UE9xcEpNa2xvZV9Ld3dfTWlhNFczWllsazRIZzA4R2Fjd0ctclJqU3hucWwxdW8xejFNTjdOVEVKS0FQNFNwRDUwc0syNjQ4cndEd2xZVFVjdVFUc1JmV05vczBRMFA3RG53?oc=5",
+          "source": "Google News (EN)",
+          "title": "Fitbit Air: Google Confirms Two Unusual Bugs - the5krunner"
+        }
+      ],
+      "sources": [
+        "App Store US · Google Health (Fitbit)",
+        "Google News (EN)",
+        "Reddit r/fitbit (problemas)"
+      ],
+      "reports": [
+        {
+          "id": "c17a28d6401feabe",
+          "title": "Fitbit Air: Zero Sleep Is Not Missing Data",
+          "url": "https://itunes.apple.com/us/review?id=462638897&type=Purple%20Software",
+          "source": "App Store US · Google Health (Fitbit)",
+          "created_at": "2026-08-24T15:27:25-07:00",
+          "severity": "media",
+          "sentiment": "negativo",
+          "star_rating": 2
+        },
+        {
+          "id": "2e998098637a6ee8",
+          "title": "Fitbit Air didn’t collect sleep data last night. Is it a common issue?",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vyquyw/fitbit_air_didnt_collect_sleep_data_last_night_is/",
+          "source": "Reddit r/fitbit (problemas)",
+          "created_at": "2026-08-26T08:13:12+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        },
+        {
+          "id": "67582285882aac23",
+          "title": "Fitbit Air: Google Confirms Two Unusual Bugs - the5krunner",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBMMkY4UE9xcEpNa2xvZV9Ld3dfTWlhNFczWllsazRIZzA4R2Fjd0ctclJqU3hucWwxdW8xejFNTjdOVEVKS0FQNFNwRDUwc0syNjQ4cndEd2xZVFVjdVFUc1JmV05vczBRMFA3RG53?oc=5",
+          "source": "Google News (EN)",
+          "created_at": "2026-07-08T07:00:00+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "9990ff008febd629",
+      "title": "Calidad / hardware · Pixel Watch",
+      "category": "calidad",
+      "category_label": "Calidad / hardware",
+      "severity": "baja",
+      "models": [
+        "Pixel Watch"
+      ],
+      "count": 3,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "I honestly don’t even know where to start anymore. I’ve now contacted Google support FOUR times about my Pixel Watch, and the situation somehow keeps getting worse. Sent my watch in for repair → waited almost 3 weeks Got it back marked as “no issues found” The watch is still clea",
+          "url": "https://www.reddit.com/r/googlepixelwatch/comments/1srk21t/google_pixel_watch_4_repair_experience_is_a/",
+          "source": "Reddit r/GooglePixelWatch",
+          "title": "Google Pixel Watch 4 repair experience is a complete joke (4 contacts, 3 weeks, still broken)"
+        },
+        {
+          "text": "Your Google Pixel Watch Sleep Tracking Might Be Broken - But It Should Be Fixed Soon bgr.com",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5OOFBCSUhYT2Y3YmpsWTdacjFKekI4LWhBVzZVQ09zWXF0QVFvQ0JkRGJDMWhkVjJHSHIxaHl4ZUVheFpmYTBtZDJXU19MUzBaZlZaUUlDN3hBRkYycnVyQzZRbktvbGt4QlB5d2tMY1RnamdKemtzaUk4Z2YwUQ?oc=5",
+          "source": "Google News (EN)",
+          "title": "Your Google Pixel Watch Sleep Tracking Might Be Broken - But It Should Be Fixed Soon - bgr.com"
+        },
+        {
+          "text": "Pixel Watch owners say sleep tracking is broken again (Updated) Android Central",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNb01ja24wcXlGU0kxUGxlY1dvSFZHZnpNMGw5WC1kSFJEQ09PTFM2N05uQVl5bkRnZVJaR3VXeXNOTzhyQXBNVUN4VHhPejJsS1lPSVd1T1pJaTJyX2M3cjBkbVVqbW5EY1d6MDZRUHRmMVlFcHN0UC00MDNZVnpPd29JdHhWUXNjMG94ODc5Wm1Sb09GMWtPYmc4Si1seThRTXRLSDlOR3ZVWHNRQW1ScFdVTQ?oc=5",
+          "source": "Google News (EN)",
+          "title": "Pixel Watch owners say sleep tracking is broken again (Updated) - Android Central"
+        }
+      ],
+      "sources": [
+        "Google News (EN)",
+        "Reddit r/GooglePixelWatch"
+      ],
+      "reports": [
+        {
+          "id": "026cc6f5cd71b17d",
+          "title": "Google Pixel Watch 4 repair experience is a complete joke (4 contacts, 3 weeks, still broken)",
+          "url": "https://www.reddit.com/r/googlepixelwatch/comments/1srk21t/google_pixel_watch_4_repair_experience_is_a/",
+          "source": "Reddit r/GooglePixelWatch",
+          "created_at": "2026-04-21T10:48:22+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        },
+        {
+          "id": "2f451579135ccedb",
+          "title": "Your Google Pixel Watch Sleep Tracking Might Be Broken - But It Should Be Fixed Soon - bgr.com",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5OOFBCSUhYT2Y3YmpsWTdacjFKekI4LWhBVzZVQ09zWXF0QVFvQ0JkRGJDMWhkVjJHSHIxaHl4ZUVheFpmYTBtZDJXU19MUzBaZlZaUUlDN3hBRkYycnVyQzZRbktvbGt4QlB5d2tMY1RnamdKemtzaUk4Z2YwUQ?oc=5",
+          "source": "Google News (EN)",
+          "created_at": "2026-05-19T07:00:00+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        },
+        {
+          "id": "7ba8e9a593fecfb9",
+          "title": "Pixel Watch owners say sleep tracking is broken again (Updated) - Android Central",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNb01ja24wcXlGU0kxUGxlY1dvSFZHZnpNMGw5WC1kSFJEQ09PTFM2N05uQVl5bkRnZVJaR3VXeXNOTzhyQXBNVUN4VHhPejJsS1lPSVd1T1pJaTJyX2M3cjBkbVVqbW5EY1d6MDZRUHRmMVlFcHN0UC00MDNZVnpPd29JdHhWUXNjMG94ODc5Wm1Sb09GMWtPYmc4Si1seThRTXRLSDlOR3ZVWHNRQW1ScFdVTQ?oc=5",
+          "source": "Google News (EN)",
+          "created_at": "2026-05-18T07:00:00+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "50aa38ad58fd9436",
+      "title": "Calidad / hardware · Fitbit Air",
+      "category": "calidad",
+      "category_label": "Calidad / hardware",
+      "severity": "baja",
+      "models": [
+        "Fitbit Air"
+      ],
+      "count": 2,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "I've been thinking about finally getting a health tracker since google released the fitbit air, however all I ever seem to hear is how awful the companion app is. As somebody who never had a tracker I never experienced the former fitbit app. Now my question as a newcomer is: Is t",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vxzxeb/am_i_being_fed_too_much_negativity_about_the_app/",
+          "source": "Reddit r/fitbit (problemas)",
+          "title": "Am i being fed too much negativity about the App? (as a newcomer)"
+        },
+        {
+          "text": "I was convinced my Google Fitbit Air's battery was defective until I changed these settings Android Police",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOQzctbElYNnYzTnVfUWZOVkV2VllIWjdZc3MyU1JxNzBFanMtMU5sTnR3aUZ2eXY5bUw5bmdZMFVEOFo4S3JkSkYxUWp3MVk3dFhrclByMGQzRFFDYzcxa044MVNvcGM3LXBJZXJqNmVrQl9wUkE3QnVyeTZfYlBPUmhnc2ZwU0M1OElnRW5saERkQl9ITUM0V0NiM0xQcjg4ZW5Bam1n?oc=5",
+          "source": "Google News (EN)",
+          "title": "I was convinced my Google Fitbit Air's battery was defective until I changed these settings - Android Police"
+        }
+      ],
+      "sources": [
+        "Google News (EN)",
+        "Reddit r/fitbit (problemas)"
+      ],
+      "reports": [
+        {
+          "id": "44386d9aa55cb157",
+          "title": "Am i being fed too much negativity about the App? (as a newcomer)",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vxzxeb/am_i_being_fed_too_much_negativity_about_the_app/",
+          "source": "Reddit r/fitbit (problemas)",
+          "created_at": "2026-08-25T13:30:20+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        },
+        {
+          "id": "0bb0d91f8be9832d",
+          "title": "I was convinced my Google Fitbit Air's battery was defective until I changed these settings - Android Police",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOQzctbElYNnYzTnVfUWZOVkV2VllIWjdZc3MyU1JxNzBFanMtMU5sTnR3aUZ2eXY5bUw5bmdZMFVEOFo4S3JkSkYxUWp3MVk3dFhrclByMGQzRFFDYzcxa044MVNvcGM3LXBJZXJqNmVrQl9wUkE3QnVyeTZfYlBPUmhnc2ZwU0M1OElnRW5saERkQl9ITUM0V0NiM0xQcjg4ZW5Bam1n?oc=5",
+          "source": "Google News (EN)",
+          "created_at": "2026-08-11T07:00:00+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "548f9b363f417ce5",
+      "title": "Correa · Fitbit Air",
+      "category": "correa",
+      "category_label": "Correa",
+      "severity": "baja",
+      "models": [
+        "Fitbit Air"
+      ],
+      "count": 2,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "Fitbit Air has a strap problem after launch Tech Advisor",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPUWgxVGN0dkVlMWNDQUR2OWx6VnM0bko1TXJKNUhmRllCZGtUak5XYmpRNkU3dVJsYWN1WGQwMDFZTEYxQU5uTy0zdWxCcXpER0ozNzZrVldldGFGLXlVeVRoeEt2U2poUjlQOTZ0angzXzctd2NRUUtpR3JsUTF6d0pEaGd5bG5NNkdrVFVCYXJVZGZJTmc?oc=5",
+          "source": "Google News (EN)",
+          "title": "Fitbit Air has a strap problem after launch - Tech Advisor"
+        },
+        {
+          "text": "submitted by /u/tokewitch [link] [comentarios]",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vz3jgd/google_fitbit_air_with_armband_impressions_and/",
+          "source": "Reddit r/fitbit (nuevos)",
+          "title": "Google Fitbit Air with Armband Impressions and best use case IMO."
+        }
+      ],
+      "sources": [
+        "Google News (EN)",
+        "Reddit r/fitbit (nuevos)"
+      ],
+      "reports": [
+        {
+          "id": "2e278618bffa1673",
+          "title": "Fitbit Air has a strap problem after launch - Tech Advisor",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPUWgxVGN0dkVlMWNDQUR2OWx6VnM0bko1TXJKNUhmRllCZGtUak5XYmpRNkU3dVJsYWN1WGQwMDFZTEYxQU5uTy0zdWxCcXpER0ozNzZrVldldGFGLXlVeVRoeEt2U2poUjlQOTZ0angzXzctd2NRUUtpR3JsUTF6d0pEaGd5bG5NNkdrVFVCYXJVZGZJTmc?oc=5",
+          "source": "Google News (EN)",
+          "created_at": "2026-06-01T07:00:00+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        },
+        {
+          "id": "5f77af69f33faa3b",
+          "title": "Google Fitbit Air with Armband Impressions and best use case IMO.",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vz3jgd/google_fitbit_air_with_armband_impressions_and/",
+          "source": "Reddit r/fitbit (nuevos)",
+          "created_at": "2026-08-26T17:23:38+00:00",
+          "severity": "baja",
+          "sentiment": "positivo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "6689856627d95c50",
+      "title": "Pantalla · Sin modelo",
+      "category": "pantalla",
+      "category_label": "Pantalla",
+      "severity": "baja",
+      "models": [
+        "Sin modelo"
+      ],
+      "count": 2,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "​I need to vent about the absurdity of Google's health ecosystem, because this is textbook Google launching a feature, building an ecosystem around it, and then abandoning the integration the second platforms evolve. ​I wear a tracker on my wrist and I also have a second gen Nest",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vye4hk/health_app_nest_gen_2_wsleep_tracking_or_how/",
+          "source": "Reddit r/fitbit (nuevos)",
+          "title": "Health App + Nest Gen 2 w/Sleep Tracking or How Google Sells Innovation and Kneecaps it When the Stack Evolves"
+        },
+        {
+          "text": "Now I'm looking at my heart rate. If I want to see zone minutes I have to tap 6 times instead of just swiping right once. That's purely insane. Is it hard to implement or one of the stupidest UX designs ever? submitted by /u/TableWallWatch [link] [comentarios]",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vy0bll/i_dont_understand_why_we_arent_allowed_to_swipe/",
+          "source": "Reddit r/fitbit (problemas)",
+          "title": "I don't understand why we aren't allowed to swipe left and right on the workout screen"
+        }
+      ],
+      "sources": [
+        "Reddit r/fitbit (nuevos)",
+        "Reddit r/fitbit (problemas)"
+      ],
+      "reports": [
+        {
+          "id": "908c547e75e1fa0f",
+          "title": "Health App + Nest Gen 2 w/Sleep Tracking or How Google Sells Innovation and Kneecaps it When the Stack Evolves",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vye4hk/health_app_nest_gen_2_wsleep_tracking_or_how/",
+          "source": "Reddit r/fitbit (nuevos)",
+          "created_at": "2026-08-25T22:05:25+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        },
+        {
+          "id": "4b60881e4ffa8413",
+          "title": "I don't understand why we aren't allowed to swipe left and right on the workout screen",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vy0bll/i_dont_understand_why_we_arent_allowed_to_swipe/",
+          "source": "Reddit r/fitbit (problemas)",
+          "created_at": "2026-08-25T13:46:18+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "fd31c525e2fe9632",
+      "title": "Ritmo cardíaco · Sin modelo",
+      "category": "ritmo_cardiaco",
+      "category_label": "Ritmo cardíaco",
+      "severity": "baja",
+      "models": [
+        "Sin modelo"
+      ],
+      "count": 2,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "Just discovered the HRV section in my fitbit app after I've been tracking my BP and HR religiously since starting 2 medications for them on July 28. I think it's cool how according to my tracker they've really improved my general well-being. Still not exactly sure what HRV is eve",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vxzer5/heart_rate_variability_hrv_changes_after_starting/",
+          "source": "Reddit r/fitbit (problemas)",
+          "title": "Heart rate variability (HRV) changes after starting medications for high blood pressure and heart rate."
+        },
+        {
+          "text": "Clip to clip on your waist or sock so you can rock normal watches on the day to day. Heart rate and steps are spot on with Apple Watch. This is with Fitbit auto detection submitted by /u/FeelFeltFound54 [link] [comentarios]",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vyliu0/the_most_slept_on_accessory/",
+          "source": "Reddit r/fitbit (problemas)",
+          "title": "The most slept on accessory"
+        }
+      ],
+      "sources": [
+        "Reddit r/fitbit (problemas)"
+      ],
+      "reports": [
+        {
+          "id": "feaac3262a7eb487",
+          "title": "Heart rate variability (HRV) changes after starting medications for high blood pressure and heart rate.",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vxzer5/heart_rate_variability_hrv_changes_after_starting/",
+          "source": "Reddit r/fitbit (problemas)",
+          "created_at": "2026-08-25T13:09:31+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        },
+        {
+          "id": "f749bd1386df4c4d",
+          "title": "The most slept on accessory",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vyliu0/the_most_slept_on_accessory/",
+          "source": "Reddit r/fitbit (problemas)",
+          "created_at": "2026-08-26T03:26:21+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "27c2074010880160",
+      "title": "Sincronización · Pixel Watch",
+      "category": "sincronizacion",
+      "category_label": "Sincronización",
+      "severity": "baja",
+      "models": [
+        "Pixel Watch"
+      ],
+      "count": 2,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "Hey everyone / Google support, I’m now on my second Pixel Watch 4 (45mm Wi-Fi, Polished Silver / Porcelain) and it’s doing the exact same thing as the first one I returned: Phone sees the watch in Bluetooth settings and even says “Connected” But the Pixel Watch app never finishes",
+          "url": "https://www.reddit.com/r/googlepixelwatch/comments/1p1nged/pixel_10_and_pixel_watch_4_paring_disaster/",
+          "source": "Reddit r/GooglePixelWatch",
+          "title": "Pixel 10 and Pixel Watch 4 paring disaster"
+        },
+        {
+          "text": "Google Health has fixed the outage that broke sync for Fitbit & Pixel Watch owners [U] 9to5Google",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQUzdJUDJ2UmRDb21hYUplTzVPSllPOEo0bW4xWGR3VG9pNVpXOVlzSEpEalRCb1JSaW9GZUdmRDI4UEdHQmVZdFVnak1iaGhxLU1BbkdMMVd1UktxRnNiLTg3RnYzMEFURDdVS181N2pxZmkweEF1SGNPZFc3SFJzZ1F0SVBlNUNNWUpoWEQ3U0JtUUVKeWNhUmtDMEdrNEVFNUV2ME15MGxLOEE?oc=5",
+          "source": "Google News (EN)",
+          "title": "Google Health has fixed the outage that broke sync for Fitbit & Pixel Watch owners [U] - 9to5Google"
+        }
+      ],
+      "sources": [
+        "Google News (EN)",
+        "Reddit r/GooglePixelWatch"
+      ],
+      "reports": [
+        {
+          "id": "0cef8c7ba0b0a6dd",
+          "title": "Pixel 10 and Pixel Watch 4 paring disaster",
+          "url": "https://www.reddit.com/r/googlepixelwatch/comments/1p1nged/pixel_10_and_pixel_watch_4_paring_disaster/",
+          "source": "Reddit r/GooglePixelWatch",
+          "created_at": "2025-11-19T23:28:43+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        },
+        {
+          "id": "d0d7b0ba3f380caf",
+          "title": "Google Health has fixed the outage that broke sync for Fitbit & Pixel Watch owners [U] - 9to5Google",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQUzdJUDJ2UmRDb21hYUplTzVPSllPOEo0bW4xWGR3VG9pNVpXOVlzSEpEalRCb1JSaW9GZUdmRDI4UEdHQmVZdFVnak1iaGhxLU1BbkdMMVd1UktxRnNiLTg3RnYzMEFURDdVS181N2pxZmkweEF1SGNPZFc3SFJzZ1F0SVBlNUNNWUpoWEQ3U0JtUUVKeWNhUmtDMEdrNEVFNUV2ME15MGxLOEE?oc=5",
+          "source": "Google News (EN)",
+          "created_at": "2026-07-16T07:00:00+00:00",
+          "severity": "baja",
+          "sentiment": "positivo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "909a14d238d68fbd",
+      "title": "Batería · Inspire 3",
+      "category": "bateria",
+      "category_label": "Batería",
+      "severity": "baja",
+      "models": [
+        "Inspire 3"
+      ],
+      "count": 1,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "Battery life is down to 3 days with always on display turned off. Device shows 5% battery and when I put it to charge it shows 92% battery. Sync issues sometimes. screen flickers on and off and vibrates for a minute or so then goes off. Is there a solution? Or do I need to buy a ",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vymn0j/my_fitbit_inspire_3_flickers_on_and_off_and/",
+          "source": "Reddit r/fitbit (problemas)",
+          "title": "My fitbit inspire 3 flickers on and off and vibrates and turns off"
+        }
+      ],
+      "sources": [
+        "Reddit r/fitbit (problemas)"
+      ],
+      "reports": [
+        {
+          "id": "f73154cbf20ec2cb",
+          "title": "My fitbit inspire 3 flickers on and off and vibrates and turns off",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vymn0j/my_fitbit_inspire_3_flickers_on_and_off_and/",
+          "source": "Reddit r/fitbit (problemas)",
+          "created_at": "2026-08-26T04:19:45+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "4de563bbbfd64c0e",
+      "title": "Batería · Pixel Watch 2",
+      "category": "bateria",
+      "category_label": "Batería",
+      "severity": "baja",
+      "models": [
+        "Pixel Watch 2"
+      ],
+      "count": 1,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "So I've been looking for a good smartwatch for my Android phone, and I've narrowed it down to the Pixel Watch 2 and the Oneplus Watch 2r. My wrist is ~5.5in so its pretty small, but still fits into the official recommendation for the Oneplus watch. However, I am worried about siz",
+          "url": "https://www.reddit.com/r/googlepixelwatch/comments/1jzxswi/1_watch_2r_vs_pixel_watch_2/",
+          "source": "Reddit r/GooglePixelWatch",
+          "title": "1+ Watch 2r vs Pixel Watch 2"
+        }
+      ],
+      "sources": [
+        "Reddit r/GooglePixelWatch"
+      ],
+      "reports": [
+        {
+          "id": "7642f35a353b8050",
+          "title": "1+ Watch 2r vs Pixel Watch 2",
+          "url": "https://www.reddit.com/r/googlepixelwatch/comments/1jzxswi/1_watch_2r_vs_pixel_watch_2/",
+          "source": "Reddit r/GooglePixelWatch",
+          "created_at": "2025-04-15T17:30:18+00:00",
+          "severity": "baja",
+          "sentiment": "positivo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "f8ba4ff8f67929cc",
+      "title": "Carga · Sin modelo",
+      "category": "carga",
+      "category_label": "Carga",
+      "severity": "baja",
+      "models": [
+        "Sin modelo"
+      ],
+      "count": 1,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "I’m not sure what less than one percent difference from the S&P 500 is supposed to prove good or bad. The S&P 500 is heavily weighted toward Alphabet, it literally is a big part of the S&P 500 itself. And, you know, Exxon Mobil hasn’t really made a new product in quite some time ",
+          "url": "https://bcantrill.dtrace.org/2024/12/08/why-gelsinger-was-wrong-for-intel/",
+          "source": "Hacker News Pixel Watch",
+          "title": "Pat Gelsinger was wrong for Intel"
+        }
+      ],
+      "sources": [
+        "Hacker News Pixel Watch"
+      ],
+      "reports": [
+        {
+          "id": "81450f88a5f01851",
+          "title": "Pat Gelsinger was wrong for Intel",
+          "url": "https://bcantrill.dtrace.org/2024/12/08/why-gelsinger-was-wrong-for-intel/",
+          "source": "Hacker News Pixel Watch",
+          "created_at": "2024-12-11T05:49:01Z",
+          "severity": "baja",
+          "sentiment": "positivo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "e0a9ffe265110afd",
+      "title": "Pantalla · Fitbit Air",
+      "category": "pantalla",
+      "category_label": "Pantalla",
+      "severity": "baja",
+      "models": [
+        "Fitbit Air"
+      ],
+      "count": 1,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "I've been seeing a lot about the fitbit air, and I kind of miss having a screen. Does anyone still use the original fitbit / recommend it? And can anyone give me feedback on the ai coach for the fitbit air and how they like it? submitted by /u/Home-Resident [link] [comentarios]",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vy0cnc/does_anyone_still_wear_the_original_fitbit/",
+          "source": "Reddit r/fitbit (problemas)",
+          "title": "Does anyone still wear the original Fitbit"
+        }
+      ],
+      "sources": [
+        "Reddit r/fitbit (problemas)"
+      ],
+      "reports": [
+        {
+          "id": "ae18450440fed378",
+          "title": "Does anyone still wear the original Fitbit",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vy0cnc/does_anyone_still_wear_the_original_fitbit/",
+          "source": "Reddit r/fitbit (problemas)",
+          "created_at": "2026-08-25T13:47:26+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "104c43f898fe48f5",
+      "title": "Ritmo cardíaco · Fitbit Air",
+      "category": "ritmo_cardiaco",
+      "category_label": "Ritmo cardíaco",
+      "severity": "baja",
+      "models": [
+        "Fitbit Air"
+      ],
+      "count": 1,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "Hi My HRV has always been in range of 40 to 50 using Apple Watch. I switched to Fitbit Air and numbers from last two days are 30. What do you guys think? submitted by /u/greeks-square [link] [comentarios]",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vxuwr4/hrv/",
+          "source": "Reddit r/fitbit (problemas)",
+          "title": "HRV"
+        }
+      ],
+      "sources": [
+        "Reddit r/fitbit (problemas)"
+      ],
+      "reports": [
+        {
+          "id": "372a4d31fc504cec",
+          "title": "HRV",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vxuwr4/hrv/",
+          "source": "Reddit r/fitbit (problemas)",
+          "created_at": "2026-08-25T09:28:53+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "62a688fce7ad5ad6",
+      "title": "Sincronización · Versa 4",
+      "category": "sincronizacion",
+      "category_label": "Sincronización",
+      "severity": "baja",
+      "models": [
+        "Versa 4"
+      ],
+      "count": 1,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "So my wife dropped her old Versa 4 and broke it. Decided to replace like-for-like. Received new one. Went through the whole shebang of “replacing” old watch with new watch on her android. Made sure Google Health app and Watch had latest software. Watch seems to work fine: steps, ",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vz4thz/plz_help_cant_download_watch_faces_on_versa_4_not/",
+          "source": "Reddit r/fitbit (problemas)",
+          "title": "Plz help - can’t download watch faces on versa 4… “not available”"
+        }
+      ],
+      "sources": [
+        "Reddit r/fitbit (problemas)"
+      ],
+      "reports": [
+        {
+          "id": "b0a3e11877e6e6b7",
+          "title": "Plz help - can’t download watch faces on versa 4… “not available”",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vz4thz/plz_help_cant_download_watch_faces_on_versa_4_not/",
+          "source": "Reddit r/fitbit (problemas)",
+          "created_at": "2026-08-26T18:08:45+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "b7ec2746f75016ae",
+      "title": "Sincronización · Inspire 2",
+      "category": "sincronizacion",
+      "category_label": "Sincronización",
+      "severity": "baja",
+      "models": [
+        "Inspire 2"
+      ],
+      "count": 1,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "I've been trying to fix the persistent issue between the bluetooth connecting my inspire 2 to the new app. Working fine in the past, now the device has been disconnected. It registers as a bluetooth device that will connect to my phone but when it comes to connecting to the app c",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vyuooy/google_health_app_taking_forever_to_sync/",
+          "source": "Reddit r/fitbit (problemas)",
+          "title": "Google Health App taking forever to sync"
+        }
+      ],
+      "sources": [
+        "Reddit r/fitbit (problemas)"
+      ],
+      "reports": [
+        {
+          "id": "2f1b5cc7cd6811bc",
+          "title": "Google Health App taking forever to sync",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vyuooy/google_health_app_taking_forever_to_sync/",
+          "source": "Reddit r/fitbit (problemas)",
+          "created_at": "2026-08-26T11:42:32+00:00",
+          "severity": "baja",
+          "sentiment": "positivo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "3d01ae3af3006914",
+      "title": "Sincronización · Charge 6",
+      "category": "sincronizacion",
+      "category_label": "Sincronización",
+      "severity": "baja",
+      "models": [
+        "Charge 6"
+      ],
+      "count": 1,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "I have a charge 6. Soon after Google ingested Fitbit, I started losing data. I don't believe there is a solution to this one, but I thought I would give this a try. The issue is that the fitbit disconnects at every update of google health or android, and after trying all the docu",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vymful/fitbit_charge_6_requires_frequent_resets_to/",
+          "source": "Reddit r/fitbit (problemas)",
+          "title": "Fitbit Charge 6 requires frequent resets to reconnect to google health"
+        }
+      ],
+      "sources": [
+        "Reddit r/fitbit (problemas)"
+      ],
+      "reports": [
+        {
+          "id": "e6d0bfd7e990fb45",
+          "title": "Fitbit Charge 6 requires frequent resets to reconnect to google health",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vymful/fitbit_charge_6_requires_frequent_resets_to/",
+          "source": "Reddit r/fitbit (problemas)",
+          "created_at": "2026-08-26T04:10:15+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "7dce9c3de820b8ef",
+      "title": "Sincronización · Pixel Watch 2",
+      "category": "sincronizacion",
+      "category_label": "Sincronización",
+      "severity": "baja",
+      "models": [
+        "Pixel Watch 2"
+      ],
+      "count": 1,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "So, I have been using the free Addidas Running (formerly Runtastic) for runs and training plans in the past. It is straightforward: You chose your training plan (e.g. Beginner 10k), decide how many weeks and how often per week you want to train You do a calibration run, and the a",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vyxkjp/am_i_too_stubid_or_is_it_the_apps_fault/",
+          "source": "Reddit r/fitbit (nuevos)",
+          "title": "Am I too stubid or is it the app's fault?"
+        }
+      ],
+      "sources": [
+        "Reddit r/fitbit (nuevos)"
+      ],
+      "reports": [
+        {
+          "id": "12e4bc8727a450ec",
+          "title": "Am I too stubid or is it the app's fault?",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vyxkjp/am_i_too_stubid_or_is_it_the_apps_fault/",
+          "source": "Reddit r/fitbit (nuevos)",
+          "created_at": "2026-08-26T13:45:48+00:00",
+          "severity": "baja",
+          "sentiment": "positivo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "7b35e931ad198f2b",
+      "title": "Sincronización · Sense",
+      "category": "sincronizacion",
+      "category_label": "Sincronización",
+      "severity": "baja",
+      "models": [
+        "Sense"
+      ],
+      "count": 1,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "I ride my e-trike and is say July 23 2:26 14 mins, 2:43 1hr 1 min, then 4:35 46 min. Cardio load 0. On other days I have 6 mins and 2 cardio. How can I ride my bike for 2+ hours and have 0 cardio? submitted by /u/Randall_Lind [link] [comentarios]",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vyi7rh/google_health_app_makes_no_sense/",
+          "source": "Reddit r/fitbit (nuevos)",
+          "title": "Google Health app makes no sense"
+        }
+      ],
+      "sources": [
+        "Reddit r/fitbit (nuevos)"
+      ],
+      "reports": [
+        {
+          "id": "3c013080947469bc",
+          "title": "Google Health app makes no sense",
+          "url": "https://www.reddit.com/r/fitbit/comments/1vyi7rh/google_health_app_makes_no_sense/",
+          "source": "Reddit r/fitbit (nuevos)",
+          "created_at": "2026-08-26T00:57:13+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "54017f6850865614",
+      "title": "Sincronización · Versa",
+      "category": "sincronizacion",
+      "category_label": "Sincronización",
+      "severity": "baja",
+      "models": [
+        "Versa",
+        "Pixel Watch 3"
+      ],
+      "count": 1,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "Pebble was peak smart watch. After my third one broke I had some time where I tried a Galaxy Watch, played with an Apple watch, and finally settled on nothing until there was something that lasted longer than a day. Fitbit Versa being the spiritual successor I moved to, but its f",
+          "url": "https://blog.google/products/pixel/google-pixel-watch-3/",
+          "source": "Hacker News Pixel Watch",
+          "title": "Pixel Watch 3"
+        }
+      ],
+      "sources": [
+        "Hacker News Pixel Watch"
+      ],
+      "reports": [
+        {
+          "id": "3b8556ce66cf5c2d",
+          "title": "Pixel Watch 3",
+          "url": "https://blog.google/products/pixel/google-pixel-watch-3/",
+          "source": "Hacker News Pixel Watch",
+          "created_at": "2024-08-14T04:41:36Z",
+          "severity": "baja",
+          "sentiment": "positivo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "70a9d6d9ea2f698e",
+      "title": "Software / app · Pixel Watch 3",
+      "category": "software",
+      "category_label": "Software / app",
+      "severity": "baja",
+      "models": [
+        "Pixel Watch 3"
+      ],
+      "count": 1,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "A buggy Fitbit update is blinding sensors on the Pixel Watch 3 and 4 Android Central",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNZnBjSjlncGE0cGc5eHY0eFRiOXl5dWhRRHFsdXBWRmxvS2cyV2JNR1NJaWpfd1BEajNoR2VqazlOYkhYc2VGcndJcWNLamx3cUJ2YnhEWWFQRElRdUsxVW1LekhURF9vaThuSlJzbUFCTi1yZ3MzUktYOFBzdkpiVHo0blJ6U29oX2otTGV6Y3hlaUVxc29Sc2xib0F6cV9zWjRnVmF1d2hHTXJQSnZDVGpaYXZOWURnaDB5NklINUhzdjFKemR3?oc=5",
+          "source": "Google News (EN)",
+          "title": "A buggy Fitbit update is blinding sensors on the Pixel Watch 3 and 4 - Android Central"
+        }
+      ],
+      "sources": [
+        "Google News (EN)"
+      ],
+      "reports": [
+        {
+          "id": "439fcf0cec78b73a",
+          "title": "A buggy Fitbit update is blinding sensors on the Pixel Watch 3 and 4 - Android Central",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNZnBjSjlncGE0cGc5eHY0eFRiOXl5dWhRRHFsdXBWRmxvS2cyV2JNR1NJaWpfd1BEajNoR2VqazlOYkhYc2VGcndJcWNLamx3cUJ2YnhEWWFQRElRdUsxVW1LekhURF9vaThuSlJzbUFCTi1yZ3MzUktYOFBzdkpiVHo0blJ6U29oX2otTGV6Y3hlaUVxc29Sc2xib0F6cV9zWjRnVmF1d2hHTXJQSnZDVGpaYXZOWURnaDB5NklINUhzdjFKemR3?oc=5",
+          "source": "Google News (EN)",
+          "created_at": "2026-05-09T07:00:00+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "e744a629b02ee29b",
+      "title": "Software / app · Pixel Watch",
+      "category": "software",
+      "category_label": "Software / app",
+      "severity": "baja",
+      "models": [
+        "Pixel Watch"
+      ],
+      "count": 1,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "Fitbit Bug Leaves Pixel Watch Users Missing Sleep Data Again TechRepublic",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQUlNWWHZHaW1razQweHdYdVVIVTV6NXgyM0wzUWpxbUhFM2RjMTVyREtWSDZTRVFlbFpVTUdwNHVOZmZkV09Ca21ETDZLYVdXQWdvZENpcHg1dVQ5ZTY2blBHdGlES19ETkxmUjFKZGwtOElsUFdKWjNXcHgzNzlEWm5Ua0FQb1JWckpOSFk0SQ?oc=5",
+          "source": "Google News (EN)",
+          "title": "Fitbit Bug Leaves Pixel Watch Users Missing Sleep Data Again - TechRepublic"
+        }
+      ],
+      "sources": [
+        "Google News (EN)"
+      ],
+      "reports": [
+        {
+          "id": "3d18f8fa0b6b2a6e",
+          "title": "Fitbit Bug Leaves Pixel Watch Users Missing Sleep Data Again - TechRepublic",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQUlNWWHZHaW1razQweHdYdVVIVTV6NXgyM0wzUWpxbUhFM2RjMTVyREtWSDZTRVFlbFpVTUdwNHVOZmZkV09Ca21ETDZLYVdXQWdvZENpcHg1dVQ5ZTY2blBHdGlES19ETkxmUjFKZGwtOElsUFdKWjNXcHgzNzlEWm5Ua0FQb1JWckpOSFk0SQ?oc=5",
+          "source": "Google News (EN)",
+          "created_at": "2026-05-18T07:00:00+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        }
+      ]
+    },
+    {
+      "id": "019bf2c3ea5e1d64",
+      "title": "Software / app · Pixel Watch 2",
+      "category": "software",
+      "category_label": "Software / app",
+      "severity": "baja",
+      "models": [
+        "Pixel Watch 2"
+      ],
+      "count": 1,
+      "recurring": true,
+      "first_seen": "2026-08-26",
+      "seen_runs": 3,
+      "quotes": [
+        {
+          "text": "Fitbit and Google Pixel Watch 2/3/4 SpO2 and Skin Temperature Bug Fix jetstream.blog",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQYmxVWW9NRkdCbUs1WC1ZMTlka2ZPUl96MGpoNmFmc2VSTktHd0RVdTZrN2FsaWZ4Z3VoSjYyeVdJMXpVczg5UGVVcVZzODg0Z1l2bk10amNjOVExQ18zMG8wMGVaaVlJMUgyTkQ2VDdSbUV6eWREWmc3RWZ3LVhvMTloZnNncUxxall3bnlVdndwUQ?oc=5",
+          "source": "Google News (EN)",
+          "title": "Fitbit and Google Pixel Watch 2/3/4 SpO2 and Skin Temperature Bug Fix - jetstream.blog"
+        }
+      ],
+      "sources": [
+        "Google News (EN)"
+      ],
+      "reports": [
+        {
+          "id": "a20c14f6a16aab9b",
+          "title": "Fitbit and Google Pixel Watch 2/3/4 SpO2 and Skin Temperature Bug Fix - jetstream.blog",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQYmxVWW9NRkdCbUs1WC1ZMTlka2ZPUl96MGpoNmFmc2VSTktHd0RVdTZrN2FsaWZ4Z3VoSjYyeVdJMXpVczg5UGVVcVZzODg0Z1l2bk10amNjOVExQ18zMG8wMGVaaVlJMUgyTkQ2VDdSbUV6eWREWmc3RWZ3LVhvMTloZnNncUxxall3bnlVdndwUQ?oc=5",
+          "source": "Google News (EN)",
+          "created_at": "2026-03-11T07:00:00+00:00",
+          "severity": "baja",
+          "sentiment": "negativo",
+          "star_rating": null
+        }
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "id": "b0a3e11877e6e6b7",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (problemas)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vz4thz/plz_help_cant_download_watch_faces_on_versa_4_not/",
+      "title": "Plz help - can’t download watch faces on versa 4… “not available”",
+      "text": "So my wife dropped her old Versa 4 and broke it. Decided to replace like-for-like. Received new one. Went through the whole shebang of “replacing” old watch with new watch on her android. Made sure Google Health app and Watch had latest software. Watch seems to work fine: steps, most apps, syncs, etc EXCEPT when she (& I both) tried to download New Watch Faces it just keeps saying “not available” which leads to a screen that says make sure software is up to date. Have tried on/off, forcing quit/restart, uninstalling/reinstalling, etc Any guidance would be helpful submitted by /u/scottcprince [link] [comentarios]",
+      "created_at": "2026-08-26T18:08:45+00:00",
+      "author": "/u/scottcprince",
+      "models": [
+        "Versa 4"
+      ],
+      "categories": [
+        "sincronizacion",
+        "calidad",
+        "pantalla",
+        "software"
+      ],
+      "primary_category": "sincronizacion",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "19697e7461369700",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (problemas)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vz2g61/apple_health_sync/",
+      "title": "Apple Health sync",
+      "text": "Hey everyone, Since Google added Apple Health sync, I’m thinking about buying a Fitbit Air. I have a quick question that I haven’t been able to find a clear answer to: How detailed is the synced data? Heart rate: Does it sync to Apple Health with the same granularity as in the Fitbit/Google app (e.g., minute-by-minute readings)? Sleep: How accurately do sleep stages (REM, deep, light, awake) transfer over? This is pretty essential for me because I plan on analyzing my sleep and heart rate data in a third-party app. submitted by /u/essenbisderarztkommt [link] [comentarios]",
+      "created_at": "2026-08-26T16:45:21+00:00",
+      "author": "/u/essenbisderarztkommt",
+      "models": [
+        "Fitbit Air"
+      ],
+      "categories": [
+        "sincronizacion",
+        "ritmo_cardiaco"
+      ],
+      "primary_category": "sincronizacion",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "4ac85547025f5e70",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (problemas)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vyyamr/so_many_bugs_since_app_update_50601/",
+      "title": "So many bugs since app update 5.06.01",
+      "text": "I use Fitbit air with an iPhone 12 mini with iOS 26.4.2. Everything has been running perfectly since I got my FBA a three weeks ago. It’s been great. The last days, since the latest app update of Google Health 5.06.01 so many things have stopped working. I can’t start activities (I prefer to start them in the app to get GPs and more data). Just get an error saying activity can’t be started, make sure device is nearby and connected. (Activities does start on auto detection, or if I log them with time stamps after finish, but this is not what I want). Steps stays either at 0 or some ridiculously low number like 120 throughout the day. SpO2 stopped showing Resilience stopped showing Sleep efficiency stopped working. I’m really sad about this, and hope people who experience any of the same stuff will rapport it through the app. I’ve seen many posts about the same issues the last couple of days. I have already checked Googles support forum sites, but there are no good solutions for similar issues. I’ve rapported a dozen times through the app. I’ve also contacted support through e-mail and have done all the different suggestions for troubleshooting (reinstalling app, re-pairing device, checking all settings etc etc). I think it’s safe to say that all my issues are definitely bugs that needs to be fixed through another update on Googles end. Please keep rapport in app, people! And Google, please fix ASAP submitted by /u/DryCharacter6458 [link] [comentarios]",
+      "created_at": "2026-08-26T14:13:56+00:00",
+      "author": "/u/DryCharacter6458",
+      "models": [
+        "Fitbit Air"
+      ],
+      "categories": [
+        "sincronizacion",
+        "software",
+        "gps",
+        "ritmo_cardiaco"
+      ],
+      "primary_category": "sincronizacion",
+      "severity": "media",
+      "sentiment": "positivo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "49da46a34a8934d2",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (problemas)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vyxct7/sleep_efficiency/",
+      "title": "Sleep efficiency",
+      "text": "So I thought this was a bug to have zero efficiency. But I’ve had zero for a week. Tried cleaning and restarting my phone, app, and watch. Now I’m wondering did it get changed to being a premium feature? submitted by /u/KimberKitsuragi [link] [comentarios]",
+      "created_at": "2026-08-26T13:37:16+00:00",
+      "author": "/u/KimberKitsuragi",
+      "models": [],
+      "categories": [
+        "software"
+      ],
+      "primary_category": "software",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "ea33d4150f726215",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (problemas)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vywt9t/feature_request/",
+      "title": "Feature request",
+      "text": "Hi, I am enjoying my Fitbit air and new Google health app, but to make experience even better, if some devs are reading, I would like to give some advice. In \"Zone min\" section, in information tab it says that recommend zone minutes is 150 for the entire week, but card is only showing daily Zone minutes. It would be great if we can have weekly card (small and large like for weekly cardio). In \"Hourly activity\" section, it would be great if we could set number of hours in one day, but not to be in range like now (for example from 6am to 15pm). It doesn't make sense, maybe I am more active later... Why can't it be hourly activity for whole day (for example 12 hours of 24). submitted by /u/Life-Programmer2031 [link] [comentarios]",
+      "created_at": "2026-08-26T13:15:47+00:00",
+      "author": "/u/Life-Programmer2031",
+      "models": [
+        "Fitbit Air"
+      ],
+      "categories": [
+        "sincronizacion"
+      ],
+      "primary_category": "sincronizacion",
+      "severity": "baja",
+      "sentiment": "positivo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "2f1b5cc7cd6811bc",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (problemas)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vyuooy/google_health_app_taking_forever_to_sync/",
+      "title": "Google Health App taking forever to sync",
+      "text": "I've been trying to fix the persistent issue between the bluetooth connecting my inspire 2 to the new app. Working fine in the past, now the device has been disconnected. It registers as a bluetooth device that will connect to my phone but when it comes to connecting to the app computer says no. Any ideas on how to fix this or am I doomed to wait forever? I can register the watch just fine, but it's been stuck on the \"connecting to google app\" page for almost 20 minutes. UPDATE: finally moved to the pairing page the minute I hit post. Consider it just a slow connection UPDATE: It has connected now, but I've lost a lot of previous data such as sleep and heart rate because it has essentially reset itself. Gutting. submitted by /u/jonleftthedisco [link] [comentarios]",
+      "created_at": "2026-08-26T11:42:32+00:00",
+      "author": "/u/jonleftthedisco",
+      "models": [
+        "Inspire 2"
+      ],
+      "categories": [
+        "sincronizacion",
+        "ritmo_cardiaco"
+      ],
+      "primary_category": "sincronizacion",
+      "severity": "baja",
+      "sentiment": "positivo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "2e998098637a6ee8",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (problemas)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vyquyw/fitbit_air_didnt_collect_sleep_data_last_night_is/",
+      "title": "Fitbit Air didn’t collect sleep data last night. Is it a common issue?",
+      "text": "I am pretty sure the band was wrapped around wrist and it was a snug fit when i woke up. Sleep is the most important think i want to track 😭 submitted by /u/kafka_si_zindagi [link] [comentarios]",
+      "created_at": "2026-08-26T08:13:12+00:00",
+      "author": "/u/kafka_si_zindagi",
+      "models": [
+        "Fitbit Air"
+      ],
+      "categories": [
+        "correa",
+        "software"
+      ],
+      "primary_category": "software",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "f73154cbf20ec2cb",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (problemas)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vymn0j/my_fitbit_inspire_3_flickers_on_and_off_and/",
+      "title": "My fitbit inspire 3 flickers on and off and vibrates and turns off",
+      "text": "Battery life is down to 3 days with always on display turned off. Device shows 5% battery and when I put it to charge it shows 92% battery. Sync issues sometimes. screen flickers on and off and vibrates for a minute or so then goes off. Is there a solution? Or do I need to buy a new device? submitted by /u/ClassicLack3480 [link] [comentarios]",
+      "created_at": "2026-08-26T04:19:45+00:00",
+      "author": "/u/ClassicLack3480",
+      "models": [
+        "Inspire 3"
+      ],
+      "categories": [
+        "bateria",
+        "pantalla",
+        "sincronizacion"
+      ],
+      "primary_category": "bateria",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "e6d0bfd7e990fb45",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (problemas)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vymful/fitbit_charge_6_requires_frequent_resets_to/",
+      "title": "Fitbit Charge 6 requires frequent resets to reconnect to google health",
+      "text": "I have a charge 6. Soon after Google ingested Fitbit, I started losing data. I don't believe there is a solution to this one, but I thought I would give this a try. The issue is that the fitbit disconnects at every update of google health or android, and after trying all the documented solutions, the only ones that can work involve a hard reset of the fitbit, deleting days of data. I have a pixel 10xl. Any thoughts? Thanks. Anyway, I'm not complaining, and I'm a superfan of google products in the past. I have been a loyal google customer since pre-2000, as a retail, smb, and corporate buyer. But for future reference, sometimes, when a bigger company buys a smaller one, that companies products are challenged with integration, and typically must be discarded for the next generation branded by the bigger company. My mistake is to keep trying to use the smaller companies products and not immediately abandon them for a stable solution or just do without until the bigger company replaces them. This has happened with many products I've purchased in the past. submitted by /u/richbodo [link] [comentarios]",
+      "created_at": "2026-08-26T04:10:15+00:00",
+      "author": "/u/richbodo",
+      "models": [
+        "Charge 6"
+      ],
+      "categories": [
+        "sincronizacion",
+        "correa"
+      ],
+      "primary_category": "sincronizacion",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "f749bd1386df4c4d",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (problemas)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vyliu0/the_most_slept_on_accessory/",
+      "title": "The most slept on accessory",
+      "text": "Clip to clip on your waist or sock so you can rock normal watches on the day to day. Heart rate and steps are spot on with Apple Watch. This is with Fitbit auto detection submitted by /u/FeelFeltFound54 [link] [comentarios]",
+      "created_at": "2026-08-26T03:26:21+00:00",
+      "author": "/u/FeelFeltFound54",
+      "models": [],
+      "categories": [
+        "ritmo_cardiaco"
+      ],
+      "primary_category": "ritmo_cardiaco",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "d28c63714cd72b59",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (problemas)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vydbzj/weekly_cardio/",
+      "title": "Weekly cardio",
+      "text": "Hi! So i'm not sure what the weekly cardio goal is based on because i reached it on the first day of the week, last week i hit about 350%. Context: i'm 192cm and about 103kg, kinda fit but a bit heavy. On monday i had a walk the dog, hyrox training and crossfit training. Is it just bugged or is it normal to reach 350%? submitted by /u/LividAssistant5489 [link] [comentarios]",
+      "created_at": "2026-08-25T21:34:42+00:00",
+      "author": "/u/LividAssistant5489",
+      "models": [],
+      "categories": [
+        "software"
+      ],
+      "primary_category": "software",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "f74599018c1094d1",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (problemas)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vyd8ch/megathread_fitbit_google_health_alternatives_app/",
+      "title": "MEGATHREAD: Fitbit / Google Health Alternatives, App Replacements, and Device Switching",
+      "text": "Hello r/fitbit , We’ve been seeing a lot of posts from users who are unhappy with the Fitbit app, the move toward Google Health, recent app changes, missing features, syncing issues, or the overall direction of the platform. To keep the subreddit easier to browse and stop the influx of posts about it, we’re creating this megathread as a central place for those discussions. Use this thread if you want to: Ask about alternatives to Fitbit Compare Fitbit to other devices or ecosystems Talk about switching to Garmin, Apple Watch, Samsung, Whoop, Oura, Amazfit, Withings, Polar, etc. Recommend other health, sleep, fitness, or habit-tracking apps Ask what apps work well with Fitbit data Share why you’re leaving Fitbit or why you decided to stay Discuss exporting, saving, or replacing your Fitbit data/workflow To make this thread more useful, please try to include details like: What Fitbit device you currently use What phone you use: iPhone or Android What features matter most to you: sleep tracking, steps, heart rate, workouts, battery life, smart features, weight tracking, food logging, etc. What you dislike about the current Fitbit/Google app experience Your budget, if you’re looking for a new device Any alternatives you’ve already tried A quick reminder: personal recommendations are welcome, but please avoid spam, referral links, affiliate links, or low-effort promotion. If you are connected to an app, product, website, or service you mention, please disclose that clearly. The goal of this thread is to help users compare options and make informed choices without the same topic taking over the entire subreddit. Thanks, The r/fitbit Mod Team submitted by /u/ioweej [link] [comentarios]",
+      "created_at": "2026-08-25T21:30:49+00:00",
+      "author": "/u/ioweej",
+      "models": [],
+      "categories": [
+        "sincronizacion",
+        "bateria",
+        "calidad",
+        "ritmo_cardiaco"
+      ],
+      "primary_category": "sincronizacion",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "ae18450440fed378",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (problemas)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vy0cnc/does_anyone_still_wear_the_original_fitbit/",
+      "title": "Does anyone still wear the original Fitbit",
+      "text": "I've been seeing a lot about the fitbit air, and I kind of miss having a screen. Does anyone still use the original fitbit / recommend it? And can anyone give me feedback on the ai coach for the fitbit air and how they like it? submitted by /u/Home-Resident [link] [comentarios]",
+      "created_at": "2026-08-25T13:47:26+00:00",
+      "author": "/u/Home-Resident",
+      "models": [
+        "Fitbit Air"
+      ],
+      "categories": [
+        "pantalla"
+      ],
+      "primary_category": "pantalla",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "4b60881e4ffa8413",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (problemas)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vy0bll/i_dont_understand_why_we_arent_allowed_to_swipe/",
+      "title": "I don't understand why we aren't allowed to swipe left and right on the workout screen",
+      "text": "Now I'm looking at my heart rate. If I want to see zone minutes I have to tap 6 times instead of just swiping right once. That's purely insane. Is it hard to implement or one of the stupidest UX designs ever? submitted by /u/TableWallWatch [link] [comentarios]",
+      "created_at": "2026-08-25T13:46:18+00:00",
+      "author": "/u/TableWallWatch",
+      "models": [],
+      "categories": [
+        "pantalla",
+        "ritmo_cardiaco"
+      ],
+      "primary_category": "pantalla",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "44386d9aa55cb157",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (problemas)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vxzxeb/am_i_being_fed_too_much_negativity_about_the_app/",
+      "title": "Am i being fed too much negativity about the App? (as a newcomer)",
+      "text": "I've been thinking about finally getting a health tracker since google released the fitbit air, however all I ever seem to hear is how awful the companion app is. As somebody who never had a tracker I never experienced the former fitbit app. Now my question as a newcomer is: Is the device actually worth it and usable with Google Health? I am especially interested in sleep quality and heart rate monitoring. Edit: Thank you all for the genuinely helpful insights! It allowed me to view the app and hardware more objectively and hopefully will make the decision easier for other people finding this post. submitted by /u/IceSliderDev [link] [comentarios]",
+      "created_at": "2026-08-25T13:30:20+00:00",
+      "author": "/u/IceSliderDev",
+      "models": [
+        "Fitbit Air"
+      ],
+      "categories": [
+        "calidad",
+        "ritmo_cardiaco",
+        "sincronizacion"
+      ],
+      "primary_category": "calidad",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "feaac3262a7eb487",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (problemas)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vxzer5/heart_rate_variability_hrv_changes_after_starting/",
+      "title": "Heart rate variability (HRV) changes after starting medications for high blood pressure and heart rate.",
+      "text": "Just discovered the HRV section in my fitbit app after I've been tracking my BP and HR religiously since starting 2 medications for them on July 28. I think it's cool how according to my tracker they've really improved my general well-being. Still not exactly sure what HRV is even after reading the info, but apparently the higher it is, the better. :D submitted by /u/mrsmendes [link] [comentarios]",
+      "created_at": "2026-08-25T13:09:31+00:00",
+      "author": "/u/mrsmendes",
+      "models": [],
+      "categories": [
+        "ritmo_cardiaco"
+      ],
+      "primary_category": "ritmo_cardiaco",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "a683463273558b78",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (problemas)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vxxhvr/fitbit_air_run_not_syncing_to_strava/",
+      "title": "Fitbit Air run not syncing to Strava",
+      "text": "Hey everyone, my workout is showing correctly in Fitbit, but it’s not syncing to Strava. I’m using a Fitbit Air. I’ve already connected Fitbit and Strava, but this run still isn’t appearing in Strava. You can see the error in the photo Has anyone had this issue? What’s the easiest way to fix it? Thanks! submitted by /u/abhi28222 [link] [comentarios]",
+      "created_at": "2026-08-25T11:45:57+00:00",
+      "author": "/u/abhi28222",
+      "models": [
+        "Fitbit Air"
+      ],
+      "categories": [
+        "sincronizacion"
+      ],
+      "primary_category": "sincronizacion",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "372a4d31fc504cec",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (problemas)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vxuwr4/hrv/",
+      "title": "HRV",
+      "text": "Hi My HRV has always been in range of 40 to 50 using Apple Watch. I switched to Fitbit Air and numbers from last two days are 30. What do you guys think? submitted by /u/greeks-square [link] [comentarios]",
+      "created_at": "2026-08-25T09:28:53+00:00",
+      "author": "/u/greeks-square",
+      "models": [
+        "Fitbit Air"
+      ],
+      "categories": [
+        "ritmo_cardiaco"
+      ],
+      "primary_category": "ritmo_cardiaco",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "369871953ed2c3a7",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (problemas)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vxrq0u/how_to_unbrick_a_fitbit_stuck_on_sync_to_the/",
+      "title": "How to unbrick a Fitbit stuck on \"Sync to the fitbit app\" and the red X",
+      "text": "We recently bought a new Sense 2 to replace one that APPARENTLY had a dead battery. Straight out of the box it was unable to pair, and was experiencing the \"Sync to the fitbit app\" and wasn't able to factory reset. A couple of days after that, the ORIGINAL Sense 2 started doing the same thing. Good news, the unbrick fix is actually not that hard. There are two requirements. 1, nothing must be trying to connect to it with Bluetooth. This means turn off Bluetooth on any nearby phone. Completely. The second requirement is that it must be on your wrist when you're trying to factory reset it. Yes really, this is important. Put it on your wrist, and hold the power button down until the screen starts flashing with the Fitbit logo. Release the button and push it again, holding it down for about 5 seconds and then release it. If you have done it right, after 10 more seconds of it flashing you'll get the logo in a circle. If you hold it down too short, you get the red X. If you hold it down too long, it power cycles and you go back to the flashing logo. If you hold it down for the right amount, and then release it, after about 20 seconds of it continuing to flash, you will get the logo surrounded by a circle. This is the goal! After it has started the factory reset, you can take it off your wrist and put it back on charge, if needed. Good luck! submitted by /u/xrobau [link] [comentarios]",
+      "created_at": "2026-08-25T06:20:31+00:00",
+      "author": "/u/xrobau",
+      "models": [
+        "Sense 2"
+      ],
+      "categories": [
+        "sincronizacion",
+        "bateria",
+        "calidad",
+        "pantalla"
+      ],
+      "primary_category": "sincronizacion",
+      "severity": "alta",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "5f77af69f33faa3b",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (nuevos)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vz3jgd/google_fitbit_air_with_armband_impressions_and/",
+      "title": "Google Fitbit Air with Armband Impressions and best use case IMO.",
+      "text": "submitted by /u/tokewitch [link] [comentarios]",
+      "created_at": "2026-08-26T17:23:38+00:00",
+      "author": "/u/tokewitch",
+      "models": [
+        "Fitbit Air"
+      ],
+      "categories": [
+        "correa"
+      ],
+      "primary_category": "correa",
+      "severity": "baja",
+      "sentiment": "positivo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "12e4bc8727a450ec",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (nuevos)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vyxkjp/am_i_too_stubid_or_is_it_the_apps_fault/",
+      "title": "Am I too stubid or is it the app's fault?",
+      "text": "So, I have been using the free Addidas Running (formerly Runtastic) for runs and training plans in the past. It is straightforward: You chose your training plan (e.g. Beginner 10k), decide how many weeks and how often per week you want to train You do a calibration run, and the app builds a training plan around it (relatively diverse session, progressively more difficult – once the plan is made it stays like this, no adjustments possible) You start your sessions, it tracks all the running metrics (also via wearables) and the app gives you voice cues if you run too fast/ slow, how far you are, heartrate/zone, if an interval is about to end/start, the intensity of the new interval etc. … There is an app for my Pixel Watch 2 that shows me heartrate, pace and time etc. (I still prefer the native Google Exercise Tracker – so I run them in parallel: Addidas Running on the phone and Google Exercise Running on the watch) So, when I got a free premium trial for Google Health, I was ecstatic about the possibilities: • An AI Coach that can tailor build me training plans according to my goals and needs • It can adjust these plans daily if I for example plateau and need to be pushed more, or lower the intensity if my other health metrics • Give me voice audio cues just like the free Addidas app, maybe even a bit more sophisticated thanks to all the additional metrics • A holistic experience with all the metrics, sensors, constant monitoring, sleep and food tracking etc. • Iwould finally just have one app … start the training plan on the phone and watch and off I go At least this what the AI Coach promised me would work. Reality: I tell the Coach what I want, get a relatively uninspired training plan with some other milestones like some strength training exercise sessions (nice) Phon",
+      "created_at": "2026-08-26T13:45:48+00:00",
+      "author": "/u/EchtPikanterFuchs",
+      "models": [
+        "Pixel Watch 2"
+      ],
+      "categories": [
+        "ritmo_cardiaco",
+        "sincronizacion"
+      ],
+      "primary_category": "sincronizacion",
+      "severity": "baja",
+      "sentiment": "positivo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "7d6c0e994e48b225",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (nuevos)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vyvane/fitbit_started_writing_data_to_apple_health/",
+      "title": "Fitbit started writing data to Apple Health 🏃‍♂️😴",
+      "text": "I’ve been waiting for this functionality for a long time and was checking almost every day. Some time ago, I finally gave up and forgot about it. Then, today when I was about to manually enter my weight, I noticed that some data had started appearing in my Apple Health profile. It’s definitely coming from Google Fitbit Air, as I don’t have any other source that could have transferred these data so accurately. I’m honestly really surprised and happy to see it working—especially since my free Google Health Premium subscription is about to be over. Good news for Apple users. submitted by /u/a_synyshyn [link] [comentarios]",
+      "created_at": "2026-08-26T12:11:13+00:00",
+      "author": "/u/a_synyshyn",
+      "models": [
+        "Fitbit Air"
+      ],
+      "categories": [
+        "sincronizacion"
+      ],
+      "primary_category": "sincronizacion",
+      "severity": "baja",
+      "sentiment": "positivo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "3fc39ae102cc9b08",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (nuevos)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vyv1j4/issues_with_sleep_efficiency/",
+      "title": "Issues with sleep efficiency",
+      "text": "Has anyone else been getting 0% sleep efficiency despite other metrics looking normal? This has been happening to me the past couple nights. All sleep quality metrics also in the green submitted by /u/Big-Juice5679 [link] [comentarios]",
+      "created_at": "2026-08-26T12:00:01+00:00",
+      "author": "/u/Big-Juice5679",
+      "models": [],
+      "categories": [
+        "calidad"
+      ],
+      "primary_category": "calidad",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "3c55483dae4c9b03",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (nuevos)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vykrqp/fitbit_sleep_option/",
+      "title": "Fitbit sleep option",
+      "text": "Light sleep on Apple watch appears as awake in Google health. submitted by /u/rackmanrog2 [link] [comentarios]",
+      "created_at": "2026-08-26T02:51:56+00:00",
+      "author": "/u/rackmanrog2",
+      "models": [],
+      "categories": [
+        "sincronizacion"
+      ],
+      "primary_category": "sincronizacion",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "3c013080947469bc",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (nuevos)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vyi7rh/google_health_app_makes_no_sense/",
+      "title": "Google Health app makes no sense",
+      "text": "I ride my e-trike and is say July 23 2:26 14 mins, 2:43 1hr 1 min, then 4:35 46 min. Cardio load 0. On other days I have 6 mins and 2 cardio. How can I ride my bike for 2+ hours and have 0 cardio? submitted by /u/Randall_Lind [link] [comentarios]",
+      "created_at": "2026-08-26T00:57:13+00:00",
+      "author": "/u/Randall_Lind",
+      "models": [
+        "Sense"
+      ],
+      "categories": [
+        "sincronizacion"
+      ],
+      "primary_category": "sincronizacion",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "ef67ff8f1e290f17",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (nuevos)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vyi1bz/ai_is_saying_that_my_wearable_is_probably/",
+      "title": "AI is saying that my “wearable” is probably exaggerating my progress",
+      "text": "I’m thinking it might be right. Does this seem reasonable for 2 hours of advanced pickleball? (Fitbit inspire 3) Metric Result 🔥 Energy burned 1,326 cal (this seems unreasonable to me) 🏃 Distance 3.1 mi 👟 Steps 6,874 ❤️** Average heart rat e **141 bpm 📈 Cardio load 257 ⏱️** Zone minute s **249 🟡 Moderate zone 29 min 🔴 Vigorous zone “ You spent 29 minutes in the moderate zone, and 1 hour, 53 minutes in vigorous and peak.” submitted by /u/Megalynarion [link] [comentarios]",
+      "created_at": "2026-08-26T00:49:10+00:00",
+      "author": "/u/Megalynarion",
+      "models": [
+        "Inspire 3"
+      ],
+      "categories": [
+        "piel",
+        "ritmo_cardiaco"
+      ],
+      "primary_category": "ritmo_cardiaco",
+      "severity": "alta",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "908c547e75e1fa0f",
+      "source": "reddit",
+      "source_label": "Reddit r/fitbit (nuevos)",
+      "url": "https://www.reddit.com/r/fitbit/comments/1vye4hk/health_app_nest_gen_2_wsleep_tracking_or_how/",
+      "title": "Health App + Nest Gen 2 w/Sleep Tracking or How Google Sells Innovation and Kneecaps it When the Stack Evolves",
+      "text": "​I need to vent about the absurdity of Google's health ecosystem, because this is textbook Google launching a feature, building an ecosystem around it, and then abandoning the integration the second platforms evolve. ​I wear a tracker on my wrist and I also have a second gen Nest Hub on my nightstand specifically utilizing Soli radar Sleep Sensing. Everything is fully linked across Google Fit, Health Connect, Fitbit, and Google Health Premium. The Nest Hub's Soli sensor records ambient telemetry like respiratory rate ranges, sleep disturbances like coughing and snoring events, ambient room light changes, and temperature fluctuations. ​Yet Google Health and its integrated AI completely ignore the Nest Hub's Soli data. Even though Google Health pulls data directly from Google Fit, it arbitrarily drops the ambient radar metrics. If you ask the in-app AI or look at your unified sleep profile, the data is not merged. If you wear a wrist tracker, the ecosystem designates that as the primary tracker and simply throws away the ambient radar, audio disturbance, and room condition telemetry from the bedside display. ​This is infuriating because it is all the exact same corporate pipeline. These are not competing third party startups. It is Google hardware sending data to Google Fit, which connects via Health Connect to Google Health. They could have easily included a toggle switch that defaults to off for people without the hardware, allowing users who actually bought the device to flip it on and import the extra telemetry layer. Instead, the only workaround is taking manual screenshots of daily sleep charts from Google Fit and pasting the images into the AI chat. That is if you pay the $6 a month fee for even having Google Health Premium which gives you access to a very limited ",
+      "created_at": "2026-08-25T22:05:25+00:00",
+      "author": "/u/Snoo-90806",
+      "models": [],
+      "categories": [
+        "pantalla",
+        "calidad",
+        "correa",
+        "sincronizacion"
+      ],
+      "primary_category": "pantalla",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "026cc6f5cd71b17d",
+      "source": "reddit",
+      "source_label": "Reddit r/GooglePixelWatch",
+      "url": "https://www.reddit.com/r/googlepixelwatch/comments/1srk21t/google_pixel_watch_4_repair_experience_is_a/",
+      "title": "Google Pixel Watch 4 repair experience is a complete joke (4 contacts, 3 weeks, still broken)",
+      "text": "I honestly don’t even know where to start anymore. I’ve now contacted Google support FOUR times about my Pixel Watch, and the situation somehow keeps getting worse. Sent my watch in for repair → waited almost 3 weeks Got it back marked as “no issues found” The watch is still clearly damaged Status even said “device replaced”… which is just straight up false When I contacted support again, it was the usual script: “We’ll transfer you to a specialized team” “Please wait 3–5 minutes” Repeat everything from scratch At one point I literally had to ask the agent if they were a bot because they kept misunderstanding basic things (like trying to refund a “repair cost” I never paid). Now the best part: They refuse to process a refund because there’s an “open RMA” — which is THEIR internal process that they messed up themselves. So the logic is: They send back a broken device Their system is wrong And because of that, I can’t get a refund Also: 14-day return window obviously expired (I bought it at Christmas) Their solution: “maybe we’ll ask for a one-time exception” Timeline for resolution: no timeframe at all Escalation? Only via email. No direct contact. So I’m now stuck in limbo: No working watch, no refund, no timeline, and no accountability. Cherry on top: they didn’t even return all the parts I originally sent. Honestly, I’ve owned multiple Pixel devices and subscriptions, but this support experience is by far the worst I’ve ever had with any company. Has anyone else dealt with this kind of mess with Google hardware support? Did you actually manage to get a refund or replacement in the end? submitted by /u/Content_Evening3873 [link] [comentarios]",
+      "created_at": "2026-04-21T10:48:22+00:00",
+      "author": "/u/Content_Evening3873",
+      "models": [
+        "Pixel Watch"
+      ],
+      "categories": [
+        "calidad",
+        "sincronizacion"
+      ],
+      "primary_category": "calidad",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "0cef8c7ba0b0a6dd",
+      "source": "reddit",
+      "source_label": "Reddit r/GooglePixelWatch",
+      "url": "https://www.reddit.com/r/googlepixelwatch/comments/1p1nged/pixel_10_and_pixel_watch_4_paring_disaster/",
+      "title": "Pixel 10 and Pixel Watch 4 paring disaster",
+      "text": "Hey everyone / Google support, I’m now on my second Pixel Watch 4 (45mm Wi-Fi, Polished Silver / Porcelain) and it’s doing the exact same thing as the first one I returned: Phone sees the watch in Bluetooth settings and even says “Connected” But the Pixel Watch app never finishes pairing → it either spins forever on “Looking for your watch…” or instantly says “Couldn’t find your watch” QR code scan also fails every time Ends up stuck on the “Connected, but not paired” state (screenshot attached from yesterday) Current watch details: Model: Pixel Watch 4 45mm Wi-Fi only Color: Polished Silver Aluminum / Porcelain Active Band IMEI: 59241WRBNW412V Serial: 5A061WRBNW4186 First watch was ordered Oct 7 → returned Second watch ordered Oct 27 → this is the one I have now, same problem Refund for the first one was processed Oct 15 (screenshot attached) I’ve done every troubleshooting step multiple times: Factory reset watch + phone Cleared cache/data on Pixel Watch app & Play Services Airplane mode on/off, Bluetooth toggle, location on, etc. Tried on another Pixel phone (friend’s Pixel 9 Pro) → same result At this point it’s clearly not me. Two brand-new watches in a row with the identical pairing failure makes me think either: A bad batch of the Wi-Fi-only Polished Silver model, or Some specific compatibility bug between the Pixel Watch 4 Wi-Fi and the Pixel 10 Pro Fold I really just want a working watch, not another refund. Has anyone here with a Pixel 10 Pro Fold actually gotten the Wi-Fi-only Pixel Watch 4 to finish pairing successfully? Or is Google aware of this issue? Screenshots attached: “Connected, but not paired” message from yesterday Refund confirmation for the first watch 3-4. Order history showing both purchases Current watch details in Google Store Thanks for any",
+      "created_at": "2025-11-19T23:28:43+00:00",
+      "author": "/u/Database_Guilty",
+      "models": [
+        "Pixel Watch"
+      ],
+      "categories": [
+        "sincronizacion",
+        "correa",
+        "pantalla",
+        "software"
+      ],
+      "primary_category": "sincronizacion",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "7642f35a353b8050",
+      "source": "reddit",
+      "source_label": "Reddit r/GooglePixelWatch",
+      "url": "https://www.reddit.com/r/googlepixelwatch/comments/1jzxswi/1_watch_2r_vs_pixel_watch_2/",
+      "title": "1+ Watch 2r vs Pixel Watch 2",
+      "text": "So I've been looking for a good smartwatch for my Android phone, and I've narrowed it down to the Pixel Watch 2 and the Oneplus Watch 2r. My wrist is ~5.5in so its pretty small, but still fits into the official recommendation for the Oneplus watch. However, I am worried about size, but I love the 5 day battery life (I don't use AOD). I do like the small size of the Pixel Watch 2 and the OS, but the one day battery life can get a little annoying. Which one do you guys recommend? I'm also open to other suggestions but mainly I want good battery and more on the smart watches other than sport watches. submitted by /u/Cheeseman727 [link] [comentarios]",
+      "created_at": "2025-04-15T17:30:18+00:00",
+      "author": "/u/Cheeseman727",
+      "models": [
+        "Pixel Watch 2"
+      ],
+      "categories": [
+        "bateria"
+      ],
+      "primary_category": "bateria",
+      "severity": "baja",
+      "sentiment": "positivo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "c17a28d6401feabe",
+      "source": "itunes",
+      "source_label": "App Store US · Google Health (Fitbit)",
+      "url": "https://itunes.apple.com/us/review?id=462638897&type=Purple%20Software",
+      "title": "Fitbit Air: Zero Sleep Is Not Missing Data",
+      "text": "Due to a medical condition, I often cannot sleep without prescribed sleep medication. Because I do not take it every day, my established sleep pattern is often to sleep every other day and sleep longer on the days when I do sleep. I previously used older Fitbit models, including a 3-series device and a Fitbit 5, and both handled this pattern properly. However, my new Fitbit Air now says, “No sleep was detected” and asks me to manually enter my sleep. This prompt is illogical and extremely frustrating: I cannot manually enter a sleep period that never occurred. The Air was worn continuously and recorded my other health and activity data, so a genuinely sleepless day should be recorded as 0 hours of sleep—not treated as missing data. Zero is not the same as null. Excluding zero-sleep days makes the average sleep statistic mathematically invalid for people with severe insomnia or irregular sleep patterns. For example, if I sleep 14 hours one day and 0 hours the next, my true daily average is 7 hours; if the zero-sleep day is omitted, Fitbit incorrectly reports an average of 14 hours and completely reverses my actual health pattern. Please restore the behavior available with older Fitbit devices, add an explicit “No sleep / 0 hours” state, include confirmed sleepless days in calendar-day averages, and stop asking users to manually log sleep that did not happen.",
+      "created_at": "2026-08-24T15:27:25-07:00",
+      "author": "sefgh456",
+      "models": [
+        "Fitbit Air"
+      ],
+      "categories": [
+        "piel",
+        "software"
+      ],
+      "primary_category": "software",
+      "severity": "media",
+      "sentiment": "negativo",
+      "star_rating": 2,
+      "reason": "incidencia",
+      "meta": {
+        "app": "Google Health (Fitbit)",
+        "country": "us",
+        "version": "5.06.1"
+      }
+    },
+    {
+      "id": "9a9fe06bfad2717f",
+      "source": "itunes",
+      "source_label": "App Store ES · Google Health (Fitbit)",
+      "url": "https://itunes.apple.com/es/review?id=462638897&type=Purple%20Software",
+      "title": "Just awful",
+      "text": "Google updated this app from a very useful and user friendly app with lots of great features to a cumbersome, useless app with many features missing or very difficult to use. You can no longer create a new food, you can only log foods previously logged on the old app or new ones that have a bar code (fresh fruit and veg, butchers meat, bakers etc foods do not have barcodes. You cannot log a meal with several different foods- bolognaise for example- it all has to be done as an individual ingredient. \nServing sizes cannot be adjusted (if it says “a serving” you cannot change it to grams or vice versa) \nYou log one item and it takes you out so for each item you have to go out of the section and then select log food again. After I contacted them to complain- it was not resolved despite efforts by agents and was just told to keep checking for updates.  Each time you “upgrade or update” something it should improve but Google have released (and not given users a choice if they want it or not) a very poor unfinished and hard to use and inferior version of the app we previously had. \nRubbish!",
+      "created_at": "2026-06-04T07:10:10-07:00",
+      "author": "flexi06",
+      "models": [],
+      "categories": [
+        "software"
+      ],
+      "primary_category": "software",
+      "severity": "media",
+      "sentiment": "negativo",
+      "star_rating": 1,
+      "reason": "reseña_baja",
+      "meta": {
+        "app": "Google Health (Fitbit)",
+        "country": "es",
+        "version": "5.00.1"
+      }
+    },
+    {
+      "id": "ffccb6a768abd852",
+      "source": "itunes",
+      "source_label": "App Store AR · Google Health (Fitbit)",
+      "url": "https://itunes.apple.com/ar/review?id=462638897&type=Purple%20Software",
+      "title": "No sincroniza todos los días los pasos.",
+      "text": "Me despierto con 6.000 pasos y me dice que todos los hice a las 00hs. Durante el día pasa de la nada a 4.000 y después a 12.000. No reinicia el control de pasos a las 00hs. Hable con atención al cliente y me dieron 10.000 soluciones que no sirvieron para nada. Y por ultimo un mail que dice que me ponga una app que cuenta pasos en el celular por aparte y haga 100 pasos. Una lastima la cantidad de Bug que tiene el reloj Fit Bit changue 6. No lo recomendaría y compraría directamente por un precio mayor un apple Wach",
+      "created_at": "2026-01-23T09:27:49-07:00",
+      "author": "Cesar-o-10",
+      "models": [],
+      "categories": [
+        "sincronizacion",
+        "software"
+      ],
+      "primary_category": "sincronizacion",
+      "severity": "media",
+      "sentiment": "negativo",
+      "star_rating": 1,
+      "reason": "incidencia",
+      "meta": {
+        "app": "Google Health (Fitbit)",
+        "country": "ar",
+        "version": "4.61"
+      }
+    },
+    {
+      "id": "0bb0d91f8be9832d",
+      "source": "news",
+      "source_label": "Google News (EN)",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOQzctbElYNnYzTnVfUWZOVkV2VllIWjdZc3MyU1JxNzBFanMtMU5sTnR3aUZ2eXY5bUw5bmdZMFVEOFo4S3JkSkYxUWp3MVk3dFhrclByMGQzRFFDYzcxa044MVNvcGM3LXBJZXJqNmVrQl9wUkE3QnVyeTZfYlBPUmhnc2ZwU0M1OElnRW5saERkQl9ITUM0V0NiM0xQcjg4ZW5Bam1n?oc=5",
+      "title": "I was convinced my Google Fitbit Air's battery was defective until I changed these settings - Android Police",
+      "text": "I was convinced my Google Fitbit Air's battery was defective until I changed these settings Android Police",
+      "created_at": "2026-08-11T07:00:00+00:00",
+      "author": "",
+      "models": [
+        "Fitbit Air"
+      ],
+      "categories": [
+        "calidad",
+        "bateria"
+      ],
+      "primary_category": "calidad",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "d0d7b0ba3f380caf",
+      "source": "news",
+      "source_label": "Google News (EN)",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQUzdJUDJ2UmRDb21hYUplTzVPSllPOEo0bW4xWGR3VG9pNVpXOVlzSEpEalRCb1JSaW9GZUdmRDI4UEdHQmVZdFVnak1iaGhxLU1BbkdMMVd1UktxRnNiLTg3RnYzMEFURDdVS181N2pxZmkweEF1SGNPZFc3SFJzZ1F0SVBlNUNNWUpoWEQ3U0JtUUVKeWNhUmtDMEdrNEVFNUV2ME15MGxLOEE?oc=5",
+      "title": "Google Health has fixed the outage that broke sync for Fitbit & Pixel Watch owners [U] - 9to5Google",
+      "text": "Google Health has fixed the outage that broke sync for Fitbit & Pixel Watch owners [U] 9to5Google",
+      "created_at": "2026-07-16T07:00:00+00:00",
+      "author": "",
+      "models": [
+        "Pixel Watch"
+      ],
+      "categories": [
+        "sincronizacion",
+        "calidad"
+      ],
+      "primary_category": "sincronizacion",
+      "severity": "baja",
+      "sentiment": "positivo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "439fcf0cec78b73a",
+      "source": "news",
+      "source_label": "Google News (EN)",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNZnBjSjlncGE0cGc5eHY0eFRiOXl5dWhRRHFsdXBWRmxvS2cyV2JNR1NJaWpfd1BEajNoR2VqazlOYkhYc2VGcndJcWNLamx3cUJ2YnhEWWFQRElRdUsxVW1LekhURF9vaThuSlJzbUFCTi1yZ3MzUktYOFBzdkpiVHo0blJ6U29oX2otTGV6Y3hlaUVxc29Sc2xib0F6cV9zWjRnVmF1d2hHTXJQSnZDVGpaYXZOWURnaDB5NklINUhzdjFKemR3?oc=5",
+      "title": "A buggy Fitbit update is blinding sensors on the Pixel Watch 3 and 4 - Android Central",
+      "text": "A buggy Fitbit update is blinding sensors on the Pixel Watch 3 and 4 Android Central",
+      "created_at": "2026-05-09T07:00:00+00:00",
+      "author": "",
+      "models": [
+        "Pixel Watch 3"
+      ],
+      "categories": [
+        "software"
+      ],
+      "primary_category": "software",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "77e11af4d2d1cb0b",
+      "source": "news",
+      "source_label": "Google News (EN)",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQRTNOb3NFTUp4Zk9UR1RDRE5QTDVmdlVhRjFVNjdQLVNVWllXMkFMZVI3azZUTnNWQ3V2YnpfUkp2MnV1bWxTM205UTJMUEw2UEthRno5NXFYT3FoRXFCZDJrRk5WbjRDakoteDMxV3llcVNDdmlheXlMcXBpbU1rNkNMOWFBZnNDQWJBLWRqbnBxdmpBQ1JfbFF1cDRXYVR3UTJxUTZvZlM3QUcweWxyMW9QTkc?oc=5",
+      "title": "Fitbit Recalls Ionic Smartwatches Due to Burn Hazard; One Million Sold in the U.S. | CPSC.gov - U.S. Consumer Product Safety Commission (.gov)",
+      "text": "Fitbit Recalls Ionic Smartwatches Due to Burn Hazard; One Million Sold in the U.S. | CPSC.gov U.S. Consumer Product Safety Commission (.gov)",
+      "created_at": "2022-03-02T08:00:00+00:00",
+      "author": "",
+      "models": [],
+      "categories": [
+        "calidad",
+        "piel"
+      ],
+      "primary_category": "calidad",
+      "severity": "alta",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "67582285882aac23",
+      "source": "news",
+      "source_label": "Google News (EN)",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBMMkY4UE9xcEpNa2xvZV9Ld3dfTWlhNFczWllsazRIZzA4R2Fjd0ctclJqU3hucWwxdW8xejFNTjdOVEVKS0FQNFNwRDUwc0syNjQ4cndEd2xZVFVjdVFUc1JmV05vczBRMFA3RG53?oc=5",
+      "title": "Fitbit Air: Google Confirms Two Unusual Bugs - the5krunner",
+      "text": "Fitbit Air: Google Confirms Two Unusual Bugs the5krunner",
+      "created_at": "2026-07-08T07:00:00+00:00",
+      "author": "",
+      "models": [
+        "Fitbit Air"
+      ],
+      "categories": [
+        "software"
+      ],
+      "primary_category": "software",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "3d18f8fa0b6b2a6e",
+      "source": "news",
+      "source_label": "Google News (EN)",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQUlNWWHZHaW1razQweHdYdVVIVTV6NXgyM0wzUWpxbUhFM2RjMTVyREtWSDZTRVFlbFpVTUdwNHVOZmZkV09Ca21ETDZLYVdXQWdvZENpcHg1dVQ5ZTY2blBHdGlES19ETkxmUjFKZGwtOElsUFdKWjNXcHgzNzlEWm5Ua0FQb1JWckpOSFk0SQ?oc=5",
+      "title": "Fitbit Bug Leaves Pixel Watch Users Missing Sleep Data Again - TechRepublic",
+      "text": "Fitbit Bug Leaves Pixel Watch Users Missing Sleep Data Again TechRepublic",
+      "created_at": "2026-05-18T07:00:00+00:00",
+      "author": "",
+      "models": [
+        "Pixel Watch"
+      ],
+      "categories": [
+        "software"
+      ],
+      "primary_category": "software",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "2e278618bffa1673",
+      "source": "news",
+      "source_label": "Google News (EN)",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPUWgxVGN0dkVlMWNDQUR2OWx6VnM0bko1TXJKNUhmRllCZGtUak5XYmpRNkU3dVJsYWN1WGQwMDFZTEYxQU5uTy0zdWxCcXpER0ozNzZrVldldGFGLXlVeVRoeEt2U2poUjlQOTZ0angzXzctd2NRUUtpR3JsUTF6d0pEaGd5bG5NNkdrVFVCYXJVZGZJTmc?oc=5",
+      "title": "Fitbit Air has a strap problem after launch - Tech Advisor",
+      "text": "Fitbit Air has a strap problem after launch Tech Advisor",
+      "created_at": "2026-06-01T07:00:00+00:00",
+      "author": "",
+      "models": [
+        "Fitbit Air"
+      ],
+      "categories": [
+        "correa"
+      ],
+      "primary_category": "correa",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "7ba8e9a593fecfb9",
+      "source": "news",
+      "source_label": "Google News (EN)",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNb01ja24wcXlGU0kxUGxlY1dvSFZHZnpNMGw5WC1kSFJEQ09PTFM2N05uQVl5bkRnZVJaR3VXeXNOTzhyQXBNVUN4VHhPejJsS1lPSVd1T1pJaTJyX2M3cjBkbVVqbW5EY1d6MDZRUHRmMVlFcHN0UC00MDNZVnpPd29JdHhWUXNjMG94ODc5Wm1Sb09GMWtPYmc4Si1seThRTXRLSDlOR3ZVWHNRQW1ScFdVTQ?oc=5",
+      "title": "Pixel Watch owners say sleep tracking is broken again (Updated) - Android Central",
+      "text": "Pixel Watch owners say sleep tracking is broken again (Updated) Android Central",
+      "created_at": "2026-05-18T07:00:00+00:00",
+      "author": "",
+      "models": [
+        "Pixel Watch"
+      ],
+      "categories": [
+        "calidad"
+      ],
+      "primary_category": "calidad",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "b9b9859a319b1591",
+      "source": "news",
+      "source_label": "Google News (EN)",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5lTVFJVVpIb0gyRnBCOVJXRTl2U2pKbE9YMTN5SmtQa2RFaWJTZ21pbmZydU4xZVMzS05kQWdUclNObklaMnN6T2ZPTnAtM0NkWU9uWE1CbVZpZlFpX05UVzZMMThzb29MR3hvUF8yM3FwSHNoRjE3OHpnQQ?oc=5",
+      "title": "Google Health: Fitbit, We have a problem. A design problem. - the5krunner",
+      "text": "Google Health: Fitbit, We have a problem. A design problem. the5krunner",
+      "created_at": "2026-05-28T07:00:00+00:00",
+      "author": "",
+      "models": [],
+      "categories": [
+        "sincronizacion"
+      ],
+      "primary_category": "sincronizacion",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "2f451579135ccedb",
+      "source": "news",
+      "source_label": "Google News (EN)",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5OOFBCSUhYT2Y3YmpsWTdacjFKekI4LWhBVzZVQ09zWXF0QVFvQ0JkRGJDMWhkVjJHSHIxaHl4ZUVheFpmYTBtZDJXU19MUzBaZlZaUUlDN3hBRkYycnVyQzZRbktvbGt4QlB5d2tMY1RnamdKemtzaUk4Z2YwUQ?oc=5",
+      "title": "Your Google Pixel Watch Sleep Tracking Might Be Broken - But It Should Be Fixed Soon - bgr.com",
+      "text": "Your Google Pixel Watch Sleep Tracking Might Be Broken - But It Should Be Fixed Soon bgr.com",
+      "created_at": "2026-05-19T07:00:00+00:00",
+      "author": "",
+      "models": [
+        "Pixel Watch"
+      ],
+      "categories": [
+        "calidad"
+      ],
+      "primary_category": "calidad",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "89a4e0f3cd0c336b",
+      "source": "news",
+      "source_label": "Google News (EN)",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOWHNlS1ZEbDBpS2tZZzlqSEZYeVJCZ0tONnMydWV6WmxmQzBiZlI3anNycGVJeF81SnVXSVBzQ1lnMkZGdDJkaU9BNWJzS3RVV0QybTNteEQ2TXljeG03MjhXelFwbnJkT04tUXBRVEZwb3RPRkloYmdfTzM1S09vUThkaVFjX0owcERJRHRFQ29MWmpRWVl1OFBFRkFoQQ?oc=5",
+      "title": "Fitbit to pay $12.25 million over smartwatches that caused burns - PIRG",
+      "text": "Fitbit to pay $12.25 million over smartwatches that caused burns PIRG",
+      "created_at": "2025-01-25T08:00:00+00:00",
+      "author": "",
+      "models": [],
+      "categories": [
+        "piel"
+      ],
+      "primary_category": "piel",
+      "severity": "alta",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "a20c14f6a16aab9b",
+      "source": "news",
+      "source_label": "Google News (EN)",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQYmxVWW9NRkdCbUs1WC1ZMTlka2ZPUl96MGpoNmFmc2VSTktHd0RVdTZrN2FsaWZ4Z3VoSjYyeVdJMXpVczg5UGVVcVZzODg0Z1l2bk10amNjOVExQ18zMG8wMGVaaVlJMUgyTkQ2VDdSbUV6eWREWmc3RWZ3LVhvMTloZnNncUxxall3bnlVdndwUQ?oc=5",
+      "title": "Fitbit and Google Pixel Watch 2/3/4 SpO2 and Skin Temperature Bug Fix - jetstream.blog",
+      "text": "Fitbit and Google Pixel Watch 2/3/4 SpO2 and Skin Temperature Bug Fix jetstream.blog",
+      "created_at": "2026-03-11T07:00:00+00:00",
+      "author": "",
+      "models": [
+        "Pixel Watch 2"
+      ],
+      "categories": [
+        "piel",
+        "ritmo_cardiaco",
+        "software"
+      ],
+      "primary_category": "software",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "dff8eabfa22a96c5",
+      "source": "news",
+      "source_label": "Google News (EN)",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPWlY5RGJ6TFlfRWdsaERodnJxOU15QWFiWHA4alFmeHU5dm1nTzRnVjdYS1EzaTV4eUYyTllSdC1OcGt4Y0pPcXQzeHN2YzNSQVluOTFudENOcUtBMGNQTG0yMXNzQTE1V1U3YkF4SW40WExFU2h1ampmTlpablhDZTBkek1IdkUwOXo1U2MtRGR6Njc2QVZmZU5tQXNMMDFhU2V6N0VzUTJxUWdE?oc=5",
+      "title": "Fitbit Fined More Than $12 Millions Over Recalled Watch That Burned Wearers - Forbes",
+      "text": "Fitbit Fined More Than $12 Millions Over Recalled Watch That Burned Wearers Forbes",
+      "created_at": "2025-01-24T08:00:00+00:00",
+      "author": "",
+      "models": [],
+      "categories": [
+        "calidad",
+        "piel"
+      ],
+      "primary_category": "calidad",
+      "severity": "alta",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "7bd46d0ef4f3fb34",
+      "source": "news",
+      "source_label": "Google News (EN)",
+      "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxPTWhLSkVMSDMtNmRvdXlzdkUwalFDWDU5eWMyczVGVGVUNjZpemhzMkxWSTA4U2lDRlNJUjBBQ29naVBNM0xjdDhwa0c4R1VIcUUzQ3hwR1p0RVMzZXFSdlBTMWVBZzg3SGVnQWFrbjNxQUFfVkYyNWt3eFFpN051M2ItSVNVUm1LcU5ZNll6akN0bWdVZUNmTlFBU1p6alJTbDVxU3JoelpSYXk0YTFLaXdpcGVmVzNDRXpXZzZTVHRjNlhpWUZubHQ0TXdqWF9wcW9tUkI5bDFyNTBuSVFpb1B3VnVjUjQ5U2V6aEhfQi0xcFR2WGZ1cVZVS29wanJGeHdwY2ZETFhNdw?oc=5",
+      "title": "Fitbit issues battery overheating warning over two of its most popular watches – and it might compensate you if you're affected - TechRadar",
+      "text": "Fitbit issues battery overheating warning over two of its most popular watches – and it might compensate you if you're affected TechRadar",
+      "created_at": "2025-01-22T08:00:00+00:00",
+      "author": "",
+      "models": [],
+      "categories": [
+        "calidad",
+        "bateria"
+      ],
+      "primary_category": "calidad",
+      "severity": "alta",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "1e2b788aa07d19cb",
+      "source": "news",
+      "source_label": "Google News (EN)",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE04Q3NDVjAwRW43MWFsVWZfYjlrMmxSV00xdHBfbm80Ym93VFJOeEM3R0p0aVlvcGgwVFRRYVlyMHVuX0FvajktSVN2MG9aR1c1Q21wVmpQQzF1eUUtN2pEcy1GcHppLVU5a0VkakdxSTRIcEdS0gF6QVVfeXFMUExZV1EwNkY5ZWNzQVFyMEZkYXoxTVRzWC1rOFhySkxWTURBc05zOE9uLVFVMEE5SXZHaXFiZXVMLWdZejVVVDJlZzdySm1DWGNkcXRNekZaLXlTMkx0WGFLcTRuRFZ4cDBIUmtpUUJ2NlV2TGU0NlY3ZGc?oc=5",
+      "title": "Google-owned Fitbit to pay $12.2 million after consumers were burned by smartwatches - CBS News",
+      "text": "Google-owned Fitbit to pay $12.2 million after consumers were burned by smartwatches CBS News",
+      "created_at": "2025-01-23T08:00:00+00:00",
+      "author": "",
+      "models": [],
+      "categories": [
+        "piel"
+      ],
+      "primary_category": "piel",
+      "severity": "alta",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "f2fa920ec416b845",
+      "source": "news",
+      "source_label": "Google News (EN)",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxORE8yWEVHSG9IQlhJbmZmOFJJdEp0QzVRRWQwcUNNNmNBX21MMDdJWmlpY2FkTFBIT3RhZHZXdk51SDVFQ0dqNDc1b1lhV2ZkX2liVHgxNElkb29oSFptY3NaNXFmTDJkSWR3OEpJTU5Eb1ZwbENNNzBobjlMdWNTVk9ESUxfc0J2NzJhRWhkUXNtSTVDV3ExeVBEbXk4MWs?oc=5",
+      "title": "Fitbit has a battery overheating problem and here's what to do if you have one - Android Central",
+      "text": "Fitbit has a battery overheating problem and here's what to do if you have one Android Central",
+      "created_at": "2025-01-23T08:00:00+00:00",
+      "author": "",
+      "models": [],
+      "categories": [
+        "calidad",
+        "bateria"
+      ],
+      "primary_category": "calidad",
+      "severity": "alta",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "9ebf5d4373788965",
+      "source": "news",
+      "source_label": "Google News (EN)",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPVlVQcHhENWJhN3JIX1N1d1RGTzdlaXNFTWhwMGR0ZDRud3Y1N0c5REVxSVowcHBQaDBGMl9uaklYT1dLOWplZ0MzeDVGNmxDWXpEUFhEZmJsTE1UTE9CUjcwLUZQcllLMzlQbGZOZy1JZ3IyOFlxVzJYV1MtbEdZYjdZRjV4aGprN05TNWpZUQ?oc=5",
+      "title": "Fitbit Agrees to Pay $12 Million for Not Quickly Reporting Burn Risk With Watches (Published 2025) - The New York Times",
+      "text": "Fitbit Agrees to Pay $12 Million for Not Quickly Reporting Burn Risk With Watches (Published 2025) The New York Times",
+      "created_at": "2025-01-24T08:00:00+00:00",
+      "author": "",
+      "models": [],
+      "categories": [
+        "piel"
+      ],
+      "primary_category": "piel",
+      "severity": "alta",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "bd06e808bc28b63b",
+      "source": "news",
+      "source_label": "Google News (EN)",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBIdkc4cVRHRDBqNktHd2FmRl9yYUpURTVjV2Q5Z1BLRU1ZVm1pTGlJVXdnTDhtZC13QTQ1UjBoVHhaMnRZbk5yaEhNSHdWSXRKNmxoTlhyaUZqcmI5T2dfc3pKMHlIemlmLXozMzExb2VUdGJkTFZiMFc0bzduY1XSAYQBQVVfeXFMUFBQUTVUbWVwcm5Jb1ZFWlc5dUlWTzZHN0F2djRyNTBlUFlfMEVyWXY0ZjlvVzJ3ZVQ4V016eUFRckI5cXVCSVpoRDB2VXhPR2Ftd09aUENuVmFxY3hjVTFBTlB3RE9tMldWZ2luN0xxa1RpWHBzYnhFSzdLNDRiNnNmakNq?oc=5",
+      "title": "Fitbit recalls 1.7 million smartwatches over burn hazard - LiveNOW from FOX",
+      "text": "Fitbit recalls 1.7 million smartwatches over burn hazard LiveNOW from FOX",
+      "created_at": "2025-01-24T08:00:00+00:00",
+      "author": "",
+      "models": [],
+      "categories": [
+        "calidad",
+        "piel"
+      ],
+      "primary_category": "calidad",
+      "severity": "alta",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "cecb0964597dd51a",
+      "source": "news",
+      "source_label": "Google News (EN)",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPcktLbTJpU0xydTZNZkN0WDB1bERuTXhOdkdNOFBVOTkzbnFRZEtWb1JKUDNUQmNiMWxFWkdSci1ncDBScGg4SC00aU5iRDJ0SFIwZS0yM3RLZm9YREd2MDVhTUFrY1BETk1wUTlkMFFYTjV2cEw4RnFRbkNzTHpxcnlSd0ZpVFdLdHlwc0JGdnBLby0zLW5Kc3kyWklhVEExeDI4azZFTmtPd2VDbEdhTWowMlFfQQ?oc=5",
+      "title": "“Time to move on”: Fitbit owners fed up with battery problems, Google response - Ars Technica",
+      "text": "“Time to move on”: Fitbit owners fed up with battery problems, Google response Ars Technica",
+      "created_at": "2024-01-31T08:00:00+00:00",
+      "author": "",
+      "models": [],
+      "categories": [
+        "bateria"
+      ],
+      "primary_category": "bateria",
+      "severity": "baja",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "3e8b819023861c1f",
+      "source": "news",
+      "source_label": "Google News (EN)",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQVjAwa3M4UENFd3E1MWJyMTNfVmlHVmFPZ2x3Y1NZam8wWlhDRVpITzR1S1JCVWxqYlR6d0c2eVFTZE9iOW5XZnB2dmNwSXM2UlhVWVQxRHQ4cmJsSVdiOEk0ZFJCOVM2TGJfbkJSUHYwSFhmMW5GX3dtN2ZaWjFDVElEd3gwWDBqQzhHS0VWeVY2YUdvak5QSA?oc=5",
+      "title": "Google's anti-overheating update is causing Fitbit battery woes - Android Police",
+      "text": "Google's anti-overheating update is causing Fitbit battery woes Android Police",
+      "created_at": "2025-02-21T08:00:00+00:00",
+      "author": "",
+      "models": [],
+      "categories": [
+        "calidad",
+        "bateria"
+      ],
+      "primary_category": "calidad",
+      "severity": "alta",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "cff49d962b69fa28",
+      "source": "news",
+      "source_label": "Google News (EN)",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdVRvMjEwUTNFZ05Rcl9hcnFubGdMSGNiYU5Wa18xbDU2U1N5d3FUMHJXVlptZzBUNVRCTWg1RTdZNXpsbXE0S1NQWmt1amNFZzZrdS1URE1TWGkxZmZ5aDNIbVVPeHo3c1FxZGdCUmIyYU1ZSEpadkFwdUR0aGpnZUx4Uy0tdXgzRHVROGdVZEktam52cGF6MG12MVJQQXNJVXpDOFgwSnQ?oc=5",
+      "title": "Fitbit Sense and Versa 3 users are reeling after Google's overheating fix - Android Central",
+      "text": "Fitbit Sense and Versa 3 users are reeling after Google's overheating fix Android Central",
+      "created_at": "2025-02-21T08:00:00+00:00",
+      "author": "",
+      "models": [
+        "Versa 3",
+        "Sense"
+      ],
+      "categories": [
+        "calidad"
+      ],
+      "primary_category": "calidad",
+      "severity": "alta",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "9b35a4603e08e05a",
+      "source": "news",
+      "source_label": "Google News (EN)",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNb0FvZjVuRHNFLXNWa3c2ZEpHR3pSRmlZNTZWbHNTYm9JcGZZTVU5ZnlXZzNCVk5JR3Z5dEl6RWpHOGtZaUlmQkp0Nk81eGlJQ2RLaTdiaHlQYnVWSVRTdGpFNUtkTXd0S0h1TWNPa2g4bUZNNWdfSkRfSnN3NnAzT2hZTFUtbU1JUTlCY1RPSThnWF9jV2Rwdy0tYXNRQ2l6Vy1YYWFpWQ?oc=5",
+      "title": "Certain Fitbit watches recalled over burn hazard; refund offered - WTOP News",
+      "text": "Certain Fitbit watches recalled over burn hazard; refund offered WTOP News",
+      "created_at": "2022-03-02T08:00:00+00:00",
+      "author": "",
+      "models": [],
+      "categories": [
+        "calidad",
+        "piel"
+      ],
+      "primary_category": "calidad",
+      "severity": "alta",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "6f5365f99a3710ce",
+      "source": "news",
+      "source_label": "Google News (EN)",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxORnpwamFTS1ZzdWxoaGFDN2RWUjRoWHExLUhoTzBJOUFEQ1pHOFpiaUYwSVNqbTFGdWw0ZHZRSUtrRVh0TF9RSWNDOUNTaVBBZk9SdzJWbU1DeWFid1NLYnZFS1BfbF9nSk85d0lYLVJwV0dGMHRNUUpENWQ0Q2hRUWlXcFFtcjZxLWhKXy1kOGNlN3FLZkJMSk5vR2ZDcTZiRktkdVhnRVJIUDh5LVlxZkZlbmhlQXdWVWxQRUpqTXV5WTNlc290dUtpdzdLdnFRcmc?oc=5",
+      "title": "These Fitbit models are overheating — see if yours is on the list to get $50 from Google - Tom's Guide",
+      "text": "These Fitbit models are overheating — see if yours is on the list to get $50 from Google Tom's Guide",
+      "created_at": "2025-01-22T08:00:00+00:00",
+      "author": "",
+      "models": [],
+      "categories": [
+        "calidad"
+      ],
+      "primary_category": "calidad",
+      "severity": "alta",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "c3972377b4270623",
+      "source": "news",
+      "source_label": "Google News (EN)",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFAwZWlqV1BVY1RZTVF0RHVheEU3R25ReUJwd1QzSDZnNUNUSGNnQzJERlo1TU5QOHNVXzlDSjJ0X1RPQUFpZi1XM3E4WlRrSlVOaHlCamNQSDNKRXlFM2owZ0s3eUhvV0dvRmJNNFRSZE1jLXVKV293REh3Vk1ZSFE?oc=5",
+      "title": "Fitbit rolls out fix for Sense and Versa 3 overheating battery, offers $50 credit - Android Authority",
+      "text": "Fitbit rolls out fix for Sense and Versa 3 overheating battery, offers $50 credit Android Authority",
+      "created_at": "2025-01-22T08:00:00+00:00",
+      "author": "",
+      "models": [
+        "Versa 3",
+        "Sense"
+      ],
+      "categories": [
+        "calidad",
+        "bateria"
+      ],
+      "primary_category": "calidad",
+      "severity": "alta",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "26694c0eecdf338b",
+      "source": "news",
+      "source_label": "Google News (EN)",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBHR1Q3ZWhQdHp1NUpfTElpS0ZMQVJ5RU9JNFl6TnVGU0phaGxKa2xZUUticFAzOUtrSkhTeHY3cS1Nd2ZvVFN0SkM0OEF3T0FWNk1xS0xGZkZYU3V2Sy1jdGpRWmZ5bXA5N2ZYaExXMWtXanMyQkhB?oc=5",
+      "title": "Fitbit Recalls Fitbit Ionic Smartwatches Due to Burn-Hazard, Offers Refund - DC Rainmaker",
+      "text": "Fitbit Recalls Fitbit Ionic Smartwatches Due to Burn-Hazard, Offers Refund DC Rainmaker",
+      "created_at": "2022-03-02T08:00:00+00:00",
+      "author": "",
+      "models": [],
+      "categories": [
+        "calidad",
+        "piel"
+      ],
+      "primary_category": "calidad",
+      "severity": "alta",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "e80007184791f265",
+      "source": "hackernews",
+      "source_label": "Hacker News",
+      "url": "https://quantum5.ca/2026/08/16/fixing-bricked-amd-7040-series-framework-13-laptop-with-20-tools/",
+      "title": "Fixing a bricked Framework laptop",
+      "text": "Google bricked all of the old fitbit scales with a firmware that glitches out and drains the battery. There were tons of reports at the time, but the devices were out of warranty so they didn’t fix it.",
+      "created_at": "2026-08-18T14:12:28Z",
+      "author": "dec0dedab0de",
+      "models": [],
+      "categories": [
+        "bateria",
+        "calidad",
+        "software"
+      ],
+      "primary_category": "bateria",
+      "severity": "alta",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "42d7f543ae88c2f8",
+      "source": "hackernews",
+      "source_label": "Hacker News Pixel Watch",
+      "url": "https://www.cnbc.com/2025/01/31/google-offers-voluntary-buyouts-to-hardware-and-platform-teams.html",
+      "title": "Google offers 'voluntary' buyouts to hardware and platform teams",
+      "text": "My take (launched Samsung Galaxy device series in the US, did work for Nokia/HTC/LG/etc.)... the ad business was always based on attention dominance through search. Android has performed its primary function - preventing the exclusive dominance of mobile including operator relations by Apple, which threatened Google's attention dominance. Chrome the platform (minimal cloud-oriented laptop OS) has gone nowhere. Fitbit (wearable fitness monitor) is a dead leading product in a dead market in an era of smart watches. We had one free and never used it. Nest (smart home controller) has filled its niche, the 'smart home' never eventuated, most people are happy flicking a light switch once a day and living without remote-accessible CCTV with doorbell integration. Pixel (Google phone) was only ever a US product. The problem now for Google is AI is a better search engine. Google's search business is dead unless they upgrade their offering immediately. They get one chance at this (at least, rolling upgrades for <12 months). If they screw up, the company's value will deflate rapidly. Crystal balling, I would see through this a cashflow freeze also for Alphabet hardware plays like Wing which seem to be bloated operations with multinational presence and no revenue stream, and mutually inconsistent messaging (re. building \"aircraft library\" vs. \"specific aircraft required for specific cargo due to physics\" vs. biggest headline partner = Walmart = highly varied cargo requirement).",
+      "created_at": "2025-02-01T22:05:28Z",
+      "author": "contingencies",
+      "models": [],
+      "categories": [
+        "calidad",
+        "software"
+      ],
+      "primary_category": "software",
+      "severity": "media",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "81450f88a5f01851",
+      "source": "hackernews",
+      "source_label": "Hacker News Pixel Watch",
+      "url": "https://bcantrill.dtrace.org/2024/12/08/why-gelsinger-was-wrong-for-intel/",
+      "title": "Pat Gelsinger was wrong for Intel",
+      "text": "I’m not sure what less than one percent difference from the S&P 500 is supposed to prove good or bad. The S&P 500 is heavily weighted toward Alphabet, it literally is a big part of the S&P 500 itself. And, you know, Exxon Mobil hasn’t really made a new product in quite some time but they’re doing just fine. Still, I’d say that Google has had plenty of new products and bets that it has been making, along with great recent performance in many ways. They’re finally hitting their stride with consumer hardware, with the FitBit acquisition clearly boosting their wearables business and selling a lot more pixel watches than any previous smartwatch effort. Similarly, Pixel phones themselves have jumped from around 4% marketshare to 8-12% marketshare in the US just this year. Success in that arena is very new to Google, so I would call that a long term investment that is paying off. Google is investing in custom Tensor processors which is also a recent product launch for them, starting in 2020. Stadia was a new product that obviously failed in the end but did represent a decent technical achievement and major bet on a new product. YouTube TV isn’t that old, either, it launched 2017, and being the top subscribed digital cable product is a big achievement. The elephant in the room for newest major product launch is Bard AI and Gemini. It’s fair to say AI is less than proven and that these may be copycat products, but it’s also true that it’s going to be an area where your big competitors are basically Microsoft, Apple, and Google with little room for anyone else. And let’s not forget that large companies can boost their value proposition and mitigate competitive threats through acquisitions. Even IBM’s lost decade was overcome, and a lot of it was through acquisitions and business ",
+      "created_at": "2024-12-11T05:49:01Z",
+      "author": "dangus",
+      "models": [],
+      "categories": [
+        "calidad",
+        "carga"
+      ],
+      "primary_category": "carga",
+      "severity": "baja",
+      "sentiment": "positivo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "3b8556ce66cf5c2d",
+      "source": "hackernews",
+      "source_label": "Hacker News Pixel Watch",
+      "url": "https://blog.google/products/pixel/google-pixel-watch-3/",
+      "title": "Pixel Watch 3",
+      "text": "Pebble was peak smart watch. After my third one broke I had some time where I tried a Galaxy Watch, played with an Apple watch, and finally settled on nothing until there was something that lasted longer than a day. Fitbit Versa being the spiritual successor I moved to, but its frustrating that Google picked them up after i bought it and slowly the software is becoming less reliable. My wife's will keep unpairing from her Pixel, mine is insistent on moving the account from Fitbit to Google but the \"account migration\" fails so once a month it just logs out. I actively avoid new Google products these days.",
+      "created_at": "2024-08-14T04:41:36Z",
+      "author": "happymellon",
+      "models": [
+        "Versa",
+        "Pixel Watch 3"
+      ],
+      "categories": [
+        "sincronizacion",
+        "calidad"
+      ],
+      "primary_category": "sincronizacion",
+      "severity": "baja",
+      "sentiment": "positivo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    },
+    {
+      "id": "18d3511b04ddfad9",
+      "source": "hackernews",
+      "source_label": "Hacker News Pixel Watch",
+      "url": "https://blog.google/products/google-nest/chromecast-history/",
+      "title": "Moments in Chromecast's history",
+      "text": "The problem is that Google makes it hard to go all-in on their products even when you want to. I was an early user for Google Apps for Your Domain, which was a free version of what is now Google Workspace that you could use with custom domains. I signed up for Google Play Music with that account. Then they introduced Google Family, with app sharing and a family plan for Google Play Music, but you couldn't use Google Workspace accounts as part of a family plan. So I went back to using a regular Gmail account, manually moving my playlists for Google Play Music, and repurchasing the handful of apps I wanted to be able to share with my kids. Google bought Fitbit, and we got some Fitbit Ace watches for our kids. Then Google decided that Fitbit accounts needed to be converted to Google accounts, but the kids can't use their watches with their Android tablets anymore, because the Fitbit app won't let you log in to use your Ace (the kid watch) with a child account from a Google family. The watch designed for kids doesn't work with the account management designed for kids. My wife's Fitbit died and she was ready to buy the newer version of it, except that one doesn't work with the Fitbit app store because (presumably) they want people to buy the more expensive Pixel watches and use that completely separate app library. Somewhere in there I had to switch my playlists from Google Play Music to YouTube Music. They also decided to start charging for the free Google Workspace plans, eventually relenting only if you solemnly promised it was only for personal use. I'm the kind of person who should be a loyal Google customer, but I've been burned enough that my immediate response to a new Google product is to wonder what I would do if it suddenly disappeared.",
+      "created_at": "2024-08-06T15:30:42Z",
+      "author": "kej",
+      "models": [
+        "Ace"
+      ],
+      "categories": [
+        "bateria",
+        "carga",
+        "piel"
+      ],
+      "primary_category": "bateria",
+      "severity": "alta",
+      "sentiment": "negativo",
+      "star_rating": null,
+      "reason": "incidencia",
+      "meta": {}
+    }
+  ]
+}

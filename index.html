@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel de incidencias Fitbit</title>
+  <meta name="description" content="Tablero diario de fallas, defectos y opiniones públicas sobre relojes Fitbit.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='12' width='64' height='64' fill='%2309131f'/%3E%3Ccircle cx='32' cy='32' r='14' fill='none' stroke='%232dd4bf' stroke-width='6'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="mast">
+      <div>
+        <p class="kicker">Scraper público · relojes Fitbit</p>
+        <h1>Qué está fallando hoy</h1>
+        <p class="lede">
+          Agrupa quejas y opiniones públicas para que un equipo de producto
+          vea patrones, juzgue si se ven reales y vuelva a la fuente.
+        </p>
+      </div>
+      <div class="mast-meta" id="run-meta">
+        <span class="pulse" aria-hidden="true"></span>
+        <div>
+          <div class="meta-label">Última ejecución</div>
+          <time id="run-stamp">Cargando…</time>
+          <div class="meta-sub" id="run-zone">America/Buenos_Aires</div>
+        </div>
+      </div>
+    </header>
+
+    <section class="kpis" id="kpis" aria-label="Resumen"></section>
+
+    <section class="toolbar" aria-label="Filtros">
+      <label class="search">
+        <span>Buscar</span>
+        <input id="q" type="search" placeholder="batería, Sense 2, sincronización…" autocomplete="off">
+      </label>
+      <label>
+        <span>Modelo</span>
+        <select id="f-model"><option value="">Todos</option></select>
+      </label>
+      <label>
+        <span>Categoría</span>
+        <select id="f-cat"><option value="">Todas</option></select>
+      </label>
+      <label>
+        <span>Gravedad</span>
+        <select id="f-sev">
+          <option value="">Todas</option>
+          <option value="alta">Alta</option>
+          <option value="media">Media</option>
+          <option value="baja">Baja</option>
+          <option value="info">Info / positivo</option>
+        </select>
+      </label>
+      <label>
+        <span>Estado</span>
+        <select id="f-rec">
+          <option value="">Nuevos y recurrentes</option>
+          <option value="new">Solo nuevos</option>
+          <option value="recurring">Solo recurrentes</option>
+        </select>
+      </label>
+      <label>
+        <span>Mi veredicto</span>
+        <select id="f-triage">
+          <option value="">Todos</option>
+          <option value="unset">Sin marcar</option>
+          <option value="real">Parece real</option>
+          <option value="check">Hay que verificar</option>
+          <option value="discard">Descartar</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="layout">
+      <aside class="side">
+        <h2>Modelos mencionados</h2>
+        <ol id="model-bars" class="bars"></ol>
+        <h2>Fuentes de esta corrida</h2>
+        <ul id="source-list" class="sources"></ul>
+        <p class="hint">
+          Las marcas «parece real / verificar» se guardan solo en este navegador
+          (no hay backend). Los JSON históricos viven en el repositorio.
+        </p>
+        <p><a class="dl" href="data/latest.json" download>Descargar JSON</a></p>
+      </aside>
+      <main>
+        <div class="list-head">
+          <h2 id="list-title">Incidencias agrupadas</h2>
+          <p id="list-count"></p>
+        </div>
+        <div id="clusters" class="clusters"></div>
+        <p id="empty" class="empty hidden">
+          No hay grupos con esos filtros. Probá limpiar la búsqueda o esperá
+          la próxima corrida diaria.
+        </p>
+      </main>
+    </section>
+
+    <footer class="foot">
+      <p>
+        Solo fuentes públicas (Reddit RSS, reseñas de App Store, Google News, Hacker News).
+        No es telemetría oficial de Fitbit. Un reporte viral no prueba un defecto.
+      </p>
+      <p>
+        Sitio:
+        <a href="https://itravaglino.github.io/scraper/">itravaglino.github.io/scraper</a>
+        · código:
+        <a href="https://github.com/itravaglino/scraper">github.com/itravaglino/scraper</a>
+      </p>
+    </footer>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>
