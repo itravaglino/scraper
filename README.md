@@ -4,7 +4,7 @@ Scraper diario de **fallas, defectos, bugs y opiniones públicas** sobre product
 
 **Tablero en vivo:** [https://itravaglino.github.io/scraper/](https://itravaglino.github.io/scraper/)
 
-Zona horaria: `America/Buenos_Aires`. La corrida automática arranca todos los días a las **08:00** (11:00 UTC).
+Zona horaria: `America/Buenos_Aires`. No hay corrida automática diaria: el scrape se dispara a mano desde **Actions → “Scrape y dashboard Fitbit” → Run workflow** (o **Ejecutar ahora** en el tablero).
 
 ## Cómo usarlo
 
