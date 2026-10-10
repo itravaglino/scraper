@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-09T14:16:11-03:00",
-  "generated_at_utc": "2026-10-09T17:16:11+00:00",
+  "generated_at": "2026-10-10T13:04:40-03:00",
+  "generated_at_utc": "2026-10-10T16:04:40+00:00",
   "timezone": "America/Buenos_Aires",
-  "run_id": "2026-10-09",
+  "run_id": "2026-10-10",
   "scrape_window_days": 90,
   "github_repo": "itravaglino/scraper",
   "github_workflow": "daily.yml",
@@ -17,7 +17,7 @@
       "fetched": 100,
       "kept": 6,
       "error": null,
-      "latency_ms": 804
+      "latency_ms": 848
     },
     {
       "id": "youtube_gnews_es",
@@ -28,7 +28,7 @@
       "fetched": 100,
       "kept": 1,
       "error": null,
-      "latency_ms": 988
+      "latency_ms": 1008
     },
     {
       "id": "youtube_gnews_pt",
@@ -39,7 +39,7 @@
       "fetched": 100,
       "kept": 2,
       "error": null,
-      "latency_ms": 1233
+      "latency_ms": 1280
     },
     {
       "id": "youtube_gnews_fr",
@@ -50,7 +50,7 @@
       "fetched": 100,
       "kept": 0,
       "error": null,
-      "latency_ms": 1080
+      "latency_ms": 1035
     },
     {
       "id": "youtube_gnews_de",
@@ -61,7 +61,7 @@
       "fetched": 100,
       "kept": 0,
       "error": null,
-      "latency_ms": 1218
+      "latency_ms": 1177
     },
     {
       "id": "youtube_gnews_ja",
@@ -69,10 +69,10 @@
       "kind": "youtube",
       "ok": true,
       "state": "ok",
-      "fetched": 24,
+      "fetched": 25,
       "kept": 0,
       "error": null,
-      "latency_ms": 1019
+      "latency_ms": 1035
     },
     {
       "id": "youtube_praise",
@@ -81,9 +81,9 @@
       "ok": true,
       "state": "ok",
       "fetched": 100,
-      "kept": 2,
+      "kept": 3,
       "error": null,
-      "latency_ms": 1618
+      "latency_ms": 1622
     },
     {
       "id": "tiktok_gnews",
@@ -92,9 +92,9 @@
       "ok": true,
       "state": "ok",
       "fetched": 100,
-      "kept": 6,
+      "kept": 7,
       "error": null,
-      "latency_ms": 1354
+      "latency_ms": 1409
     },
     {
       "id": "tiktok_gnews_es",
@@ -105,7 +105,7 @@
       "fetched": 100,
       "kept": 1,
       "error": null,
-      "latency_ms": 1073
+      "latency_ms": 1037
     },
     {
       "id": "tiktok_gnews_pt",
@@ -116,7 +116,7 @@
       "fetched": 100,
       "kept": 0,
       "error": null,
-      "latency_ms": 1189
+      "latency_ms": 1135
     },
     {
       "id": "instagram_gnews",
@@ -125,9 +125,9 @@
       "ok": true,
       "state": "ok",
       "fetched": 100,
-      "kept": 4,
+      "kept": 3,
       "error": null,
-      "latency_ms": 1795
+      "latency_ms": 1828
     },
     {
       "id": "instagram_gnews_es",
@@ -138,7 +138,7 @@
       "fetched": 100,
       "kept": 3,
       "error": null,
-      "latency_ms": 1107
+      "latency_ms": 1144
     },
     {
       "id": "instagram_gnews_pt",
@@ -149,7 +149,7 @@
       "fetched": 100,
       "kept": 1,
       "error": null,
-      "latency_ms": 983
+      "latency_ms": 1007
     },
     {
       "id": "gnews_en",
@@ -160,7 +160,7 @@
       "fetched": 100,
       "kept": 7,
       "error": null,
-      "latency_ms": 1242
+      "latency_ms": 1207
     },
     {
       "id": "gnews_uk",
@@ -169,9 +169,9 @@
       "ok": true,
       "state": "ok",
       "fetched": 100,
-      "kept": 1,
+      "kept": 0,
       "error": null,
-      "latency_ms": 1235
+      "latency_ms": 1269
     },
     {
       "id": "gnews_ca",
@@ -182,7 +182,7 @@
       "fetched": 100,
       "kept": 0,
       "error": null,
-      "latency_ms": 1095
+      "latency_ms": 1146
     },
     {
       "id": "gnews_au",
@@ -193,7 +193,7 @@
       "fetched": 100,
       "kept": 0,
       "error": null,
-      "latency_ms": 1339
+      "latency_ms": 1192
     },
     {
       "id": "gnews_in",
@@ -204,7 +204,7 @@
       "fetched": 100,
       "kept": 0,
       "error": null,
-      "latency_ms": 1082
+      "latency_ms": 1234
     },
     {
       "id": "gnews_es",
@@ -215,7 +215,7 @@
       "fetched": 59,
       "kept": 0,
       "error": null,
-      "latency_ms": 1033
+      "latency_ms": 909
     },
     {
       "id": "gnews_mx",
@@ -226,7 +226,7 @@
       "fetched": 59,
       "kept": 0,
       "error": null,
-      "latency_ms": 1117
+      "latency_ms": 1274
     },
     {
       "id": "gnews_es_es",
@@ -234,10 +234,10 @@
       "kind": "news",
       "ok": true,
       "state": "ok",
-      "fetched": 60,
+      "fetched": 59,
       "kept": 0,
       "error": null,
-      "latency_ms": 1197
+      "latency_ms": 1122
     },
     {
       "id": "gnews_pt",
@@ -248,7 +248,7 @@
       "fetched": 50,
       "kept": 1,
       "error": null,
-      "latency_ms": 1080
+      "latency_ms": 1132
     },
     {
       "id": "gnews_fr",
@@ -259,7 +259,7 @@
       "fetched": 73,
       "kept": 3,
       "error": null,
-      "latency_ms": 1340
+      "latency_ms": 1286
     },
     {
       "id": "gnews_de",
@@ -267,10 +267,10 @@
       "kind": "news",
       "ok": true,
       "state": "ok",
-      "fetched": 46,
+      "fetched": 42,
       "kept": 0,
       "error": null,
-      "latency_ms": 1193
+      "latency_ms": 1086
     },
     {
       "id": "gnews_it",
@@ -281,7 +281,7 @@
       "fetched": 74,
       "kept": 0,
       "error": null,
-      "latency_ms": 1221
+      "latency_ms": 1303
     },
     {
       "id": "gnews_nl",
@@ -292,7 +292,7 @@
       "fetched": 28,
       "kept": 0,
       "error": null,
-      "latency_ms": 1016
+      "latency_ms": 977
     },
     {
       "id": "gnews_ja",
@@ -300,10 +300,10 @@
       "kind": "news",
       "ok": true,
       "state": "ok",
-      "fetched": 27,
+      "fetched": 28,
       "kept": 3,
       "error": null,
-      "latency_ms": 1113
+      "latency_ms": 1172
     },
     {
       "id": "gnews_ko",
@@ -311,10 +311,10 @@
       "kind": "news",
       "ok": true,
       "state": "ok",
-      "fetched": 10,
+      "fetched": 11,
       "kept": 0,
       "error": null,
-      "latency_ms": 3233
+      "latency_ms": 1018
     },
     {
       "id": "gnews_forums",
@@ -325,7 +325,7 @@
       "fetched": 77,
       "kept": 1,
       "error": null,
-      "latency_ms": 734
+      "latency_ms": 1765
     },
     {
       "id": "gnews_community_fitbit",
@@ -336,7 +336,7 @@
       "fetched": 0,
       "kept": 0,
       "error": null,
-      "latency_ms": 673
+      "latency_ms": 614
     },
     {
       "id": "gnews_xda",
@@ -347,7 +347,7 @@
       "fetched": 0,
       "kept": 0,
       "error": null,
-      "latency_ms": 1209
+      "latency_ms": 1224
     },
     {
       "id": "gnews_9to5",
@@ -355,10 +355,10 @@
       "kind": "news",
       "ok": true,
       "state": "ok",
-      "fetched": 52,
+      "fetched": 51,
       "kept": 2,
       "error": null,
-      "latency_ms": 1444
+      "latency_ms": 1412
     },
     {
       "id": "gnews_androidcentral",
@@ -367,9 +367,9 @@
       "ok": true,
       "state": "ok",
       "fetched": 100,
-      "kept": 0,
+      "kept": 1,
       "error": null,
-      "latency_ms": 1319
+      "latency_ms": 1287
     },
     {
       "id": "gnews_verge",
@@ -377,10 +377,10 @@
       "kind": "news",
       "ok": true,
       "state": "ok",
-      "fetched": 50,
+      "fetched": 100,
       "kept": 0,
       "error": null,
-      "latency_ms": 1070
+      "latency_ms": 1167
     },
     {
       "id": "gnews_support_google",
@@ -391,7 +391,7 @@
       "fetched": 100,
       "kept": 15,
       "error": null,
-      "latency_ms": 1503
+      "latency_ms": 1411
     },
     {
       "id": "gnews_praise",
@@ -402,7 +402,7 @@
       "fetched": 100,
       "kept": 4,
       "error": null,
-      "latency_ms": 1282
+      "latency_ms": 1177
     },
     {
       "id": "bing_news_en",
@@ -413,7 +413,7 @@
       "fetched": 0,
       "kept": 0,
       "error": null,
-      "latency_ms": 632
+      "latency_ms": 681
     },
     {
       "id": "bing_news_es",
@@ -424,7 +424,7 @@
       "fetched": 0,
       "kept": 0,
       "error": null,
-      "latency_ms": 1268
+      "latency_ms": 1195
     },
     {
       "id": "itunes_us_462638897",
@@ -435,7 +435,7 @@
       "fetched": 50,
       "kept": 1,
       "error": null,
-      "latency_ms": 1391
+      "latency_ms": 1514
     },
     {
       "id": "itunes_es_462638897",
@@ -446,7 +446,7 @@
       "fetched": 50,
       "kept": 1,
       "error": null,
-      "latency_ms": 1120
+      "latency_ms": 1262
     },
     {
       "id": "itunes_ar_462638897",
@@ -457,7 +457,7 @@
       "fetched": 50,
       "kept": 1,
       "error": null,
-      "latency_ms": 1013
+      "latency_ms": 1147
     },
     {
       "id": "itunes_br_462638897",
@@ -468,7 +468,7 @@
       "fetched": 50,
       "kept": 1,
       "error": null,
-      "latency_ms": 1283
+      "latency_ms": 1083
     },
     {
       "id": "itunes_fr_462638897",
@@ -479,7 +479,7 @@
       "fetched": 50,
       "kept": 1,
       "error": null,
-      "latency_ms": 1289
+      "latency_ms": 1214
     },
     {
       "id": "itunes_de_462638897",
@@ -490,7 +490,7 @@
       "fetched": 50,
       "kept": 1,
       "error": null,
-      "latency_ms": 1198
+      "latency_ms": 1190
     },
     {
       "id": "itunes_it_462638897",
@@ -501,7 +501,7 @@
       "fetched": 50,
       "kept": 1,
       "error": null,
-      "latency_ms": 1132
+      "latency_ms": 1190
     },
     {
       "id": "itunes_mx_462638897",
@@ -512,7 +512,7 @@
       "fetched": 50,
       "kept": 1,
       "error": null,
-      "latency_ms": 1526
+      "latency_ms": 1104
     },
     {
       "id": "itunes_us_1621113388",
@@ -520,10 +520,10 @@
       "kind": "itunes",
       "ok": true,
       "state": "ok",
-      "fetched": 50,
+      "fetched": 0,
       "kept": 0,
       "error": null,
-      "latency_ms": 922
+      "latency_ms": 966
     },
     {
       "id": "itunes_es_1621113388",
@@ -534,7 +534,7 @@
       "fetched": 0,
       "kept": 0,
       "error": null,
-      "latency_ms": 982
+      "latency_ms": 1165
     },
     {
       "id": "itunes_ar_1621113388",
@@ -545,7 +545,7 @@
       "fetched": 0,
       "kept": 0,
       "error": null,
-      "latency_ms": 1191
+      "latency_ms": 1210
     },
     {
       "id": "itunes_br_1621113388",
@@ -556,7 +556,7 @@
       "fetched": 0,
       "kept": 0,
       "error": null,
-      "latency_ms": 1174
+      "latency_ms": 1256
     },
     {
       "id": "itunes_fr_1621113388",
@@ -567,7 +567,7 @@
       "fetched": 0,
       "kept": 0,
       "error": null,
-      "latency_ms": 1099
+      "latency_ms": 1167
     },
     {
       "id": "itunes_de_1621113388",
@@ -578,7 +578,7 @@
       "fetched": 0,
       "kept": 0,
       "error": null,
-      "latency_ms": 1232
+      "latency_ms": 1210
     },
     {
       "id": "itunes_it_1621113388",
@@ -589,7 +589,7 @@
       "fetched": 0,
       "kept": 0,
       "error": null,
-      "latency_ms": 1163
+      "latency_ms": 1263
     },
     {
       "id": "itunes_mx_1621113388",
@@ -600,7 +600,7 @@
       "fetched": 0,
       "kept": 0,
       "error": null,
-      "latency_ms": 1194
+      "latency_ms": 1187
     },
     {
       "id": "hn_fitbit",
@@ -611,7 +611,7 @@
       "fetched": 11,
       "kept": 0,
       "error": null,
-      "latency_ms": 1686
+      "latency_ms": 1327
     },
     {
       "id": "hn_pixel_watch",
@@ -622,7 +622,7 @@
       "fetched": 0,
       "kept": 0,
       "error": null,
-      "latency_ms": 1045
+      "latency_ms": 1163
     },
     {
       "id": "hn_fitbit_bug",
@@ -633,7 +633,7 @@
       "fetched": 0,
       "kept": 0,
       "error": null,
-      "latency_ms": 1117
+      "latency_ms": 1292
     },
     {
       "id": "reddit_fitbit",
@@ -642,66 +642,66 @@
       "ok": true,
       "state": "ok",
       "fetched": 25,
-      "kept": 13,
+      "kept": 14,
       "error": null,
-      "latency_ms": 8680
+      "latency_ms": 8720
     },
     {
       "id": "reddit_pixel_watch",
       "label": "Reddit r/GooglePixelWatch",
+      "kind": "reddit",
+      "ok": true,
+      "state": "ok",
+      "fetched": 6,
+      "kept": 1,
+      "error": null,
+      "latency_ms": 7158
+    },
+    {
+      "id": "reddit_global_search",
+      "label": "Reddit (búsqueda Fitbit)",
       "kind": "reddit",
       "ok": false,
       "state": "skip",
       "fetched": 0,
       "kept": 0,
       "error": "Límite de peticiones (HTTP 429)",
-      "latency_ms": 27107
-    },
-    {
-      "id": "reddit_global_search",
-      "label": "Reddit (búsqueda Fitbit)",
-      "kind": "reddit",
-      "ok": true,
-      "state": "ok",
-      "fetched": 25,
-      "kept": 6,
-      "error": null,
-      "latency_ms": 48607
+      "latency_ms": 27828
     }
   ],
   "summary": {
-    "reports": 90,
-    "clusters": 85,
-    "clusters_mala": 19,
-    "clusters_buena": 35,
-    "new_clusters": 21,
-    "recurring_clusters": 64,
+    "reports": 87,
+    "clusters": 81,
+    "clusters_mala": 17,
+    "clusters_buena": 33,
+    "new_clusters": 14,
+    "recurring_clusters": 67,
     "by_model": {
-      "Fitbit Air": 38,
-      "Sin modelo": 31,
-      "Pixel Watch": 8,
-      "Sense 2": 3,
-      "Versa 4": 3,
-      "Charge 6": 3,
+      "Fitbit Air": 37,
+      "Sin modelo": 27,
+      "Pixel Watch": 10,
+      "Sense 2": 4,
+      "Charge 6": 4,
+      "Versa 4": 4,
+      "Inspire 3": 3,
       "Versa": 2,
-      "Inspire 3": 2,
-      "Sense": 2,
-      "Charge 5": 1,
+      "Charge 5": 2,
+      "Sense": 1,
       "Ionic": 1,
       "Versa 3": 1
     },
     "by_severity": {
-      "baja": 7,
+      "baja": 5,
       "alta": 5,
       "media": 8
     },
     "by_polarity": {
-      "buena": 37,
+      "buena": 36,
       "revisar": 33,
-      "mala": 20
+      "mala": 18
     },
     "by_language": {
-      "en": 69,
+      "en": 66,
       "es": 7,
       "pt": 3,
       "it": 3,
@@ -711,33 +711,32 @@
     },
     "by_category": {
       "opinion": 23,
-      "pantalla": 8,
-      "correa": 3,
-      "bateria": 9,
-      "sincronizacion": 25,
-      "calidad": 9,
+      "pantalla": 9,
+      "correa": 4,
+      "bateria": 8,
+      "sincronizacion": 26,
+      "calidad": 8,
       "gps": 2,
-      "software": 5,
-      "ritmo_cardiaco": 5,
-      "carga": 1
+      "software": 4,
+      "ritmo_cardiaco": 3
     },
     "by_source": {
       "YouTube (búsqueda pública)": 6,
       "YouTube ES": 1,
       "YouTube PT": 2,
-      "YouTube elogios": 2,
-      "TikTok (búsqueda pública)": 6,
+      "YouTube elogios": 3,
+      "TikTok (búsqueda pública)": 7,
       "TikTok ES": 1,
-      "Instagram (búsqueda pública)": 4,
+      "Instagram (búsqueda pública)": 3,
       "Instagram ES": 3,
       "Instagram PT": 1,
       "Noticias web (EN-US)": 7,
-      "Noticias web (EN-GB)": 1,
       "Noticias web (PT)": 1,
       "Noticias web (FR)": 3,
       "Noticias web (JA)": 3,
       "Foros / soporte (web)": 1,
       "9to5Google": 2,
+      "Android Central": 1,
       "Soporte Google": 15,
       "Noticias positivas (EN)": 4,
       "App Store US · Google Health (Fitbit)": 1,
@@ -748,17 +747,17 @@
       "App Store DE · Google Health (Fitbit)": 1,
       "App Store IT · Google Health (Fitbit)": 1,
       "App Store MX · Google Health (Fitbit)": 1,
-      "Reddit r/fitbit": 13,
-      "Reddit (búsqueda Fitbit)": 6
+      "Reddit r/fitbit": 14,
+      "Reddit r/GooglePixelWatch": 1
     },
     "by_kind": {
-      "youtube": 11,
-      "tiktok": 7,
-      "instagram": 8,
+      "youtube": 12,
+      "tiktok": 8,
+      "instagram": 7,
       "news": 21,
       "web": 16,
       "itunes": 8,
-      "reddit": 19
+      "reddit": 15
     },
     "sources_ok": 59,
     "sources_limited": 1,
@@ -791,7 +790,7 @@
       "recurring": true,
       "first_seen": "2026-10-07",
       "last_report_at": "2026-08-02T07:00:00+00:00",
-      "seen_runs": 3,
+      "seen_runs": 4,
       "engagement": {
         "score": null,
         "comments": null,
@@ -877,7 +876,7 @@
       "recurring": true,
       "first_seen": "2026-10-08",
       "last_report_at": "2026-09-03T07:00:00+00:00",
-      "seen_runs": 2,
+      "seen_runs": 3,
       "engagement": {
         "score": null,
         "comments": null,
@@ -963,7 +962,7 @@
       "recurring": true,
       "first_seen": "2026-10-08",
       "last_report_at": "2026-08-02T07:00:00+00:00",
-      "seen_runs": 2,
+      "seen_runs": 3,
       "engagement": {
         "score": null,
         "comments": null,
@@ -1049,7 +1048,7 @@
       "recurring": true,
       "first_seen": "2026-10-06",
       "last_report_at": "2026-07-15T12:46:23+00:00",
-      "seen_runs": 4,
+      "seen_runs": 5,
       "engagement": {
         "score": null,
         "comments": null,
@@ -1133,7 +1132,7 @@
       "recurring": true,
       "first_seen": "2026-09-03",
       "last_report_at": "2026-07-14T07:00:00+00:00",
-      "seen_runs": 37,
+      "seen_runs": 38,
       "engagement": {
         "score": null,
         "comments": null,
@@ -1219,7 +1218,7 @@
       "recurring": true,
       "first_seen": "2026-10-03",
       "last_report_at": "2026-10-02T18:42:52+00:00",
-      "seen_runs": 7,
+      "seen_runs": 8,
       "engagement": {
         "score": null,
         "comments": null,
@@ -1345,7 +1344,7 @@
       "recurring": true,
       "first_seen": "2026-10-03",
       "last_report_at": "2026-07-13T07:00:00+00:00",
-      "seen_runs": 7,
+      "seen_runs": 8,
       "engagement": {
         "score": null,
         "comments": null,
@@ -1431,7 +1430,7 @@
       "recurring": true,
       "first_seen": "2026-10-08",
       "last_report_at": "2026-08-19T11:53:15+00:00",
-      "seen_runs": 2,
+      "seen_runs": 3,
       "engagement": {
         "score": null,
         "comments": null,
@@ -1515,7 +1514,7 @@
       "recurring": true,
       "first_seen": "2026-10-03",
       "last_report_at": "2026-07-13T07:00:00+00:00",
-      "seen_runs": 7,
+      "seen_runs": 8,
       "engagement": {
         "score": null,
         "comments": null,
@@ -1601,7 +1600,7 @@
       "recurring": true,
       "first_seen": "2026-09-30",
       "last_report_at": "2026-09-09T05:20:21+00:00",
-      "seen_runs": 10,
+      "seen_runs": 11,
       "engagement": {
         "score": null,
         "comments": null,
@@ -1687,7 +1686,7 @@
       "recurring": true,
       "first_seen": "2026-10-02",
       "last_report_at": "2026-09-07T05:22:17+00:00",
-      "seen_runs": 8,
+      "seen_runs": 9,
       "engagement": {
         "score": null,
         "comments": null,
@@ -1773,7 +1772,7 @@
       "recurring": true,
       "first_seen": "2026-10-02",
       "last_report_at": "2026-08-29T07:32:13+00:00",
-      "seen_runs": 8,
+      "seen_runs": 9,
       "engagement": {
         "score": null,
         "comments": null,
@@ -1857,7 +1856,7 @@
       "recurring": true,
       "first_seen": "2026-10-04",
       "last_report_at": "2026-08-11T07:00:00+00:00",
-      "seen_runs": 6,
+      "seen_runs": 7,
       "engagement": {
         "score": null,
         "comments": null,
@@ -1943,7 +1942,7 @@
       "recurring": true,
       "first_seen": "2026-10-04",
       "last_report_at": "2026-08-02T07:00:00+00:00",
-      "seen_runs": 6,
+      "seen_runs": 7,
       "engagement": {
         "score": null,
         "comments": null,
@@ -2004,92 +2003,6 @@
       ]
     },
     {
-      "id": "86e96022673dc4ec",
-      "title": "Calidad / hardware · Fitbit Air · Is my Fitbit broken ???",
-      "category": "calidad",
-      "category_label": "Calidad / hardware",
-      "polarity": "mala",
-      "polarity_label": "Mala noticia",
-      "severity": "baja",
-      "confidence": 0.74,
-      "issue_stem": "broken",
-      "models": [
-        "Fitbit Air"
-      ],
-      "languages": [
-        "en"
-      ],
-      "language_labels": [
-        "Inglés"
-      ],
-      "source_kinds": [
-        "reddit"
-      ],
-      "count": 1,
-      "recurring": false,
-      "first_seen": "2026-10-09",
-      "last_report_at": "2026-10-09T09:59:17+00:00",
-      "seen_runs": 1,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "quotes": [
-        {
-          "text": "Over the last couple weeks it’s been tracking my calories and showing me crazy high calories burned what’s going on ?? submitted by /u/LessExchange8005 to r/FitbitAir [link] [comentarios]",
-          "url": "https://www.reddit.com/r/FitbitAir/comments/1x1hbu8/is_my_fitbit_broken/",
-          "source": "Reddit (búsqueda Fitbit)",
-          "source_kind": "reddit",
-          "title": "Is my Fitbit broken ???",
-          "created_at": "2026-10-09T09:59:17+00:00",
-          "language": "en",
-          "model": "Fitbit Air",
-          "engagement": {
-            "score": null,
-            "comments": null,
-            "views": null,
-            "label": null
-          },
-          "engagement_label": null,
-          "confidence": 0.74
-        }
-      ],
-      "sources": [
-        "Reddit (búsqueda Fitbit)"
-      ],
-      "reports": [
-        {
-          "id": "91594747370442d9",
-          "title": "Is my Fitbit broken ???",
-          "url": "https://www.reddit.com/r/FitbitAir/comments/1x1hbu8/is_my_fitbit_broken/",
-          "source": "Reddit (búsqueda Fitbit)",
-          "source_kind": "reddit",
-          "created_at": "2026-10-09T09:59:17+00:00",
-          "published_at": "2026-10-09T09:59:17+00:00",
-          "severity": "baja",
-          "sentiment": "negativo",
-          "polarity": "mala",
-          "language": "en",
-          "language_label": "Inglés",
-          "models": [
-            "Fitbit Air"
-          ],
-          "star_rating": null,
-          "engagement": {
-            "score": null,
-            "comments": null,
-            "views": null,
-            "label": null
-          },
-          "engagement_label": null,
-          "confidence": 0.74
-        }
-      ]
-    },
-    {
       "id": "215078888014cfc8",
       "title": "Calidad / hardware · Inspire 3 · Inspire 3 not working after swim",
       "category": "calidad",
@@ -2115,7 +2028,7 @@
       "recurring": true,
       "first_seen": "2026-10-05",
       "last_report_at": "2026-07-22T07:00:00+00:00",
-      "seen_runs": 5,
+      "seen_runs": 6,
       "engagement": {
         "score": null,
         "comments": null,
@@ -2176,90 +2089,6 @@
       ]
     },
     {
-      "id": "87f9122e001af2d4",
-      "title": "Calidad / hardware · Sin modelo · Is my Fitbit calorie tracker broken ?",
-      "category": "calidad",
-      "category_label": "Calidad / hardware",
-      "polarity": "mala",
-      "polarity_label": "Mala noticia",
-      "severity": "baja",
-      "confidence": 0.74,
-      "issue_stem": "broken calorie tracker",
-      "models": [
-        "Sin modelo"
-      ],
-      "languages": [
-        "en"
-      ],
-      "language_labels": [
-        "Inglés"
-      ],
-      "source_kinds": [
-        "reddit"
-      ],
-      "count": 1,
-      "recurring": false,
-      "first_seen": "2026-10-09",
-      "last_report_at": "2026-10-09T10:00:12+00:00",
-      "seen_runs": 1,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "quotes": [
-        {
-          "text": "My Fitbit has been showing me crazy amount of calories burnt throughout the day I don’t get it. submitted by /u/LessExchange8005 to r/fitbit [link] [comentarios]",
-          "url": "https://www.reddit.com/r/fitbit/comments/1x1hce4/is_my_fitbit_calorie_tracker_broken/",
-          "source": "Reddit (búsqueda Fitbit)",
-          "source_kind": "reddit",
-          "title": "Is my Fitbit calorie tracker broken ?",
-          "created_at": "2026-10-09T10:00:12+00:00",
-          "language": "en",
-          "model": null,
-          "engagement": {
-            "score": null,
-            "comments": null,
-            "views": null,
-            "label": null
-          },
-          "engagement_label": null,
-          "confidence": 0.74
-        }
-      ],
-      "sources": [
-        "Reddit (búsqueda Fitbit)"
-      ],
-      "reports": [
-        {
-          "id": "4ab35f158f5a0086",
-          "title": "Is my Fitbit calorie tracker broken ?",
-          "url": "https://www.reddit.com/r/fitbit/comments/1x1hce4/is_my_fitbit_calorie_tracker_broken/",
-          "source": "Reddit (búsqueda Fitbit)",
-          "source_kind": "reddit",
-          "created_at": "2026-10-09T10:00:12+00:00",
-          "published_at": "2026-10-09T10:00:12+00:00",
-          "severity": "baja",
-          "sentiment": "negativo",
-          "polarity": "mala",
-          "language": "en",
-          "language_label": "Inglés",
-          "models": [],
-          "star_rating": null,
-          "engagement": {
-            "score": null,
-            "comments": null,
-            "views": null,
-            "label": null
-          },
-          "engagement_label": null,
-          "confidence": 0.74
-        }
-      ]
-    },
-    {
       "id": "5fe90ef41976e76e",
       "title": "Pantalla · Sin modelo · Fitbit not holding charge and screen is blank. Restart not working",
       "category": "pantalla",
@@ -2285,7 +2114,7 @@
       "recurring": true,
       "first_seen": "2026-10-07",
       "last_report_at": "2026-09-19T07:00:00+00:00",
-      "seen_runs": 3,
+      "seen_runs": 4,
       "engagement": {
         "score": null,
         "comments": null,
@@ -2369,7 +2198,7 @@
       "recurring": true,
       "first_seen": "2026-10-03",
       "last_report_at": "2026-07-27T07:00:00+00:00",
-      "seen_runs": 7,
+      "seen_runs": 8,
       "engagement": {
         "score": null,
         "comments": null,
@@ -2456,7 +2285,7 @@
       "recurring": true,
       "first_seen": "2026-10-08",
       "last_report_at": "2026-10-07T20:16:01+00:00",
-      "seen_runs": 2,
+      "seen_runs": 3,
       "engagement": {
         "score": null,
         "comments": null,
@@ -2588,7 +2417,7 @@
       "recurring": true,
       "first_seen": "2026-10-04",
       "last_report_at": "2026-09-12T20:46:27+00:00",
-      "seen_runs": 6,
+      "seen_runs": 7,
       "engagement": {
         "score": null,
         "comments": null,
@@ -2719,7 +2548,7 @@
       "recurring": true,
       "first_seen": "2026-09-22",
       "last_report_at": "2026-07-18T15:00:30+00:00",
-      "seen_runs": 18,
+      "seen_runs": 19,
       "engagement": {
         "score": null,
         "comments": null,
@@ -2780,92 +2609,6 @@
       ]
     },
     {
-      "id": "7b0ee805a4181076",
-      "title": "Revisar · Batería · Fitbit Air · Battery life on fitbit air",
-      "category": "bateria",
-      "category_label": "Batería",
-      "polarity": "revisar",
-      "polarity_label": "Revisar",
-      "severity": null,
-      "confidence": 0.22,
-      "issue_stem": "battery life",
-      "models": [
-        "Fitbit Air"
-      ],
-      "languages": [
-        "en"
-      ],
-      "language_labels": [
-        "Inglés"
-      ],
-      "source_kinds": [
-        "reddit"
-      ],
-      "count": 1,
-      "recurring": false,
-      "first_seen": "2026-10-09",
-      "last_report_at": "2026-10-09T02:08:07+00:00",
-      "seen_runs": 1,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "quotes": [
-        {
-          "text": "I got my fitbit previous Sunday and today on Friday it is at 10%. Is it normal to have a 5 day battery life, or is there an issue? as I have seen people get like 7 days exactly. Please help me on this, Note: I keep my bluetooth on and it is connected 24*7 to my phone (it syncs da",
-          "url": "https://www.reddit.com/r/FitbitAir/comments/1x19cdw/battery_life_on_fitbit_air/",
-          "source": "Reddit (búsqueda Fitbit)",
-          "source_kind": "reddit",
-          "title": "Battery life on fitbit air",
-          "created_at": "2026-10-09T02:08:07+00:00",
-          "language": "en",
-          "model": "Fitbit Air",
-          "engagement": {
-            "score": null,
-            "comments": null,
-            "views": null,
-            "label": null
-          },
-          "engagement_label": null,
-          "confidence": 0.22
-        }
-      ],
-      "sources": [
-        "Reddit (búsqueda Fitbit)"
-      ],
-      "reports": [
-        {
-          "id": "f32d3bcd3e79c23f",
-          "title": "Battery life on fitbit air",
-          "url": "https://www.reddit.com/r/FitbitAir/comments/1x19cdw/battery_life_on_fitbit_air/",
-          "source": "Reddit (búsqueda Fitbit)",
-          "source_kind": "reddit",
-          "created_at": "2026-10-09T02:08:07+00:00",
-          "published_at": "2026-10-09T02:08:07+00:00",
-          "severity": null,
-          "sentiment": "mixto",
-          "polarity": "revisar",
-          "language": "en",
-          "language_label": "Inglés",
-          "models": [
-            "Fitbit Air"
-          ],
-          "star_rating": null,
-          "engagement": {
-            "score": null,
-            "comments": null,
-            "views": null,
-            "label": null
-          },
-          "engagement_label": null,
-          "confidence": 0.22
-        }
-      ]
-    },
-    {
       "id": "543e102d913ff6e8",
       "title": "Revisar · Batería · Sin modelo · Fitbit 5 battery life last only 24 hours . Tried all the suggestions.…",
       "category": "bateria",
@@ -2891,7 +2634,7 @@
       "recurring": true,
       "first_seen": "2026-10-07",
       "last_report_at": "2026-08-13T07:00:00+00:00",
-      "seen_runs": 3,
+      "seen_runs": 4,
       "engagement": {
         "score": null,
         "comments": null,
@@ -2950,15 +2693,15 @@
       ]
     },
     {
-      "id": "d5508385eef757c8",
-      "title": "Revisar · Batería · Sin modelo · did your fitbit end up unused, and did you get anything out of it bef…",
+      "id": "40c0ddcb455c62ba",
+      "title": "Revisar · Batería · Sin modelo · Bateria caiu 41% menos de 12h",
       "category": "bateria",
       "category_label": "Batería",
       "polarity": "revisar",
       "polarity_label": "Revisar",
       "severity": null,
       "confidence": 0.22,
-      "issue_stem": "anything before unused your",
+      "issue_stem": "bateria caiu menos",
       "models": [
         "Sin modelo"
       ],
@@ -2973,8 +2716,8 @@
       ],
       "count": 1,
       "recurring": false,
-      "first_seen": "2026-10-09",
-      "last_report_at": "2026-10-09T08:10:07+00:00",
+      "first_seen": "2026-10-10",
+      "last_report_at": "2026-10-10T09:24:03+00:00",
       "seen_runs": 1,
       "engagement": {
         "score": null,
@@ -2985,12 +2728,12 @@
       "engagement_label": null,
       "quotes": [
         {
-          "text": "i have a habit of buying stuff for my health and then not using it. temperature sensors for the bedroom and the living room, i never look at them. sleeping headphones that i take out in my sleep, so now they are train headphones. a sleep mask, same story. i try to make sure every",
-          "url": "https://www.reddit.com/r/fitbit/comments/1x1fmgr/did_your_fitbit_end_up_unused_and_did_you_get/",
+          "text": "Hoje, fui trabalhar às 7:30 e voltei 8 horas depois, só que eu esqueci meu iPhone em casa, usei Fitbit só sentado E com isso bateria drenou demais Oque pode ter acontecido Como resolver se isso acontecer de novo ? submitted by /u/maickon7 [link] [comentarios]",
+          "url": "https://www.reddit.com/r/fitbit/comments/1x2awyc/bateria_caiu_41_menos_de_12h/",
           "source": "Reddit r/fitbit",
           "source_kind": "reddit",
-          "title": "did your fitbit end up unused, and did you get anything out of it before that?",
-          "created_at": "2026-10-09T08:10:07+00:00",
+          "title": "Bateria caiu 41% menos de 12h",
+          "created_at": "2026-10-10T09:24:03+00:00",
           "language": "en",
           "model": null,
           "engagement": {
@@ -3008,13 +2751,13 @@
       ],
       "reports": [
         {
-          "id": "63601cb8c50659d5",
-          "title": "did your fitbit end up unused, and did you get anything out of it before that?",
-          "url": "https://www.reddit.com/r/fitbit/comments/1x1fmgr/did_your_fitbit_end_up_unused_and_did_you_get/",
+          "id": "0b806b2c658f2c5a",
+          "title": "Bateria caiu 41% menos de 12h",
+          "url": "https://www.reddit.com/r/fitbit/comments/1x2awyc/bateria_caiu_41_menos_de_12h/",
           "source": "Reddit r/fitbit",
           "source_kind": "reddit",
-          "created_at": "2026-10-09T08:10:07+00:00",
-          "published_at": "2026-10-09T08:10:07+00:00",
+          "created_at": "2026-10-10T09:24:03+00:00",
+          "published_at": "2026-10-10T09:24:03+00:00",
           "severity": null,
           "sentiment": "mixto",
           "polarity": "revisar",
@@ -3034,17 +2777,18 @@
       ]
     },
     {
-      "id": "4da73a068de60e47",
-      "title": "Revisar · Batería · Sin modelo · Question regarding charging and battery life?",
+      "id": "1fa6275e98d0e2be",
+      "title": "Revisar · Batería · Charge 6 · Charge 6 vs Edge",
       "category": "bateria",
       "category_label": "Batería",
       "polarity": "revisar",
       "polarity_label": "Revisar",
       "severity": null,
       "confidence": 0.0,
-      "issue_stem": "battery charging life question regarding",
+      "issue_stem": "charge edge",
       "models": [
-        "Sin modelo"
+        "Charge 6",
+        "Charge 5"
       ],
       "languages": [
         "en"
@@ -3057,8 +2801,8 @@
       ],
       "count": 1,
       "recurring": false,
-      "first_seen": "2026-10-09",
-      "last_report_at": "2026-10-09T04:28:47+00:00",
+      "first_seen": "2026-10-10",
+      "last_report_at": "2026-10-10T12:16:50+00:00",
       "seen_runs": 1,
       "engagement": {
         "score": null,
@@ -3069,14 +2813,14 @@
       "engagement_label": null,
       "quotes": [
         {
-          "text": "submitted by /u/Kr4tos_23 [link] [comentarios]",
-          "url": "https://www.reddit.com/r/fitbit/comments/1x1c0ft/question_regarding_charging_and_battery_life/",
+          "text": "So, last week my charge 5 decided to die of a sudden death (won't charge, or if by miracle I'm able to charge it even at 100%, by the end of the day is 1%) It has been with me for a good 4-5 years and served its purpose. I use it mostly at work for clock/timers/alarms/notificatio",
+          "url": "https://www.reddit.com/r/fitbit/comments/1x2dw1v/charge_6_vs_edge/",
           "source": "Reddit r/fitbit",
           "source_kind": "reddit",
-          "title": "Question regarding charging and battery life?",
-          "created_at": "2026-10-09T04:28:47+00:00",
+          "title": "Charge 6 vs Edge",
+          "created_at": "2026-10-10T12:16:50+00:00",
           "language": "en",
-          "model": null,
+          "model": "Charge 6",
           "engagement": {
             "score": null,
             "comments": null,
@@ -3092,19 +2836,22 @@
       ],
       "reports": [
         {
-          "id": "ff4d805412519668",
-          "title": "Question regarding charging and battery life?",
-          "url": "https://www.reddit.com/r/fitbit/comments/1x1c0ft/question_regarding_charging_and_battery_life/",
+          "id": "53a654e4ad6b9c66",
+          "title": "Charge 6 vs Edge",
+          "url": "https://www.reddit.com/r/fitbit/comments/1x2dw1v/charge_6_vs_edge/",
           "source": "Reddit r/fitbit",
           "source_kind": "reddit",
-          "created_at": "2026-10-09T04:28:47+00:00",
-          "published_at": "2026-10-09T04:28:47+00:00",
+          "created_at": "2026-10-10T12:16:50+00:00",
+          "published_at": "2026-10-10T12:16:50+00:00",
           "severity": null,
           "sentiment": "mixto",
           "polarity": "revisar",
           "language": "en",
           "language_label": "Inglés",
-          "models": [],
+          "models": [
+            "Charge 6",
+            "Charge 5"
+          ],
           "star_rating": null,
           "engagement": {
             "score": null,
@@ -3114,6 +2861,92 @@
           },
           "engagement_label": null,
           "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "50e0a1a6458b1482",
+      "title": "Revisar · Batería · Pixel Watch · Pixel Watch owners: volunteer for a 21-day test of two Wear OS watch…",
+      "category": "bateria",
+      "category_label": "Batería",
+      "polarity": "revisar",
+      "polarity_label": "Revisar",
+      "severity": null,
+      "confidence": 0.22,
+      "issue_stem": "access faces free owners pixel",
+      "models": [
+        "Pixel Watch"
+      ],
+      "languages": [
+        "en"
+      ],
+      "language_labels": [
+        "Inglés"
+      ],
+      "source_kinds": [
+        "reddit"
+      ],
+      "count": 1,
+      "recurring": false,
+      "first_seen": "2026-10-10",
+      "last_report_at": "2026-10-07T19:49:34+00:00",
+      "seen_runs": 1,
+      "engagement": {
+        "score": null,
+        "comments": null,
+        "views": null,
+        "label": null
+      },
+      "engagement_label": null,
+      "quotes": [
+        {
+          "text": "I'm the developer of Codefall Rain Pro (colorful digital rain) and Axiom Alchemy (an alchemy-inspired face). I'm looking for Pixel Watch owners to help check real watch compatibility, readability, customization and battery behavior during normal wear. You need regular access to a",
+          "url": "https://www.reddit.com/r/googlepixelwatch/comments/1x069to/pixel_watch_owners_volunteer_for_a_21day_test_of/",
+          "source": "Reddit r/GooglePixelWatch",
+          "source_kind": "reddit",
+          "title": "Pixel Watch owners: volunteer for a 21-day test of two Wear OS watch faces (free access if selected)",
+          "created_at": "2026-10-07T19:49:34+00:00",
+          "language": "en",
+          "model": "Pixel Watch",
+          "engagement": {
+            "score": null,
+            "comments": null,
+            "views": null,
+            "label": null
+          },
+          "engagement_label": null,
+          "confidence": 0.22
+        }
+      ],
+      "sources": [
+        "Reddit r/GooglePixelWatch"
+      ],
+      "reports": [
+        {
+          "id": "c76a95a6bc93773a",
+          "title": "Pixel Watch owners: volunteer for a 21-day test of two Wear OS watch faces (free access if selected)",
+          "url": "https://www.reddit.com/r/googlepixelwatch/comments/1x069to/pixel_watch_owners_volunteer_for_a_21day_test_of/",
+          "source": "Reddit r/GooglePixelWatch",
+          "source_kind": "reddit",
+          "created_at": "2026-10-07T19:49:34+00:00",
+          "published_at": "2026-10-07T19:49:34+00:00",
+          "severity": null,
+          "sentiment": "mixto",
+          "polarity": "revisar",
+          "language": "en",
+          "language_label": "Inglés",
+          "models": [
+            "Pixel Watch"
+          ],
+          "star_rating": null,
+          "engagement": {
+            "score": null,
+            "comments": null,
+            "views": null,
+            "label": null
+          },
+          "engagement_label": null,
+          "confidence": 0.22
         }
       ]
     },
@@ -3143,7 +2976,7 @@
       "recurring": true,
       "first_seen": "2026-10-07",
       "last_report_at": "2026-09-29T07:00:00+00:00",
-      "seen_runs": 3,
+      "seen_runs": 4,
       "engagement": {
         "score": null,
         "comments": null,
@@ -3226,10 +3059,10 @@
         "itunes"
       ],
       "count": 1,
-      "recurring": false,
+      "recurring": true,
       "first_seen": "2026-10-09",
       "last_report_at": "2026-10-07T15:18:59+00:00",
-      "seen_runs": 1,
+      "seen_runs": 2,
       "engagement": {
         "score": null,
         "comments": null,
@@ -3290,17 +3123,18 @@
       ]
     },
     {
-      "id": "05135a9d175d0a47",
-      "title": "Revisar · Carga · Sense · Is this a steal?",
-      "category": "carga",
-      "category_label": "Carga",
+      "id": "95913b23905dcb69",
+      "title": "Revisar · Correa · Fitbit Air · Double-wristing a screenless Fitbit Air with a classic dress watch: D…",
+      "category": "correa",
+      "category_label": "Correa",
       "polarity": "revisar",
       "polarity_label": "Revisar",
       "severity": null,
       "confidence": 0.22,
-      "issue_stem": "steal",
+      "issue_stem": "classic double dress look screenless",
       "models": [
-        "Sense"
+        "Fitbit Air",
+        "Pixel Watch"
       ],
       "languages": [
         "en"
@@ -3313,8 +3147,8 @@
       ],
       "count": 1,
       "recurring": false,
-      "first_seen": "2026-10-09",
-      "last_report_at": "2026-10-09T13:09:38+00:00",
+      "first_seen": "2026-10-10",
+      "last_report_at": "2026-10-10T04:59:35+00:00",
       "seen_runs": 1,
       "engagement": {
         "score": null,
@@ -3325,14 +3159,14 @@
       "engagement_label": null,
       "quotes": [
         {
-          "text": "So for the people who want context i bought an fitbit sense 1 off vinted paid 6.29 total for it comes with charger and STILL WORKING! submitted by /u/Southern_One1909 [link] [comentarios]",
-          "url": "https://www.reddit.com/r/fitbit/comments/1x1ky5n/is_this_a_steal/",
+          "text": "Hey everyone, ​I’m stuck in a dilemma and need some real-world advice from watch collectors and fitness tracker users. ​I love wearing traditional analog dress watches (especially with leather straps) for work and social outings. At the same time, I want continuous 24/7 health tr",
+          "url": "https://www.reddit.com/r/fitbit/comments/1x26kzp/doublewristing_a_screenless_fitbit_air_with_a/",
           "source": "Reddit r/fitbit",
           "source_kind": "reddit",
-          "title": "Is this a steal?",
-          "created_at": "2026-10-09T13:09:38+00:00",
+          "title": "Double-wristing a screenless Fitbit Air with a classic dress watch: Does it look weird?",
+          "created_at": "2026-10-10T04:59:35+00:00",
           "language": "en",
-          "model": "Sense",
+          "model": "Fitbit Air",
           "engagement": {
             "score": null,
             "comments": null,
@@ -3348,20 +3182,21 @@
       ],
       "reports": [
         {
-          "id": "6d29b79b2648191d",
-          "title": "Is this a steal?",
-          "url": "https://www.reddit.com/r/fitbit/comments/1x1ky5n/is_this_a_steal/",
+          "id": "4d8ce330e0bd6821",
+          "title": "Double-wristing a screenless Fitbit Air with a classic dress watch: Does it look weird?",
+          "url": "https://www.reddit.com/r/fitbit/comments/1x26kzp/doublewristing_a_screenless_fitbit_air_with_a/",
           "source": "Reddit r/fitbit",
           "source_kind": "reddit",
-          "created_at": "2026-10-09T13:09:38+00:00",
-          "published_at": "2026-10-09T13:09:38+00:00",
+          "created_at": "2026-10-10T04:59:35+00:00",
+          "published_at": "2026-10-10T04:59:35+00:00",
           "severity": null,
           "sentiment": "mixto",
           "polarity": "revisar",
           "language": "en",
           "language_label": "Inglés",
           "models": [
-            "Sense"
+            "Fitbit Air",
+            "Pixel Watch"
           ],
           "star_rating": null,
           "engagement": {
@@ -3398,10 +3233,10 @@
         "reddit"
       ],
       "count": 1,
-      "recurring": false,
+      "recurring": true,
       "first_seen": "2026-10-09",
       "last_report_at": "2026-10-09T06:11:44+00:00",
-      "seen_runs": 1,
+      "seen_runs": 2,
       "engagement": {
         "score": null,
         "comments": null,
@@ -3487,7 +3322,7 @@
       "recurring": true,
       "first_seen": "2026-08-26",
       "last_report_at": "2026-07-20T07:00:00+00:00",
-      "seen_runs": 51,
+      "seen_runs": 52,
       "engagement": {
         "score": null,
         "comments": null,
@@ -3548,90 +3383,6 @@
       ]
     },
     {
-      "id": "53ed3247bea33fad",
-      "title": "Revisar · Opinión · Sin modelo · Sleep Study says my fitbit sleep hours are way inaccurate.",
-      "category": "opinion",
-      "category_label": "Opinión",
-      "polarity": "revisar",
-      "polarity_label": "Revisar",
-      "severity": null,
-      "confidence": 0.22,
-      "issue_stem": "hours inaccurate says sleep study",
-      "models": [
-        "Sin modelo"
-      ],
-      "languages": [
-        "en"
-      ],
-      "language_labels": [
-        "Inglés"
-      ],
-      "source_kinds": [
-        "reddit"
-      ],
-      "count": 1,
-      "recurring": false,
-      "first_seen": "2026-10-09",
-      "last_report_at": "2026-10-08T21:26:23+00:00",
-      "seen_runs": 1,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "quotes": [
-        {
-          "text": "Just took a sleep study through my insurance provider and it reported that I'm getting less than half of the sleep reported by my fitbit. Fitbit will say 7:15 hours, sleep study equipment says 4:30. Fitbit says 6:00, sleep study says 3:15. Has anyone else seen this wide margin of",
-          "url": "https://www.reddit.com/r/fitbit/comments/1x13be6/sleep_study_says_my_fitbit_sleep_hours_are_way/",
-          "source": "Reddit r/fitbit",
-          "source_kind": "reddit",
-          "title": "Sleep Study says my fitbit sleep hours are way inaccurate.",
-          "created_at": "2026-10-08T21:26:23+00:00",
-          "language": "en",
-          "model": null,
-          "engagement": {
-            "score": null,
-            "comments": null,
-            "views": null,
-            "label": null
-          },
-          "engagement_label": null,
-          "confidence": 0.22
-        }
-      ],
-      "sources": [
-        "Reddit r/fitbit"
-      ],
-      "reports": [
-        {
-          "id": "030699bbeba95d0c",
-          "title": "Sleep Study says my fitbit sleep hours are way inaccurate.",
-          "url": "https://www.reddit.com/r/fitbit/comments/1x13be6/sleep_study_says_my_fitbit_sleep_hours_are_way/",
-          "source": "Reddit r/fitbit",
-          "source_kind": "reddit",
-          "created_at": "2026-10-08T21:26:23+00:00",
-          "published_at": "2026-10-08T21:26:23+00:00",
-          "severity": null,
-          "sentiment": "mixto",
-          "polarity": "revisar",
-          "language": "en",
-          "language_label": "Inglés",
-          "models": [],
-          "star_rating": null,
-          "engagement": {
-            "score": null,
-            "comments": null,
-            "views": null,
-            "label": null
-          },
-          "engagement_label": null,
-          "confidence": 0.22
-        }
-      ]
-    },
-    {
       "id": "05597ba54aaa1f16",
       "title": "Revisar · Pantalla · Sense 2 · Fix a Cracked Smartwatch Screen in Seconds! ⌚💥 #shorts Got a shattere…",
       "category": "pantalla",
@@ -3657,7 +3408,7 @@
       "recurring": true,
       "first_seen": "2026-09-25",
       "last_report_at": "2026-08-05T07:00:00+00:00",
-      "seen_runs": 15,
+      "seen_runs": 16,
       "engagement": {
         "score": null,
         "comments": null,
@@ -3744,7 +3495,7 @@
       "recurring": true,
       "first_seen": "2026-10-03",
       "last_report_at": "2026-09-29T07:00:00+00:00",
-      "seen_runs": 7,
+      "seen_runs": 8,
       "engagement": {
         "score": null,
         "comments": null,
@@ -3806,17 +3557,186 @@
       ]
     },
     {
-      "id": "c43155d85c2ef7e4",
-      "title": "Revisar · Ritmo cardíaco · Sin modelo · Fitbit showed 93% SpO2 overnight. Has anyone experienced this?",
+      "id": "07cfc65f7a0599e2",
+      "title": "Revisar · Pantalla · Sin modelo · my fitbit app gave up 💔",
+      "category": "pantalla",
+      "category_label": "Pantalla",
+      "polarity": "revisar",
+      "polarity_label": "Revisar",
+      "severity": null,
+      "confidence": 0.22,
+      "issue_stem": "gave",
+      "models": [
+        "Sin modelo"
+      ],
+      "languages": [
+        "en"
+      ],
+      "language_labels": [
+        "Inglés"
+      ],
+      "source_kinds": [
+        "reddit"
+      ],
+      "count": 1,
+      "recurring": false,
+      "first_seen": "2026-10-10",
+      "last_report_at": "2026-10-10T11:18:59+00:00",
+      "seen_runs": 1,
+      "engagement": {
+        "score": null,
+        "comments": null,
+        "views": null,
+        "label": null
+      },
+      "engagement_label": null,
+      "quotes": [
+        {
+          "text": "end of an era... dont know how to get past this screen 💔 been holding out for ages but i guess now im gonna have to go to the dreaded fitbit health (rip my daily readiness score) (at least im getting a garmin soon 🥹) submitted by /u/skiderss [link] [comentarios]",
+          "url": "https://www.reddit.com/r/fitbit/comments/1x2cthm/my_fitbit_app_gave_up/",
+          "source": "Reddit r/fitbit",
+          "source_kind": "reddit",
+          "title": "my fitbit app gave up 💔",
+          "created_at": "2026-10-10T11:18:59+00:00",
+          "language": "en",
+          "model": null,
+          "engagement": {
+            "score": null,
+            "comments": null,
+            "views": null,
+            "label": null
+          },
+          "engagement_label": null,
+          "confidence": 0.22
+        }
+      ],
+      "sources": [
+        "Reddit r/fitbit"
+      ],
+      "reports": [
+        {
+          "id": "8006de6defdd9525",
+          "title": "my fitbit app gave up 💔",
+          "url": "https://www.reddit.com/r/fitbit/comments/1x2cthm/my_fitbit_app_gave_up/",
+          "source": "Reddit r/fitbit",
+          "source_kind": "reddit",
+          "created_at": "2026-10-10T11:18:59+00:00",
+          "published_at": "2026-10-10T11:18:59+00:00",
+          "severity": null,
+          "sentiment": "mixto",
+          "polarity": "revisar",
+          "language": "en",
+          "language_label": "Inglés",
+          "models": [],
+          "star_rating": null,
+          "engagement": {
+            "score": null,
+            "comments": null,
+            "views": null,
+            "label": null
+          },
+          "engagement_label": null,
+          "confidence": 0.22
+        }
+      ]
+    },
+    {
+      "id": "fa1b32fd9c633948",
+      "title": "Revisar · Ritmo cardíaco · Sin modelo · Should I be concerned about how fast my resting heart rate is climbing",
+      "category": "ritmo_cardiaco",
+      "category_label": "Ritmo cardíaco",
+      "polarity": "revisar",
+      "polarity_label": "Revisar",
+      "severity": null,
+      "confidence": 0.0,
+      "issue_stem": "climbing concerned fast heart rate",
+      "models": [
+        "Sin modelo"
+      ],
+      "languages": [
+        "en"
+      ],
+      "language_labels": [
+        "Inglés"
+      ],
+      "source_kinds": [
+        "reddit"
+      ],
+      "count": 1,
+      "recurring": false,
+      "first_seen": "2026-10-10",
+      "last_report_at": "2026-10-10T14:16:34+00:00",
+      "seen_runs": 1,
+      "engagement": {
+        "score": null,
+        "comments": null,
+        "views": null,
+        "label": null
+      },
+      "engagement_label": null,
+      "quotes": [
+        {
+          "text": "For reference, I was able to be pretty active over the summer, but haven’t really gotten the chance now that I’m back at college submitted by /u/Persian_Empire42 [link] [comentarios]",
+          "url": "https://www.reddit.com/r/fitbit/comments/1x2geh8/should_i_be_concerned_about_how_fast_my_resting/",
+          "source": "Reddit r/fitbit",
+          "source_kind": "reddit",
+          "title": "Should I be concerned about how fast my resting heart rate is climbing",
+          "created_at": "2026-10-10T14:16:34+00:00",
+          "language": "en",
+          "model": null,
+          "engagement": {
+            "score": null,
+            "comments": null,
+            "views": null,
+            "label": null
+          },
+          "engagement_label": null,
+          "confidence": 0.0
+        }
+      ],
+      "sources": [
+        "Reddit r/fitbit"
+      ],
+      "reports": [
+        {
+          "id": "b279d06a1e4eda65",
+          "title": "Should I be concerned about how fast my resting heart rate is climbing",
+          "url": "https://www.reddit.com/r/fitbit/comments/1x2geh8/should_i_be_concerned_about_how_fast_my_resting/",
+          "source": "Reddit r/fitbit",
+          "source_kind": "reddit",
+          "created_at": "2026-10-10T14:16:34+00:00",
+          "published_at": "2026-10-10T14:16:34+00:00",
+          "severity": null,
+          "sentiment": "mixto",
+          "polarity": "revisar",
+          "language": "en",
+          "language_label": "Inglés",
+          "models": [],
+          "star_rating": null,
+          "engagement": {
+            "score": null,
+            "comments": null,
+            "views": null,
+            "label": null
+          },
+          "engagement_label": null,
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "95f64db9558cf1be",
+      "title": "Revisar · Ritmo cardíaco · Charge 6 · Versa 4 disappearing stats?",
       "category": "ritmo_cardiaco",
       "category_label": "Ritmo cardíaco",
       "polarity": "revisar",
       "polarity_label": "Revisar",
       "severity": null,
       "confidence": 0.22,
-      "issue_stem": "anyone experienced overnight showed spo2",
+      "issue_stem": "disappearing stats versa",
       "models": [
-        "Sin modelo"
+        "Charge 6",
+        "Versa 4"
       ],
       "languages": [
         "en"
@@ -3829,8 +3749,8 @@
       ],
       "count": 1,
       "recurring": false,
-      "first_seen": "2026-10-09",
-      "last_report_at": "2026-10-09T16:18:37+00:00",
+      "first_seen": "2026-10-10",
+      "last_report_at": "2026-10-09T21:47:06+00:00",
       "seen_runs": 1,
       "engagement": {
         "score": null,
@@ -3841,14 +3761,14 @@
       "engagement_label": null,
       "quotes": [
         {
-          "text": "Hi everyone! I've been using Fitbit to track my sleep and SpO2 levels. My average SpO2 over the past month and three months has been 96%, and most nights my readings are between 95–98%. However, last night my Fitbit showed an average SpO2 of 93%, which was flagged as below my per",
-          "url": "https://www.reddit.com/r/fitbit/comments/1x1pnsz/fitbit_showed_93_spo2_overnight_has_anyone/",
+          "text": "Hey there, I recently upgraded my Charge 6 to a Versa 4 and very quickly after getting the device (within 3 weeks), I noticed a weird thing it did. Sometimes when I'm exercising, and sometimes for no reason, stats and functions just disappear. I have three photos for a basic refe",
+          "url": "https://www.reddit.com/r/fitbit/comments/1x1xzf9/versa_4_disappearing_stats/",
           "source": "Reddit r/fitbit",
           "source_kind": "reddit",
-          "title": "Fitbit showed 93% SpO2 overnight. Has anyone experienced this?",
-          "created_at": "2026-10-09T16:18:37+00:00",
+          "title": "Versa 4 disappearing stats?",
+          "created_at": "2026-10-09T21:47:06+00:00",
           "language": "en",
-          "model": null,
+          "model": "Charge 6",
           "engagement": {
             "score": null,
             "comments": null,
@@ -3864,19 +3784,22 @@
       ],
       "reports": [
         {
-          "id": "20acd171228c4666",
-          "title": "Fitbit showed 93% SpO2 overnight. Has anyone experienced this?",
-          "url": "https://www.reddit.com/r/fitbit/comments/1x1pnsz/fitbit_showed_93_spo2_overnight_has_anyone/",
+          "id": "5a47eb8ee4e0cfb5",
+          "title": "Versa 4 disappearing stats?",
+          "url": "https://www.reddit.com/r/fitbit/comments/1x1xzf9/versa_4_disappearing_stats/",
           "source": "Reddit r/fitbit",
           "source_kind": "reddit",
-          "created_at": "2026-10-09T16:18:37+00:00",
-          "published_at": "2026-10-09T16:18:37+00:00",
+          "created_at": "2026-10-09T21:47:06+00:00",
+          "published_at": "2026-10-09T21:47:06+00:00",
           "severity": null,
           "sentiment": "mixto",
           "polarity": "revisar",
           "language": "en",
           "language_label": "Inglés",
-          "models": [],
+          "models": [
+            "Charge 6",
+            "Versa 4"
+          ],
           "star_rating": null,
           "engagement": {
             "score": null,
@@ -3886,174 +3809,6 @@
           },
           "engagement_label": null,
           "confidence": 0.22
-        }
-      ]
-    },
-    {
-      "id": "6f1a2ee78dd46b1b",
-      "title": "Revisar · Ritmo cardíaco · Sin modelo · Need some help with HRV",
-      "category": "ritmo_cardiaco",
-      "category_label": "Ritmo cardíaco",
-      "polarity": "revisar",
-      "polarity_label": "Revisar",
-      "severity": null,
-      "confidence": 0.0,
-      "issue_stem": "help need some",
-      "models": [
-        "Sin modelo"
-      ],
-      "languages": [
-        "en"
-      ],
-      "language_labels": [
-        "Inglés"
-      ],
-      "source_kinds": [
-        "reddit"
-      ],
-      "count": 1,
-      "recurring": false,
-      "first_seen": "2026-10-09",
-      "last_report_at": "2026-10-09T14:13:06+00:00",
-      "seen_runs": 1,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "quotes": [
-        {
-          "text": "This is rough… I’ve been getting only about 6 hours of sleep this week and lots of stress. Also hurt my back and didn’t exercise. Should I worry about underlying issues? 36 M submitted by /u/Victory-laps [link] [comentarios]",
-          "url": "https://www.reddit.com/r/fitbit/comments/1x1mgrr/need_some_help_with_hrv/",
-          "source": "Reddit r/fitbit",
-          "source_kind": "reddit",
-          "title": "Need some help with HRV",
-          "created_at": "2026-10-09T14:13:06+00:00",
-          "language": "en",
-          "model": null,
-          "engagement": {
-            "score": null,
-            "comments": null,
-            "views": null,
-            "label": null
-          },
-          "engagement_label": null,
-          "confidence": 0.0
-        }
-      ],
-      "sources": [
-        "Reddit r/fitbit"
-      ],
-      "reports": [
-        {
-          "id": "492cf37deb8b7321",
-          "title": "Need some help with HRV",
-          "url": "https://www.reddit.com/r/fitbit/comments/1x1mgrr/need_some_help_with_hrv/",
-          "source": "Reddit r/fitbit",
-          "source_kind": "reddit",
-          "created_at": "2026-10-09T14:13:06+00:00",
-          "published_at": "2026-10-09T14:13:06+00:00",
-          "severity": null,
-          "sentiment": "mixto",
-          "polarity": "revisar",
-          "language": "en",
-          "language_label": "Inglés",
-          "models": [],
-          "star_rating": null,
-          "engagement": {
-            "score": null,
-            "comments": null,
-            "views": null,
-            "label": null
-          },
-          "engagement_label": null,
-          "confidence": 0.0
-        }
-      ]
-    },
-    {
-      "id": "afe947ee86759b98",
-      "title": "Revisar · Ritmo cardíaco · Sin modelo · 31M is this normal?",
-      "category": "ritmo_cardiaco",
-      "category_label": "Ritmo cardíaco",
-      "polarity": "revisar",
-      "polarity_label": "Revisar",
-      "severity": null,
-      "confidence": 0.0,
-      "issue_stem": "normal",
-      "models": [
-        "Sin modelo"
-      ],
-      "languages": [
-        "en"
-      ],
-      "language_labels": [
-        "Inglés"
-      ],
-      "source_kinds": [
-        "reddit"
-      ],
-      "count": 1,
-      "recurring": false,
-      "first_seen": "2026-10-09",
-      "last_report_at": "2026-10-09T12:56:46+00:00",
-      "seen_runs": 1,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "quotes": [
-        {
-          "text": "I have started zone 2 training for 30mins avg x4 a week for 3 weeks. Is this normal vitals I want to lower my RHR and increase HRV submitted by /u/Distinct_Scallion342 [link] [comentarios]",
-          "url": "https://www.reddit.com/r/fitbit/comments/1x1knok/31m_is_this_normal/",
-          "source": "Reddit r/fitbit",
-          "source_kind": "reddit",
-          "title": "31M is this normal?",
-          "created_at": "2026-10-09T12:56:46+00:00",
-          "language": "en",
-          "model": null,
-          "engagement": {
-            "score": null,
-            "comments": null,
-            "views": null,
-            "label": null
-          },
-          "engagement_label": null,
-          "confidence": 0.0
-        }
-      ],
-      "sources": [
-        "Reddit r/fitbit"
-      ],
-      "reports": [
-        {
-          "id": "466174eef5549d09",
-          "title": "31M is this normal?",
-          "url": "https://www.reddit.com/r/fitbit/comments/1x1knok/31m_is_this_normal/",
-          "source": "Reddit r/fitbit",
-          "source_kind": "reddit",
-          "created_at": "2026-10-09T12:56:46+00:00",
-          "published_at": "2026-10-09T12:56:46+00:00",
-          "severity": null,
-          "sentiment": "mixto",
-          "polarity": "revisar",
-          "language": "en",
-          "language_label": "Inglés",
-          "models": [],
-          "star_rating": null,
-          "engagement": {
-            "score": null,
-            "comments": null,
-            "views": null,
-            "label": null
-          },
-          "engagement_label": null,
-          "confidence": 0.0
         }
       ]
     },
@@ -4083,7 +3838,7 @@
       "recurring": true,
       "first_seen": "2026-09-26",
       "last_report_at": "2026-08-11T07:00:00+00:00",
-      "seen_runs": 14,
+      "seen_runs": 15,
       "engagement": {
         "score": null,
         "comments": null,
@@ -4167,7 +3922,7 @@
       "recurring": true,
       "first_seen": "2026-10-02",
       "last_report_at": "2026-07-14T07:00:00+00:00",
-      "seen_runs": 8,
+      "seen_runs": 9,
       "engagement": {
         "score": null,
         "comments": null,
@@ -4251,7 +4006,7 @@
       "recurring": true,
       "first_seen": "2026-10-06",
       "last_report_at": "2026-07-15T07:00:00+00:00",
-      "seen_runs": 4,
+      "seen_runs": 5,
       "engagement": {
         "score": null,
         "comments": null,
@@ -4335,7 +4090,7 @@
       "recurring": true,
       "first_seen": "2026-09-04",
       "last_report_at": "2026-07-14T07:00:00+00:00",
-      "seen_runs": 36,
+      "seen_runs": 37,
       "engagement": {
         "score": null,
         "comments": null,
@@ -4419,7 +4174,7 @@
       "recurring": true,
       "first_seen": "2026-09-09",
       "last_report_at": "2026-08-03T07:00:00+00:00",
-      "seen_runs": 31,
+      "seen_runs": 32,
       "engagement": {
         "score": null,
         "comments": null,
@@ -4503,7 +4258,7 @@
       "recurring": true,
       "first_seen": "2026-10-03",
       "last_report_at": "2026-07-31T07:00:00+00:00",
-      "seen_runs": 7,
+      "seen_runs": 8,
       "engagement": {
         "score": null,
         "comments": null,
@@ -4587,7 +4342,7 @@
       "recurring": true,
       "first_seen": "2026-08-28",
       "last_report_at": "2026-09-18T19:01:25+00:00",
-      "seen_runs": 43,
+      "seen_runs": 44,
       "engagement": {
         "score": null,
         "comments": null,
@@ -4668,10 +4423,10 @@
         "reddit"
       ],
       "count": 1,
-      "recurring": false,
+      "recurring": true,
       "first_seen": "2026-10-09",
       "last_report_at": "2026-10-09T16:26:42+00:00",
-      "seen_runs": 1,
+      "seen_runs": 2,
       "engagement": {
         "score": null,
         "comments": null,
@@ -4755,7 +4510,7 @@
       "recurring": true,
       "first_seen": "2026-10-03",
       "last_report_at": "2026-08-10T07:00:00+00:00",
-      "seen_runs": 7,
+      "seen_runs": 8,
       "engagement": {
         "score": null,
         "comments": null,
@@ -4816,15 +4571,15 @@
       ]
     },
     {
-      "id": "eb36f99ea575a4ac",
-      "title": "Revisar · Sincronización · Fitbit Air · My sleep score isn't showing after first few days.",
+      "id": "f97d80db91e92f5d",
+      "title": "Revisar · Sincronización · Fitbit Air · Google Health 5.10 importing Apple Health runs without HR or Cardio L…",
       "category": "sincronizacion",
       "category_label": "Sincronización",
       "polarity": "revisar",
       "polarity_label": "Revisar",
       "severity": null,
       "confidence": 0.22,
-      "issue_stem": "days first score showing sleep",
+      "issue_stem": "anyone apple cardio else importing",
       "models": [
         "Fitbit Air"
       ],
@@ -4839,8 +4594,8 @@
       ],
       "count": 1,
       "recurring": false,
-      "first_seen": "2026-10-09",
-      "last_report_at": "2026-10-09T12:58:44+00:00",
+      "first_seen": "2026-10-10",
+      "last_report_at": "2026-10-10T14:09:14+00:00",
       "seen_runs": 1,
       "engagement": {
         "score": null,
@@ -4851,12 +4606,12 @@
       "engagement_label": null,
       "quotes": [
         {
-          "text": "My Fitbit Air records sleep stages and duration properly in the Google Health app, but the Sleep Score never appears. I'm not seeing a \"stages weren't generated\" issue, so this doesn't match the usual cause. What I've tried: Restarted my phone. Restarted the Fitbit Air. Logged ou",
-          "url": "https://www.reddit.com/r/fitbit/comments/1x1kp6c/my_sleep_score_isnt_showing_after_first_few_days/",
+          "text": "Google recently announced that third-party workouts synced with heart-rate data should now count toward Cardio Load as of 5.09. On 5.10 for my iPhone 15 Pro Max and FitBit Air. Is anyone actually getting this working? My setup: Apple Watch Ultra recording the run through WorkOutD",
+          "url": "https://www.reddit.com/r/fitbit/comments/1x2g8dx/google_health_510_importing_apple_health_runs/",
           "source": "Reddit r/fitbit",
           "source_kind": "reddit",
-          "title": "My sleep score isn't showing after first few days.",
-          "created_at": "2026-10-09T12:58:44+00:00",
+          "title": "Google Health 5.10 importing Apple Health runs without HR or Cardio Load—anyone else?",
+          "created_at": "2026-10-10T14:09:14+00:00",
           "language": "en",
           "model": "Fitbit Air",
           "engagement": {
@@ -4874,13 +4629,185 @@
       ],
       "reports": [
         {
-          "id": "97e53ea140efef41",
-          "title": "My sleep score isn't showing after first few days.",
-          "url": "https://www.reddit.com/r/fitbit/comments/1x1kp6c/my_sleep_score_isnt_showing_after_first_few_days/",
+          "id": "911eb68de6fc041d",
+          "title": "Google Health 5.10 importing Apple Health runs without HR or Cardio Load—anyone else?",
+          "url": "https://www.reddit.com/r/fitbit/comments/1x2g8dx/google_health_510_importing_apple_health_runs/",
           "source": "Reddit r/fitbit",
           "source_kind": "reddit",
-          "created_at": "2026-10-09T12:58:44+00:00",
-          "published_at": "2026-10-09T12:58:44+00:00",
+          "created_at": "2026-10-10T14:09:14+00:00",
+          "published_at": "2026-10-10T14:09:14+00:00",
+          "severity": null,
+          "sentiment": "mixto",
+          "polarity": "revisar",
+          "language": "en",
+          "language_label": "Inglés",
+          "models": [
+            "Fitbit Air"
+          ],
+          "star_rating": null,
+          "engagement": {
+            "score": null,
+            "comments": null,
+            "views": null,
+            "label": null
+          },
+          "engagement_label": null,
+          "confidence": 0.22
+        }
+      ]
+    },
+    {
+      "id": "f938d89e1c4f9149",
+      "title": "Revisar · Sincronización · Fitbit Air · Managing Google Health Dashboard",
+      "category": "sincronizacion",
+      "category_label": "Sincronización",
+      "polarity": "revisar",
+      "polarity_label": "Revisar",
+      "severity": null,
+      "confidence": 0.22,
+      "issue_stem": "dashboard managing",
+      "models": [
+        "Fitbit Air"
+      ],
+      "languages": [
+        "en"
+      ],
+      "language_labels": [
+        "Inglés"
+      ],
+      "source_kinds": [
+        "reddit"
+      ],
+      "count": 1,
+      "recurring": false,
+      "first_seen": "2026-10-10",
+      "last_report_at": "2026-10-10T12:28:37+00:00",
+      "seen_runs": 1,
+      "engagement": {
+        "score": null,
+        "comments": null,
+        "views": null,
+        "label": null
+      },
+      "engagement_label": null,
+      "quotes": [
+        {
+          "text": "I wanted to manage google health dashboard syncing with Google Fitbit Air. Can someone please share me what are the most essential layout of health dashboard please 🙏 submitted by /u/hey369369 [link] [comentarios]",
+          "url": "https://www.reddit.com/r/fitbit/comments/1x2e43f/managing_google_health_dashboard/",
+          "source": "Reddit r/fitbit",
+          "source_kind": "reddit",
+          "title": "Managing Google Health Dashboard",
+          "created_at": "2026-10-10T12:28:37+00:00",
+          "language": "en",
+          "model": "Fitbit Air",
+          "engagement": {
+            "score": null,
+            "comments": null,
+            "views": null,
+            "label": null
+          },
+          "engagement_label": null,
+          "confidence": 0.22
+        }
+      ],
+      "sources": [
+        "Reddit r/fitbit"
+      ],
+      "reports": [
+        {
+          "id": "51ac746e3d06116d",
+          "title": "Managing Google Health Dashboard",
+          "url": "https://www.reddit.com/r/fitbit/comments/1x2e43f/managing_google_health_dashboard/",
+          "source": "Reddit r/fitbit",
+          "source_kind": "reddit",
+          "created_at": "2026-10-10T12:28:37+00:00",
+          "published_at": "2026-10-10T12:28:37+00:00",
+          "severity": null,
+          "sentiment": "mixto",
+          "polarity": "revisar",
+          "language": "en",
+          "language_label": "Inglés",
+          "models": [
+            "Fitbit Air"
+          ],
+          "star_rating": null,
+          "engagement": {
+            "score": null,
+            "comments": null,
+            "views": null,
+            "label": null
+          },
+          "engagement_label": null,
+          "confidence": 0.22
+        }
+      ]
+    },
+    {
+      "id": "885a76c682ae06ed",
+      "title": "Revisar · Sincronización · Fitbit Air · Smart watches that use Google health information",
+      "category": "sincronizacion",
+      "category_label": "Sincronización",
+      "polarity": "revisar",
+      "polarity_label": "Revisar",
+      "severity": null,
+      "confidence": 0.22,
+      "issue_stem": "information smart watches",
+      "models": [
+        "Fitbit Air"
+      ],
+      "languages": [
+        "en"
+      ],
+      "language_labels": [
+        "Inglés"
+      ],
+      "source_kinds": [
+        "reddit"
+      ],
+      "count": 1,
+      "recurring": false,
+      "first_seen": "2026-10-10",
+      "last_report_at": "2026-10-10T00:20:59+00:00",
+      "seen_runs": 1,
+      "engagement": {
+        "score": null,
+        "comments": null,
+        "views": null,
+        "label": null
+      },
+      "engagement_label": null,
+      "quotes": [
+        {
+          "text": "For context I currently have a Garmin Marq and just bought a Fitbit air so I don't have to wear a watch to sleep. (Also so I can go back to analog watches) So my Garmin tracks my actives while my air tracks everything else. After lots of trial and error I realized Garmin wouldn't",
+          "url": "https://www.reddit.com/r/fitbit/comments/1x21c8l/smart_watches_that_use_google_health_information/",
+          "source": "Reddit r/fitbit",
+          "source_kind": "reddit",
+          "title": "Smart watches that use Google health information",
+          "created_at": "2026-10-10T00:20:59+00:00",
+          "language": "en",
+          "model": "Fitbit Air",
+          "engagement": {
+            "score": null,
+            "comments": null,
+            "views": null,
+            "label": null
+          },
+          "engagement_label": null,
+          "confidence": 0.22
+        }
+      ],
+      "sources": [
+        "Reddit r/fitbit"
+      ],
+      "reports": [
+        {
+          "id": "ccd3edfaeec5f448",
+          "title": "Smart watches that use Google health information",
+          "url": "https://www.reddit.com/r/fitbit/comments/1x21c8l/smart_watches_that_use_google_health_information/",
+          "source": "Reddit r/fitbit",
+          "source_kind": "reddit",
+          "created_at": "2026-10-10T00:20:59+00:00",
+          "published_at": "2026-10-10T00:20:59+00:00",
           "severity": null,
           "sentiment": "mixto",
           "polarity": "revisar",
@@ -4924,10 +4851,10 @@
         "reddit"
       ],
       "count": 1,
-      "recurring": false,
+      "recurring": true,
       "first_seen": "2026-10-09",
       "last_report_at": "2026-10-09T09:37:28+00:00",
-      "seen_runs": 1,
+      "seen_runs": 2,
       "engagement": {
         "score": null,
         "comments": null,
@@ -4988,92 +4915,6 @@
       ]
     },
     {
-      "id": "1131e41f2642b4ee",
-      "title": "Revisar · Sincronización · Charge 6 · Why isn't Fitbit's activity recognition quite as good?",
-      "category": "sincronizacion",
-      "category_label": "Sincronización",
-      "polarity": "revisar",
-      "polarity_label": "Revisar",
-      "severity": null,
-      "confidence": 0.22,
-      "issue_stem": "activity good quite recognition",
-      "models": [
-        "Charge 6"
-      ],
-      "languages": [
-        "en"
-      ],
-      "language_labels": [
-        "Inglés"
-      ],
-      "source_kinds": [
-        "reddit"
-      ],
-      "count": 1,
-      "recurring": false,
-      "first_seen": "2026-10-09",
-      "last_report_at": "2026-10-09T08:27:42+00:00",
-      "seen_runs": 1,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "quotes": [
-        {
-          "text": "I wonder why automatic activity detection using a Fitbit Charge 6 tracker and Google Health on my smartphone works so poorly. I frequently set off on bike rides from home. Based on movement data, I would expect the technology to detect the cycling as soon as I start moving; the m",
-          "url": "https://www.reddit.com/r/fitbit/comments/1x1fw8a/why_isnt_fitbits_activity_recognition_quite_as/",
-          "source": "Reddit r/fitbit",
-          "source_kind": "reddit",
-          "title": "Why isn't Fitbit's activity recognition quite as good?",
-          "created_at": "2026-10-09T08:27:42+00:00",
-          "language": "en",
-          "model": "Charge 6",
-          "engagement": {
-            "score": null,
-            "comments": null,
-            "views": null,
-            "label": null
-          },
-          "engagement_label": null,
-          "confidence": 0.22
-        }
-      ],
-      "sources": [
-        "Reddit r/fitbit"
-      ],
-      "reports": [
-        {
-          "id": "f81a7eb7a59301de",
-          "title": "Why isn't Fitbit's activity recognition quite as good?",
-          "url": "https://www.reddit.com/r/fitbit/comments/1x1fw8a/why_isnt_fitbits_activity_recognition_quite_as/",
-          "source": "Reddit r/fitbit",
-          "source_kind": "reddit",
-          "created_at": "2026-10-09T08:27:42+00:00",
-          "published_at": "2026-10-09T08:27:42+00:00",
-          "severity": null,
-          "sentiment": "mixto",
-          "polarity": "revisar",
-          "language": "en",
-          "language_label": "Inglés",
-          "models": [
-            "Charge 6"
-          ],
-          "star_rating": null,
-          "engagement": {
-            "score": null,
-            "comments": null,
-            "views": null,
-            "label": null
-          },
-          "engagement_label": null,
-          "confidence": 0.22
-        }
-      ]
-    },
-    {
       "id": "8ca32a70d4de1943",
       "title": "Revisar · Software / app · Fitbit Air · Fitbit Air’s newest update brings nothing new except invisible bug fixes",
       "category": "software",
@@ -5099,7 +4940,7 @@
       "recurring": true,
       "first_seen": "2026-10-04",
       "last_report_at": "2026-07-24T07:00:00+00:00",
-      "seen_runs": 6,
+      "seen_runs": 7,
       "engagement": {
         "score": null,
         "comments": null,
@@ -5111,7 +4952,7 @@
         {
           "text": "Fitbit Air’s newest update brings nothing new except invisible bug fixes Android Central",
           "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQVHNBT2dGS0ZTVDZydmxjUGZubjVnelRyNlBMUDNfa0xOc0p0dWxWeHIwaFo4X0YycERsTzdCeS1DNWVaWF9Wb01teVFlUW1DTkZlV2xIZjFZV2ZST19hMm5jN1hWYzVfdkdfaWdaRVBERXRnRXdCbUJxaS1rWUtfaGZrNnNIMlpob0JfbUQ1bXdUWS1QYkRyXzdHNS1ZUl84Y09uU29JN08zQS1XMnV0aFhQZWkwM2JFREk4?oc=5",
-          "source": "Noticias web (EN-US)",
+          "source": "Android Central",
           "source_kind": "news",
           "title": "Fitbit Air’s newest update brings nothing new except invisible bug fixes - Android Central",
           "created_at": "2026-07-24T07:00:00+00:00",
@@ -5128,14 +4969,14 @@
         }
       ],
       "sources": [
-        "Noticias web (EN-US)"
+        "Android Central"
       ],
       "reports": [
         {
           "id": "f118935953378be5",
           "title": "Fitbit Air’s newest update brings nothing new except invisible bug fixes - Android Central",
           "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQVHNBT2dGS0ZTVDZydmxjUGZubjVnelRyNlBMUDNfa0xOc0p0dWxWeHIwaFo4X0YycERsTzdCeS1DNWVaWF9Wb01teVFlUW1DTkZlV2xIZjFZV2ZST19hMm5jN1hWYzVfdkdfaWdaRVBERXRnRXdCbUJxaS1rWUtfaGZrNnNIMlpob0JfbUQ1bXdUWS1QYkRyXzdHNS1ZUl84Y09uU29JN08zQS1XMnV0aFhQZWkwM2JFREk4?oc=5",
-          "source": "Noticias web (EN-US)",
+          "source": "Android Central",
           "source_kind": "news",
           "created_at": "2026-07-24T07:00:00+00:00",
           "published_at": "2026-07-24T07:00:00+00:00",
@@ -5185,7 +5026,7 @@
       "recurring": true,
       "first_seen": "2026-09-08",
       "last_report_at": "2026-09-03T09:00:06+00:00",
-      "seen_runs": 32,
+      "seen_runs": 33,
       "engagement": {
         "score": null,
         "comments": null,
@@ -5317,7 +5158,7 @@
       "recurring": true,
       "first_seen": "2026-09-19",
       "last_report_at": "2026-07-25T07:00:00+00:00",
-      "seen_runs": 21,
+      "seen_runs": 22,
       "engagement": {
         "score": null,
         "comments": null,
@@ -5423,6 +5264,138 @@
       ]
     },
     {
+      "id": "8a4792ab7f3bb429",
+      "title": "Elogio · Fitbit Air · Fitbit Air 3 month review — is it actually worth it #fitbitair #fibit…",
+      "category": "opinion",
+      "category_label": "Opinión",
+      "polarity": "buena",
+      "polarity_label": "Buena noticia",
+      "severity": null,
+      "confidence": 0.02,
+      "issue_stem": "actually fibit fitbitair googlehealth madebygoogle",
+      "models": [
+        "Fitbit Air"
+      ],
+      "languages": [
+        "en"
+      ],
+      "language_labels": [
+        "Inglés"
+      ],
+      "source_kinds": [
+        "tiktok",
+        "instagram"
+      ],
+      "count": 2,
+      "recurring": false,
+      "first_seen": "2026-10-10",
+      "last_report_at": "2026-08-11T07:00:00+00:00",
+      "seen_runs": 1,
+      "engagement": {
+        "score": null,
+        "comments": null,
+        "views": null,
+        "label": null
+      },
+      "engagement_label": null,
+      "quotes": [
+        {
+          "text": "Fitbit Air 3 month review — is it actually worth it #fitbitair #fibit #GoogleHealth #madebygoogle #wearabletech Instagram",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE10SjFZRmU0OUR3cUpGWVlRTkJLV2F6SUtYcVF2QlQtd2NqQzNJbXFpWVljT201cXJZSVNUbi1CZ1FxeVdaajFJeFR1eWdEd01Xb2F6dUN3?oc=5",
+          "source": "Instagram (búsqueda pública)",
+          "source_kind": "instagram",
+          "title": "Fitbit Air 3 month review — is it actually worth it #fitbitair #fibit #GoogleHealth #madebygoogle #wearabletech - Instagram",
+          "created_at": "2026-08-11T07:00:00+00:00",
+          "language": "en",
+          "model": "Fitbit Air",
+          "engagement": {
+            "score": null,
+            "comments": null,
+            "views": null,
+            "label": null
+          },
+          "engagement_label": null,
+          "confidence": 0.02
+        },
+        {
+          "text": "Fitbit Air 3 month review — is it actually worth it #fitbitair #fibit #GoogleHealth #madebygoogle #wearabletech TikTok",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1XZURlSTQyNDJ2b3pSY1hCV3VDWXE3U1gwQXlxc1NLVUxGY29ncGxpeUFIWS1mSHktVVl2bmE3TnczTkxXOXNhZGJrVm1rRHR4NkhpNWh4dFZMelVDUzdGOU0wN1pLRERTeUpGNQ?oc=5",
+          "source": "TikTok (búsqueda pública)",
+          "source_kind": "tiktok",
+          "title": "Fitbit Air 3 month review — is it actually worth it #fitbitair #fibit #GoogleHealth #madebygoogle #wearabletech - TikTok",
+          "created_at": "2026-08-11T07:00:00+00:00",
+          "language": "en",
+          "model": "Fitbit Air",
+          "engagement": {
+            "score": null,
+            "comments": null,
+            "views": null,
+            "label": null
+          },
+          "engagement_label": null,
+          "confidence": 0.02
+        }
+      ],
+      "sources": [
+        "Instagram (búsqueda pública)",
+        "TikTok (búsqueda pública)"
+      ],
+      "reports": [
+        {
+          "id": "5041cb004d4e10da",
+          "title": "Fitbit Air 3 month review — is it actually worth it #fitbitair #fibit #GoogleHealth #madebygoogle #wearabletech - Instagram",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE10SjFZRmU0OUR3cUpGWVlRTkJLV2F6SUtYcVF2QlQtd2NqQzNJbXFpWVljT201cXJZSVNUbi1CZ1FxeVdaajFJeFR1eWdEd01Xb2F6dUN3?oc=5",
+          "source": "Instagram (búsqueda pública)",
+          "source_kind": "instagram",
+          "created_at": "2026-08-11T07:00:00+00:00",
+          "published_at": "2026-08-11T07:00:00+00:00",
+          "severity": null,
+          "sentiment": "positivo",
+          "polarity": "buena",
+          "language": "en",
+          "language_label": "Inglés",
+          "models": [
+            "Fitbit Air"
+          ],
+          "star_rating": null,
+          "engagement": {
+            "score": null,
+            "comments": null,
+            "views": null,
+            "label": null
+          },
+          "engagement_label": null,
+          "confidence": 0.02
+        },
+        {
+          "id": "d188a1de40bcf25b",
+          "title": "Fitbit Air 3 month review — is it actually worth it #fitbitair #fibit #GoogleHealth #madebygoogle #wearabletech - TikTok",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1XZURlSTQyNDJ2b3pSY1hCV3VDWXE3U1gwQXlxc1NLVUxGY29ncGxpeUFIWS1mSHktVVl2bmE3TnczTkxXOXNhZGJrVm1rRHR4NkhpNWh4dFZMelVDUzdGOU0wN1pLRERTeUpGNQ?oc=5",
+          "source": "TikTok (búsqueda pública)",
+          "source_kind": "tiktok",
+          "created_at": "2026-08-11T07:00:00+00:00",
+          "published_at": "2026-08-11T07:00:00+00:00",
+          "severity": null,
+          "sentiment": "positivo",
+          "polarity": "buena",
+          "language": "en",
+          "language_label": "Inglés",
+          "models": [
+            "Fitbit Air"
+          ],
+          "star_rating": null,
+          "engagement": {
+            "score": null,
+            "comments": null,
+            "views": null,
+            "label": null
+          },
+          "engagement_label": null,
+          "confidence": 0.02
+        }
+      ]
+    },
+    {
       "id": "a5e7c954db5eecf7",
       "title": "Buena noticia · Batería · Sin modelo · Best Fitbit fitness tracker with a 7-day battery life and Google Maps…",
       "category": "bateria",
@@ -5448,7 +5421,7 @@
       "recurring": true,
       "first_seen": "2026-08-26",
       "last_report_at": "2026-07-13T07:00:00+00:00",
-      "seen_runs": 51,
+      "seen_runs": 52,
       "engagement": {
         "score": null,
         "comments": null,
@@ -5507,17 +5480,19 @@
       ]
     },
     {
-      "id": "d5fefc9c867a9483",
-      "title": "Buena noticia · Batería · Fitbit Air · Best Option for hybrid training ?🤔",
-      "category": "bateria",
-      "category_label": "Batería",
+      "id": "a0c425c4402a52ee",
+      "title": "Buena noticia · Calidad / hardware · Charge 6 · Is Pixel Care+ worth it? And should I buy another Charge 6?",
+      "category": "calidad",
+      "category_label": "Calidad / hardware",
       "polarity": "buena",
       "polarity_label": "Buena noticia",
       "severity": null,
-      "confidence": 0.22,
-      "issue_stem": "best hybrid option training",
+      "confidence": 0.02,
+      "issue_stem": "another care charge pixel should",
       "models": [
-        "Fitbit Air"
+        "Charge 6",
+        "Versa 4",
+        "Inspire 3"
       ],
       "languages": [
         "en"
@@ -5530,8 +5505,8 @@
       ],
       "count": 1,
       "recurring": false,
-      "first_seen": "2026-10-09",
-      "last_report_at": "2026-10-09T03:23:16+00:00",
+      "first_seen": "2026-10-10",
+      "last_report_at": "2026-10-09T21:35:40+00:00",
       "seen_runs": 1,
       "engagement": {
         "score": null,
@@ -5542,14 +5517,14 @@
       "engagement_label": null,
       "quotes": [
         {
-          "text": "Confused between Fitbit Air, Galaxy Watch 8, and Garmin Forerunner. My training includes gym/strength training, badminton, pickleball, and swimming. Looking for accurate HR tracking, sleep & recovery insights, training load, and good battery life. Which would you recommend for hy",
-          "url": "https://www.reddit.com/r/FitbitAir_India/comments/1x1asvi/best_option_for_hybrid_training/",
-          "source": "Reddit (búsqueda Fitbit)",
+          "text": "Charge 6 stopped working last night - 2 year warranty ended a few weeks ago. I've had it replaced twice during those 2 years, and I'm aware this is just a widespread issue with this model. I've been given a 50% off code to buy a new Charge 6, Inspire 3 or Versa 4, from Google cus",
+          "url": "https://www.reddit.com/r/fitbit/comments/1x1xpsa/is_pixel_care_worth_it_and_should_i_buy_another/",
+          "source": "Reddit r/fitbit",
           "source_kind": "reddit",
-          "title": "Best Option for hybrid training ?🤔",
-          "created_at": "2026-10-09T03:23:16+00:00",
+          "title": "Is Pixel Care+ worth it? And should I buy another Charge 6?",
+          "created_at": "2026-10-09T21:35:40+00:00",
           "language": "en",
-          "model": "Fitbit Air",
+          "model": "Charge 6",
           "engagement": {
             "score": null,
             "comments": null,
@@ -5557,28 +5532,30 @@
             "label": null
           },
           "engagement_label": null,
-          "confidence": 0.22
+          "confidence": 0.02
         }
       ],
       "sources": [
-        "Reddit (búsqueda Fitbit)"
+        "Reddit r/fitbit"
       ],
       "reports": [
         {
-          "id": "2b91f01a9d31b6c2",
-          "title": "Best Option for hybrid training ?🤔",
-          "url": "https://www.reddit.com/r/FitbitAir_India/comments/1x1asvi/best_option_for_hybrid_training/",
-          "source": "Reddit (búsqueda Fitbit)",
+          "id": "dc28b85bd4445876",
+          "title": "Is Pixel Care+ worth it? And should I buy another Charge 6?",
+          "url": "https://www.reddit.com/r/fitbit/comments/1x1xpsa/is_pixel_care_worth_it_and_should_i_buy_another/",
+          "source": "Reddit r/fitbit",
           "source_kind": "reddit",
-          "created_at": "2026-10-09T03:23:16+00:00",
-          "published_at": "2026-10-09T03:23:16+00:00",
+          "created_at": "2026-10-09T21:35:40+00:00",
+          "published_at": "2026-10-09T21:35:40+00:00",
           "severity": null,
           "sentiment": "positivo",
           "polarity": "buena",
           "language": "en",
           "language_label": "Inglés",
           "models": [
-            "Fitbit Air"
+            "Charge 6",
+            "Versa 4",
+            "Inspire 3"
           ],
           "star_rating": null,
           "engagement": {
@@ -5588,7 +5565,7 @@
             "label": null
           },
           "engagement_label": null,
-          "confidence": 0.22
+          "confidence": 0.02
         }
       ]
     },
@@ -5618,7 +5595,7 @@
       "recurring": true,
       "first_seen": "2026-08-26",
       "last_report_at": "2026-08-04T01:34:19+00:00",
-      "seen_runs": 51,
+      "seen_runs": 52,
       "engagement": {
         "score": null,
         "comments": null,
@@ -5701,10 +5678,10 @@
         "news"
       ],
       "count": 1,
-      "recurring": false,
+      "recurring": true,
       "first_seen": "2026-10-09",
       "last_report_at": "2026-10-08T11:18:23+00:00",
-      "seen_runs": 1,
+      "seen_runs": 2,
       "engagement": {
         "score": null,
         "comments": null,
@@ -5788,7 +5765,7 @@
       "recurring": true,
       "first_seen": "2026-10-06",
       "last_report_at": "2026-08-26T07:00:00+00:00",
-      "seen_runs": 4,
+      "seen_runs": 5,
       "engagement": {
         "score": null,
         "comments": null,
@@ -5872,7 +5849,7 @@
       "recurring": true,
       "first_seen": "2026-08-26",
       "last_report_at": "2026-08-22T16:00:37+00:00",
-      "seen_runs": 51,
+      "seen_runs": 52,
       "engagement": {
         "score": null,
         "comments": null,
@@ -5958,7 +5935,7 @@
       "recurring": true,
       "first_seen": "2026-09-19",
       "last_report_at": "2026-07-20T01:30:22+00:00",
-      "seen_runs": 21,
+      "seen_runs": 22,
       "engagement": {
         "score": null,
         "comments": null,
@@ -6019,6 +5996,92 @@
       ]
     },
     {
+      "id": "71286f7462f5ea81",
+      "title": "Elogio · Fitbit Air · Google Fitbit Air Pokémon Sleep Special Edition (Sleepy Blue) – Is It…",
+      "category": "opinion",
+      "category_label": "Opinión",
+      "polarity": "buena",
+      "polarity_label": "Buena noticia",
+      "severity": null,
+      "confidence": 0.02,
+      "issue_stem": "blue edition pokémon sleep sleepy",
+      "models": [
+        "Fitbit Air"
+      ],
+      "languages": [
+        "en"
+      ],
+      "language_labels": [
+        "Inglés"
+      ],
+      "source_kinds": [
+        "youtube"
+      ],
+      "count": 1,
+      "recurring": false,
+      "first_seen": "2026-10-10",
+      "last_report_at": "2026-09-25T14:00:35+00:00",
+      "seen_runs": 1,
+      "engagement": {
+        "score": null,
+        "comments": null,
+        "views": null,
+        "label": null
+      },
+      "engagement_label": null,
+      "quotes": [
+        {
+          "text": "Google Fitbit Air Pokémon Sleep Special Edition (Sleepy Blue) – Is It Worth It? YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBxX0dqZjdpa216OGVvV2RXZXlCeFpfR0N0dUpJUUViXzJ5T2hQRDFncFRFMWFtZ01tNGtkUV9xZmV1UC0tRnpuWUdUbUZMeGJaS215REFn?oc=5",
+          "source": "YouTube elogios",
+          "source_kind": "youtube",
+          "title": "Google Fitbit Air Pokémon Sleep Special Edition (Sleepy Blue) – Is It Worth It? - YouTube",
+          "created_at": "2026-09-25T14:00:35+00:00",
+          "language": "en",
+          "model": "Fitbit Air",
+          "engagement": {
+            "score": null,
+            "comments": null,
+            "views": null,
+            "label": null
+          },
+          "engagement_label": null,
+          "confidence": 0.02
+        }
+      ],
+      "sources": [
+        "YouTube elogios"
+      ],
+      "reports": [
+        {
+          "id": "29e3e813b09b6c1f",
+          "title": "Google Fitbit Air Pokémon Sleep Special Edition (Sleepy Blue) – Is It Worth It? - YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBxX0dqZjdpa216OGVvV2RXZXlCeFpfR0N0dUpJUUViXzJ5T2hQRDFncFRFMWFtZ01tNGtkUV9xZmV1UC0tRnpuWUdUbUZMeGJaS215REFn?oc=5",
+          "source": "YouTube elogios",
+          "source_kind": "youtube",
+          "created_at": "2026-09-25T14:00:35+00:00",
+          "published_at": "2026-09-25T14:00:35+00:00",
+          "severity": null,
+          "sentiment": "positivo",
+          "polarity": "buena",
+          "language": "en",
+          "language_label": "Inglés",
+          "models": [
+            "Fitbit Air"
+          ],
+          "star_rating": null,
+          "engagement": {
+            "score": null,
+            "comments": null,
+            "views": null,
+            "label": null
+          },
+          "engagement_label": null,
+          "confidence": 0.02
+        }
+      ]
+    },
+    {
       "id": "3adbb4ae0071d992",
       "title": "Elogio · Fitbit Air · The @Google FitBit Air is great for low-key, distraction-free health…",
       "category": "opinion",
@@ -6044,7 +6107,7 @@
       "recurring": true,
       "first_seen": "2026-10-03",
       "last_report_at": "2026-07-27T07:00:00+00:00",
-      "seen_runs": 7,
+      "seen_runs": 8,
       "engagement": {
         "score": null,
         "comments": null,
@@ -6130,7 +6193,7 @@
       "recurring": true,
       "first_seen": "2026-10-05",
       "last_report_at": "2026-08-07T07:00:00+00:00",
-      "seen_runs": 5,
+      "seen_runs": 6,
       "engagement": {
         "score": null,
         "comments": null,
@@ -6191,178 +6254,6 @@
       ]
     },
     {
-      "id": "0b7f9d1d33da6b27",
-      "title": "Elogio · Fitbit Air · Fitbit Air 3 month review — is it actually worth it #fitbitair #fibit…",
-      "category": "opinion",
-      "category_label": "Opinión",
-      "polarity": "buena",
-      "polarity_label": "Buena noticia",
-      "severity": null,
-      "confidence": 0.02,
-      "issue_stem": "actually fibit fitbitair googlehealth instagram",
-      "models": [
-        "Fitbit Air"
-      ],
-      "languages": [
-        "en"
-      ],
-      "language_labels": [
-        "Inglés"
-      ],
-      "source_kinds": [
-        "instagram"
-      ],
-      "count": 1,
-      "recurring": true,
-      "first_seen": "2026-10-07",
-      "last_report_at": "2026-08-11T07:00:00+00:00",
-      "seen_runs": 3,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "quotes": [
-        {
-          "text": "Fitbit Air 3 month review — is it actually worth it #fitbitair #fibit #GoogleHealth #madebygoogle #wearabletech Instagram",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE10SjFZRmU0OUR3cUpGWVlRTkJLV2F6SUtYcVF2QlQtd2NqQzNJbXFpWVljT201cXJZSVNUbi1CZ1FxeVdaajFJeFR1eWdEd01Xb2F6dUN3?oc=5",
-          "source": "Instagram (búsqueda pública)",
-          "source_kind": "instagram",
-          "title": "Fitbit Air 3 month review — is it actually worth it #fitbitair #fibit #GoogleHealth #madebygoogle #wearabletech - Instagram",
-          "created_at": "2026-08-11T07:00:00+00:00",
-          "language": "en",
-          "model": "Fitbit Air",
-          "engagement": {
-            "score": null,
-            "comments": null,
-            "views": null,
-            "label": null
-          },
-          "engagement_label": null,
-          "confidence": 0.02
-        }
-      ],
-      "sources": [
-        "Instagram (búsqueda pública)"
-      ],
-      "reports": [
-        {
-          "id": "5041cb004d4e10da",
-          "title": "Fitbit Air 3 month review — is it actually worth it #fitbitair #fibit #GoogleHealth #madebygoogle #wearabletech - Instagram",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE10SjFZRmU0OUR3cUpGWVlRTkJLV2F6SUtYcVF2QlQtd2NqQzNJbXFpWVljT201cXJZSVNUbi1CZ1FxeVdaajFJeFR1eWdEd01Xb2F6dUN3?oc=5",
-          "source": "Instagram (búsqueda pública)",
-          "source_kind": "instagram",
-          "created_at": "2026-08-11T07:00:00+00:00",
-          "published_at": "2026-08-11T07:00:00+00:00",
-          "severity": null,
-          "sentiment": "positivo",
-          "polarity": "buena",
-          "language": "en",
-          "language_label": "Inglés",
-          "models": [
-            "Fitbit Air"
-          ],
-          "star_rating": null,
-          "engagement": {
-            "score": null,
-            "comments": null,
-            "views": null,
-            "label": null
-          },
-          "engagement_label": null,
-          "confidence": 0.02
-        }
-      ]
-    },
-    {
-      "id": "eb07deb4c3c25186",
-      "title": "Elogio · Fitbit Air · Fitbit Air launched at ₹12,999* (worth it?)",
-      "category": "opinion",
-      "category_label": "Opinión",
-      "polarity": "buena",
-      "polarity_label": "Buena noticia",
-      "severity": null,
-      "confidence": 0.02,
-      "issue_stem": "instagram launched worth",
-      "models": [
-        "Fitbit Air"
-      ],
-      "languages": [
-        "en"
-      ],
-      "language_labels": [
-        "Inglés"
-      ],
-      "source_kinds": [
-        "instagram"
-      ],
-      "count": 1,
-      "recurring": true,
-      "first_seen": "2026-10-06",
-      "last_report_at": "2026-10-01T11:41:44+00:00",
-      "seen_runs": 4,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "quotes": [
-        {
-          "text": "Fitbit Air launched at ₹12,999* (worth it?) Instagram",
-          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB4dXcwWkpLQWhiUlFwc05oQ184NHJ3ZGxDbmJ1SFBReEJmY2JSWXhVMEJhRkt5UHUtTjA2dDNBNWdaWHltSVdmTl9jajV6Qy1mSkE?oc=5",
-          "source": "Instagram (búsqueda pública)",
-          "source_kind": "instagram",
-          "title": "Fitbit Air launched at ₹12,999* (worth it?) - Instagram",
-          "created_at": "2026-10-01T11:41:44+00:00",
-          "language": "en",
-          "model": "Fitbit Air",
-          "engagement": {
-            "score": null,
-            "comments": null,
-            "views": null,
-            "label": null
-          },
-          "engagement_label": null,
-          "confidence": 0.02
-        }
-      ],
-      "sources": [
-        "Instagram (búsqueda pública)"
-      ],
-      "reports": [
-        {
-          "id": "a8071229784d56f4",
-          "title": "Fitbit Air launched at ₹12,999* (worth it?) - Instagram",
-          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB4dXcwWkpLQWhiUlFwc05oQ184NHJ3ZGxDbmJ1SFBReEJmY2JSWXhVMEJhRkt5UHUtTjA2dDNBNWdaWHltSVdmTl9jajV6Qy1mSkE?oc=5",
-          "source": "Instagram (búsqueda pública)",
-          "source_kind": "instagram",
-          "created_at": "2026-10-01T11:41:44+00:00",
-          "published_at": "2026-10-01T11:41:44+00:00",
-          "severity": null,
-          "sentiment": "positivo",
-          "polarity": "buena",
-          "language": "en",
-          "language_label": "Inglés",
-          "models": [
-            "Fitbit Air"
-          ],
-          "star_rating": null,
-          "engagement": {
-            "score": null,
-            "comments": null,
-            "views": null,
-            "label": null
-          },
-          "engagement_label": null,
-          "confidence": 0.02
-        }
-      ]
-    },
-    {
       "id": "5b028700f8dd588f",
       "title": "Elogio · Fitbit Air · Pon esto en tu muñeca y mide tu salud. ⌚✨ Llega el nuevo Google Fitbi…",
       "category": "opinion",
@@ -6388,7 +6279,7 @@
       "recurring": true,
       "first_seen": "2026-09-04",
       "last_report_at": "2026-07-15T07:00:00+00:00",
-      "seen_runs": 36,
+      "seen_runs": 37,
       "engagement": {
         "score": null,
         "comments": null,
@@ -6474,7 +6365,7 @@
       "recurring": true,
       "first_seen": "2026-10-05",
       "last_report_at": "2026-08-24T07:00:00+00:00",
-      "seen_runs": 5,
+      "seen_runs": 6,
       "engagement": {
         "score": null,
         "comments": null,
@@ -6560,7 +6451,7 @@
       "recurring": true,
       "first_seen": "2026-10-05",
       "last_report_at": "2026-10-05T07:52:27+00:00",
-      "seen_runs": 5,
+      "seen_runs": 6,
       "engagement": {
         "score": null,
         "comments": null,
@@ -6647,7 +6538,7 @@
       "recurring": true,
       "first_seen": "2026-10-06",
       "last_report_at": "2026-10-05T18:12:03+00:00",
-      "seen_runs": 4,
+      "seen_runs": 5,
       "engagement": {
         "score": null,
         "comments": null,
@@ -6659,7 +6550,7 @@
         {
           "text": "Fitbit Edge is Google’s mysterious wearable and may be a great Fitbit Air and Pixel Watch 5 middle ground Stuff",
           "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9ubmVQLWpia2kyOE1OYm9iblktckNZSXd1VGY5U2Z6R0ZIU1RELXJtREhVMGFoWTFpNmVzcXZIZ2ZHX1BqWnZ1dzZBRWhYU05zWk9qQjBxNmw0SHl5RGNqQ0dTbGV1TS1ubEVXSHVvSFpBdjJNbU9MU0Fn?oc=5",
-          "source": "Noticias web (EN-GB)",
+          "source": "Noticias web (EN-US)",
           "source_kind": "news",
           "title": "Fitbit Edge is Google’s mysterious wearable and may be a great Fitbit Air and Pixel Watch 5 middle ground - Stuff",
           "created_at": "2026-10-05T18:12:03+00:00",
@@ -6676,14 +6567,14 @@
         }
       ],
       "sources": [
-        "Noticias web (EN-GB)"
+        "Noticias web (EN-US)"
       ],
       "reports": [
         {
           "id": "e2f05296d2c3f960",
           "title": "Fitbit Edge is Google’s mysterious wearable and may be a great Fitbit Air and Pixel Watch 5 middle ground - Stuff",
           "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9ubmVQLWpia2kyOE1OYm9iblktckNZSXd1VGY5U2Z6R0ZIU1RELXJtREhVMGFoWTFpNmVzcXZIZ2ZHX1BqWnZ1dzZBRWhYU05zWk9qQjBxNmw0SHl5RGNqQ0dTbGV1TS1ubEVXSHVvSFpBdjJNbU9MU0Fn?oc=5",
-          "source": "Noticias web (EN-GB)",
+          "source": "Noticias web (EN-US)",
           "source_kind": "news",
           "created_at": "2026-10-05T18:12:03+00:00",
           "published_at": "2026-10-05T18:12:03+00:00",
@@ -6734,7 +6625,7 @@
       "recurring": true,
       "first_seen": "2026-10-06",
       "last_report_at": "2026-09-09T07:00:00+00:00",
-      "seen_runs": 4,
+      "seen_runs": 5,
       "engagement": {
         "score": null,
         "comments": null,
@@ -6821,7 +6712,7 @@
       "recurring": true,
       "first_seen": "2026-10-03",
       "last_report_at": "2026-07-16T07:00:00+00:00",
-      "seen_runs": 7,
+      "seen_runs": 8,
       "engagement": {
         "score": null,
         "comments": null,
@@ -6906,10 +6797,10 @@
         "news"
       ],
       "count": 1,
-      "recurring": false,
+      "recurring": true,
       "first_seen": "2026-10-09",
       "last_report_at": "2026-08-13T07:00:00+00:00",
-      "seen_runs": 1,
+      "seen_runs": 2,
       "engagement": {
         "score": null,
         "comments": null,
@@ -6971,17 +6862,17 @@
       ]
     },
     {
-      "id": "49985732124d25fb",
-      "title": "Elogio · Versa 4 · Fitbit Versa 4 Review: Is It Still Worth It in 2026?",
+      "id": "33825e6bd4619095",
+      "title": "Elogio · Sense 2 · Fitbit Sense 2 Review: Is It Still Worth It?",
       "category": "opinion",
       "category_label": "Opinión",
       "polarity": "buena",
       "polarity_label": "Buena noticia",
       "severity": null,
       "confidence": 0.02,
-      "issue_stem": "2026 review versa worth youtube",
+      "issue_stem": "review sense worth youtube",
       "models": [
-        "Versa 4"
+        "Sense 2"
       ],
       "languages": [
         "en"
@@ -6993,10 +6884,10 @@
         "youtube"
       ],
       "count": 1,
-      "recurring": true,
-      "first_seen": "2026-09-27",
-      "last_report_at": "2026-07-11T20:00:13+00:00",
-      "seen_runs": 13,
+      "recurring": false,
+      "first_seen": "2026-10-10",
+      "last_report_at": "2026-10-04T00:00:37+00:00",
+      "seen_runs": 1,
       "engagement": {
         "score": null,
         "comments": null,
@@ -7006,14 +6897,14 @@
       "engagement_label": null,
       "quotes": [
         {
-          "text": "Fitbit Versa 4 Review: Is It Still Worth It in 2026? YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE03Tmk3S0pZYlc1aWgwNG5yMDJwVlctaDh4N1FQbWVEMVlCSmIzQ28tclhPN0p5eE9mTklkMUVWb2s4ZVJEYlZBQnBkTm9mT04zMVZaUDZ3?oc=5",
+          "text": "Fitbit Sense 2 Review: Is It Still Worth It? YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9ZbkF5T2pQaVl6ZzJ1ZE1XUzAyMlpnYzhDNzNiODJGV2I2V1BVOGJtaklZdm9FWUJDZjRHYW9ZdlRETXRMUFFxSkEzNjI0aU44QUtFNkFB?oc=5",
           "source": "YouTube (búsqueda pública)",
           "source_kind": "youtube",
-          "title": "Fitbit Versa 4 Review: Is It Still Worth It in 2026? - YouTube",
-          "created_at": "2026-07-11T20:00:13+00:00",
+          "title": "Fitbit Sense 2 Review: Is It Still Worth It? - YouTube",
+          "created_at": "2026-10-04T00:00:37+00:00",
           "language": "en",
-          "model": "Versa 4",
+          "model": "Sense 2",
           "engagement": {
             "score": null,
             "comments": null,
@@ -7029,20 +6920,20 @@
       ],
       "reports": [
         {
-          "id": "f8ca2a5c9a7f5b88",
-          "title": "Fitbit Versa 4 Review: Is It Still Worth It in 2026? - YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE03Tmk3S0pZYlc1aWgwNG5yMDJwVlctaDh4N1FQbWVEMVlCSmIzQ28tclhPN0p5eE9mTklkMUVWb2s4ZVJEYlZBQnBkTm9mT04zMVZaUDZ3?oc=5",
+          "id": "86b1ff65713affe2",
+          "title": "Fitbit Sense 2 Review: Is It Still Worth It? - YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9ZbkF5T2pQaVl6ZzJ1ZE1XUzAyMlpnYzhDNzNiODJGV2I2V1BVOGJtaklZdm9FWUJDZjRHYW9ZdlRETXRMUFFxSkEzNjI0aU44QUtFNkFB?oc=5",
           "source": "YouTube (búsqueda pública)",
           "source_kind": "youtube",
-          "created_at": "2026-07-11T20:00:13+00:00",
-          "published_at": "2026-07-11T20:00:13+00:00",
+          "created_at": "2026-10-04T00:00:37+00:00",
+          "published_at": "2026-10-04T00:00:37+00:00",
           "severity": null,
           "sentiment": "positivo",
           "polarity": "buena",
           "language": "en",
           "language_label": "Inglés",
           "models": [
-            "Versa 4"
+            "Sense 2"
           ],
           "star_rating": null,
           "engagement": {
@@ -7082,7 +6973,7 @@
       "recurring": true,
       "first_seen": "2026-09-26",
       "last_report_at": "2026-08-01T19:15:23+00:00",
-      "seen_runs": 14,
+      "seen_runs": 15,
       "engagement": {
         "score": null,
         "comments": null,
@@ -7168,7 +7059,7 @@
       "recurring": true,
       "first_seen": "2026-10-03",
       "last_report_at": "2026-09-22T07:00:00+00:00",
-      "seen_runs": 7,
+      "seen_runs": 8,
       "engagement": {
         "score": null,
         "comments": null,
@@ -7254,7 +7145,7 @@
       "recurring": true,
       "first_seen": "2026-09-06",
       "last_report_at": "2026-07-24T07:00:00+00:00",
-      "seen_runs": 34,
+      "seen_runs": 35,
       "engagement": {
         "score": null,
         "comments": null,
@@ -7340,7 +7231,7 @@
       "recurring": true,
       "first_seen": "2026-09-22",
       "last_report_at": "2026-08-04T07:00:00+00:00",
-      "seen_runs": 18,
+      "seen_runs": 19,
       "engagement": {
         "score": null,
         "comments": null,
@@ -7424,7 +7315,7 @@
       "recurring": true,
       "first_seen": "2026-10-08",
       "last_report_at": "2026-10-06T12:18:34+00:00",
-      "seen_runs": 2,
+      "seen_runs": 3,
       "engagement": {
         "score": null,
         "comments": null,
@@ -7510,7 +7401,7 @@
       "recurring": true,
       "first_seen": "2026-09-30",
       "last_report_at": "2026-07-31T10:06:50+00:00",
-      "seen_runs": 10,
+      "seen_runs": 11,
       "engagement": {
         "score": null,
         "comments": null,
@@ -7569,92 +7460,6 @@
       ]
     },
     {
-      "id": "a3480990da7cf546",
-      "title": "Buena noticia · Ritmo cardíaco · Fitbit Air",
-      "category": "ritmo_cardiaco",
-      "category_label": "Ritmo cardíaco",
-      "polarity": "buena",
-      "polarity_label": "Buena noticia",
-      "severity": null,
-      "confidence": 0.22,
-      "issue_stem": "mini review",
-      "models": [
-        "Fitbit Air"
-      ],
-      "languages": [
-        "en"
-      ],
-      "language_labels": [
-        "Inglés"
-      ],
-      "source_kinds": [
-        "reddit"
-      ],
-      "count": 1,
-      "recurring": false,
-      "first_seen": "2026-10-09",
-      "last_report_at": "2026-10-09T10:12:14+00:00",
-      "seen_runs": 1,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "quotes": [
-        {
-          "text": "I asked around here and ended up with a Fitbit Air. I'm happy with it so far. I don't like having anything on my hands and arms while I sleep but this is so lightweight that it doesn't bother me. Its been tracking my sleep and heart rate quite well. I haven't gotten a workout in ",
-          "url": "https://www.reddit.com/r/FitnessTrackers/comments/1x1hjxl/fitbit_air_mini_review/",
-          "source": "Reddit (búsqueda Fitbit)",
-          "source_kind": "reddit",
-          "title": "Fitbit Air - Mini review",
-          "created_at": "2026-10-09T10:12:14+00:00",
-          "language": "en",
-          "model": "Fitbit Air",
-          "engagement": {
-            "score": null,
-            "comments": null,
-            "views": null,
-            "label": null
-          },
-          "engagement_label": null,
-          "confidence": 0.22
-        }
-      ],
-      "sources": [
-        "Reddit (búsqueda Fitbit)"
-      ],
-      "reports": [
-        {
-          "id": "762eb945277cd67a",
-          "title": "Fitbit Air - Mini review",
-          "url": "https://www.reddit.com/r/FitnessTrackers/comments/1x1hjxl/fitbit_air_mini_review/",
-          "source": "Reddit (búsqueda Fitbit)",
-          "source_kind": "reddit",
-          "created_at": "2026-10-09T10:12:14+00:00",
-          "published_at": "2026-10-09T10:12:14+00:00",
-          "severity": null,
-          "sentiment": "positivo",
-          "polarity": "buena",
-          "language": "en",
-          "language_label": "Inglés",
-          "models": [
-            "Fitbit Air"
-          ],
-          "star_rating": null,
-          "engagement": {
-            "score": null,
-            "comments": null,
-            "views": null,
-            "label": null
-          },
-          "engagement_label": null,
-          "confidence": 0.22
-        }
-      ]
-    },
-    {
       "id": "8330d9db3907142d",
       "title": "Buena noticia · Sincronización · Sin modelo · Google Finally Fixed the Biggest Google Health Problems! (v5.04 Update)",
       "category": "sincronizacion",
@@ -7680,7 +7485,7 @@
       "recurring": true,
       "first_seen": "2026-09-15",
       "last_report_at": "2026-07-21T09:25:38+00:00",
-      "seen_runs": 25,
+      "seen_runs": 26,
       "engagement": {
         "score": null,
         "comments": null,
@@ -7764,7 +7569,7 @@
       "recurring": true,
       "first_seen": "2026-09-26",
       "last_report_at": "2026-08-09T07:00:00+00:00",
-      "seen_runs": 14,
+      "seen_runs": 15,
       "engagement": {
         "score": null,
         "comments": null,
@@ -7848,7 +7653,7 @@
       "recurring": true,
       "first_seen": "2026-10-05",
       "last_report_at": "2026-08-29T07:00:00+00:00",
-      "seen_runs": 5,
+      "seen_runs": 6,
       "engagement": {
         "score": null,
         "comments": null,
@@ -7932,7 +7737,7 @@
       "recurring": true,
       "first_seen": "2026-10-08",
       "last_report_at": "2026-07-17T07:00:00+00:00",
-      "seen_runs": 2,
+      "seen_runs": 3,
       "engagement": {
         "score": null,
         "comments": null,
@@ -8016,7 +7821,7 @@
       "recurring": true,
       "first_seen": "2026-10-04",
       "last_report_at": "2026-08-08T07:00:00+00:00",
-      "seen_runs": 6,
+      "seen_runs": 7,
       "engagement": {
         "score": null,
         "comments": null,
@@ -8102,7 +7907,7 @@
       "recurring": true,
       "first_seen": "2026-09-04",
       "last_report_at": "2026-07-16T07:00:00+00:00",
-      "seen_runs": 36,
+      "seen_runs": 37,
       "engagement": {
         "score": null,
         "comments": null,
@@ -8159,94 +7964,6 @@
           },
           "engagement_label": null,
           "confidence": 0.42
-        }
-      ]
-    },
-    {
-      "id": "183284b18e14dc5b",
-      "title": "Buena noticia · Software / app · Fitbit Air · Has the Charge 6 been updated to improve sleep and automatic exercise…",
-      "category": "software",
-      "category_label": "Software / app",
-      "polarity": "buena",
-      "polarity_label": "Buena noticia",
-      "severity": null,
-      "confidence": 0.22,
-      "issue_stem": "automatic charge exercise improve sleep",
-      "models": [
-        "Fitbit Air",
-        "Charge 6"
-      ],
-      "languages": [
-        "en"
-      ],
-      "language_labels": [
-        "Inglés"
-      ],
-      "source_kinds": [
-        "reddit"
-      ],
-      "count": 1,
-      "recurring": false,
-      "first_seen": "2026-10-09",
-      "last_report_at": "2026-10-09T04:09:25+00:00",
-      "seen_runs": 1,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "quotes": [
-        {
-          "text": "My main concern is tracking quality. From what I’ve seen, a lot of people seem to think the Fitbit Air has better sleep detection, and it also has newer automatic exercise detection. Has the Charge 6 received firmware/software updates that improved: sleep tracking automatic exerc",
-          "url": "https://www.reddit.com/r/fitbit/comments/1x1bnxg/has_the_charge_6_been_updated_to_improve_sleep/",
-          "source": "Reddit (búsqueda Fitbit)",
-          "source_kind": "reddit",
-          "title": "Has the Charge 6 been updated to improve sleep and automatic exercise tracking like the Fitbit Air?",
-          "created_at": "2026-10-09T04:09:25+00:00",
-          "language": "en",
-          "model": "Fitbit Air",
-          "engagement": {
-            "score": null,
-            "comments": null,
-            "views": null,
-            "label": null
-          },
-          "engagement_label": null,
-          "confidence": 0.22
-        }
-      ],
-      "sources": [
-        "Reddit (búsqueda Fitbit)"
-      ],
-      "reports": [
-        {
-          "id": "36bdf9f42a0a8d0b",
-          "title": "Has the Charge 6 been updated to improve sleep and automatic exercise tracking like the Fitbit Air?",
-          "url": "https://www.reddit.com/r/fitbit/comments/1x1bnxg/has_the_charge_6_been_updated_to_improve_sleep/",
-          "source": "Reddit (búsqueda Fitbit)",
-          "source_kind": "reddit",
-          "created_at": "2026-10-09T04:09:25+00:00",
-          "published_at": "2026-10-09T04:09:25+00:00",
-          "severity": null,
-          "sentiment": "positivo",
-          "polarity": "buena",
-          "language": "en",
-          "language_label": "Inglés",
-          "models": [
-            "Fitbit Air",
-            "Charge 6"
-          ],
-          "star_rating": null,
-          "engagement": {
-            "score": null,
-            "comments": null,
-            "views": null,
-            "label": null
-          },
-          "engagement_label": null,
-          "confidence": 0.22
         }
       ]
     }
@@ -8373,46 +8090,6 @@
       "confidence": 0.0
     },
     {
-      "id": "cbf6cdeac69d29e6",
-      "source": "social",
-      "source_kind": "youtube",
-      "source_label": "YouTube (búsqueda pública)",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1SUmNBc1AtQXp1Q2ZDOUcwbURDTUJ1YUw0RmdUZS00ckVnb3JuUGs1STlFdWVkdDExeV9RaV82OG45c25MTjNuUGNyMFpYZTRpcU83TA?oc=5",
-      "title": "Replace Fitbit Sense 2 Cracked Screen Fast! ⌚⚡ #shorts - YouTube",
-      "text": "Replace Fitbit Sense 2 Cracked Screen Fast! ⌚⚡ #shorts YouTube",
-      "created_at": "2026-09-12T20:46:27+00:00",
-      "published_at": "2026-09-12T20:46:27+00:00",
-      "author": "",
-      "models": [
-        "Sense 2"
-      ],
-      "categories": [
-        "pantalla"
-      ],
-      "primary_category": "pantalla",
-      "severity": null,
-      "sentiment": "mixto",
-      "polarity": "revisar",
-      "polarity_label": "Revisar",
-      "language": "en",
-      "language_label": "Inglés",
-      "badges": [
-        "revisar",
-        "confianza 0%"
-      ],
-      "star_rating": null,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "reason": "revisar",
-      "meta": {},
-      "confidence": 0.0
-    },
-    {
       "id": "18ae957aee8466ca",
       "source": "social",
       "source_kind": "youtube",
@@ -8453,18 +8130,58 @@
       "confidence": 0.34
     },
     {
-      "id": "f8ca2a5c9a7f5b88",
+      "id": "cbf6cdeac69d29e6",
       "source": "social",
       "source_kind": "youtube",
       "source_label": "YouTube (búsqueda pública)",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE03Tmk3S0pZYlc1aWgwNG5yMDJwVlctaDh4N1FQbWVEMVlCSmIzQ28tclhPN0p5eE9mTklkMUVWb2s4ZVJEYlZBQnBkTm9mT04zMVZaUDZ3?oc=5",
-      "title": "Fitbit Versa 4 Review: Is It Still Worth It in 2026? - YouTube",
-      "text": "Fitbit Versa 4 Review: Is It Still Worth It in 2026? YouTube",
-      "created_at": "2026-07-11T20:00:13+00:00",
-      "published_at": "2026-07-11T20:00:13+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1SUmNBc1AtQXp1Q2ZDOUcwbURDTUJ1YUw0RmdUZS00ckVnb3JuUGs1STlFdWVkdDExeV9RaV82OG45c25MTjNuUGNyMFpYZTRpcU83TA?oc=5",
+      "title": "Replace Fitbit Sense 2 Cracked Screen Fast! ⌚⚡ #shorts - YouTube",
+      "text": "Replace Fitbit Sense 2 Cracked Screen Fast! ⌚⚡ #shorts YouTube",
+      "created_at": "2026-09-12T20:46:27+00:00",
+      "published_at": "2026-09-12T20:46:27+00:00",
       "author": "",
       "models": [
-        "Versa 4"
+        "Sense 2"
+      ],
+      "categories": [
+        "pantalla"
+      ],
+      "primary_category": "pantalla",
+      "severity": null,
+      "sentiment": "mixto",
+      "polarity": "revisar",
+      "polarity_label": "Revisar",
+      "language": "en",
+      "language_label": "Inglés",
+      "badges": [
+        "revisar",
+        "confianza 0%"
+      ],
+      "star_rating": null,
+      "engagement": {
+        "score": null,
+        "comments": null,
+        "views": null,
+        "label": null
+      },
+      "engagement_label": null,
+      "reason": "revisar",
+      "meta": {},
+      "confidence": 0.0
+    },
+    {
+      "id": "86b1ff65713affe2",
+      "source": "social",
+      "source_kind": "youtube",
+      "source_label": "YouTube (búsqueda pública)",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9ZbkF5T2pQaVl6ZzJ1ZE1XUzAyMlpnYzhDNzNiODJGV2I2V1BVOGJtaklZdm9FWUJDZjRHYW9ZdlRETXRMUFFxSkEzNjI0aU44QUtFNkFB?oc=5",
+      "title": "Fitbit Sense 2 Review: Is It Still Worth It? - YouTube",
+      "text": "Fitbit Sense 2 Review: Is It Still Worth It? YouTube",
+      "created_at": "2026-10-04T00:00:37+00:00",
+      "published_at": "2026-10-04T00:00:37+00:00",
+      "author": "",
+      "models": [
+        "Sense 2"
       ],
       "categories": [
         "opinion"
@@ -8692,6 +8409,46 @@
       "confidence": 0.02
     },
     {
+      "id": "29e3e813b09b6c1f",
+      "source": "social",
+      "source_kind": "youtube",
+      "source_label": "YouTube elogios",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBxX0dqZjdpa216OGVvV2RXZXlCeFpfR0N0dUpJUUViXzJ5T2hQRDFncFRFMWFtZ01tNGtkUV9xZmV1UC0tRnpuWUdUbUZMeGJaS215REFn?oc=5",
+      "title": "Google Fitbit Air Pokémon Sleep Special Edition (Sleepy Blue) – Is It Worth It? - YouTube",
+      "text": "Google Fitbit Air Pokémon Sleep Special Edition (Sleepy Blue) – Is It Worth It? YouTube",
+      "created_at": "2026-09-25T14:00:35+00:00",
+      "published_at": "2026-09-25T14:00:35+00:00",
+      "author": "",
+      "models": [
+        "Fitbit Air"
+      ],
+      "categories": [
+        "opinion"
+      ],
+      "primary_category": "opinion",
+      "severity": null,
+      "sentiment": "positivo",
+      "polarity": "buena",
+      "polarity_label": "Buena noticia",
+      "language": "en",
+      "language_label": "Inglés",
+      "badges": [
+        "positivo",
+        "buena noticia"
+      ],
+      "star_rating": null,
+      "engagement": {
+        "score": null,
+        "comments": null,
+        "views": null,
+        "label": null
+      },
+      "engagement_label": null,
+      "reason": "opinion_positiva",
+      "meta": {},
+      "confidence": 0.02
+    },
+    {
       "id": "999819afe3affa50",
       "source": "social",
       "source_kind": "tiktok",
@@ -8772,6 +8529,46 @@
       "confidence": 0.02
     },
     {
+      "id": "dad690a4bb3d2435",
+      "source": "social",
+      "source_kind": "tiktok",
+      "source_label": "TikTok (búsqueda pública)",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5ZV2NHbVViSlBTY0h5eWdfWTVtNHVqcktUT2d2UXNhN2lyM2VvZERmUTdjSFA3ckRRc3czTjBzTU9BTEt3eXBVVDRBUjhiSGF6dVhTeEpsYVJ3dGVzTTBMQnZlOVNISmlFQjRkbjBEQVlVZw?oc=5",
+      "title": "The @Google FitBit Air is great for low-key, distraction-free health tracking. Let's see how it compares to the Apple Watch Series 11 on my weekend walk in the forest. #fyp #foryou - TikTok",
+      "text": "The @Google FitBit Air is great for low-key, distraction-free health tracking. Let's see how it compares to the Apple Watch Series 11 on my weekend walk in the forest. #fyp #foryou TikTok",
+      "created_at": "2026-07-27T07:00:00+00:00",
+      "published_at": "2026-07-27T07:00:00+00:00",
+      "author": "",
+      "models": [
+        "Fitbit Air"
+      ],
+      "categories": [
+        "opinion"
+      ],
+      "primary_category": "opinion",
+      "severity": null,
+      "sentiment": "positivo",
+      "polarity": "buena",
+      "polarity_label": "Buena noticia",
+      "language": "en",
+      "language_label": "Inglés",
+      "badges": [
+        "positivo",
+        "buena noticia"
+      ],
+      "star_rating": null,
+      "engagement": {
+        "score": null,
+        "comments": null,
+        "views": null,
+        "label": null
+      },
+      "engagement_label": null,
+      "reason": "opinion_positiva",
+      "meta": {},
+      "confidence": 0.02
+    },
+    {
       "id": "50914a3a2fb899e6",
       "source": "social",
       "source_kind": "tiktok",
@@ -8814,46 +8611,6 @@
       "confidence": 0.0
     },
     {
-      "id": "dad690a4bb3d2435",
-      "source": "social",
-      "source_kind": "tiktok",
-      "source_label": "TikTok (búsqueda pública)",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5ZV2NHbVViSlBTY0h5eWdfWTVtNHVqcktUT2d2UXNhN2lyM2VvZERmUTdjSFA3ckRRc3czTjBzTU9BTEt3eXBVVDRBUjhiSGF6dVhTeEpsYVJ3dGVzTTBMQnZlOVNISmlFQjRkbjBEQVlVZw?oc=5",
-      "title": "The @Google FitBit Air is great for low-key, distraction-free health tracking. Let's see how it compares to the Apple Watch Series 11 on my weekend walk in the forest. #fyp #foryou - TikTok",
-      "text": "The @Google FitBit Air is great for low-key, distraction-free health tracking. Let's see how it compares to the Apple Watch Series 11 on my weekend walk in the forest. #fyp #foryou TikTok",
-      "created_at": "2026-07-27T07:00:00+00:00",
-      "published_at": "2026-07-27T07:00:00+00:00",
-      "author": "",
-      "models": [
-        "Fitbit Air"
-      ],
-      "categories": [
-        "opinion"
-      ],
-      "primary_category": "opinion",
-      "severity": null,
-      "sentiment": "positivo",
-      "polarity": "buena",
-      "polarity_label": "Buena noticia",
-      "language": "en",
-      "language_label": "Inglés",
-      "badges": [
-        "positivo",
-        "buena noticia"
-      ],
-      "star_rating": null,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "reason": "opinion_positiva",
-      "meta": {},
-      "confidence": 0.02
-    },
-    {
       "id": "bda8960428bf8cae",
       "source": "social",
       "source_kind": "tiktok",
@@ -8892,6 +8649,46 @@
       "reason": "revisar",
       "meta": {},
       "confidence": 0.0
+    },
+    {
+      "id": "d188a1de40bcf25b",
+      "source": "social",
+      "source_kind": "tiktok",
+      "source_label": "TikTok (búsqueda pública)",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1XZURlSTQyNDJ2b3pSY1hCV3VDWXE3U1gwQXlxc1NLVUxGY29ncGxpeUFIWS1mSHktVVl2bmE3TnczTkxXOXNhZGJrVm1rRHR4NkhpNWh4dFZMelVDUzdGOU0wN1pLRERTeUpGNQ?oc=5",
+      "title": "Fitbit Air 3 month review — is it actually worth it #fitbitair #fibit #GoogleHealth #madebygoogle #wearabletech - TikTok",
+      "text": "Fitbit Air 3 month review — is it actually worth it #fitbitair #fibit #GoogleHealth #madebygoogle #wearabletech TikTok",
+      "created_at": "2026-08-11T07:00:00+00:00",
+      "published_at": "2026-08-11T07:00:00+00:00",
+      "author": "",
+      "models": [
+        "Fitbit Air"
+      ],
+      "categories": [
+        "opinion"
+      ],
+      "primary_category": "opinion",
+      "severity": null,
+      "sentiment": "positivo",
+      "polarity": "buena",
+      "polarity_label": "Buena noticia",
+      "language": "en",
+      "language_label": "Inglés",
+      "badges": [
+        "positivo",
+        "buena noticia"
+      ],
+      "star_rating": null,
+      "engagement": {
+        "score": null,
+        "comments": null,
+        "views": null,
+        "label": null
+      },
+      "engagement_label": null,
+      "reason": "opinion_positiva",
+      "meta": {},
+      "confidence": 0.02
     },
     {
       "id": "67d65631fabaeff9",
@@ -8972,46 +8769,6 @@
       "confidence": 0.34
     },
     {
-      "id": "5041cb004d4e10da",
-      "source": "social",
-      "source_kind": "instagram",
-      "source_label": "Instagram (búsqueda pública)",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE10SjFZRmU0OUR3cUpGWVlRTkJLV2F6SUtYcVF2QlQtd2NqQzNJbXFpWVljT201cXJZSVNUbi1CZ1FxeVdaajFJeFR1eWdEd01Xb2F6dUN3?oc=5",
-      "title": "Fitbit Air 3 month review — is it actually worth it #fitbitair #fibit #GoogleHealth #madebygoogle #wearabletech - Instagram",
-      "text": "Fitbit Air 3 month review — is it actually worth it #fitbitair #fibit #GoogleHealth #madebygoogle #wearabletech Instagram",
-      "created_at": "2026-08-11T07:00:00+00:00",
-      "published_at": "2026-08-11T07:00:00+00:00",
-      "author": "",
-      "models": [
-        "Fitbit Air"
-      ],
-      "categories": [
-        "opinion"
-      ],
-      "primary_category": "opinion",
-      "severity": null,
-      "sentiment": "positivo",
-      "polarity": "buena",
-      "polarity_label": "Buena noticia",
-      "language": "en",
-      "language_label": "Inglés",
-      "badges": [
-        "positivo",
-        "buena noticia"
-      ],
-      "star_rating": null,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "reason": "opinion_positiva",
-      "meta": {},
-      "confidence": 0.02
-    },
-    {
       "id": "d07a935e2d282249",
       "source": "social",
       "source_kind": "instagram",
@@ -9052,15 +8809,15 @@
       "confidence": 0.34
     },
     {
-      "id": "6897f2ac1854bcdb",
+      "id": "5041cb004d4e10da",
       "source": "social",
       "source_kind": "instagram",
       "source_label": "Instagram (búsqueda pública)",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE04UncwcnlPVFQyMnZ0bk1paklWODh3OGdKcWs1czJfc0J0V2ZiMVl6OUtQOHk1RFZxV1d1bHZ0eEtXRjQ4Z2Y2aC1USmdUTGU1Z1MtdUZn?oc=5",
-      "title": "The BEST Fitbit Air Feature Nobody is Talking About ⌚️ #fitness #health #fitbit #fitbitair #tech - Instagram",
-      "text": "The BEST Fitbit Air Feature Nobody is Talking About ⌚️ #fitness #health #fitbit #fitbitair #tech Instagram",
-      "created_at": "2026-07-25T07:00:00+00:00",
-      "published_at": "2026-07-25T07:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE10SjFZRmU0OUR3cUpGWVlRTkJLV2F6SUtYcVF2QlQtd2NqQzNJbXFpWVljT201cXJZSVNUbi1CZ1FxeVdaajFJeFR1eWdEd01Xb2F6dUN3?oc=5",
+      "title": "Fitbit Air 3 month review — is it actually worth it #fitbitair #fibit #GoogleHealth #madebygoogle #wearabletech - Instagram",
+      "text": "Fitbit Air 3 month review — is it actually worth it #fitbitair #fibit #GoogleHealth #madebygoogle #wearabletech Instagram",
+      "created_at": "2026-08-11T07:00:00+00:00",
+      "published_at": "2026-08-11T07:00:00+00:00",
       "author": "",
       "models": [
         "Fitbit Air"
@@ -9092,15 +8849,15 @@
       "confidence": 0.02
     },
     {
-      "id": "a8071229784d56f4",
+      "id": "6897f2ac1854bcdb",
       "source": "social",
       "source_kind": "instagram",
       "source_label": "Instagram (búsqueda pública)",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB4dXcwWkpLQWhiUlFwc05oQ184NHJ3ZGxDbmJ1SFBReEJmY2JSWXhVMEJhRkt5UHUtTjA2dDNBNWdaWHltSVdmTl9jajV6Qy1mSkE?oc=5",
-      "title": "Fitbit Air launched at ₹12,999* (worth it?) - Instagram",
-      "text": "Fitbit Air launched at ₹12,999* (worth it?) Instagram",
-      "created_at": "2026-10-01T11:41:44+00:00",
-      "published_at": "2026-10-01T11:41:44+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE04UncwcnlPVFQyMnZ0bk1paklWODh3OGdKcWs1czJfc0J0V2ZiMVl6OUtQOHk1RFZxV1d1bHZ0eEtXRjQ4Z2Y2aC1USmdUTGU1Z1MtdUZn?oc=5",
+      "title": "The BEST Fitbit Air Feature Nobody is Talking About ⌚️ #fitness #health #fitbit #fitbitair #tech - Instagram",
+      "text": "The BEST Fitbit Air Feature Nobody is Talking About ⌚️ #fitness #health #fitbit #fitbitair #tech Instagram",
+      "created_at": "2026-07-25T07:00:00+00:00",
+      "published_at": "2026-07-25T07:00:00+00:00",
       "author": "",
       "models": [
         "Fitbit Air"
@@ -9333,32 +9090,32 @@
       "confidence": 0.62
     },
     {
-      "id": "f118935953378be5",
+      "id": "f85d9d1422d52294",
       "source": "news",
       "source_kind": "news",
       "source_label": "Noticias web (EN-US)",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQVHNBT2dGS0ZTVDZydmxjUGZubjVnelRyNlBMUDNfa0xOc0p0dWxWeHIwaFo4X0YycERsTzdCeS1DNWVaWF9Wb01teVFlUW1DTkZlV2xIZjFZV2ZST19hMm5jN1hWYzVfdkdfaWdaRVBERXRnRXdCbUJxaS1rWUtfaGZrNnNIMlpob0JfbUQ1bXdUWS1QYkRyXzdHNS1ZUl84Y09uU29JN08zQS1XMnV0aFhQZWkwM2JFREk4?oc=5",
-      "title": "Fitbit Air’s newest update brings nothing new except invisible bug fixes - Android Central",
-      "text": "Fitbit Air’s newest update brings nothing new except invisible bug fixes Android Central",
-      "created_at": "2026-07-24T07:00:00+00:00",
-      "published_at": "2026-07-24T07:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1udWllT3BJQ1JveHpiOC1CdVlzai1ZQkpkMEtWV2NnV0htb2pQZ3FvUkZrWGlrbEtCZFRid3cxcDJvVzBuSU5NSW0zMFUyWkRfcThMX2hFNGV5a0J6WlE0QzVJb2N1dDc2WERpUnR2SU9EWTljd29EUjlHdw?oc=5",
+      "title": "I love the Fitbit Air, but Google's leaked Fitbit Edge might be even better - Android Central",
+      "text": "I love the Fitbit Air, but Google's leaked Fitbit Edge might be even better Android Central",
+      "created_at": "2026-10-05T07:52:27+00:00",
+      "published_at": "2026-10-05T07:52:27+00:00",
       "author": "",
       "models": [
         "Fitbit Air"
       ],
       "categories": [
-        "software"
+        "opinion"
       ],
-      "primary_category": "software",
+      "primary_category": "opinion",
       "severity": null,
-      "sentiment": "mixto",
-      "polarity": "revisar",
-      "polarity_label": "Revisar",
+      "sentiment": "positivo",
+      "polarity": "buena",
+      "polarity_label": "Buena noticia",
       "language": "en",
       "language_label": "Inglés",
       "badges": [
-        "revisar",
-        "confianza 34%"
+        "positivo",
+        "buena noticia"
       ],
       "star_rating": null,
       "engagement": {
@@ -9368,9 +9125,9 @@
         "label": null
       },
       "engagement_label": null,
-      "reason": "revisar",
+      "reason": "opinion_positiva",
       "meta": {},
-      "confidence": 0.34
+      "confidence": 0.02
     },
     {
       "id": "a89c53d98250be06",
@@ -9411,46 +9168,6 @@
       "reason": "incidencia",
       "meta": {},
       "confidence": 0.74
-    },
-    {
-      "id": "f85d9d1422d52294",
-      "source": "news",
-      "source_kind": "news",
-      "source_label": "Noticias web (EN-US)",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1udWllT3BJQ1JveHpiOC1CdVlzai1ZQkpkMEtWV2NnV0htb2pQZ3FvUkZrWGlrbEtCZFRid3cxcDJvVzBuSU5NSW0zMFUyWkRfcThMX2hFNGV5a0J6WlE0QzVJb2N1dDc2WERpUnR2SU9EWTljd29EUjlHdw?oc=5",
-      "title": "I love the Fitbit Air, but Google's leaked Fitbit Edge might be even better - Android Central",
-      "text": "I love the Fitbit Air, but Google's leaked Fitbit Edge might be even better Android Central",
-      "created_at": "2026-10-05T07:52:27+00:00",
-      "published_at": "2026-10-05T07:52:27+00:00",
-      "author": "",
-      "models": [
-        "Fitbit Air"
-      ],
-      "categories": [
-        "opinion"
-      ],
-      "primary_category": "opinion",
-      "severity": null,
-      "sentiment": "positivo",
-      "polarity": "buena",
-      "polarity_label": "Buena noticia",
-      "language": "en",
-      "language_label": "Inglés",
-      "badges": [
-        "positivo",
-        "buena noticia"
-      ],
-      "star_rating": null,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "reason": "opinion_positiva",
-      "meta": {},
-      "confidence": 0.02
     },
     {
       "id": "ec21fc0fadb606f9",
@@ -9572,7 +9289,7 @@
       "id": "e2f05296d2c3f960",
       "source": "news",
       "source_kind": "news",
-      "source_label": "Noticias web (EN-GB)",
+      "source_label": "Noticias web (EN-US)",
       "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9ubmVQLWpia2kyOE1OYm9iblktckNZSXd1VGY5U2Z6R0ZIU1RELXJtREhVMGFoWTFpNmVzcXZIZ2ZHX1BqWnZ1dzZBRWhYU05zWk9qQjBxNmw0SHl5RGNqQ0dTbGV1TS1ubEVXSHVvSFpBdjJNbU9MU0Fn?oc=5",
       "title": "Fitbit Edge is Google’s mysterious wearable and may be a great Fitbit Air and Pixel Watch 5 middle ground - Stuff",
       "text": "Fitbit Edge is Google’s mysterious wearable and may be a great Fitbit Air and Pixel Watch 5 middle ground Stuff",
@@ -10000,6 +9717,46 @@
       "reason": "buena_noticia",
       "meta": {},
       "confidence": 0.42
+    },
+    {
+      "id": "f118935953378be5",
+      "source": "news",
+      "source_kind": "news",
+      "source_label": "Android Central",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQVHNBT2dGS0ZTVDZydmxjUGZubjVnelRyNlBMUDNfa0xOc0p0dWxWeHIwaFo4X0YycERsTzdCeS1DNWVaWF9Wb01teVFlUW1DTkZlV2xIZjFZV2ZST19hMm5jN1hWYzVfdkdfaWdaRVBERXRnRXdCbUJxaS1rWUtfaGZrNnNIMlpob0JfbUQ1bXdUWS1QYkRyXzdHNS1ZUl84Y09uU29JN08zQS1XMnV0aFhQZWkwM2JFREk4?oc=5",
+      "title": "Fitbit Air’s newest update brings nothing new except invisible bug fixes - Android Central",
+      "text": "Fitbit Air’s newest update brings nothing new except invisible bug fixes Android Central",
+      "created_at": "2026-07-24T07:00:00+00:00",
+      "published_at": "2026-07-24T07:00:00+00:00",
+      "author": "",
+      "models": [
+        "Fitbit Air"
+      ],
+      "categories": [
+        "software"
+      ],
+      "primary_category": "software",
+      "severity": null,
+      "sentiment": "mixto",
+      "polarity": "revisar",
+      "polarity_label": "Revisar",
+      "language": "en",
+      "language_label": "Inglés",
+      "badges": [
+        "revisar",
+        "confianza 34%"
+      ],
+      "star_rating": null,
+      "engagement": {
+        "score": null,
+        "comments": null,
+        "views": null,
+        "label": null
+      },
+      "engagement_label": null,
+      "reason": "revisar",
+      "meta": {},
+      "confidence": 0.34
     },
     {
       "id": "ba46b9652c6b509f",
@@ -11148,6 +10905,47 @@
       "confidence": 0.22
     },
     {
+      "id": "4d8ce330e0bd6821",
+      "source": "reddit",
+      "source_kind": "reddit",
+      "source_label": "Reddit r/fitbit",
+      "url": "https://www.reddit.com/r/fitbit/comments/1x26kzp/doublewristing_a_screenless_fitbit_air_with_a/",
+      "title": "Double-wristing a screenless Fitbit Air with a classic dress watch: Does it look weird?",
+      "text": "Hey everyone, ​I’m stuck in a dilemma and need some real-world advice from watch collectors and fitness tracker users. ​I love wearing traditional analog dress watches (especially with leather straps) for work and social outings. At the same time, I want continuous 24/7 health tracking. I specifically avoid full smartwatches like the Pixel Watch because I hate screen distractions, wrist pings, and constant notifications. ​That is why the Fitbit Air appeals to me: zero screens, zero digital noise. But here is what I am wrestling with: - ​Double-wristing appearance: How does it actually look and feel to wear a classic leather dress watch on one wrist and the screenless Fitbit Air on the other? Does the Air look like a clean accessory/strap, or does it feel cluttered? - ​Same wrist vs. opposite wrist: Has anyone tried wearing a screenless band on the same arm as their analog watch, or higher up the forearm/arm? - ​The Fitbit Edge alternative: If double-wristing looks awkward with formal wear, should I just get the Fitbit Edge instead? That way I get a simple, low-distraction screen for time checks and workout stats, even if it means swapping out my dress watch more often. ​For those who collect analog watches and use a screenless tracker, how do you handle it? Do you double-wrist daily without issue, or would you prefer getting a slim tracker with a screen like the Edge? ​Appreciate your thoughts and real-world pics if you have them! submitted by /u/StartOver321 [link] [comentarios]",
+      "created_at": "2026-10-10T04:59:35+00:00",
+      "published_at": "2026-10-10T04:59:35+00:00",
+      "author": "/u/StartOver321",
+      "models": [
+        "Fitbit Air",
+        "Pixel Watch"
+      ],
+      "categories": [
+        "correa"
+      ],
+      "primary_category": "correa",
+      "severity": null,
+      "sentiment": "mixto",
+      "polarity": "revisar",
+      "polarity_label": "Revisar",
+      "language": "en",
+      "language_label": "Inglés",
+      "badges": [
+        "revisar",
+        "confianza 22%"
+      ],
+      "star_rating": null,
+      "engagement": {
+        "score": null,
+        "comments": null,
+        "views": null,
+        "label": null
+      },
+      "engagement_label": null,
+      "reason": "revisar",
+      "meta": {},
+      "confidence": 0.22
+    },
+    {
       "id": "c0eda00ed1d59b5d",
       "source": "reddit",
       "source_kind": "reddit",
@@ -11159,6 +10957,244 @@
       "published_at": "2026-10-09T16:26:42+00:00",
       "author": "/u/EarthTorque",
       "models": [],
+      "categories": [
+        "sincronizacion"
+      ],
+      "primary_category": "sincronizacion",
+      "severity": null,
+      "sentiment": "mixto",
+      "polarity": "revisar",
+      "polarity_label": "Revisar",
+      "language": "en",
+      "language_label": "Inglés",
+      "badges": [
+        "revisar",
+        "confianza 22%"
+      ],
+      "star_rating": null,
+      "engagement": {
+        "score": null,
+        "comments": null,
+        "views": null,
+        "label": null
+      },
+      "engagement_label": null,
+      "reason": "revisar",
+      "meta": {},
+      "confidence": 0.22
+    },
+    {
+      "id": "8006de6defdd9525",
+      "source": "reddit",
+      "source_kind": "reddit",
+      "source_label": "Reddit r/fitbit",
+      "url": "https://www.reddit.com/r/fitbit/comments/1x2cthm/my_fitbit_app_gave_up/",
+      "title": "my fitbit app gave up 💔",
+      "text": "end of an era... dont know how to get past this screen 💔 been holding out for ages but i guess now im gonna have to go to the dreaded fitbit health (rip my daily readiness score) (at least im getting a garmin soon 🥹) submitted by /u/skiderss [link] [comentarios]",
+      "created_at": "2026-10-10T11:18:59+00:00",
+      "published_at": "2026-10-10T11:18:59+00:00",
+      "author": "/u/skiderss",
+      "models": [],
+      "categories": [
+        "pantalla"
+      ],
+      "primary_category": "pantalla",
+      "severity": null,
+      "sentiment": "mixto",
+      "polarity": "revisar",
+      "polarity_label": "Revisar",
+      "language": "en",
+      "language_label": "Inglés",
+      "badges": [
+        "revisar",
+        "confianza 22%"
+      ],
+      "star_rating": null,
+      "engagement": {
+        "score": null,
+        "comments": null,
+        "views": null,
+        "label": null
+      },
+      "engagement_label": null,
+      "reason": "revisar",
+      "meta": {},
+      "confidence": 0.22
+    },
+    {
+      "id": "b279d06a1e4eda65",
+      "source": "reddit",
+      "source_kind": "reddit",
+      "source_label": "Reddit r/fitbit",
+      "url": "https://www.reddit.com/r/fitbit/comments/1x2geh8/should_i_be_concerned_about_how_fast_my_resting/",
+      "title": "Should I be concerned about how fast my resting heart rate is climbing",
+      "text": "For reference, I was able to be pretty active over the summer, but haven’t really gotten the chance now that I’m back at college submitted by /u/Persian_Empire42 [link] [comentarios]",
+      "created_at": "2026-10-10T14:16:34+00:00",
+      "published_at": "2026-10-10T14:16:34+00:00",
+      "author": "/u/Persian_Empire42",
+      "models": [],
+      "categories": [
+        "ritmo_cardiaco"
+      ],
+      "primary_category": "ritmo_cardiaco",
+      "severity": null,
+      "sentiment": "mixto",
+      "polarity": "revisar",
+      "polarity_label": "Revisar",
+      "language": "en",
+      "language_label": "Inglés",
+      "badges": [
+        "revisar",
+        "confianza 0%"
+      ],
+      "star_rating": null,
+      "engagement": {
+        "score": null,
+        "comments": null,
+        "views": null,
+        "label": null
+      },
+      "engagement_label": null,
+      "reason": "revisar",
+      "meta": {},
+      "confidence": 0.0
+    },
+    {
+      "id": "53a654e4ad6b9c66",
+      "source": "reddit",
+      "source_kind": "reddit",
+      "source_label": "Reddit r/fitbit",
+      "url": "https://www.reddit.com/r/fitbit/comments/1x2dw1v/charge_6_vs_edge/",
+      "title": "Charge 6 vs Edge",
+      "text": "So, last week my charge 5 decided to die of a sudden death (won't charge, or if by miracle I'm able to charge it even at 100%, by the end of the day is 1%) It has been with me for a good 4-5 years and served its purpose. I use it mostly at work for clock/timers/alarms/notifications so I don't have to take out my phone (i work in a professional kitchen). In the gym I'd like it had better functions/more precise readings but hey...it's acceptable. My wife's garmin is so much better but way bulkier and pricier. Now, since it died and hate to leave house without a watch on my wrist, I ordered on Amazon a charge 6 for 89.99$ ... only to discover yesterday that the edge is coming out. Besides aesthetic and the altimeter...what are the actual improvements? Is it worth it to send back the C6 and wait for the official reveal and do you guys have an idea when it'll hit the market? An idea on the price? I just want something with a small screen to wear in a place where it can take some hit and splash and counts my steps. submitted by /u/Xelorath [link] [comentarios]",
+      "created_at": "2026-10-10T12:16:50+00:00",
+      "published_at": "2026-10-10T12:16:50+00:00",
+      "author": "/u/Xelorath",
+      "models": [
+        "Charge 6",
+        "Charge 5"
+      ],
+      "categories": [
+        "bateria",
+        "carga",
+        "pantalla"
+      ],
+      "primary_category": "bateria",
+      "severity": null,
+      "sentiment": "mixto",
+      "polarity": "revisar",
+      "polarity_label": "Revisar",
+      "language": "en",
+      "language_label": "Inglés",
+      "badges": [
+        "revisar",
+        "confianza 0%"
+      ],
+      "star_rating": null,
+      "engagement": {
+        "score": null,
+        "comments": null,
+        "views": null,
+        "label": null
+      },
+      "engagement_label": null,
+      "reason": "revisar",
+      "meta": {},
+      "confidence": 0.0
+    },
+    {
+      "id": "0b806b2c658f2c5a",
+      "source": "reddit",
+      "source_kind": "reddit",
+      "source_label": "Reddit r/fitbit",
+      "url": "https://www.reddit.com/r/fitbit/comments/1x2awyc/bateria_caiu_41_menos_de_12h/",
+      "title": "Bateria caiu 41% menos de 12h",
+      "text": "Hoje, fui trabalhar às 7:30 e voltei 8 horas depois, só que eu esqueci meu iPhone em casa, usei Fitbit só sentado E com isso bateria drenou demais Oque pode ter acontecido Como resolver se isso acontecer de novo ? submitted by /u/maickon7 [link] [comentarios]",
+      "created_at": "2026-10-10T09:24:03+00:00",
+      "published_at": "2026-10-10T09:24:03+00:00",
+      "author": "/u/maickon7",
+      "models": [],
+      "categories": [
+        "bateria"
+      ],
+      "primary_category": "bateria",
+      "severity": null,
+      "sentiment": "mixto",
+      "polarity": "revisar",
+      "polarity_label": "Revisar",
+      "language": "en",
+      "language_label": "Inglés",
+      "badges": [
+        "revisar",
+        "confianza 22%"
+      ],
+      "star_rating": null,
+      "engagement": {
+        "score": null,
+        "comments": null,
+        "views": null,
+        "label": null
+      },
+      "engagement_label": null,
+      "reason": "revisar",
+      "meta": {},
+      "confidence": 0.22
+    },
+    {
+      "id": "911eb68de6fc041d",
+      "source": "reddit",
+      "source_kind": "reddit",
+      "source_label": "Reddit r/fitbit",
+      "url": "https://www.reddit.com/r/fitbit/comments/1x2g8dx/google_health_510_importing_apple_health_runs/",
+      "title": "Google Health 5.10 importing Apple Health runs without HR or Cardio Load—anyone else?",
+      "text": "Google recently announced that third-party workouts synced with heart-rate data should now count toward Cardio Load as of 5.09. On 5.10 for my iPhone 15 Pro Max and FitBit Air. Is anyone actually getting this working? My setup: Apple Watch Ultra recording the run through WorkOutDoors. Fitbit Air also worn during the run, with automatic workout detection disabled. Google Health on iOS, version 5.10. Apple Health read permissions enabled for both Workouts and Heart Rate. The run shows up in Apple Fitness with its HR graph. It also imports into Google Health, but the workout has no HR graph and gets no Cardio Load. The weird part: I can see the Apple Watch’s HR readings during that exact time on Google Health’s separate heart-rate page when filtering the source to Apple Health only . So Google is receiving both the workout and the HR data, but apparently isn’t connecting them. Anyone else seeing this? Does it work for you with WorkOutDoors, or only with Apple’s built-in Workout app? Any fixes? submitted by /u/Mikep976 [link] [comentarios]",
+      "created_at": "2026-10-10T14:09:14+00:00",
+      "published_at": "2026-10-10T14:09:14+00:00",
+      "author": "/u/Mikep976",
+      "models": [
+        "Fitbit Air"
+      ],
+      "categories": [
+        "sincronizacion",
+        "ritmo_cardiaco"
+      ],
+      "primary_category": "sincronizacion",
+      "severity": null,
+      "sentiment": "mixto",
+      "polarity": "revisar",
+      "polarity_label": "Revisar",
+      "language": "en",
+      "language_label": "Inglés",
+      "badges": [
+        "revisar",
+        "confianza 22%"
+      ],
+      "star_rating": null,
+      "engagement": {
+        "score": null,
+        "comments": null,
+        "views": null,
+        "label": null
+      },
+      "engagement_label": null,
+      "reason": "revisar",
+      "meta": {},
+      "confidence": 0.22
+    },
+    {
+      "id": "51ac746e3d06116d",
+      "source": "reddit",
+      "source_kind": "reddit",
+      "source_label": "Reddit r/fitbit",
+      "url": "https://www.reddit.com/r/fitbit/comments/1x2e43f/managing_google_health_dashboard/",
+      "title": "Managing Google Health Dashboard",
+      "text": "I wanted to manage google health dashboard syncing with Google Fitbit Air. Can someone please share me what are the most essential layout of health dashboard please 🙏 submitted by /u/hey369369 [link] [comentarios]",
+      "created_at": "2026-10-10T12:28:37+00:00",
+      "published_at": "2026-10-10T12:28:37+00:00",
+      "author": "/u/hey369369",
+      "models": [
+        "Fitbit Air"
+      ],
       "categories": [
         "sincronizacion"
       ],
@@ -11226,21 +11262,67 @@
       "confidence": 0.22
     },
     {
-      "id": "030699bbeba95d0c",
+      "id": "dc28b85bd4445876",
       "source": "reddit",
       "source_kind": "reddit",
       "source_label": "Reddit r/fitbit",
-      "url": "https://www.reddit.com/r/fitbit/comments/1x13be6/sleep_study_says_my_fitbit_sleep_hours_are_way/",
-      "title": "Sleep Study says my fitbit sleep hours are way inaccurate.",
-      "text": "Just took a sleep study through my insurance provider and it reported that I'm getting less than half of the sleep reported by my fitbit. Fitbit will say 7:15 hours, sleep study equipment says 4:30. Fitbit says 6:00, sleep study says 3:15. Has anyone else seen this wide margin of error with their fitbit sleep hours? submitted by /u/IchabodDiesel [link] [comentarios]",
-      "created_at": "2026-10-08T21:26:23+00:00",
-      "published_at": "2026-10-08T21:26:23+00:00",
-      "author": "/u/IchabodDiesel",
-      "models": [],
-      "categories": [
-        "opinion"
+      "url": "https://www.reddit.com/r/fitbit/comments/1x1xpsa/is_pixel_care_worth_it_and_should_i_buy_another/",
+      "title": "Is Pixel Care+ worth it? And should I buy another Charge 6?",
+      "text": "Charge 6 stopped working last night - 2 year warranty ended a few weeks ago. I've had it replaced twice during those 2 years, and I'm aware this is just a widespread issue with this model. I've been given a 50% off code to buy a new Charge 6, Inspire 3 or Versa 4, from Google customer care. What would you do in this position? Use the discount and buy another Charge 6 for £70, and replace every 6 months when it breaks until the warranty ends (assuming they still do free in warranty replacements?) Or wait and buy the new Edge in a few days? Also, is the Care plus protection worth it? It's £24 for 2 years but I'm unsure what it actually gives me. Advice please! submitted by /u/AvoCarDoughToes [link] [comentarios]",
+      "created_at": "2026-10-09T21:35:40+00:00",
+      "published_at": "2026-10-09T21:35:40+00:00",
+      "author": "/u/AvoCarDoughToes",
+      "models": [
+        "Charge 6",
+        "Versa 4",
+        "Inspire 3"
       ],
-      "primary_category": "opinion",
+      "categories": [
+        "calidad"
+      ],
+      "primary_category": "calidad",
+      "severity": null,
+      "sentiment": "positivo",
+      "polarity": "buena",
+      "polarity_label": "Buena noticia",
+      "language": "en",
+      "language_label": "Inglés",
+      "badges": [
+        "positivo",
+        "buena noticia"
+      ],
+      "star_rating": null,
+      "engagement": {
+        "score": null,
+        "comments": null,
+        "views": null,
+        "label": null
+      },
+      "engagement_label": null,
+      "reason": "buena_noticia",
+      "meta": {},
+      "confidence": 0.02
+    },
+    {
+      "id": "5a47eb8ee4e0cfb5",
+      "source": "reddit",
+      "source_kind": "reddit",
+      "source_label": "Reddit r/fitbit",
+      "url": "https://www.reddit.com/r/fitbit/comments/1x1xzf9/versa_4_disappearing_stats/",
+      "title": "Versa 4 disappearing stats?",
+      "text": "Hey there, I recently upgraded my Charge 6 to a Versa 4 and very quickly after getting the device (within 3 weeks), I noticed a weird thing it did. Sometimes when I'm exercising, and sometimes for no reason, stats and functions just disappear. I have three photos for a basic reference for what I mean. When I exercise and my heart rate is being tracked, the heart rate is visible as just a number, say \"146\" and where the time duration should be is just completely blank. At first, I thought it was a fluke, but it happens pretty regularly at random intervals. Sometimes it'll be fine for a full week- other times it'll happen 3 times a week. Usually, after I plug it in or restart the Versa, it fixes itself. I'm just confused as to what this is, why it happens, and if anyone else has had this happen and what they did to fix it. If it is a software issue or a \"you need a replacement device\" issue, I'd love to know because this thing is less than 3 months old. submitted by /u/1SpecialSongVA [link] [comentarios]",
+      "created_at": "2026-10-09T21:47:06+00:00",
+      "published_at": "2026-10-09T21:47:06+00:00",
+      "author": "/u/1SpecialSongVA",
+      "models": [
+        "Charge 6",
+        "Versa 4"
+      ],
+      "categories": [
+        "calidad",
+        "ritmo_cardiaco"
+      ],
+      "primary_category": "ritmo_cardiaco",
       "severity": null,
       "sentiment": "mixto",
       "polarity": "revisar",
@@ -11259,7 +11341,7 @@
         "label": null
       },
       "engagement_label": null,
-      "reason": "sin_incidencia",
+      "reason": "revisar",
       "meta": {},
       "confidence": 0.22
     },
@@ -11304,214 +11386,22 @@
       "confidence": 0.22
     },
     {
-      "id": "6d29b79b2648191d",
+      "id": "ccd3edfaeec5f448",
       "source": "reddit",
       "source_kind": "reddit",
       "source_label": "Reddit r/fitbit",
-      "url": "https://www.reddit.com/r/fitbit/comments/1x1ky5n/is_this_a_steal/",
-      "title": "Is this a steal?",
-      "text": "So for the people who want context i bought an fitbit sense 1 off vinted paid 6.29 total for it comes with charger and STILL WORKING! submitted by /u/Southern_One1909 [link] [comentarios]",
-      "created_at": "2026-10-09T13:09:38+00:00",
-      "published_at": "2026-10-09T13:09:38+00:00",
-      "author": "/u/Southern_One1909",
-      "models": [
-        "Sense"
-      ],
-      "categories": [
-        "carga"
-      ],
-      "primary_category": "carga",
-      "severity": null,
-      "sentiment": "mixto",
-      "polarity": "revisar",
-      "polarity_label": "Revisar",
-      "language": "en",
-      "language_label": "Inglés",
-      "badges": [
-        "revisar",
-        "confianza 22%"
-      ],
-      "star_rating": null,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "reason": "revisar",
-      "meta": {},
-      "confidence": 0.22
-    },
-    {
-      "id": "20acd171228c4666",
-      "source": "reddit",
-      "source_kind": "reddit",
-      "source_label": "Reddit r/fitbit",
-      "url": "https://www.reddit.com/r/fitbit/comments/1x1pnsz/fitbit_showed_93_spo2_overnight_has_anyone/",
-      "title": "Fitbit showed 93% SpO2 overnight. Has anyone experienced this?",
-      "text": "Hi everyone! I've been using Fitbit to track my sleep and SpO2 levels. My average SpO2 over the past month and three months has been 96%, and most nights my readings are between 95–98%. However, last night my Fitbit showed an average SpO2 of 93%, which was flagged as below my personal range. I also had another night around 94% a few weeks ago. I had pretty bad allergies yesterday, with significant nasal congestion, and my sleep was interrupted several times. I don't normally have breathing problems, but seeing this number has made me quite anxious, especially about going to sleep tonight. Has anyone experienced occasional readings around 92–93% despite having otherwise normal averages? Has anyone compared their Fitbit's overnight SpO2 readings with a medical-grade or fingertip pulse oximeter? I'm curious whether allergies, nasal congestion, or poor sleep have affected your readings too. I'd really appreciate hearing your experiences. Thanks! submitted by /u/Old_Tie1632 [link] [comentarios]",
-      "created_at": "2026-10-09T16:18:37+00:00",
-      "published_at": "2026-10-09T16:18:37+00:00",
-      "author": "/u/Old_Tie1632",
-      "models": [],
-      "categories": [
-        "ritmo_cardiaco"
-      ],
-      "primary_category": "ritmo_cardiaco",
-      "severity": null,
-      "sentiment": "mixto",
-      "polarity": "revisar",
-      "polarity_label": "Revisar",
-      "language": "en",
-      "language_label": "Inglés",
-      "badges": [
-        "revisar",
-        "confianza 22%"
-      ],
-      "star_rating": null,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "reason": "revisar",
-      "meta": {},
-      "confidence": 0.22
-    },
-    {
-      "id": "492cf37deb8b7321",
-      "source": "reddit",
-      "source_kind": "reddit",
-      "source_label": "Reddit r/fitbit",
-      "url": "https://www.reddit.com/r/fitbit/comments/1x1mgrr/need_some_help_with_hrv/",
-      "title": "Need some help with HRV",
-      "text": "This is rough… I’ve been getting only about 6 hours of sleep this week and lots of stress. Also hurt my back and didn’t exercise. Should I worry about underlying issues? 36 M submitted by /u/Victory-laps [link] [comentarios]",
-      "created_at": "2026-10-09T14:13:06+00:00",
-      "published_at": "2026-10-09T14:13:06+00:00",
-      "author": "/u/Victory-laps",
-      "models": [],
-      "categories": [
-        "ritmo_cardiaco"
-      ],
-      "primary_category": "ritmo_cardiaco",
-      "severity": null,
-      "sentiment": "mixto",
-      "polarity": "revisar",
-      "polarity_label": "Revisar",
-      "language": "en",
-      "language_label": "Inglés",
-      "badges": [
-        "revisar",
-        "confianza 0%"
-      ],
-      "star_rating": null,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "reason": "revisar",
-      "meta": {},
-      "confidence": 0.0
-    },
-    {
-      "id": "63601cb8c50659d5",
-      "source": "reddit",
-      "source_kind": "reddit",
-      "source_label": "Reddit r/fitbit",
-      "url": "https://www.reddit.com/r/fitbit/comments/1x1fmgr/did_your_fitbit_end_up_unused_and_did_you_get/",
-      "title": "did your fitbit end up unused, and did you get anything out of it before that?",
-      "text": "i have a habit of buying stuff for my health and then not using it. temperature sensors for the bedroom and the living room, i never look at them. sleeping headphones that i take out in my sleep, so now they are train headphones. a sleep mask, same story. i try to make sure everything i buy actually gets used and clearly i am losing that one lol. my garmin is the one thing that stuck, mostly because i only look at the sleep score and the battery lasts weeks. so i am curious how it went for you. if your fitbit ended up in a drawer, did you get anything out of it before that, any result, any habit that stayed? and did the stuff you bought around it, apps, a scale, whatever, go the same way or did some of it stick? submitted by /u/Powerful-Pizza3994 [link] [comentarios]",
-      "created_at": "2026-10-09T08:10:07+00:00",
-      "published_at": "2026-10-09T08:10:07+00:00",
-      "author": "/u/Powerful-Pizza3994",
-      "models": [],
-      "categories": [
-        "bateria"
-      ],
-      "primary_category": "bateria",
-      "severity": null,
-      "sentiment": "mixto",
-      "polarity": "revisar",
-      "polarity_label": "Revisar",
-      "language": "en",
-      "language_label": "Inglés",
-      "badges": [
-        "revisar",
-        "confianza 22%"
-      ],
-      "star_rating": null,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "reason": "revisar",
-      "meta": {},
-      "confidence": 0.22
-    },
-    {
-      "id": "4ab35f158f5a0086",
-      "source": "reddit",
-      "source_kind": "reddit",
-      "source_label": "Reddit (búsqueda Fitbit)",
-      "url": "https://www.reddit.com/r/fitbit/comments/1x1hce4/is_my_fitbit_calorie_tracker_broken/",
-      "title": "Is my Fitbit calorie tracker broken ?",
-      "text": "My Fitbit has been showing me crazy amount of calories burnt throughout the day I don’t get it. submitted by /u/LessExchange8005 to r/fitbit [link] [comentarios]",
-      "created_at": "2026-10-09T10:00:12+00:00",
-      "published_at": "2026-10-09T10:00:12+00:00",
-      "author": "/u/LessExchange8005",
-      "models": [],
-      "categories": [
-        "calidad"
-      ],
-      "primary_category": "calidad",
-      "severity": "baja",
-      "sentiment": "negativo",
-      "polarity": "mala",
-      "polarity_label": "Mala noticia",
-      "language": "en",
-      "language_label": "Inglés",
-      "badges": [
-        "gravedad baja",
-        "confianza 74%"
-      ],
-      "star_rating": null,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "reason": "incidencia",
-      "meta": {},
-      "confidence": 0.74
-    },
-    {
-      "id": "97e53ea140efef41",
-      "source": "reddit",
-      "source_kind": "reddit",
-      "source_label": "Reddit r/fitbit",
-      "url": "https://www.reddit.com/r/fitbit/comments/1x1kp6c/my_sleep_score_isnt_showing_after_first_few_days/",
-      "title": "My sleep score isn't showing after first few days.",
-      "text": "My Fitbit Air records sleep stages and duration properly in the Google Health app, but the Sleep Score never appears. I'm not seeing a \"stages weren't generated\" issue, so this doesn't match the usual cause. What I've tried: Restarted my phone. Restarted the Fitbit Air. Logged out and back into the Google Health app. Cleared the app's cache. Switched the Air to my other wrist. Un-paired and re-paired the Air. Asked the in-app coach to pull up the sleep data manually, with no change. It's very snug in my wrist. Is there something else I'm missing? It worked fine for the first two days. submitted by /u/Isopyxi [link] [comentarios]",
-      "created_at": "2026-10-09T12:58:44+00:00",
-      "published_at": "2026-10-09T12:58:44+00:00",
-      "author": "/u/Isopyxi",
+      "url": "https://www.reddit.com/r/fitbit/comments/1x21c8l/smart_watches_that_use_google_health_information/",
+      "title": "Smart watches that use Google health information",
+      "text": "For context I currently have a Garmin Marq and just bought a Fitbit air so I don't have to wear a watch to sleep. (Also so I can go back to analog watches) So my Garmin tracks my actives while my air tracks everything else. After lots of trial and error I realized Garmin wouldn't be able to use the data tracked from my Fitbit air and that it can only send data to it. What devices use the data from my Fitbit air to incorporate my data? I'm presuming obvious ones would be Pixel and Fitbit, though are there any other options? Primarily looking to have a device that is able to display my running pace, hr and time during my activities. I'm not exactly sure how Fitbits how this information or if it is customizable to do so. If it can well, I think I have a solution to my problem. submitted by /u/SaltyFlight1459 [link] [comentarios]",
+      "created_at": "2026-10-10T00:20:59+00:00",
+      "published_at": "2026-10-10T00:20:59+00:00",
+      "author": "/u/SaltyFlight1459",
       "models": [
         "Fitbit Air"
       ],
       "categories": [
         "sincronizacion",
-        "software"
+        "pantalla"
       ],
       "primary_category": "sincronizacion",
       "severity": null,
@@ -11537,302 +11427,21 @@
       "confidence": 0.22
     },
     {
-      "id": "466174eef5549d09",
+      "id": "c76a95a6bc93773a",
       "source": "reddit",
       "source_kind": "reddit",
-      "source_label": "Reddit r/fitbit",
-      "url": "https://www.reddit.com/r/fitbit/comments/1x1knok/31m_is_this_normal/",
-      "title": "31M is this normal?",
-      "text": "I have started zone 2 training for 30mins avg x4 a week for 3 weeks. Is this normal vitals I want to lower my RHR and increase HRV submitted by /u/Distinct_Scallion342 [link] [comentarios]",
-      "created_at": "2026-10-09T12:56:46+00:00",
-      "published_at": "2026-10-09T12:56:46+00:00",
-      "author": "/u/Distinct_Scallion342",
-      "models": [],
-      "categories": [
-        "ritmo_cardiaco"
-      ],
-      "primary_category": "ritmo_cardiaco",
-      "severity": null,
-      "sentiment": "mixto",
-      "polarity": "revisar",
-      "polarity_label": "Revisar",
-      "language": "en",
-      "language_label": "Inglés",
-      "badges": [
-        "revisar",
-        "confianza 0%"
-      ],
-      "star_rating": null,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "reason": "revisar",
-      "meta": {},
-      "confidence": 0.0
-    },
-    {
-      "id": "f81a7eb7a59301de",
-      "source": "reddit",
-      "source_kind": "reddit",
-      "source_label": "Reddit r/fitbit",
-      "url": "https://www.reddit.com/r/fitbit/comments/1x1fw8a/why_isnt_fitbits_activity_recognition_quite_as/",
-      "title": "Why isn't Fitbit's activity recognition quite as good?",
-      "text": "I wonder why automatic activity detection using a Fitbit Charge 6 tracker and Google Health on my smartphone works so poorly. I frequently set off on bike rides from home. Based on movement data, I would expect the technology to detect the cycling as soon as I start moving; the movement pattern should be clearly distinguishable from walking or using a motor vehicle. Yet, it usually takes about five minutes after I’ve started riding for the Charge 6 to display \"Activity detected\" and begin tracking the time and movement. Conversely, I might have already returned home, put my bike in the shed, and be sitting on the living room sofa, while the Charge 6 is still counting the activity, or only then the prompt to ask if I want to end the workout does appear. After outdoor activities, the app could register when my phone reconnects to my home Wi-Fi and use that as a signal to end the workout; that would be simple and precise. submitted by /u/w__sky [link] [comentarios]",
-      "created_at": "2026-10-09T08:27:42+00:00",
-      "published_at": "2026-10-09T08:27:42+00:00",
-      "author": "/u/w__sky",
+      "source_label": "Reddit r/GooglePixelWatch",
+      "url": "https://www.reddit.com/r/googlepixelwatch/comments/1x069to/pixel_watch_owners_volunteer_for_a_21day_test_of/",
+      "title": "Pixel Watch owners: volunteer for a 21-day test of two Wear OS watch faces (free access if selected)",
+      "text": "I'm the developer of Codefall Rain Pro (colorful digital rain) and Axiom Alchemy (an alchemy-inspired face). I'm looking for Pixel Watch owners to help check real watch compatibility, readability, customization and battery behavior during normal wear. You need regular access to a physical Pixel Watch running Wear OS 4 or newer and a Google Play account in a country supported by both closed tests. We verify your exact watch model and Play country before selection; a catalog listing alone is not proof of installation. Selected volunteers receive a private free-access code for each paid face. Please remain opted into both separate closed tests for 21 days, switch between the faces during normal wear, and send brief honest feedback after installation and around days 7 and 14. No purchase, rating, public review or reciprocal testing is required. This is a waiting-list invitation: applications are open while we investigate a Play promo-code installation issue with our current pilots. Applying does not enroll you or promise immediate access. We'll privately send enrollment links and codes to selected eligible volunteers once the installation path is verified. Private signup: https://docs.google.com/forms/d/e/1FAIpQLScnyAmGDGqX3VZzzsVVBdQWayD18TWPCUjxGcYWBQ0BzChdZA/viewform Please enter r/googlepixelwatch in the optional “Where did you hear about this test?” field, or name the friend/community that forwarded this invitation. Don't post your email or a code in comments. Screenshots below show the two faces. Thanks for helping us test on real Pixel watches. submitted by /u/BigSkyStudio [link] [comentarios]",
+      "created_at": "2026-10-07T19:49:34+00:00",
+      "published_at": "2026-10-07T19:49:34+00:00",
+      "author": "/u/BigSkyStudio",
       "models": [
-        "Charge 6"
-      ],
-      "categories": [
-        "pantalla",
-        "sincronizacion"
-      ],
-      "primary_category": "sincronizacion",
-      "severity": null,
-      "sentiment": "mixto",
-      "polarity": "revisar",
-      "polarity_label": "Revisar",
-      "language": "en",
-      "language_label": "Inglés",
-      "badges": [
-        "revisar",
-        "confianza 22%"
-      ],
-      "star_rating": null,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "reason": "revisar",
-      "meta": {},
-      "confidence": 0.22
-    },
-    {
-      "id": "ff4d805412519668",
-      "source": "reddit",
-      "source_kind": "reddit",
-      "source_label": "Reddit r/fitbit",
-      "url": "https://www.reddit.com/r/fitbit/comments/1x1c0ft/question_regarding_charging_and_battery_life/",
-      "title": "Question regarding charging and battery life?",
-      "text": "submitted by /u/Kr4tos_23 [link] [comentarios]",
-      "created_at": "2026-10-09T04:28:47+00:00",
-      "published_at": "2026-10-09T04:28:47+00:00",
-      "author": "/u/Kr4tos_23",
-      "models": [],
-      "categories": [
-        "bateria",
-        "carga"
-      ],
-      "primary_category": "bateria",
-      "severity": null,
-      "sentiment": "mixto",
-      "polarity": "revisar",
-      "polarity_label": "Revisar",
-      "language": "en",
-      "language_label": "Inglés",
-      "badges": [
-        "revisar",
-        "confianza 0%"
-      ],
-      "star_rating": null,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "reason": "revisar",
-      "meta": {},
-      "confidence": 0.0
-    },
-    {
-      "id": "762eb945277cd67a",
-      "source": "reddit",
-      "source_kind": "reddit",
-      "source_label": "Reddit (búsqueda Fitbit)",
-      "url": "https://www.reddit.com/r/FitnessTrackers/comments/1x1hjxl/fitbit_air_mini_review/",
-      "title": "Fitbit Air - Mini review",
-      "text": "I asked around here and ended up with a Fitbit Air. I'm happy with it so far. I don't like having anything on my hands and arms while I sleep but this is so lightweight that it doesn't bother me. Its been tracking my sleep and heart rate quite well. I haven't gotten a workout in since Wednesday (I got it then) so I don't know about its tracking abilities for that. But I mainly got it for sleep and heart rate monitoring so I'm not too worried about that. I'd recommend it to anyone wanting it for similar purposes. submitted by /u/jetfuelhuffer to r/FitnessTrackers [link] [comentarios]",
-      "created_at": "2026-10-09T10:12:14+00:00",
-      "published_at": "2026-10-09T10:12:14+00:00",
-      "author": "/u/jetfuelhuffer",
-      "models": [
-        "Fitbit Air"
-      ],
-      "categories": [
-        "ritmo_cardiaco"
-      ],
-      "primary_category": "ritmo_cardiaco",
-      "severity": null,
-      "sentiment": "positivo",
-      "polarity": "buena",
-      "polarity_label": "Buena noticia",
-      "language": "en",
-      "language_label": "Inglés",
-      "badges": [
-        "positivo",
-        "buena noticia"
-      ],
-      "star_rating": null,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "reason": "buena_noticia",
-      "meta": {},
-      "confidence": 0.22
-    },
-    {
-      "id": "91594747370442d9",
-      "source": "reddit",
-      "source_kind": "reddit",
-      "source_label": "Reddit (búsqueda Fitbit)",
-      "url": "https://www.reddit.com/r/FitbitAir/comments/1x1hbu8/is_my_fitbit_broken/",
-      "title": "Is my Fitbit broken ???",
-      "text": "Over the last couple weeks it’s been tracking my calories and showing me crazy high calories burned what’s going on ?? submitted by /u/LessExchange8005 to r/FitbitAir [link] [comentarios]",
-      "created_at": "2026-10-09T09:59:17+00:00",
-      "published_at": "2026-10-09T09:59:17+00:00",
-      "author": "/u/LessExchange8005",
-      "models": [
-        "Fitbit Air"
-      ],
-      "categories": [
-        "calidad"
-      ],
-      "primary_category": "calidad",
-      "severity": "baja",
-      "sentiment": "negativo",
-      "polarity": "mala",
-      "polarity_label": "Mala noticia",
-      "language": "en",
-      "language_label": "Inglés",
-      "badges": [
-        "gravedad baja",
-        "confianza 74%"
-      ],
-      "star_rating": null,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "reason": "incidencia",
-      "meta": {},
-      "confidence": 0.74
-    },
-    {
-      "id": "36bdf9f42a0a8d0b",
-      "source": "reddit",
-      "source_kind": "reddit",
-      "source_label": "Reddit (búsqueda Fitbit)",
-      "url": "https://www.reddit.com/r/fitbit/comments/1x1bnxg/has_the_charge_6_been_updated_to_improve_sleep/",
-      "title": "Has the Charge 6 been updated to improve sleep and automatic exercise tracking like the Fitbit Air?",
-      "text": "My main concern is tracking quality. From what I’ve seen, a lot of people seem to think the Fitbit Air has better sleep detection, and it also has newer automatic exercise detection. Has the Charge 6 received firmware/software updates that improved: sleep tracking automatic exercise detection general workout tracking accuracy? From what I understand, the Charge 6 and Fitbit Air share quite a few sensors, while the Charge 6 actually has some additional sensors/features. Please correct me if I’m wrong. For context, I play tennis twice a week, pickleball once a week, and go to the gym around 5 days a week, so good exercise detection is pretty important to me. I was originally planning to buy the Fitbit Air, but I suddenly found a good deal on the Charge 6 and now I’m reconsidering. Would you still choose the Air for the newer tracking algorithms, or is the Charge 6 the better buy if it’s cheaper? submitted by /u/Shoddy_Peanut586 to r/fitbit [link] [comentarios]",
-      "created_at": "2026-10-09T04:09:25+00:00",
-      "published_at": "2026-10-09T04:09:25+00:00",
-      "author": "/u/Shoddy_Peanut586",
-      "models": [
-        "Fitbit Air",
-        "Charge 6"
-      ],
-      "categories": [
-        "calidad",
-        "software"
-      ],
-      "primary_category": "software",
-      "severity": null,
-      "sentiment": "positivo",
-      "polarity": "buena",
-      "polarity_label": "Buena noticia",
-      "language": "en",
-      "language_label": "Inglés",
-      "badges": [
-        "positivo",
-        "buena noticia"
-      ],
-      "star_rating": null,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "reason": "buena_noticia",
-      "meta": {},
-      "confidence": 0.22
-    },
-    {
-      "id": "2b91f01a9d31b6c2",
-      "source": "reddit",
-      "source_kind": "reddit",
-      "source_label": "Reddit (búsqueda Fitbit)",
-      "url": "https://www.reddit.com/r/FitbitAir_India/comments/1x1asvi/best_option_for_hybrid_training/",
-      "title": "Best Option for hybrid training ?🤔",
-      "text": "Confused between Fitbit Air, Galaxy Watch 8, and Garmin Forerunner. My training includes gym/strength training, badminton, pickleball, and swimming. Looking for accurate HR tracking, sleep & recovery insights, training load, and good battery life. Which would you recommend for hybrid training and multiple sports? Is Garmin worth it over Samsung/Fitbit? Would love feedback from real users! View Poll submitted by /u/killr_gaming_ to r/FitbitAir_India [link] [comentarios]",
-      "created_at": "2026-10-09T03:23:16+00:00",
-      "published_at": "2026-10-09T03:23:16+00:00",
-      "author": "/u/killr_gaming_",
-      "models": [
-        "Fitbit Air"
+        "Pixel Watch"
       ],
       "categories": [
         "bateria"
-      ],
-      "primary_category": "bateria",
-      "severity": null,
-      "sentiment": "positivo",
-      "polarity": "buena",
-      "polarity_label": "Buena noticia",
-      "language": "en",
-      "language_label": "Inglés",
-      "badges": [
-        "positivo",
-        "buena noticia"
-      ],
-      "star_rating": null,
-      "engagement": {
-        "score": null,
-        "comments": null,
-        "views": null,
-        "label": null
-      },
-      "engagement_label": null,
-      "reason": "buena_noticia",
-      "meta": {},
-      "confidence": 0.22
-    },
-    {
-      "id": "f32d3bcd3e79c23f",
-      "source": "reddit",
-      "source_kind": "reddit",
-      "source_label": "Reddit (búsqueda Fitbit)",
-      "url": "https://www.reddit.com/r/FitbitAir/comments/1x19cdw/battery_life_on_fitbit_air/",
-      "title": "Battery life on fitbit air",
-      "text": "I got my fitbit previous Sunday and today on Friday it is at 10%. Is it normal to have a 5 day battery life, or is there an issue? as I have seen people get like 7 days exactly. Please help me on this, Note: I keep my bluetooth on and it is connected 24*7 to my phone (it syncs data when I open the app) and I have used alarm on my fitbit air as well (in the morning). submitted by /u/Important-Roof6242 to r/FitbitAir [link] [comentarios]",
-      "created_at": "2026-10-09T02:08:07+00:00",
-      "published_at": "2026-10-09T02:08:07+00:00",
-      "author": "/u/Important-Roof6242",
-      "models": [
-        "Fitbit Air"
-      ],
-      "categories": [
-        "bateria",
-        "sincronizacion"
       ],
       "primary_category": "bateria",
       "severity": null,
