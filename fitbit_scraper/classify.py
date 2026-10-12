@@ -426,9 +426,16 @@ def classify(
         if polarity == "revisar" and (migration or _hits(title_low, NEGATIVE_CUES)):
             polarity = "mala"
             reason = "incidencia"
-    elif brand_hit and models:
-        # Named Fitbit/Pixel product in the title (review, TikTok, etc.) even if
-        # the post is not a bug report.
+    elif brand_hit and models and (
+        title_def
+        or title_neg
+        or title_pos
+        or comparison
+        or _hits(title_low, REVIEW_CUES)
+        or _hits(title_low, MIXED_CUES)
+        or news_like
+    ):
+        # Named product plus a review / comparison / issue — not a launch blurb.
         primary = "opinion"
         categories = ["opinion"]
         reason = (
@@ -470,7 +477,18 @@ def classify(
                 and (cat_scores or pos or neg or star_rating is not None or title_def or migration)
             )
             or (brand_hit and cat_scores)
-            or (brand_hit and models)
+            or (
+                brand_hit
+                and models
+                and (
+                    title_def
+                    or title_neg
+                    or title_pos
+                    or comparison
+                    or _hits(title_low, REVIEW_CUES)
+                    or news_like
+                )
+            )
         )
         if not keep:
             reason = "sin_senal"

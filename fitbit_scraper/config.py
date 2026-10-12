@@ -364,14 +364,21 @@ LAUNCH_CUES = [
     "reinventing the old pebble", "lanza fitbit", "anuncia fitbit",
     "wearable strategy", "screenless fitness tracker", "officially rebooting",
     "pulsera inteligente sin pantalla",
+    "launches in india", "launches in 🇮🇳", "coming to india", "has launched",
+    "officially launched", "officially confirmed to launch", "is getting a",
+    "getting a shiny", "metal mesh", "classy new look", "arrives to bridge",
+    "sits between", "is here, and it", "priced at ₹", "priced at rs",
+    "available for sale starting", "flipkart",
 ]
 
 SHOPPING_CUES = [
     "best fitbit for", "top 5 best fitbit", "top 6 best fitbit",
     "the best fitbit 20", "best fitbit 2026", "what should i buy",
     "which one should i buy", "aliexpress bands", "ali bands",
-    "10$ aliexpress",     "best fitbit charge alternatives",
+    "10$ aliexpress", "aliexpress", "best fitbit charge alternatives",
     "consiglio di acquisto", "should you buy", "which screenless",
+    "which to buy", "worth your money", "menor precio", "cashback",
+    "which should you choose", "cuál comprar", "qual vale mais",
 ]
 
 OFFTOPIC_PRODUCT_CUES = [
@@ -381,6 +388,8 @@ OFFTOPIC_PRODUCT_CUES = [
     "i built my own: one dashboard", "i built a free android dashboard",
     "chromecast", "framework laptop", "oneplus watch", "oneplus ace",
     "sbi upi", "delhi internet", "giving up on smart rings",
+    "mrbeast", "photoscanner", "monopolies anymore", "multi-year google deal",
+    "bitesize", "i built an ai calorie",
 ]
 
 # Titles with several " | " sections are TV/news roundup dumps, not Fitbit posts.
@@ -419,7 +428,8 @@ OPEN_DEFECT_CUES = [
 REVIEW_CUES = [
     "review", "reviewed", "reseña", "resena", "unboxing", "hands-on", "hands on",
     "first look", "primeras impresiones", "vale la pena", "worth it",
-    "test de la", "im test", "recensione",
+    "test de la", "im test", "recensione", "after a month", "after 30 days",
+    "i tested", "i wore", "days later", "hands-on review",
 ]
 
 MIXED_CUES = [

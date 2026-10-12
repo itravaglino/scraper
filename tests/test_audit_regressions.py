@@ -126,6 +126,23 @@ class FalsePositiveDrops(unittest.TestCase):
         )
         self.assertFalse(info["keep"])
 
+    def test_mrbeast_promo_dropped(self):
+        info = classify(
+            "MrBeast will try to survive using Gemini and Fitbit Air in deal with Google",
+            "Multi-year Google deal featuring Gemini, Google Health, and the Fitbit Air.",
+            source_scoped=False,
+        )
+        self.assertFalse(info["keep"])
+
+    def test_photoscanner_passing_mention_dropped(self):
+        info = classify(
+            "Google's AI photoscanner can determine body fat through selfies",
+            "Fitbit Sense 2 was used to measure BIA on the wrist as a baseline.",
+            source_scoped=False,
+            url="https://arxiv.org/abs/2603.27017",
+        )
+        self.assertFalse(info["keep"])
+
     def test_now_available_india_is_launch(self):
         info = classify(
             "Google Fitbit Air is now available in India!",

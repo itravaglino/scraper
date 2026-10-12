@@ -295,6 +295,14 @@ def is_fitbit_subject(
 
     if not has_fitbit:
         return False, "sin_sujeto_fitbit"
+    # Unscoped news/HN: a Fitbit mention only in the body is a passing comment.
+    if (
+        not _FITBIT_SUBJECT.search(title)
+        and not _fitbit_models(title)
+        and not _PIXEL_ONLY.search(title_l)
+        and not _url_is_fitbit(url)
+    ):
+        return False, "sin_sujeto_fitbit"
 
     if "wear os" in title_l and "fitbit" not in title_l and "google health" not in title_l:
         if not _fitbit_models(title):

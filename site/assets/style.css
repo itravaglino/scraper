@@ -213,6 +213,13 @@ h1 {
 .ops-chip.ok .ops-dot { background: var(--buena); }
 .ops-chip.skip .ops-dot { background: var(--media); }
 .ops-chip.bad .ops-dot { background: var(--alta); }
+.ops-chip.hits {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  padding: 2px 8px;
+  color: var(--ink);
+}
 .ops-details { margin: 8px 0; }
 .ops-details summary { cursor: pointer; color: var(--muted); font-size: 0.8rem; }
 

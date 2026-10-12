@@ -59,7 +59,7 @@ Manual inspection of the 90-day scrape: a few kept and dropped titles per source
 ### dropped
 - `otra_marca` Show HN: Hamilton – a no-internet Android health dashboard, named after my dog  (Hacker News comentarios)
 
-## reddit (821 items, 801 keep / 20 drop)
+## reddit (821 items, 790 keep / 31 drop)
 
 ### kept
 - [mala] Fitbit Air strap fabric frayed out. It's been only 3 months. Is it normal?  (Reddit r/fitbit new)
@@ -72,12 +72,12 @@ Manual inspection of the 90-day scrape: a few kept and dropped titles per source
 ### dropped
 - `irrelevante` Peloton was connected...now not.  (Reddit (búsqueda Fitbit))
 - `fuera_de_marca` Active Band broken pin after 3 months  (Reddit (búsqueda Fitbit))
+- `irrelevante` Solution for regaining battery life since the GH update  (Reddit (búsqueda Fitbit))
 - `fuera_de_marca` End of an era  (Reddit (búsqueda Fitbit))
 - `promo` Is this a steal?  (Reddit r/fitbit new)
 - `spinout_competidor` I built a free Android dashboard that turns your Fitbit data into sleep, recovery and movement scores, on your phone (beta, lifetime Pro for testers)  (Reddit r/fitbit new)
-- `pixel_watch_only` Pixel Watch owners: 21-day test of two watch faces (free access if selected)  (Reddit r/fitbit new)
 
-## support (153 items, 111 keep / 42 drop)
+## support (153 items, 110 keep / 43 drop)
 
 ### kept
 - [mala] Battery draining in under 24 hours since Google ...  (Google Health Community)
@@ -95,15 +95,14 @@ Manual inspection of the 90-day scrape: a few kept and dropped titles per source
 - `lanzamiento` Google’s Fitbit Edge Debuts a Replaceable Battery—and Brings Back the Screen - WIRED  (community.fitbit.com)
 - `lanzamiento` Google Finally Made Another Fitbit With a Screen - Lifehacker  (community.fitbit.com)
 
-## tiktok (3 items, 3 keep / 0 drop)
+## tiktok (3 items, 2 keep / 1 drop)
 
 ### kept
 - [mala] Me fue terrible con la Nueva Fitbit Air de Google #fitbitair #google #fitness #tecnologia #nestips - TikTok  (TikTok ES)
 - [mala] Google Health Lleva tus Datos de Fitbit a Apple Salud en iPhone 🏃 ¡Por fin! Los datos de tu Fitbit ahora llegan directo a Apple Salud Durante años, los usuarios  (TikTok ES)
-- [revisar] - Google Fitbit Air ⌚ يُعد Google Fitbit Air جهاز تتبع صحي فائق الخفة وبدون شاشة، صُمم لمراقبة مؤشرات الصحة على مدار الساعة طوال أيام الأسبوع دون تشتيت الانتباه  (TikTok ES)
 
 ### dropped
-- *(none)*
+- `irrelevante` - Google Fitbit Air ⌚ يُعد Google Fitbit Air جهاز تتبع صحي فائق الخفة وبدون شاشة، صُمم لمراقبة مؤشرات الصحة على مدار الساعة طوال أيام الأسبوع دون تشتيت الانتباه  (TikTok ES)
 
 ## x (7 items, 4 keep / 3 drop)
 

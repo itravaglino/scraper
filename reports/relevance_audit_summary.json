@@ -1,11 +1,11 @@
 {
   "total": 1065,
-  "keep": 980,
-  "drop": 85,
+  "keep": 967,
+  "drop": 98,
   "drop_reasons": {
-    "lanzamiento": 35,
-    "irrelevante": 18,
-    "promo": 13,
+    "lanzamiento": 36,
+    "irrelevante": 21,
+    "promo": 14,
     "otra_marca": 5,
     "spinout_competidor": 4,
     "google_no_wearable": 1,
@@ -13,6 +13,7 @@
     "pixel_watch_only": 4,
     "sin_senal": 1,
     "whoop": 1,
+    "sin_sujeto_fitbit": 8,
     "megathread_ruido": 1
   },
   "old_polarity": {
@@ -21,9 +22,9 @@
     "revisar": 695
   },
   "suggested_polarity_kept": {
-    "mala": 409,
-    "revisar": 479,
-    "buena": 92
+    "mala": 406,
+    "revisar": 470,
+    "buena": 91
   },
   "by_source_count": 59
 }

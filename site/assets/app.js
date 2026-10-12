@@ -10,7 +10,10 @@
     web: "Web / foros",
     news: "Noticias",
     itunes: "App Store",
+    playstore: "Play Store",
     hackernews: "Hacker News",
+    x: "X",
+    support: "Soporte",
   };
   const POL_TITLE = {
     mala: "Casos negativos",
@@ -264,11 +267,28 @@
       ? latencies.slice().sort((a, b) => a - b)[Math.floor(latencies.length / 2)]
       : null;
     const ops = $("ops-strip");
+    const kindHits = {};
+    for (const s of src) {
+      const k = s.kind || "web";
+      kindHits[k] = (kindHits[k] || 0) + (Number(s.kept) || 0);
+    }
+    const hitChips = Object.keys(KIND_ES)
+      .filter((k) => (kindHits[k] || 0) > 0)
+      .map(
+        (k) =>
+          `<span class="ops-chip hits" title="Ítems conservados de ${escapeHtml(KIND_ES[k])}">${escapeHtml(KIND_ES[k])} ${kindHits[k]}</span>`
+      )
+      .join("");
+    const extraKinds = Object.keys(kindHits)
+      .filter((k) => !KIND_ES[k] && kindHits[k] > 0)
+      .map((k) => `<span class="ops-chip hits">${escapeHtml(k)} ${kindHits[k]}</span>`)
+      .join("");
     if (ops) {
       ops.innerHTML = `
         <span class="ops-chip ok"><i class="ops-dot"></i>${nOk} ok</span>
         <span class="ops-chip skip"><i class="ops-dot"></i>${nLim} limitado</span>
         <span class="ops-chip bad"><i class="ops-dot"></i>${nErr} error</span>
+        ${hitChips}${extraKinds}
         <span>ventana scrape ${data.scrape_window_days || "—"} d</span>
         <span>${escapeHtml(zone)}</span>
         <span>latencia mediana ${p50 == null ? "n/d" : p50 + " ms"}</span>`;

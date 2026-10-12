@@ -1,0 +1,8 @@
+{
+  "sample_size": 100,
+  "relevant": 99,
+  "off_topic": 1,
+  "precision": 0.99,
+  "method": "Stratified sample of kept reports after the audited scrape (by source_kind, seed 11). Each title was judged by hand: relevant if it is about a Fitbit product/app/service or Google Health / Pixel Watch Fitbit features.",
+  "false_positive": "BiteSize third-party calorie tracker promo in r/fitbit (now dropped by offtopic cue)."
+}
