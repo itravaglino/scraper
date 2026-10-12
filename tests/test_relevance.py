@@ -91,6 +91,39 @@ class OffTopicTests(unittest.TestCase):
         )
         self.assertTrue(info["keep"])
 
+    def test_pixel_watch_only_dropped(self):
+        info = classify(
+            "Pixel Watch 3 hands-on review",
+            "Google's latest Pixel Watch looks great on the wrist. I love the GPS.",
+            source_scoped=False,
+        )
+        self.assertFalse(info["keep"])
+
+    def test_whoop_dropped_even_with_fitbit(self):
+        info = classify(
+            "After 30 days wearing the $100 Fitbit Air alongside my Whoop MG, I have the final verdict.",
+            "I wore both. Whoop overreports deep sleep.",
+            source_scoped=False,
+        )
+        self.assertFalse(info["keep"])
+        self.assertEqual(info["reason"], "whoop")
+
+    def test_deal_dropped(self):
+        info = classify(
+            "Fitbit Charge 6 40% off at Amazon today",
+            "Price drop on the Charge 6. Coupon inside.",
+            source_scoped=False,
+        )
+        self.assertFalse(info["keep"])
+
+    def test_band_promo_dropped(self):
+        info = classify(
+            "MEGATHREAD: Fitbit Air Bands, 3rd Party Bands, etc",
+            "Share compatible bands you like.",
+            source_scoped=True,
+        )
+        self.assertFalse(info["keep"])
+
 
 if __name__ == "__main__":
     unittest.main()

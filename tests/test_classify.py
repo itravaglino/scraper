@@ -65,8 +65,8 @@ class ClassifyTests(unittest.TestCase):
 
     def test_pixel_watch_praise_is_buena_not_severity(self):
         info = classify(
-            "Pixel Watch 3 hands-on review",
-            "Google's latest Pixel Watch looks great on the wrist. I love the GPS.",
+            "Fitbit app on Pixel Watch 3 hands-on review",
+            "Google Health on Pixel Watch looks great on the wrist. I love the GPS.",
             source_scoped=False,
         )
         self.assertTrue(info["keep"])

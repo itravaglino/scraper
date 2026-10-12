@@ -83,10 +83,8 @@ class GoldFalsePositiveTests(unittest.TestCase):
             "I broke this down into four categories: design, sleep, fitness, and health.",
             source_scoped=False,
         )
+        self.assertFalse(info["keep"])
         _not_mala_alta(info)
-        self.assertNotEqual(info.get("severity"), "alta")
-        if info.get("keep"):
-            self.assertNotEqual(info.get("polarity"), "mala")
 
     def test_battery_replacement_tutorial_not_alta(self):
         info = classify(

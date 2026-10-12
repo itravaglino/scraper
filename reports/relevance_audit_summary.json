@@ -1,0 +1,30 @@
+{
+  "total": 1065,
+  "keep": 967,
+  "drop": 98,
+  "drop_reasons": {
+    "lanzamiento": 36,
+    "irrelevante": 21,
+    "promo": 14,
+    "otra_marca": 5,
+    "spinout_competidor": 4,
+    "google_no_wearable": 1,
+    "fuera_de_marca": 2,
+    "pixel_watch_only": 4,
+    "sin_senal": 1,
+    "whoop": 1,
+    "sin_sujeto_fitbit": 8,
+    "megathread_ruido": 1
+  },
+  "old_polarity": {
+    "mala": 247,
+    "buena": 123,
+    "revisar": 695
+  },
+  "suggested_polarity_kept": {
+    "mala": 406,
+    "revisar": 470,
+    "buena": 91
+  },
+  "by_source_count": 59
+}

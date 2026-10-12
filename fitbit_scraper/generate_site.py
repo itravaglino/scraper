@@ -17,10 +17,49 @@ GENERATED_MARK = "__GENERATED_AT__"
 STAMP_TEXT_MARK = "__STAMP_TEXT__"
 WINDOW_MARK = "__WINDOW_DAYS__"
 
+_REPORT_KEEP = (
+    "id", "title", "url", "created_at", "published_at", "source",
+    "source_kind", "models", "severity", "language", "language_label",
+    "engagement_label", "star_rating",
+)
+
+
+def _slim_cluster(cluster: dict) -> dict:
+    out = {k: v for k, v in cluster.items() if k not in {"reports", "quotes"}}
+    out["quotes"] = (cluster.get("quotes") or [])[:3]
+    out["reports"] = [
+        {k: r.get(k) for k in _REPORT_KEEP if r.get(k) not in (None, "")}
+        for r in (cluster.get("reports") or [])[:40]
+    ]
+    return out
+
 
 def _dashboard_payload(latest: dict) -> dict:
-    """Inline copy used when fetch('data/latest.json') fails on GitHub Pages."""
-    return {k: v for k, v in latest.items() if k != "reports"}
+    """Dashboard JSON: clusters without report bodies. Drops the raw reports list."""
+    out = {k: v for k, v in latest.items() if k != "reports"}
+    out["clusters"] = [_slim_cluster(c) for c in (latest.get("clusters") or [])]
+    return out
+
+
+def _seed_payload(latest: dict) -> dict:
+    """Tiny first-paint payload. JS replaces it with data/latest.json."""
+    keys = (
+        "generated_at", "generated_at_utc", "timezone", "run_id",
+        "scrape_window_days", "github_repo", "github_workflow",
+        "run_workflow_url", "summary",
+    )
+    out = {k: latest[k] for k in keys if k in latest}
+    out["sources"] = [
+        {
+            k: s.get(k)
+            for k in ("id", "label", "kind", "ok", "state", "kept", "fetched", "error", "latency_ms")
+            if s.get(k) is not None
+        }
+        for s in (latest.get("sources") or [])
+    ]
+    mala = [c for c in (latest.get("clusters") or []) if (c.get("polarity") or "") == "mala"][:8]
+    out["clusters"] = [_slim_cluster(c) for c in mala]
+    return out
 
 
 def _parse_iso(value: str | None) -> datetime | None:
@@ -123,12 +162,12 @@ def generate_site(latest: dict, dest: Path | None = None) -> Path:
             shutil.copy2(item, target)
     data_dir = dest / "data"
     data_dir.mkdir(exist_ok=True)
-    payload = json.dumps(latest, ensure_ascii=False, indent=2)
+    payload = json.dumps(_dashboard_payload(latest), ensure_ascii=False, separators=(",", ":"))
     (data_dir / "latest.json").write_text(payload, encoding="utf-8")
 
     index = dest / "index.html"
     html_text = index.read_text(encoding="utf-8")
-    seed = json.dumps(_dashboard_payload(latest), ensure_ascii=False, separators=(",", ":"))
+    seed = json.dumps(_seed_payload(latest), ensure_ascii=False, separators=(",", ":"))
     seed = seed.replace("<", "\\u003c")
     if SEED_MARK not in html_text:
         raise RuntimeError("index.html missing seed placeholder")

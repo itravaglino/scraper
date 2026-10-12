@@ -95,10 +95,13 @@
 
   function inRange(iso, rangeDays, nowMs) {
     nowMs = nowMs || Date.now();
-    if (rangeDays == null) return !!iso && !Number.isNaN(Date.parse(iso));
     if (!iso) return false;
     var t = Date.parse(iso);
     if (Number.isNaN(t)) return false;
+    if (t > nowMs + 86400000) return false;
+    var y = new Date(t).getUTCFullYear();
+    if (y < 2015 || y > 2030) return false;
+    if (rangeDays == null) return true;
     return nowMs - t <= rangeDays * 86400000;
   }
 

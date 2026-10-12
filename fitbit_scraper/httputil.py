@@ -68,21 +68,24 @@ def _note_reddit_429(wait_sec: float) -> None:
     _reddit_cooldown_until = max(_reddit_cooldown_until, time.monotonic() + wait_sec)
 
 
-def _429_wait(exc: urllib.error.HTTPError, attempt: int) -> float:
+def _429_wait(exc: urllib.error.HTTPError, attempt: int, reddit: bool) -> float:
     header = None
     if exc.headers:
         header = exc.headers.get("Retry-After")
     parsed = parse_retry_after(header)
     backoff = REDDIT_429_BACKOFF_SEC * attempt
     wait = parsed if parsed is not None else backoff
-    return min(max(wait, 8.0), REDDIT_429_MAX_WAIT_SEC)
+    floor = 8.0 if reddit else 3.0
+    cap = REDDIT_429_MAX_WAIT_SEC if reddit else 40.0
+    return min(max(wait, floor), cap)
 
 
 def fetch_bytes(url: str, accept: str = "*/*") -> tuple[Optional[bytes], Optional[str]]:
     """Return (body, error). Never raises for network/HTTP failures.
 
     Reddit is strictly serial (one in-flight request). 429 waits on Retry-After
-    or exponential backoff, then retries once; the next Reddit call also cools down.
+    or exponential backoff and retries up to REQUEST_RETRIES; the next Reddit
+    call also cools down so later jobs are not skipped.
     """
     headers = {
         "User-Agent": USER_AGENT,
@@ -104,12 +107,17 @@ def fetch_bytes(url: str, accept: str = "*/*") -> tuple[Optional[bytes], Optiona
             except urllib.error.HTTPError as exc:
                 last_error = f"HTTP {exc.code} {exc.reason}"
                 if exc.code == 429:
-                    wait = _429_wait(exc, attempt)
+                    wait = _429_wait(exc, attempt, reddit)
                     if reddit:
                         _note_reddit_429(wait)
-                    # One retry after backoff, then skip this source.
-                    if attempt < 2:
-                        log.info("HTTP 429 on %s — waiting %.0fs then one retry", url, wait)
+                    if attempt < REQUEST_RETRIES:
+                        log.info(
+                            "HTTP 429 on %s — waiting %.0fs then retry %s/%s",
+                            url,
+                            wait,
+                            attempt + 1,
+                            REQUEST_RETRIES,
+                        )
                         time.sleep(wait)
                         continue
                     break

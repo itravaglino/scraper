@@ -77,14 +77,53 @@ def _dedupe(reports: list[dict]) -> list[dict]:
     return [by_url[k] for k in ordered]
 
 
+def _community_url(url: str) -> bool:
+    raw = (url or "").lower()
+    return any(
+        n in raw
+        for n in (
+            "support.google.com/googlehealth",
+            "support.google.com",
+            "community.fitbit.com",
+            "/r/fitbit",
+            "/r/googlehealth",
+            "/r/fitbitair",
+            "itunes.apple.com",
+            "apps.apple.com",
+            "play.google.com/store/apps/details",
+        )
+    )
+
+
+def _google_help_item(title: str, url: str = "") -> bool:
+    """Google News wraps support.google.com threads as news.google.com RSS URLs."""
+    title_l = (title or "").lower()
+    url_l = (url or "").lower()
+    if "google help" in title_l:
+        return True
+    if "support.google.com" in url_l:
+        return True
+    return False
+
+
 def _community_scoped(report: dict) -> bool:
     label = (report.get("source_label") or "").lower()
     kind = report.get("source_kind") or report.get("source")
-    if kind == "itunes":
+    url = report.get("url") or ""
+    title = report.get("title") or ""
+    if kind in {"itunes", "playstore"}:
         return True
-    if "r/fitbit" in label:
-        return True
-    if "googlepixelwatch" in label:
+    if kind == "support":
+        return _community_url(url) or _google_help_item(title, url)
+    if any(
+        tag in label
+        for tag in (
+            "r/fitbit",
+            "r/googlehealth",
+            "r/fitbitair",
+            "google health community",
+        )
+    ):
         return True
     return False
 

@@ -16,6 +16,34 @@ _WS = re.compile(r"\s+")
 _WORD = re.compile(r"[a-záéíóúüñ0-9]{4,}", re.I)
 
 
+_APOS = str.maketrans({
+    "\u2018": "'",
+    "\u2019": "'",
+    "\u201b": "'",
+    "\u00b4": "'",
+    "`": "'",
+    "\u201c": '"',
+    "\u201d": '"',
+})
+_REDDIT_FOOTER = re.compile(
+    r"(submitted by\s+\S+|use this thread if you have a problem|"
+    r"product recall question|comments?\s*[:\-]?\s*\d+|points?\s+\d+|"
+    r"\[link\]|\[comments?\]|\[comenta[^\]]*\])",
+    re.I,
+)
+
+
+def fold_quotes(text: str) -> str:
+    """Normalize curly quotes so won't / isn’t match the same cues."""
+    return (text or "").translate(_APOS)
+
+
+def strip_reddit_footer(text: str) -> str:
+    text = text or ""
+    text = re.split(r"\bsubmitted by\b", text, maxsplit=1, flags=re.I)[0]
+    return _REDDIT_FOOTER.sub(" ", text)
+
+
 def strip_html(text: str) -> str:
     if not text:
         return ""
