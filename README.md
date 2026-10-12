@@ -37,14 +37,16 @@ Solo fuentes **públicas**, sin login y sin API keys. Búsquedas en español, in
 
 | Fuente | Cómo |
 | --- | --- |
-| Reddit `r/fitbit`, `r/GooglePixelWatch`, búsqueda global Fitbit | RSS público, 3 llamadas en serie |
+| Reddit `r/fitbit` (new + top semana/mes, paginado), `r/GoogleHealthFitbit`, `r/GoogleHealthApp`, `r/FitbitAir`; Pixel Watch filtrado a Fitbit/Google Health; búsquedas por sync/batería/crash/migración/modelo | RSS público, en serie, pausa 8s, reintento con backoff en HTTP 429 |
+| RSS directo | The Verge, Android Authority, Android Police, 9to5Google, TechRadar, gadgetsandwearables, Wareable (filtrado a Fitbit / Google Health) |
+| Soporte | `support.google.com/googlehealth/thread` (HTML + Google News) y community.fitbit.com |
+| X / Twitter | RSS bridge si responde; si no, Google News `site:x.com` |
 | YouTube, TikTok, Instagram | RSS de búsqueda pública (`site:`), sin login ni APIs no oficiales |
-| Web / foros | RSS de búsqueda pública |
-| App Store | RSS de reseñas de *Google Health (Fitbit)* y *Fitbit Ace* (varios países) |
-| Google News | RSS localizado (EN, ES, PT, FR, DE, IT, JA) |
-| Hacker News | API pública de Algolia |
+| App Store y Play Store | Reseñas de *Google Health (Fitbit)* y *Fitbit Ace*, más páginas y países |
+| Google News / Bing News | Consultas por modelo y problema (EN, ES, PT, FR, DE, IT, JA) + outages |
+| Hacker News | API pública de Algolia (stories y comentarios) |
 
-Si una fuente falla (403/429), se marca **limitado** (no un RuntimeError) y el resto del reporte se genera igual. Reddit se consulta en serie (pocas feeds, pausa 8s, un reintento con Retry-After).
+Si una fuente falla (403/429), se marca **limitado** (no un RuntimeError) y el resto del reporte se genera igual. Reddit se consulta en serie (pausa 8s, varios reintentos con Retry-After); no se omiten las búsquedas restantes. El strip de salud muestra ítems conservados por tipo de fuente.
 
 **No** se entra a cuentas, **no** se evaden paywalls y **no** se piden secretos para v1.
 

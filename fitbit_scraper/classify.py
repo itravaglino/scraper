@@ -22,6 +22,7 @@ from .config import (
     FIX_HEADLINE_CUES,
     LANG_LABELS_ES,
     LANG_MARKERS,
+    MIGRATION_CUES,
     MIXED_CUES,
     NEGATIVE_CUES,
     NEWS_ISSUE_CUES,
@@ -143,6 +144,7 @@ def _title_defect(title_low: str) -> bool:
         _hits(title_low, OPEN_DEFECT_CUES) > 0
         or _hits(title_low, STRONG_DEFECT_CUES) > 0
         or _hits(title_low, SEVERITY_HIGH) > 0
+        or _hits(title_low, MIGRATION_CUES) > 0
     )
 
 
@@ -178,6 +180,11 @@ def _decide_polarity(
         return "buena"
     if title_def and not title_fix:
         return "mala"
+    # Negative phrasing in the headline beats praise in the body.
+    if title_neg and not title_fix:
+        return "mala"
+    if _hits(title_low, MIGRATION_CUES) and not title_fix:
+        return "mala"
     if (comparison or tutorial) and not title_open:
         if w_pos > w_neg:
             return "buena"
@@ -188,8 +195,6 @@ def _decide_polarity(
         return "buena"
     if w_pos > w_neg:
         return "buena"
-    if title_neg >= 2 and not title_fix:
-        return "mala"
     if mixed and (w_pos or w_neg or cat_scores):
         return "revisar"
     if title_pos and title_neg:
@@ -276,7 +281,10 @@ def classify(
     title_low = title.lower()
     body_low = body.lower()
     low = f"{title_low}\n{body_low}"
-    models = detect_models(f"{title}\n{body}")
+    models = detect_models(title) or detect_models(f"{title}\n{body}")
+    if not models and re.search(r"fitbitair|/r/fitbitair", (url or "").lower()):
+        if re.search(r"\bair\b", title_low):
+            models = ["Fitbit Air"]
     lang = detect_language(f"{title}\n{body}", hint=lang_hint)
 
     on_topic, topic_reason = is_fitbit_subject(
@@ -321,6 +329,7 @@ def classify(
             pos_body += 1
             pos += 1
 
+    migration = _hits(title_low, MIGRATION_CUES) or _hits(body_low[:400], MIGRATION_CUES)
     news_like = (
         _weighted(title_low, body_low, NEWS_ISSUE_CUES)
         or pos
@@ -328,6 +337,7 @@ def classify(
         or neg
         or _weighted(title_low, body_low, SEVERITY_HIGH)
         or _weighted(title_low, body_low, SEVERITY_MEDIUM)
+        or migration
     )
     if not source_scoped and cat_scores and not news_like:
         cat_scores = {}
@@ -368,6 +378,17 @@ def classify(
             if polarity == "revisar"
             else ("buena_noticia" if polarity == "buena" else "incidencia")
         )
+    elif brand_hit and (news_like or migration or _hits(title_low, NEGATIVE_CUES) or title_def):
+        primary = "software"
+        categories = ["software"]
+        reason = (
+            "incidencia"
+            if polarity == "mala"
+            else ("buena_noticia" if polarity == "buena" else "revisar")
+        )
+        if polarity == "revisar" and (migration or _hits(title_low, NEGATIVE_CUES)):
+            polarity = "mala"
+            reason = "incidencia"
     else:
         return _pack(
             keep=False,
@@ -382,8 +403,10 @@ def classify(
             cat_scores
             or (star_rating is not None and star_rating <= 3)
             or title_def
+            or migration
             or _hits(title_low, NEWS_ISSUE_CUES)
             or _hits(title_low, NEGATIVE_CUES)
+            or _hits(title_low, MIGRATION_CUES)
         )
     elif polarity == "buena":
         keep = brand_hit and (

@@ -44,6 +44,12 @@ def reddit_t_param(days: int | None = None) -> str:
     return "year"
 
 
+def google_when_ops(days: int | None = None) -> str:
+    """Google News recency only. `after:` zeroes out many site: feeds."""
+    d = days if days is not None else scrape_window_days()
+    return f"when:{d}d"
+
+
 def google_date_ops(days: int | None = None) -> str:
     d = days if days is not None else scrape_window_days()
     after = window_cutoff(d).date().isoformat()

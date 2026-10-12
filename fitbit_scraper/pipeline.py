@@ -80,11 +80,17 @@ def _dedupe(reports: list[dict]) -> list[dict]:
 def _community_scoped(report: dict) -> bool:
     label = (report.get("source_label") or "").lower()
     kind = report.get("source_kind") or report.get("source")
-    if kind == "itunes":
+    if kind in {"itunes", "playstore", "support"}:
         return True
-    if "r/fitbit" in label:
-        return True
-    if "googlepixelwatch" in label:
+    if any(
+        tag in label
+        for tag in (
+            "r/fitbit",
+            "r/googlehealth",
+            "r/fitbitair",
+            "google health community",
+        )
+    ):
         return True
     return False
 

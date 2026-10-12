@@ -18,18 +18,28 @@ GITHUB_WORKFLOW_FILE = "daily.yml"
 
 # Polite crawling: one request at a time. Reddit is serial with a long gap.
 REQUEST_TIMEOUT_SEC = 25
-REQUEST_RETRIES = 3
+REQUEST_RETRIES = 4
 REQUEST_PAUSE_SEC = 1.2
 REDDIT_PAUSE_SEC = 8.0
 REDDIT_429_BACKOFF_SEC = 20.0
-REDDIT_429_MAX_WAIT_SEC = 60.0
+REDDIT_429_MAX_WAIT_SEC = 90.0
 
 # Google Health (Fitbit) iOS app — the old id 462638147 was retired.
 ITUNES_APP_IDS = {
     "462638897": "Google Health (Fitbit)",
     "1621113388": "Fitbit Ace",
 }
-ITUNES_COUNTRIES = ("us", "es", "ar", "br", "fr", "de", "it", "mx")
+ITUNES_COUNTRIES = (
+    "us", "gb", "ca", "au", "es", "ar", "mx", "br", "fr", "de", "it", "jp", "in", "nl",
+)
+ITUNES_REVIEW_PAGES = 3
+
+PLAY_APP_IDS = {
+    "com.fitbit.FitbitMobile": "Google Health (Fitbit)",
+}
+PLAY_COUNTRIES = (
+    "US", "GB", "CA", "AU", "ES", "AR", "MX", "BR", "FR", "DE", "IT", "JP", "IN", "NL",
+)
 
 SOURCE_KIND_LABELS_ES = {
     "reddit": "Reddit",
@@ -39,7 +49,10 @@ SOURCE_KIND_LABELS_ES = {
     "web": "Web / foros",
     "news": "Noticias",
     "itunes": "App Store",
+    "playstore": "Play Store",
     "hackernews": "Hacker News",
+    "x": "X",
+    "support": "Soporte",
 }
 
 LANG_LABELS_ES = {
@@ -127,6 +140,7 @@ STRONG_DEFECT_CUES = [
     "problem with the", "battery issue", "sync issue", "syncing issue",
     "won't connect", "wont connect", "won't open", "pairing fails",
     "keeps turning off", "stop sync", "stuck on screen",
+    "forced", "forcing", "headache", "hate the",
 ]
 
 COMPARISON_TITLE_CUES = [
@@ -138,6 +152,38 @@ COMPARISON_TITLE_CUES = [
 TUTORIAL_TITLE_CUES = [
     "tutorial", "step-by-step", "step by step", "how to replace",
     "replacement tutorial", "diy repair", "#shorts",
+]
+
+# Forced Fitbit → Google Health app move is in-scope (ops cares).
+MIGRATION_CUES = [
+    "forced", "forcing", "holdout", "holdouts", "workaround",
+    "google health app", "switch to google health", "moved to google health",
+    "move to google health", "moving to google health", "onto google health",
+    "pushed to google health", "retired fitbit app", "classic fitbit app",
+    "old fitbit app", "mandatory update", "end of an era",
+    "replaced the fitbit", "replacing the fitbit", "fitbit app workaround",
+    "last holdouts", "forced to switch", "forced to update",
+    "health app replaced", "migrat", "migración", "migracion",
+]
+
+DEAL_CUES = [
+    "% off", " percent off", "price drop", "deal of the", "deals of",
+    "coupon", "promo code", "on sale", "black friday", "cyber monday",
+    "amazon deal", "best buy", "discount code", "lightning deal",
+    "save $", "oferta", "rebaja", "descuento", "cupón", "cupon",
+    "preissturz", "promo ", "promotional",
+]
+
+BAND_PROMO_CUES = [
+    "compatible bands", "band collection", "buy this band",
+    "best fitbit bands", "3rd party bands", "third party bands",
+    "megathread: fitbit air bands", "milanese loop", "affiliate",
+    "unboxing bands", "new band colors", "strap collection",
+]
+
+REPAIR_AD_CUES = [
+    "repair service", "we repair", "send it in for repair",
+    "screen replacement ad", "fix your fitbit #shorts",
 ]
 
 CATEGORY_KEYWORDS: dict[str, list[str]] = {
@@ -334,7 +380,9 @@ NEGATIVE_CUES = [
     "stopped working", "failed", "failure", "falla", "fallo", "falló",
     "error", "bug", "glitch", "crash", "issue", "problem", "problema",
     "defect", "defecto", "faulty", "recall", "lawsuit", "frustrated",
-    "frustrado", "scam",
+    "frustrado", "scam", "headache", "forced", "forcing", "holdout",
+    "workaround", "bricked", "drain", "draining",
+
     # PT
     "não funciona", "nao funciona", "quebrado", "péssimo", "pessimo",
     "defeito", "falha", "ódio", "odio isso", "decepcionado", "inútil", "inutil",
@@ -382,6 +430,8 @@ NEWS_ISSUE_CUES = [
     "não funciona", "nao funciona", "non funziona",
     "arreglado", "solucionado", "corrigido", "corrigé", "behoben", "risolto",
     "故障", "不具合", "召回",
+    "forced", "forcing", "holdout", "workaround", "outage", "downdetector",
+    "headache", "hate", "bricked", "migration", "migrat",
 ]
 
 # Distinctive tokens for language detection (latin scripts).

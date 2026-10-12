@@ -72,10 +72,23 @@ class WindowTests(unittest.TestCase):
 
     def test_feed_urls_are_date_bounded(self):
         news = news_feeds()
-        self.assertGreaterEqual(len(news), 20)
-        for feed in news:
+        self.assertGreaterEqual(len(news), 30)
+        gnews = [f for f in news if "news.google.com" in f["url"]]
+        bing = [f for f in news if "bing.com" in f["url"]]
+        self.assertGreaterEqual(len(gnews), 20)
+        self.assertGreaterEqual(len(bing), 2)
+        for feed in gnews:
             self.assertTrue("when:" in feed["url"] or "when%3A" in feed["url"], feed["url"])
-            self.assertTrue("after:" in feed["url"] or "after%3A" in feed["url"], feed["url"])
+        site_feeds = [f for f in gnews if "site:" in f["url"] or "site%3A" in f["url"]]
+        self.assertTrue(site_feeds)
+        for feed in site_feeds:
+            self.assertFalse("after:" in feed["url"] or "after%3A" in feed["url"], feed["url"])
+        for feed in bing:
+            self.assertNotIn("when:", feed["url"])
+            self.assertNotIn("after:", feed["url"])
+            compact = feed["url"].lower().replace("%3d", "=")
+            self.assertIn("format=rss", compact)
+        self.assertTrue(any("googlehealth" in f["url"] for f in news))
         social = social_feeds()
         self.assertGreaterEqual(len(social), 10)
         self.assertTrue(any("youtube.com" in f["url"] for f in social))
@@ -84,15 +97,11 @@ class WindowTests(unittest.TestCase):
         for feed in social:
             self.assertTrue("when:" in feed["url"] or "when%3A" in feed["url"], feed["url"])
         reddit = reddit_feeds()
-        self.assertGreaterEqual(len(reddit), 2)
-        self.assertLessEqual(len(reddit), 4)
+        self.assertGreaterEqual(len(reddit), 12)
         self.assertTrue(any("r/fitbit" in (f.get("url") or "") for f in reddit))
         self.assertTrue(any("search.rss" in (f.get("url") or "") for f in reddit))
         for feed in reddit:
-            self.assertTrue(
-                feed["url"].endswith(".rss") or "&t=" in feed["url"] or "?t=" in feed["url"],
-                feed["url"],
-            )
+            self.assertIn(".rss", feed["url"])
         hn = hn_search_url("fitbit")
         self.assertIn("numericFilters=", hn)
         self.assertTrue("created_at_i>" in hn or "created_at_i%3E" in hn)

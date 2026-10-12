@@ -5,13 +5,32 @@ from __future__ import annotations
 import json
 import logging
 import time
+from datetime import datetime, timezone
 from typing import Any, Callable
 
 from .classify import classify
-from .config import ITUNES_APP_IDS, ITUNES_COUNTRIES
+from .config import (
+    ITUNES_APP_IDS,
+    ITUNES_COUNTRIES,
+    ITUNES_REVIEW_PAGES,
+    PLAY_APP_IDS,
+    PLAY_COUNTRIES,
+)
 from .engagement import merge_engagement, pack_engagement, parse_engagement_text
-from .feedlist import HN_QUERIES, hn_search_url, news_feeds, reddit_feeds, social_feeds
+from .feedlist import (
+    GHEALTH_SEARCHES,
+    HN_QUERIES,
+    direct_rss_feeds,
+    hn_search_url,
+    news_feeds,
+    reddit_after_token,
+    reddit_jobs,
+    reddit_listing_url,
+    social_feeds,
+    x_feeds,
+)
 from .feeds import parse_feed
+from .htmlparse import parse_google_health_threads, parse_play_reviews
 from .httputil import fetch_text
 from .textutil import parse_datetime, sha1, strip_html
 from .window import iso_in_window, parse_iso
@@ -29,7 +48,14 @@ KIND_FROM_HINTS = (
     ("reddit.com", "reddit"),
     ("itunes.apple.com", "itunes"),
     ("apps.apple.com", "itunes"),
+    ("play.google.com", "playstore"),
     ("ycombinator.com", "hackernews"),
+    ("x.com", "x"),
+    ("twitter.com", "x"),
+    ("nitter.", "x"),
+    ("xcancel.com", "x"),
+    ("support.google.com", "support"),
+    ("community.fitbit.com", "support"),
 )
 
 
@@ -153,14 +179,27 @@ def _run_source(source_id: str, label: str, fn: Callable[[], tuple[list[dict], i
 
 def _rss_pull(feed: dict, default_source: str, default_kind: str) -> Callable[[], tuple[list[dict], int]]:
     kind = feed.get("kind") or default_kind
-    scoped = bool(feed.get("scoped", kind in {"reddit", "itunes"}))
+    scoped = bool(feed.get("scoped", kind in {"reddit", "itunes", "playstore", "support"}))
     lang_hint = feed.get("lang")
+    require_subject = bool(feed.get("require_subject"))
+    fallbacks = [feed["url"]] + list(feed.get("fallbacks") or [])
 
-    def _pull(feed=feed, kind=kind, scoped=scoped, lang_hint=lang_hint):
-        xml, err = fetch_text(
-            feed["url"],
-            accept="application/atom+xml, application/rss+xml, application/xml, text/xml, */*",
-        )
+    def _pull(
+        feed=feed,
+        kind=kind,
+        scoped=scoped,
+        lang_hint=lang_hint,
+        require_subject=require_subject,
+        fallbacks=fallbacks,
+    ):
+        xml = err = None
+        for url in fallbacks:
+            xml, err = fetch_text(
+                url,
+                accept="application/atom+xml, application/rss+xml, application/xml, text/xml, */*",
+            )
+            if xml:
+                break
         if xml is None:
             raise RuntimeError(err or "sin respuesta")
         items = parse_feed(xml)
@@ -169,12 +208,18 @@ def _rss_pull(feed: dict, default_source: str, default_kind: str) -> Callable[[]
             url = item.get("url") or ""
             if url.startswith("/r/"):
                 url = "https://www.reddit.com" + url
+            title = item.get("title") or ""
+            text = item.get("text") or ""
+            if require_subject:
+                blob = f"{title}\n{text}\n{url}".lower()
+                if "fitbit" not in blob and "google health" not in blob and "googlehealth" not in blob:
+                    continue
             rec = _report(
                 source=default_source,
                 source_label=feed["label"],
                 url=url,
-                title=item.get("title") or "",
-                text=item.get("text") or "",
+                title=title,
+                text=text,
                 created_at=item.get("created_at"),
                 author=item.get("author") or "",
                 extra_id=item.get("id") or url,
@@ -200,39 +245,74 @@ def _scrape_rss_collection(feeds: list[dict], default_source: str, default_kind:
     return results
 
 
-def scrape_reddit() -> list[dict]:
-    """Serial Reddit RSS. If two feeds are limited, skip the rest without more hits."""
-    feeds = [{**f, "kind": "reddit"} for f in reddit_feeds()]
-    results: list[dict] = []
-    limited_streak = 0
-    for feed in feeds:
-        if limited_streak >= 2:
-            results.append(
-                {
-                    "id": feed["id"],
-                    "label": feed["label"],
-                    "kind": "reddit",
-                    "ok": False,
-                    "state": "skip",
-                    "fetched": 0,
-                    "kept": 0,
-                    "error": "Omitida: Reddit limitado en esta corrida",
-                    "latency_ms": None,
-                    "reports": [],
-                }
+def _reddit_job_pull(job: dict) -> Callable[[], tuple[list[dict], int]]:
+    scoped = bool(job.get("scoped"))
+    pages = max(1, int(job.get("pages") or 1))
+
+    def _pull(job=job, scoped=scoped, pages=pages):
+        kept: list[dict] = []
+        fetched = 0
+        after = None
+        last_err = None
+        for page in range(pages):
+            if job.get("sub") and job.get("listing"):
+                url = reddit_listing_url(job["sub"], job["listing"], t=job.get("t"), after=after)
+            else:
+                url = job["url"]
+                if after and "after=" not in url:
+                    url += ("&" if "?" in url else "?") + f"after={after}"
+            xml, err = fetch_text(
+                url,
+                accept="application/atom+xml, application/rss+xml, application/xml, text/xml, */*",
             )
-            continue
-        status = _run_source(
-            feed["id"],
-            feed["label"],
-            _rss_pull(feed, "reddit", "reddit"),
-            kind="reddit",
+            if xml is None:
+                last_err = err
+                if page == 0:
+                    raise RuntimeError(err or "sin respuesta")
+                break
+            items = parse_feed(xml)
+            fetched += len(items)
+            for item in items:
+                item_url = item.get("url") or ""
+                if item_url.startswith("/r/"):
+                    item_url = "https://www.reddit.com" + item_url
+                rec = _report(
+                    source="reddit",
+                    source_label=job["label"],
+                    url=item_url,
+                    title=item.get("title") or "",
+                    text=item.get("text") or "",
+                    created_at=item.get("created_at"),
+                    author=item.get("author") or "",
+                    extra_id=item.get("id") or item_url,
+                    source_scoped=scoped,
+                    source_kind="reddit",
+                    lang_hint=job.get("lang") or "en",
+                    engagement=item.get("engagement"),
+                )
+                if rec:
+                    kept.append(rec)
+            if len(items) < 15:
+                break
+            after = reddit_after_token(items[-1])
+            if not after:
+                break
+            if pages == 1:
+                break
+        if fetched == 0 and last_err:
+            raise RuntimeError(last_err)
+        return kept, fetched
+
+    return _pull
+
+
+def scrape_reddit() -> list[dict]:
+    """Serial Reddit RSS with pagination. 429s back off and retry; later jobs still run."""
+    results: list[dict] = []
+    for job in reddit_jobs():
+        results.append(
+            _run_source(job["id"], job["label"], _reddit_job_pull(job), kind="reddit")
         )
-        if status.get("state") == "skip" and "429" in (status.get("error") or ""):
-            limited_streak += 1
-        else:
-            limited_streak = 0
-        results.append(status)
     return results
 
 
@@ -258,69 +338,183 @@ def scrape_itunes() -> list[dict]:
         for country in ITUNES_COUNTRIES:
             sid = f"itunes_{country}_{app_id}"
             label = f"App Store {country.upper()} · {app_name}"
-            url = (
-                f"https://itunes.apple.com/{country}/rss/customerreviews/"
-                f"page=1/id={app_id}/sortby=mostrecent/json"
-            )
 
-            def _pull(url=url, label=label, country=country, app_name=app_name):
-                text, err = fetch_text(url, accept="application/json, text/javascript, */*")
-                if text is None:
-                    raise RuntimeError(err or "sin respuesta")
-                data = json.loads(text)
-                entries = data.get("feed", {}).get("entry") or []
-                if isinstance(entries, dict):
-                    entries = [entries]
+            def _pull(label=label, country=country, app_name=app_name, app_id=app_id):
                 kept = []
-                for entry in entries:
-                    if not isinstance(entry, dict) or "im:rating" not in entry:
-                        continue
-                    rating_s = _itunes_label(entry, "im:rating")
-                    try:
-                        rating = int(rating_s)
-                    except ValueError:
-                        rating = None
-                    title = _itunes_label(entry, "title")
-                    body = _itunes_label(entry, "content")
-                    author = ""
-                    auth = entry.get("author")
-                    if isinstance(auth, dict):
-                        author = _itunes_label(auth, "name")
-                    link = ""
-                    link_node = entry.get("link")
-                    if isinstance(link_node, dict):
-                        link = (link_node.get("attributes") or {}).get("href") or ""
-                    itunes_lang = {
-                        "es": "es", "ar": "es", "mx": "es",
-                        "br": "pt", "fr": "fr", "de": "de", "it": "it",
-                    }.get(country, "en")
-                    rec = _report(
-                        source="itunes",
-                        source_label=label,
-                        url=link or url,
-                        title=title,
-                        text=body,
-                        created_at=parse_datetime(_itunes_label(entry, "updated")),
-                        author=author,
-                        extra_id=_itunes_label(entry, "id"),
-                        star_rating=rating,
-                        source_scoped=True,
-                        source_kind="itunes",
-                        lang_hint=itunes_lang,
-                        meta={"app": app_name, "country": country, "version": _itunes_label(entry, "im:version")},
+                fetched = 0
+                last_err = None
+                itunes_lang = {
+                    "es": "es", "ar": "es", "mx": "es",
+                    "br": "pt", "fr": "fr", "de": "de", "it": "it",
+                    "jp": "ja", "nl": "nl",
+                }.get(country, "en")
+                for page in range(1, ITUNES_REVIEW_PAGES + 1):
+                    url = (
+                        f"https://itunes.apple.com/{country}/rss/customerreviews/"
+                        f"page={page}/id={app_id}/sortby=mostrecent/json"
                     )
-                    if rec:
-                        kept.append(rec)
-                return kept, len(entries)
+                    text, err = fetch_text(url, accept="application/json, text/javascript, */*")
+                    if text is None:
+                        last_err = err
+                        if page == 1:
+                            raise RuntimeError(err or "sin respuesta")
+                        break
+                    try:
+                        data = json.loads(text)
+                    except json.JSONDecodeError:
+                        break
+                    entries = data.get("feed", {}).get("entry") or []
+                    if isinstance(entries, dict):
+                        entries = [entries]
+                    page_n = 0
+                    for entry in entries:
+                        if not isinstance(entry, dict) or "im:rating" not in entry:
+                            continue
+                        page_n += 1
+                        fetched += 1
+                        rating_s = _itunes_label(entry, "im:rating")
+                        try:
+                            rating = int(rating_s)
+                        except ValueError:
+                            rating = None
+                        title = _itunes_label(entry, "title")
+                        body = _itunes_label(entry, "content")
+                        author = ""
+                        auth = entry.get("author")
+                        if isinstance(auth, dict):
+                            author = _itunes_label(auth, "name")
+                        link = ""
+                        link_node = entry.get("link")
+                        if isinstance(link_node, dict):
+                            link = (link_node.get("attributes") or {}).get("href") or ""
+                        rec = _report(
+                            source="itunes",
+                            source_label=label,
+                            url=link or url,
+                            title=title,
+                            text=body,
+                            created_at=parse_datetime(_itunes_label(entry, "updated")),
+                            author=author,
+                            extra_id=_itunes_label(entry, "id"),
+                            star_rating=rating,
+                            source_scoped=True,
+                            source_kind="itunes",
+                            lang_hint=itunes_lang,
+                            meta={
+                                "app": app_name,
+                                "country": country,
+                                "page": page,
+                                "version": _itunes_label(entry, "im:version"),
+                            },
+                        )
+                        if rec:
+                            kept.append(rec)
+                    if page_n < 5:
+                        break
+                if fetched == 0 and last_err:
+                    raise RuntimeError(last_err)
+                return kept, fetched
 
             results.append(_run_source(sid, label, _pull, kind="itunes"))
     return results
 
 
+def scrape_playstore() -> list[dict]:
+    results = []
+    for app_id, app_name in PLAY_APP_IDS.items():
+        for country in PLAY_COUNTRIES:
+            sid = f"play_{country.lower()}_{app_id.replace('.', '_')}"
+            label = f"Play Store {country} · {app_name}"
+            lang = {
+                "ES": "es", "AR": "es", "MX": "es",
+                "BR": "pt", "FR": "fr", "DE": "de", "IT": "it", "JP": "ja", "NL": "nl",
+            }.get(country, "en")
+            hl = {"ES": "es", "AR": "es", "MX": "es", "BR": "pt", "FR": "fr", "DE": "de",
+                  "IT": "it", "JP": "ja", "NL": "nl"}.get(country, "en")
+            url = f"https://play.google.com/store/apps/details?id={app_id}&hl={hl}&gl={country}"
+
+            def _pull(url=url, label=label, country=country, app_name=app_name, lang=lang, app_id=app_id):
+                html, err = fetch_text(url, accept="text/html, */*")
+                if html is None:
+                    raise RuntimeError(err or "sin respuesta")
+                items = parse_play_reviews(html)
+                kept = []
+                for item in items:
+                    rec = _report(
+                        source="playstore",
+                        source_label=label,
+                        url=item.get("url") or url,
+                        title=item.get("title") or "",
+                        text=item.get("text") or "",
+                        created_at=item.get("created_at"),
+                        author=item.get("author") or "",
+                        extra_id=item.get("id") or "",
+                        star_rating=item.get("star_rating"),
+                        source_scoped=True,
+                        source_kind="playstore",
+                        lang_hint=lang,
+                        meta={"app": app_name, "country": country, "package": app_id},
+                    )
+                    if rec:
+                        kept.append(rec)
+                return kept, len(items)
+
+            results.append(_run_source(sid, label, _pull, kind="playstore"))
+    return results
+
+
+def scrape_support() -> list[dict]:
+    def _pull():
+        kept = []
+        fetched = 0
+        urls = ["https://support.google.com/googlehealth/community?hl=en"]
+        urls.extend(
+            f"https://support.google.com/googlehealth/search?q={q.replace(' ', '+')}&hl=en"
+            for q in GHEALTH_SEARCHES
+        )
+        last_err = None
+        for url in urls:
+            html, err = fetch_text(url, accept="text/html, */*")
+            if html is None:
+                last_err = err
+                continue
+            items = parse_google_health_threads(html)
+            fetched += len(items)
+            for item in items:
+                rec = _report(
+                    source="support",
+                    source_label="Google Health Community",
+                    url=item.get("url") or url,
+                    title=item.get("title") or "",
+                    text=item.get("text") or "",
+                    created_at=item.get("created_at")
+                    or datetime.now(timezone.utc).isoformat(),
+                    extra_id=item.get("id") or "",
+                    source_scoped=True,
+                    source_kind="support",
+                    lang_hint="en",
+                )
+                if rec:
+                    kept.append(rec)
+        if fetched == 0 and last_err and not kept:
+            raise RuntimeError(last_err)
+        return kept, fetched
+
+    return [_run_source("ghealth_community_html", "Google Health Community", _pull, kind="support")]
+
+
+def scrape_direct_rss() -> list[dict]:
+    return _scrape_rss_collection(direct_rss_feeds(), "news", "news")
+
+
+def scrape_x() -> list[dict]:
+    return _scrape_rss_collection(x_feeds(), "x", "x")
+
+
 def scrape_hn() -> list[dict]:
     results = []
     for q in HN_QUERIES:
-        url = hn_search_url(q["query"])
+        url = hn_search_url(q["query"], tags=q.get("tags") or "story")
 
         def _pull(url=url, label=q["label"], lang_hint=q.get("lang") or "en"):
             text, err = fetch_text(url, accept="application/json")
@@ -362,11 +556,14 @@ def scrape_hn() -> list[dict]:
 
 def scrape_all() -> list[dict]:
     batches = []
-    batches.extend(scrape_social())
+    batches.extend(scrape_direct_rss())
+    batches.extend(scrape_support())
     batches.extend(scrape_news())
+    batches.extend(scrape_x())
+    batches.extend(scrape_social())
     batches.extend(scrape_itunes())
+    batches.extend(scrape_playstore())
     batches.extend(scrape_hn())
-    # Reddit last: few serial calls with a long pause so the rest of the net
-    # is not blocked, and Reddit is not burst at the start of the job.
+    # Reddit last: serial, long pause, retry on 429 so later jobs still run.
     batches.extend(scrape_reddit())
     return batches
