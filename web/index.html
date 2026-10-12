@@ -17,9 +17,9 @@
         <h1>Señales públicas</h1>
         <p class="lede">
           Casos agrupados por <strong>modelo × tema × polaridad</strong>.
-          La gravedad solo aplica a malas noticias. Fechas en
-          <strong>America/Buenos_Aires</strong>. Ventana de scrape
-          <strong>__WINDOW_DAYS__ días</strong> (el filtro Mes no mezcla décadas).
+          La gravedad solo aplica a malas. Fechas en
+          <strong>America/Buenos_Aires</strong> · scrape
+          <strong>__WINDOW_DAYS__ días</strong>.
         </p>
       </div>
       <aside class="run-card" aria-label="Estado de la corrida">
@@ -63,15 +63,14 @@
         <button type="button" class="tab" role="tab" aria-selected="false" aria-pressed="false" data-polarity="buena" id="tab-buena">Buenas noticias</button>
         <button type="button" class="tab" role="tab" aria-selected="false" aria-pressed="false" data-polarity="revisar" id="tab-revisar">Revisar</button>
       </nav>
-
-      <section class="toolbar" aria-label="Filtros">
+      <div class="sticky-controls">
         <div class="seg" role="group" aria-label="Ventana de tiempo">
           <span class="seg-label">Tiempo</span>
           <div class="seg-opts" id="f-range">
             <button type="button" data-range="1">Día</button>
             <button type="button" data-range="7">Semana</button>
             <button type="button" data-range="30" class="on" aria-pressed="true">Mes</button>
-            <button type="button" data-range="90">Trimestre</button>
+            <button type="button" data-range="90">90 días</button>
             <button type="button" data-range="365">Año</button>
             <button type="button" data-range="all">Todo</button>
           </div>
@@ -85,10 +84,17 @@
             <button type="button" data-sev="baja">Baja</button>
           </div>
         </div>
-        <label class="search">
-          <span>Buscar</span>
-          <input id="q" type="search" placeholder="batería, Sense 2, sincronización…" autocomplete="off">
-        </label>
+      </div>
+    </div>
+
+    <section class="toolbar" aria-label="Filtros">
+      <label class="search">
+        <span>Buscar</span>
+        <input id="q" type="search" placeholder="batería, Sense 2, sincronización…" autocomplete="off">
+      </label>
+      <input type="checkbox" id="filters-toggle" class="filters-toggle">
+      <label for="filters-toggle" class="filters-toggle-label">Más filtros</label>
+      <div class="filters-grid">
         <label>
           <span>Modelo</span>
           <select id="f-model"><option value="">Todos</option></select>
@@ -123,12 +129,12 @@
             <option value="discard">Descartar</option>
           </select>
         </label>
-        <div class="toolbar-actions">
-          <button type="button" class="btn-ghost" id="btn-export">Exportar CSV</button>
-          <button type="button" class="btn-ghost" id="btn-copy-view">Copiar vista</button>
-        </div>
-      </section>
-    </div>
+      </div>
+      <div class="toolbar-actions">
+        <button type="button" class="btn-ghost" id="btn-export">Exportar CSV</button>
+        <button type="button" class="btn-ghost" id="btn-copy-view">Copiar vista</button>
+      </div>
+    </section>
 
     <section class="layout">
       <aside class="side">
@@ -155,6 +161,9 @@
         <div id="clusters" class="clusters" aria-busy="true" aria-live="polite">
           <!--STATIC_CASES-->
         </div>
+        <p class="list-more-wrap">
+          <button type="button" class="btn-ghost" id="btn-more" hidden>Cargar más</button>
+        </p>
         <p id="empty" class="empty" hidden>
           No hay casos en esta vista con los filtros actuales.
         </p>
@@ -183,7 +192,7 @@
         <span><i class="swatch baja"></i> Baja</span>
       </div>
       <div class="chart-frame">
-        <svg id="sev-chart" viewBox="0 0 760 420" role="img" aria-label="Gráfico de gravedad"></svg>
+        <svg id="sev-chart" viewBox="0 0 760 320" role="img" aria-label="Gráfico de gravedad"></svg>
         <p id="chart-empty" class="chart-empty" hidden>El gráfico de gravedad aplica a casos negativos. Abrí esa pestaña o ampliá el período.</p>
       </div>
       <div class="chart-table-wrap">

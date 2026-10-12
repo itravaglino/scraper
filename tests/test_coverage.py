@@ -156,6 +156,14 @@ class HtmlParseTests(unittest.TestCase):
         self.assertIn("Charge 5", items[0]["title"])
         self.assertIn("googlehealth/thread/435214373", items[0]["url"])
         self.assertIsNotNone(items[0]["created_at"])
+        self.assertTrue(items[0]["created_at"].startswith("2026-"))
+
+    def test_google_health_rejects_14_digit_future_stamp(self):
+        html = r'''["/googlehealth/thread/9?hl=en","Charge 6 battery drain","body",62,"9",null,null,null,null,"en",null,"Google Health",null,null,25,null,null,null,null,null,"28:abc","tok",6,null,null,[2,12,70,null,"17792154657300"'''
+        items = parse_google_health_threads(html)
+        self.assertEqual(len(items), 1)
+        stamp = items[0]["created_at"]
+        self.assertTrue(stamp is None or stamp.startswith("202"))
 
 
 if __name__ == "__main__":

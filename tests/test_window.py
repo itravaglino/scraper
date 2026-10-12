@@ -70,6 +70,18 @@ class WindowTests(unittest.TestCase):
         kept = filter_reports_in_window(rows)
         self.assertEqual([r["id"] for r in kept], ["new"])
 
+    def test_parse_iso_drops_far_future(self):
+        from fitbit_scraper.window import parse_iso
+
+        self.assertIsNone(parse_iso("2535-06-03T00:00:00+00:00"))
+        self.assertIsNone(parse_iso("1999-01-01T00:00:00Z"))
+
+    def test_filter_salvages_far_future_help_stamp(self):
+        rows = [{"id": "help", "created_at": "2535-06-03T00:00:00+00:00", "title": "Charge 5"}]
+        kept = filter_reports_in_window(rows)
+        self.assertEqual(len(kept), 1)
+        self.assertTrue(kept[0]["created_at"].startswith("202"))
+
     def test_feed_urls_are_date_bounded(self):
         news = news_feeds()
         self.assertGreaterEqual(len(news), 30)

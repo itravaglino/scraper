@@ -17,7 +17,8 @@ _GHEALTH_THREAD = re.compile(
     r'\["(/googlehealth/thread/(\d+)[^"]*)","([^"]{8,240})","([^"]{0,800})"',
     re.I,
 )
-_TS_MS = re.compile(r"(1[6-8]\d{11,12})")
+# 13-digit unix milliseconds (16xx–18xx). 14+ digits are µs and become year 253x.
+_TS_MS = re.compile(r"(1[6-8]\d{11})(?!\d)")
 
 
 def parse_play_reviews(html: str) -> list[dict]:
@@ -78,14 +79,7 @@ def parse_google_health_threads(html: str) -> list[dict]:
         stamp = None
         ts = _TS_MS.search(tail)
         if ts:
-            raw = ts.group(1)
-            try:
-                n = int(raw)
-                if n > 10_000_000_000:
-                    n = n / 1000.0
-                stamp = datetime.fromtimestamp(n, tz=timezone.utc).isoformat()
-            except (ValueError, OverflowError, OSError):
-                stamp = None
+            stamp = _unix_ms_to_iso(ts.group(1))
         url = path if path.startswith("http") else "https://support.google.com" + path.split("?")[0]
         out.append(
             {
@@ -98,6 +92,25 @@ def parse_google_health_threads(html: str) -> list[dict]:
             }
         )
     return out
+
+
+def _unix_ms_to_iso(raw: str) -> str | None:
+    try:
+        n = int(raw)
+    except (TypeError, ValueError):
+        return None
+    if n >= 10**14:
+        n = n / 1_000_000.0
+    elif n >= 10**11:
+        n = n / 1000.0
+    try:
+        dt = datetime.fromtimestamp(n, tz=timezone.utc)
+    except (ValueError, OverflowError, OSError):
+        return None
+    now = datetime.now(timezone.utc)
+    if dt.year < 2015 or dt.year > now.year + 1:
+        return None
+    return dt.isoformat()
 
 
 def _parse_long_date(raw: str) -> str | None:

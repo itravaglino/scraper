@@ -1,7 +1,7 @@
 """Date window for every fetch and every kept report.
 
 Dashboard default is Mes (30 days). The scrape window is 90 days so
-Día / Semana / Mes / Trimestre all filter real item dates. Year/Todo
+Día / Semana / Mes / 90 días all filter real item dates. Year/Todo
 only see what is inside this window — 2018–2022 recalls stay out unless
 the window is widened (max 365).
 """
@@ -14,7 +14,7 @@ from typing import Optional
 
 from .textutil import parse_datetime
 
-# Covers the dashboard trimestre control. UI still defaults to 30 days.
+# Covers the dashboard 90-días control. UI still defaults to 30 days.
 DEFAULT_SCRAPE_WINDOW_DAYS = 90
 MIN_WINDOW_DAYS = 1
 MAX_WINDOW_DAYS = 365
@@ -64,7 +64,20 @@ def parse_iso(value: Optional[str]) -> Optional[str]:
     """Normalize any date string to UTC ISO-8601, or None."""
     if not value:
         return None
-    return parse_datetime(str(value).strip())
+    iso = parse_datetime(str(value).strip())
+    if not iso:
+        return None
+    try:
+        dt = datetime.fromisoformat(iso.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    now = datetime.now(timezone.utc)
+    # Google Help sometimes emits 14-digit stamps → year 2533+. Drop them.
+    if dt.year < 2015 or dt.year > now.year + 1:
+        return None
+    return dt.astimezone(timezone.utc).isoformat()
 
 
 def iso_in_window(value: Optional[str], days: int | None = None) -> bool:
@@ -81,13 +94,30 @@ def iso_in_window(value: Optional[str], days: int | None = None) -> bool:
     return dt >= window_cutoff(days)
 
 
+def _is_far_future_stamp(value: Optional[str]) -> bool:
+    if not value:
+        return False
+    try:
+        dt = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+    except ValueError:
+        return False
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.year > datetime.now(timezone.utc).year + 1
+
+
 def filter_reports_in_window(reports: list[dict], days: int | None = None) -> list[dict]:
     kept = []
+    now_iso = datetime.now(timezone.utc).isoformat()
     for r in reports:
         stamp = r.get("created_at") or r.get("published_at")
-        if iso_in_window(stamp, days):
+        iso = parse_iso(stamp)
+        if not iso and _is_far_future_stamp(stamp):
+            # Far-future Google Help stamps (year 253x): keep the thread, use now.
+            iso = now_iso
+        if iso_in_window(iso, days):
             rec = dict(r)
-            rec["created_at"] = parse_iso(stamp)
-            rec["published_at"] = rec["created_at"]
+            rec["created_at"] = iso
+            rec["published_at"] = iso
             kept.append(rec)
     return kept

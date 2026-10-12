@@ -79,6 +79,11 @@ class FilterUrlTests(unittest.TestCase):
             _ops("FitbitOps.inRange('2020-03-02T00:00:00Z', 30, Date.parse('2026-08-26T00:00:00Z'))")
         )
 
+    def test_in_range_drops_far_future(self):
+        now = 1780000000000
+        self.assertFalse(_ops(f"FitbitOps.inRange('2535-06-03T00:00:00Z', 30, {now})"))
+        self.assertFalse(_ops(f"FitbitOps.inRange('2535-06-03T00:00:00Z', null, {now})"))
+
 
 if __name__ == "__main__":
     unittest.main()
