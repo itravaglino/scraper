@@ -149,8 +149,11 @@ h1 {
 .kpi.buena b { color: var(--buena); }
 .kpi.revisar b { color: var(--revisar); }
 
-.sticky-filters {
+/* Chrome stays in document flow. Only .btn-top may be position:fixed. */
+.mast, .ops-strip, .kpis, .board-filters, .toolbar, .page, .polarity-tabs, .filter-controls {
   position: static;
+}
+.board-filters {
   background: var(--bg);
   padding: 8px 0 10px;
   border-bottom: 1px solid var(--line);
@@ -158,13 +161,13 @@ h1 {
   padding-left: 4px;
   padding-right: 4px;
 }
-.sticky-controls {
+.filter-controls {
   display: flex;
   flex-wrap: wrap;
   gap: 8px 28px;
   align-items: flex-end;
 }
-.sticky-controls .seg { grid-column: auto; }
+.filter-controls .seg { grid-column: auto; }
 .polarity-tabs {
   display: flex;
   gap: 6px;
@@ -219,11 +222,15 @@ h1 {
   margin-top: 4px;
 }
 .filters-toggle {
-  position: absolute;
-  width: 1px;
-  height: 1px;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
   opacity: 0;
+  overflow: hidden;
   pointer-events: none;
+  appearance: none;
 }
 .toolbar .filters-toggle-label {
   display: none;

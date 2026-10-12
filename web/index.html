@@ -7,7 +7,7 @@
   <title>Panel Fitbit · operaciones de producto</title>
   <meta name="description" content="Consola de operaciones: casos negativos y buenas noticias públicas sobre productos Fitbit.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='12' width='64' height='64' fill='%230f1419'/%3E%3Ccircle cx='32' cy='32' r='14' fill='none' stroke='%23c4a574' stroke-width='6'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/style.css?v=unstick">
 </head>
 <body data-repo="itravaglino/scraper" data-workflow="daily.yml" class="is-loading">
   <div class="page">
@@ -57,13 +57,13 @@
       <p class="kpi-defs">Cargando indicadores del período…</p>
     </section>
 
-    <div class="sticky-filters" id="sticky-filters">
+    <div class="board-filters" id="board-filters">
       <nav class="polarity-tabs" role="tablist" aria-label="Polaridad">
         <button type="button" class="tab on" role="tab" aria-selected="true" aria-pressed="true" data-polarity="mala" id="tab-mala">Casos negativos</button>
         <button type="button" class="tab" role="tab" aria-selected="false" aria-pressed="false" data-polarity="buena" id="tab-buena">Buenas noticias</button>
         <button type="button" class="tab" role="tab" aria-selected="false" aria-pressed="false" data-polarity="revisar" id="tab-revisar">Revisar</button>
       </nav>
-      <div class="sticky-controls">
+      <div class="filter-controls">
         <div class="seg" role="group" aria-label="Ventana de tiempo">
           <span class="seg-label">Tiempo</span>
           <div class="seg-opts" id="f-range">
@@ -221,7 +221,7 @@
   </div>
   <button type="button" class="btn-top" id="btn-top" hidden>Volver arriba</button>
   <script>window.FITBIT_SEED={"__SEED__":true};</script>
-  <script src="assets/ops.js"></script>
-  <script src="assets/app.js"></script>
+  <script src="assets/ops.js?v=unstick"></script>
+  <script src="assets/app.js?v=unstick"></script>
 </body>
 </html>
