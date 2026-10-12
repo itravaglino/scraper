@@ -936,7 +936,21 @@
     });
   }
 
+  function bindTop() {
+    const btn = $("btn-top");
+    if (!btn) return;
+    const sync = () => {
+      btn.hidden = window.scrollY < 420;
+    };
+    window.addEventListener("scroll", sync, { passive: true });
+    btn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    sync();
+  }
+
   bind();
+  bindTop();
   boot();
   loadActionsStatus();
 })();
