@@ -141,6 +141,26 @@ STRONG_DEFECT_CUES = [
     "won't connect", "wont connect", "won't open", "pairing fails",
     "keeps turning off", "stop sync", "stuck on screen",
     "forced", "forcing", "headache", "hate the",
+    "no longer syncing", "no longer tracking", "no longer accepts",
+    "can't sync", "cant sync", "can't log", "cant log",
+    "stuck on", "gets stuck", "still stuck", "frozen", "killed my",
+    "draining", "inaccurate", "incorrectly tracking", "incorrect sleep",
+    "loading loop", "solid green screen", "eating battery", "undercounts",
+    "not pairing", "disappearing stats", "syncing issues", "sync issue",
+    "isn't autotracking", "isnt autotracking", "not autotracking",
+    "server errors", "500 server", "doesn't track", "doesnt track",
+    "does not track", "hasn't been able", "hasnt been able",
+    "unable to sync", "constantly disconnect", "not getting sleep",
+    "isn't showing", "isnt showing", "sleep score isn't", "gave up",
+    "sick and tired", "frayed", "bateria caiu", "batería cayó",
+    "without hr", "without cardio", "no longer", "stops working", "stop working",
+    "can't do", "cant do", "data vanished", "vanished",
+    "battery fluctuating", "fluctuating", "eating up my battery", "eating up",
+    "only charges", "having issues", "having problems", "issues with",
+    "not tracking", "not writing", "stopped counting", "suddenly stopped",
+    "stuck at", "wrong day", "losing my", "keeps showing", "ridiculous",
+    "half a day", "dimished", "diminished", "disappearing", "not updating",
+    "irritations", "frustrating", "not available", "time wrong",
 ]
 
 COMPARISON_TITLE_CUES = [
@@ -157,13 +177,14 @@ TUTORIAL_TITLE_CUES = [
 # Forced Fitbit → Google Health app move is in-scope (ops cares).
 MIGRATION_CUES = [
     "forced", "forcing", "holdout", "holdouts", "workaround",
-    "google health app", "switch to google health", "moved to google health",
+    "switch to google health", "moved to google health",
     "move to google health", "moving to google health", "onto google health",
     "pushed to google health", "retired fitbit app", "classic fitbit app",
     "old fitbit app", "mandatory update", "end of an era",
     "replaced the fitbit", "replacing the fitbit", "fitbit app workaround",
     "last holdouts", "forced to switch", "forced to update",
-    "health app replaced", "migrat", "migración", "migracion",
+    "health app replaced", "migration", "migrate", "migrating", "migrated",
+    "migración", "migracion", "migration loop",
 ]
 
 DEAL_CUES = [
@@ -172,6 +193,8 @@ DEAL_CUES = [
     "amazon deal", "best buy", "discount code", "lightning deal",
     "save $", "oferta", "rebaja", "descuento", "cupón", "cupon",
     "preissturz", "promo ", "promotional",
+    "prime day", "a steal", "what it actually costs", "price because",
+    "amazon is hiding",
 ]
 
 BAND_PROMO_CUES = [
@@ -326,12 +349,51 @@ POSITIVE_CUES = [
 ]
 
 # Headlines about a fix/patch — polarity buena even if they mention a bug.
+LAUNCH_CUES = [
+    "unveiled", "unveils", "announces", "announced", "debuts", "introduces",
+    "launches fitbit", "launches with", "has released the", "leaks with",
+    "teased ahead", "rolls out first", "mystery wearable", "should you buy",
+    "is now available", "now available in", "now available!",
+    "pre-order", "preorder", "just leaked", "leaks out", "leaked again",
+    "launch date", "officially announces", "officially announced",
+    "brings back the screen", "gives you a week of battery",
+    "how 37 outlets framed", "made another fitbit", "sleek new fitbit",
+    "fitbit edge unveiled", "fitbit edge tracker", "fitbit edge debuts",
+    "fitbit edge gives you", "leaked fitbit edge", "mysterious wearable",
+    "packed with health features", "middle ground", "might be even better",
+    "reinventing the old pebble", "lanza fitbit", "anuncia fitbit",
+    "wearable strategy", "screenless fitness tracker", "officially rebooting",
+    "pulsera inteligente sin pantalla",
+]
+
+SHOPPING_CUES = [
+    "best fitbit for", "top 5 best fitbit", "top 6 best fitbit",
+    "the best fitbit 20", "best fitbit 2026", "what should i buy",
+    "which one should i buy", "aliexpress bands", "ali bands",
+    "10$ aliexpress",     "best fitbit charge alternatives",
+    "consiglio di acquisto", "should you buy", "which screenless",
+]
+
+OFFTOPIC_PRODUCT_CUES = [
+    "casio", "luffu", "hamilton –", "hamilton -", "named after my dog",
+    "macos", "osxdaily", "smart rings", "smart ring", "ultrahuman",
+    "try the bevel", "bevel app with", "i built baro",
+    "i built my own: one dashboard", "i built a free android dashboard",
+    "chromecast", "framework laptop", "oneplus watch", "oneplus ace",
+    "sbi upi", "delhi internet", "giving up on smart rings",
+]
+
+# Titles with several " | " sections are TV/news roundup dumps, not Fitbit posts.
+PIPE_DUMP_MIN_SEPS = 2
+
 FIX_HEADLINE_CUES = [
     "fixed", "fix for", "fix is", "hotfix", "patched", "patch notes", "resolved",
     "resolution", "arreglado", "arreglan", "solucionado", "solucionan",
     "parche", "now working", "now works", "issue resolved", "bugfix",
-    "bug fix", "google has fixed", "fitbit has fixed", "fitbit fixed",
+    "bug fix",     "google has fixed", "fitbit has fixed", "fitbit fixed",
     "update fixes", "update that fixes", "released a fix", "rolling out a fix",
+    "finally makes", "sync properly", "google finally fixed",
+    "update finally", "risolve",
     "corrigido", "corrigem", "resolvido", "correção", "correcao",
     "corrigé", "corrige le", "corrige", "correctif", "résolu", "patch notes",
     "behoben", "gefixt", "update behebt", "fehlerbehebung",
@@ -372,16 +434,19 @@ MIXED_CUES = [
 
 NEGATIVE_CUES = [
     "hate", "terrible", "awful", "worst", "refund", "useless", "broken",
+    "stuck on", "frozen", "killed my", "killed", "draining", "inaccurate",
+    "incorrectly", "died", "undercounts", "complaints",
     "horrible", "pésimo", "pesimo", "estafa", "decepcion", "decepción",
     "disappointed", "never again", "returning", "return it",
     "no funciona", "no anda", "no carga", "no enciende", "no sincroniza",
     "no conecta", "se apaga", "se cuelga", "se rompio", "se rompió",
     "won't", "wont", "doesn't work", "doesnt work", "not working",
     "stopped working", "failed", "failure", "falla", "fallo", "falló",
-    "error", "bug", "glitch", "crash", "issue", "problem", "problema",
+    "error", "bug", "glitch", "crash", "issue", "issues", "problem", "problema",
     "defect", "defecto", "faulty", "recall", "lawsuit", "frustrated",
     "frustrado", "scam", "headache", "forced", "forcing", "holdout",
-    "workaround", "bricked", "drain", "draining",
+    "workaround", "bricked", "drain", "draining", "problems",
+    "hostage", "brainless", "having issues", "issues with",
 
     # PT
     "não funciona", "nao funciona", "quebrado", "péssimo", "pessimo",
@@ -419,6 +484,7 @@ SCREEN_NEGATIONS = [
 # News/HN must look like an incident, a fix, or a review — not a product launch.
 NEWS_ISSUE_CUES = [
     "bug", "bugs", "buggy", "crash", "crashes", "outage", "recall", "retirada",
+    "issues",
     "defect", "defective", "defectuoso", "broken", "broke", "falla", "falló",
     "problema", "problem", "won't", "wont", "not working", "no funciona",
     "overheat", "overheating", "burn", "quema", "multa", "lawsuit",
@@ -432,6 +498,7 @@ NEWS_ISSUE_CUES = [
     "故障", "不具合", "召回",
     "forced", "forcing", "holdout", "workaround", "outage", "downdetector",
     "headache", "hate", "bricked", "migration", "migrat",
+    "left to fix", "roadmap",
 ]
 
 # Distinctive tokens for language detection (latin scripts).
@@ -476,7 +543,7 @@ BRAND_CUES = [
     "fitbit ace", "fitbit scale", "báscula fitbit", "bascula fitbit",
     "fitbit ionic", "fitbit alta", "fitbit flex", "fitbit air",
     "fitbit versa", "fitbit charge", "fitbit inspire", "fitbit sense",
-    "fitbit luxe", "fitbit aria",
+    "fitbit luxe", "fitbit aria", "gh update",
 ]
 
 # Other watch/tech products. If these are the title subject and Fitbit is not, drop.
@@ -488,6 +555,7 @@ COMPETITOR_CUES = [
     "chromecast", "eyeref", "nothing watch", "cmf watch", "oppo watch",
     "realme watch", "honor watch", "ticwatch", "fossil gen",
     "pixel phone", "pixel 6", "pixel 7", "pixel 8", "pixel 9", "pixel 10",
+    "casio", "oura", "ultrahuman", "ringconn", "luffu",
 ]
 
 ROUNDUP_CUES = [

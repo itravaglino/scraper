@@ -38,6 +38,7 @@ from .config import (
 )
 from .models import detect_models
 from .relevance import is_fitbit_subject
+from .textutil import fold_quotes, strip_reddit_footer
 
 CATEGORY_LABELS_ES = {
     "bateria": "Batería",
@@ -276,8 +277,8 @@ def classify(
     lang_hint: str | None = None,
     url: str = "",
 ) -> dict:
-    title = title or ""
-    body = body or ""
+    title = fold_quotes(title or "")
+    body = strip_reddit_footer(fold_quotes(body or ""))
     title_low = title.lower()
     body_low = body.lower()
     low = f"{title_low}\n{body_low}"
@@ -348,9 +349,29 @@ def classify(
     title_def = _title_defect(title_low)
     comparison = _is_comparison_title(title_low)
     tutorial = _hits(title_low, TUTORIAL_TITLE_CUES) > 0
+    title_fix = _hits(title_low, FIX_HEADLINE_CUES) > 0
+    title_pos = _hits(title_low, POSITIVE_CUES)
+    title_neg = _hits(title_low, NEGATIVE_CUES)
+    title_cats = any(_hits(title_low, words) > 0 for words in CATEGORY_KEYWORDS.values())
+    body_def = (
+        _hits(body_low[:500], STRONG_DEFECT_CUES) > 0
+        or _hits(body_low[:500], OPEN_DEFECT_CUES) > 0
+        or neg_body > 0
+    )
+
+    # Generic community titles: body complaint → mala; praise title stays buena.
+    if polarity == "revisar" and body_def and not title_pos and not title_fix:
+        if not (
+            _hits(title_low, MIXED_CUES)
+            or comparison
+            or tutorial
+            or _title_denies_defect(title_low)
+        ):
+            polarity = "mala"
+            title_def = title_def or _title_defect(body_low[:400])
 
     if topic_reason == "comunidad_sin_producto" and star_rating is None:
-        if polarity == "mala" and not title_def:
+        if polarity == "mala" and not title_def and not title_neg and not body_def:
             polarity = "revisar"
 
     if cat_scores:
@@ -378,6 +399,22 @@ def classify(
             if polarity == "revisar"
             else ("buena_noticia" if polarity == "buena" else "incidencia")
         )
+        if polarity == "revisar" and not (
+            title_cats
+            or title_def
+            or title_neg
+            or title_pos
+            or star_rating is not None
+            or migration
+            or body_def
+        ):
+            return _pack(
+                keep=False,
+                models=models,
+                lang=lang,
+                polarity="revisar",
+                reason="sin_senal",
+            )
     elif brand_hit and (news_like or migration or _hits(title_low, NEGATIVE_CUES) or title_def):
         primary = "software"
         categories = ["software"]
@@ -389,6 +426,16 @@ def classify(
         if polarity == "revisar" and (migration or _hits(title_low, NEGATIVE_CUES)):
             polarity = "mala"
             reason = "incidencia"
+    elif brand_hit and models:
+        # Named Fitbit/Pixel product in the title (review, TikTok, etc.) even if
+        # the post is not a bug report.
+        primary = "opinion"
+        categories = ["opinion"]
+        reason = (
+            "sin_incidencia"
+            if polarity == "revisar"
+            else ("buena_noticia" if polarity == "buena" else "incidencia")
+        )
     else:
         return _pack(
             keep=False,
@@ -404,6 +451,7 @@ def classify(
             or (star_rating is not None and star_rating <= 3)
             or title_def
             or migration
+            or body_def
             or _hits(title_low, NEWS_ISSUE_CUES)
             or _hits(title_low, NEGATIVE_CUES)
             or _hits(title_low, MIGRATION_CUES)
@@ -419,10 +467,13 @@ def classify(
             (
                 source_scoped
                 and (brand_hit or topic_reason.startswith("comunidad"))
-                and (cat_scores or pos or neg or star_rating is not None)
+                and (cat_scores or pos or neg or star_rating is not None or title_def or migration)
             )
             or (brand_hit and cat_scores)
+            or (brand_hit and models)
         )
+        if not keep:
+            reason = "sin_senal"
 
     conf = _confidence(
         title_low=title_low,
@@ -458,7 +509,12 @@ def classify(
             severity = "media"
         if tutorial and severity == "alta":
             severity = "media"
-        if not title_def and conf < CONF_MALA:
+        if (
+            not title_def
+            and not _hits(title_low, NEGATIVE_CUES)
+            and not migration
+            and conf < CONF_MALA
+        ):
             polarity = "revisar"
             severity = None
             sentiment = "mixto"

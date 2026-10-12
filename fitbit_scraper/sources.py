@@ -60,6 +60,9 @@ KIND_FROM_HINTS = (
 
 
 def infer_source_kind(url: str, title: str = "", fallback: str = "web") -> str:
+    # Linked Play Store / article URLs must not relabel HN or Reddit threads.
+    if fallback == "hackernews":
+        return "hackernews"
     blob = f"{url or ''} {title or ''}".lower()
     for needle, kind in KIND_FROM_HINTS:
         if needle in blob:
@@ -214,6 +217,15 @@ def _rss_pull(feed: dict, default_source: str, default_kind: str) -> Callable[[]
                 blob = f"{title}\n{text}\n{url}".lower()
                 if "fitbit" not in blob and "google health" not in blob and "googlehealth" not in blob:
                     continue
+            item_scoped = scoped
+            if kind == "support":
+                ul = url.lower()
+                title_l = title.lower()
+                item_scoped = (
+                    "support.google.com" in ul
+                    or "community.fitbit.com" in ul
+                    or "google help" in title_l
+                )
             rec = _report(
                 source=default_source,
                 source_label=feed["label"],
@@ -223,7 +235,7 @@ def _rss_pull(feed: dict, default_source: str, default_kind: str) -> Callable[[]
                 created_at=item.get("created_at"),
                 author=item.get("author") or "",
                 extra_id=item.get("id") or url,
-                source_scoped=scoped,
+                source_scoped=item_scoped,
                 source_kind=kind,
                 lang_hint=lang_hint,
                 engagement=item.get("engagement"),

@@ -257,6 +257,7 @@ def news_feeds() -> list[dict]:
         {"id": "gnews_forums", "label": "Foros / soporte (web)", "kind": "web", "lang": "en", "site": True,
          "url": _gnews(f"Fitbit (community OR forum OR support OR thread OR foro) ({BUG_EN} OR falla)", "en-US", "US", "US:en", site=True)},
         {"id": "gnews_community_fitbit", "label": "community.fitbit.com", "kind": "support", "lang": "en", "site": True,
+         "scoped": False,
          "url": _gnews(f"Fitbit ({BUG_EN}) site:community.fitbit.com", "en-US", "US", "US:en", site=True)},
         {"id": "gnews_support_googlehealth", "label": "Soporte Google Health", "kind": "support", "lang": "en", "site": True,
          "url": _gnews('Fitbit (battery OR sync OR crash OR drain OR "Charge 5" OR "Charge 6" OR "Sense 2") site:support.google.com/googlehealth', "en-US", "US", "US:en", site=True)},

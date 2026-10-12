@@ -1,0 +1,29 @@
+{
+  "total": 1065,
+  "keep": 980,
+  "drop": 85,
+  "drop_reasons": {
+    "lanzamiento": 35,
+    "irrelevante": 18,
+    "promo": 13,
+    "otra_marca": 5,
+    "spinout_competidor": 4,
+    "google_no_wearable": 1,
+    "fuera_de_marca": 2,
+    "pixel_watch_only": 4,
+    "sin_senal": 1,
+    "whoop": 1,
+    "megathread_ruido": 1
+  },
+  "old_polarity": {
+    "mala": 247,
+    "buena": 123,
+    "revisar": 695
+  },
+  "suggested_polarity_kept": {
+    "mala": 409,
+    "revisar": 479,
+    "buena": 92
+  },
+  "by_source_count": 59
+}
