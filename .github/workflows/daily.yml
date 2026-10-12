@@ -14,7 +14,10 @@ on:
   pull_request:
   push:
     branches: [main]
-    # Bot commits of scrape output should not start a second scrape.
+    # Bot commits of scrape output should not start a second scrape
+    # (that push would otherwise retrigger this workflow and deploy twice).
+    # Dashboard/code changes on main still run tests, rebuild site/ from the
+    # committed JSON (`run.py --skip-fetch`), and deploy GitHub Pages.
     paths-ignore:
       - "data/**"
       - "site/**"
@@ -61,6 +64,15 @@ jobs:
       - name: Rebuild site from committed data
         if: github.event_name == 'push' || github.event_name == 'pull_request'
         run: python3 run.py --skip-fetch
+
+      - name: Playwright dashboard scroll
+        if: github.event_name == 'pull_request' || github.event_name == 'push'
+        env:
+          DASHBOARD_ARTIFACTS: ${{ runner.temp }}/dashboard-scroll
+        run: |
+          python3 -m pip install playwright
+          python3 -m playwright install --with-deps chromium
+          python3 -m unittest tests.test_dashboard_scroll -v
 
       - name: Commit data and site
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
