@@ -139,13 +139,14 @@ class HtmlParseTests(unittest.TestCase):
         <span aria-label="Rated 1 stars out of five stars" role="img"></span>
         <span class="bp9Aid">October 9, 2026</span></header>
         <div class="h3YV2d">Charge 6 won&#39;t sync after Google Health. Battery drain overnight.</div>
-        </div>
+        <div data-review-id="abc-1" data-original-thumbs-up-count="7"></div>
         """
         items = parse_play_reviews(html)
         self.assertEqual(len(items), 1)
         self.assertEqual(items[0]["star_rating"], 1)
         self.assertIn("2026-10-09", items[0]["created_at"] or "")
         self.assertIn("won't sync", items[0]["text"])
+        self.assertEqual(items[0]["id"], "abc-1")
 
     def test_google_health_threads(self):
         html = r'''["/googlehealth/thread/435214373?hl=en","My Charge 5 tracker battery is draining within ...","thanks for sharing battery drain",62,"435214373",null,null,null,null,"en",null,"Google Health",null,null,25,null,null,null,null,null,"28:abc","tok",6,null,null,[2,12,70,null,"1779215465730"'''

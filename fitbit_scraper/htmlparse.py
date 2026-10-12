@@ -8,13 +8,11 @@ from html import unescape
 
 from .textutil import parse_datetime, strip_html
 
-_PLAY_BLOCK = re.compile(
-    r'data-review-id="([^"]+)".{0,2500}?Rated (\d+) stars out of five stars'
-    r'.{0,800}?<span class="bp9Aid">([^<]+)</span>'
-    r'.{0,400}?<div class="h3YV2d">(.*?)</div>',
-    re.I | re.S,
-)
-_PLAY_AUTHOR = re.compile(r"data-review-id=\"[^\"]+\">\s*([^<]{2,80})\s+", re.I)
+_PLAY_TEXT = re.compile(r'<div class="h3YV2d">(.*?)</div>', re.I | re.S)
+_PLAY_DATE = re.compile(r'<span class="bp9Aid">([^<]+)</span>', re.I)
+_PLAY_RATED = re.compile(r"Rated (\d+) stars out of five stars", re.I)
+_PLAY_RID = re.compile(r'data-review-id="([^"]+)"', re.I)
+_PLAY_AUTHOR = re.compile(r'<div class="X5PpBb">([^<]+)</div>', re.I)
 _GHEALTH_THREAD = re.compile(
     r'\["(/googlehealth/thread/(\d+)[^"]*)","([^"]{8,240})","([^"]{0,800})"',
     re.I,
@@ -26,21 +24,27 @@ def parse_play_reviews(html: str) -> list[dict]:
     """Featured reviews on a public Play Store details page."""
     out: list[dict] = []
     seen: set[str] = set()
-    for m in _PLAY_BLOCK.finditer(html or ""):
-        rid, rating_s, date_s, body = m.group(1), m.group(2), m.group(3), m.group(4)
+    blob = html or ""
+    for m in _PLAY_TEXT.finditer(blob):
+        text = strip_html(unescape(m.group(1) or ""))
+        if len(text) < 12:
+            continue
+        before = blob[max(0, m.start() - 9000) : m.start()]
+        after = blob[m.end() : m.end() + 600]
+        rid_m = _PLAY_RID.search(after) or list(_PLAY_RID.finditer(before))
+        if isinstance(rid_m, list):
+            rid = rid_m[-1].group(1) if rid_m else text[:24]
+        else:
+            rid = rid_m.group(1)
         if rid in seen:
             continue
         seen.add(rid)
-        try:
-            rating = int(rating_s)
-        except ValueError:
-            rating = None
-        text = strip_html(unescape(body or ""))
-        stamp = parse_datetime(date_s.strip()) or _parse_long_date(date_s)
-        author = ""
-        am = _PLAY_AUTHOR.search(html[max(0, m.start() - 80) : m.start() + 400])
-        if am:
-            author = strip_html(am.group(1))[:80]
+        date_m = _PLAY_DATE.search(before[-800:] if len(before) > 800 else before)
+        stamp = _parse_long_date(date_m.group(1) if date_m else "")
+        rated = list(_PLAY_RATED.finditer(before))
+        rating = int(rated[-1].group(1)) if rated else None
+        authors = list(_PLAY_AUTHOR.finditer(before))
+        author = strip_html(authors[-1].group(1))[:80] if authors else ""
         title = (text.split(".")[0] or text)[:120]
         out.append(
             {

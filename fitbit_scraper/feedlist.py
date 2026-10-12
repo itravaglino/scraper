@@ -281,13 +281,15 @@ def news_feeds() -> list[dict]:
         {"id": "gnews_praise", "label": "Noticias positivas (EN)", "kind": "news", "lang": "en",
          "url": _gnews(f"Fitbit ({PRAISE} OR award)", "en-US", "US", "US:en")},
         {"id": "bing_news_en", "label": "Bing News (EN)", "kind": "news", "lang": "en",
-         "url": _bing_news("Fitbit problem OR battery OR sync OR \"Google Health\" OR outage OR forced")},
+         "url": _bing_news("Fitbit")},
+        {"id": "bing_news_problem", "label": "Bing News problemas", "kind": "news", "lang": "en",
+         "url": _bing_news("Fitbit problem")},
         {"id": "bing_news_es", "label": "Bing News (ES)", "kind": "news", "lang": "es",
-         "url": _bing_news("Fitbit problema OR batería OR sincronización OR \"Google Health\"", "es", "ES")},
+         "url": _bing_news("Fitbit problema", "es", "ES")},
         {"id": "bing_news_de", "label": "Bing News (DE)", "kind": "news", "lang": "de",
-         "url": _bing_news("Fitbit Problem OR Akku OR Google Health", "de", "DE")},
+         "url": _bing_news("Fitbit Problem", "de", "DE")},
         {"id": "bing_news_migration", "label": "Bing News migración", "kind": "news", "lang": "en",
-         "url": _bing_news('Fitbit "Google Health" forced OR holdout OR workaround')},
+         "url": _bing_news("Fitbit Google Health")},
     ]
     for model in MODELS_EN:
         slug = model.lower().replace(" ", "_")
