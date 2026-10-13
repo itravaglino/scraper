@@ -1,9 +1,7 @@
 name: Scrape y dashboard Fitbit
 
-# 08:00 America/Buenos_Aires = 11:00 UTC (Argentina stays on UTC-3).
+# Manual scrape via Actions → Run workflow (no daily cron).
 on:
-  schedule:
-    - cron: "0 11 * * *"
   workflow_dispatch:
     inputs:
       window_days:
