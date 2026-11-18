@@ -1,1516 +1,1408 @@
 {
   "clusters": {
+    "eb00345d390dd2d9": {
+      "first_seen": "2026-11-18",
+      "seen_runs": 1,
+      "peak_count": 1,
+      "title": "Elogio · Sin modelo · There’s a glaring accessibility gap in Google’s Fitbit ambitions, and…",
+      "category": "opinion",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
+    },
+    "2151865e745c99b8": {
+      "first_seen": "2026-10-12",
+      "seen_runs": 45,
+      "peak_count": 1,
+      "title": "Elogio · Sin modelo · I spent months testing Google's Fitbit fitness trackers, and these ar…",
+      "category": "opinion",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
+    },
+    "1630ced040a4463c": {
+      "first_seen": "2026-11-17",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Elogio · Sin modelo · Google’s New Fitbit Is a Vehicle for Its Excellent Health App",
+      "category": "opinion",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
+    },
+    "0e9088fdfba92dbd": {
+      "first_seen": "2026-11-12",
+      "seen_runs": 7,
+      "peak_count": 1,
+      "title": "Elogio · Sin modelo · Google Fitbit Edge review: The Fitbit we loved, now in its Google era",
+      "category": "opinion",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
+    },
+    "32b9be83ae0b9d55": {
+      "first_seen": "2026-11-14",
+      "seen_runs": 5,
+      "peak_count": 1,
+      "title": "Elogio · Sin modelo · Fitbit owners report missing daily vitals, but a fix might not come s…",
+      "category": "opinion",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
+    },
+    "9f4c3bf968e8025b": {
+      "first_seen": "2026-11-15",
+      "seen_runs": 4,
+      "peak_count": 1,
+      "title": "Elogio · Sin modelo · got the new google fitbit edge and it's stuck updating, not a great f…",
+      "category": "opinion",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
+    },
+    "eee842cc2c01a3eb": {
+      "first_seen": "2026-11-07",
+      "seen_runs": 12,
+      "peak_count": 1,
+      "title": "Elogio · Sin modelo · Google Fitbit Edge Test",
+      "category": "opinion",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
+    },
+    "c2a35b059c5596a0": {
+      "first_seen": "2026-11-17",
+      "seen_runs": 2,
+      "peak_count": 2,
+      "title": "Elogio · Sin modelo · Google Fitbit Edge Review: The Perfect Smartwatch Alternative?",
+      "category": "opinion",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
+    },
+    "395551170d714cd3": {
+      "first_seen": "2026-10-13",
+      "seen_runs": 38,
+      "peak_count": 1,
+      "title": "Elogio · Sin modelo · Best Fitbit Fitness Tracker Deals in Amazon Great Indian Festival Sale",
+      "category": "opinion",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
+    },
+    "fe6f43d44f2a6b66": {
+      "first_seen": "2026-11-18",
+      "seen_runs": 1,
+      "peak_count": 1,
+      "title": "Revisar · Opinión · Pixel Watch · Fitbit Edge after 30 days: Life in the middle lane [Video]",
+      "category": "opinion",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "7c120915b6de2c46": {
+      "first_seen": "2026-11-12",
+      "seen_runs": 7,
+      "peak_count": 1,
+      "title": "Revisar · Opinión · Pixel Watch · I tested the Google Pixel Watch 5 vs Fitbit Edge on a 5km walk",
+      "category": "opinion",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "acbfc9ea0af4fb01": {
+      "first_seen": "2026-11-04",
+      "seen_runs": 15,
+      "peak_count": 1,
+      "title": "Revisar · Opinión · Pixel Watch · Fitbit Edge review: Is the newest model better than the Pixel Watch 5?",
+      "category": "opinion",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "cba9113ef661367d": {
+      "first_seen": "2026-10-22",
+      "seen_runs": 29,
+      "peak_count": 1,
+      "title": "Revisar · Opinión · Pixel Watch · Google Fitbit Edge hands-on: Pixel Watch Lite, take two",
+      "category": "opinion",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
     "a66347e440f14b83": {
       "first_seen": "2026-11-13",
-      "seen_runs": 5,
+      "seen_runs": 6,
       "peak_count": 1,
       "title": "Revisar · Sincronización · Fitbit Air · Google Health update causes Fitbit app to hide health metrics",
       "category": "sincronizacion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
+    },
+    "5a9025e60fa07625": {
+      "first_seen": "2026-11-18",
+      "seen_runs": 1,
+      "peak_count": 1,
+      "title": "Revisar · Sincronización · Fitbit Air · ... with the Fitbit Air?",
+      "category": "sincronizacion",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
     },
     "5eb31164f6716545": {
       "first_seen": "2026-11-14",
-      "seen_runs": 4,
+      "seen_runs": 5,
       "peak_count": 1,
       "title": "Revisar · Sincronización · Fitbit Air · Fitbit Air constantly shows \"not found\" when attempting to sync",
       "category": "sincronizacion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "73d21af4cde33796": {
-      "first_seen": "2026-11-03",
-      "seen_runs": 15,
-      "peak_count": 4,
-      "title": "Batería · Charge 5 · Fitbit Charge 5 battery draining in minutes",
-      "category": "bateria",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "335f3f7800c7c202": {
-      "first_seen": "2026-11-04",
-      "seen_runs": 14,
-      "peak_count": 1,
-      "title": "Batería · Charge 5 · Charge 5 battery drain over around 12 hours",
-      "category": "bateria",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "ee4f35a3afe63fe5": {
-      "first_seen": "2026-11-17",
-      "seen_runs": 1,
-      "peak_count": 1,
-      "title": "Batería · Sin modelo · Battery draining in under 24 hours since Google ...",
-      "category": "bateria",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "25d77d894ca07558": {
-      "first_seen": "2026-10-28",
-      "seen_runs": 21,
-      "peak_count": 4,
-      "title": "Batería · Sin modelo · How to find out what is eating up my battery life ...",
-      "category": "bateria",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "06440c9227e4d1ba": {
-      "first_seen": "2026-11-07",
-      "seen_runs": 11,
-      "peak_count": 1,
-      "title": "Batería · Sin modelo · An sich okay, lässt noch zu wünschen übrig. Google-Konto-Zwang nervt",
-      "category": "bateria",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "deb5e42321008bbb": {
-      "first_seen": "2026-11-17",
-      "seen_runs": 1,
-      "peak_count": 4,
-      "title": "Batería · Charge 6 · Charge 6 Battery Draining in 2 Days After 8 ...",
-      "category": "bateria",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "832a1817ade76882": {
-      "first_seen": "2026-11-17",
-      "seen_runs": 1,
-      "peak_count": 1,
-      "title": "Revisar · Batería · Charge 6 · App upgrade from fitbit to google app appears to ...",
-      "category": "bateria",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "fc467c0c350c183a": {
-      "first_seen": "2026-11-13",
-      "seen_runs": 5,
-      "peak_count": 2,
-      "title": "Revisar · Batería · Charge 6 · Charge 6 not holding charge",
-      "category": "bateria",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "eabc1c16b562a97d": {
-      "first_seen": "2026-11-13",
-      "seen_runs": 5,
-      "peak_count": 1,
-      "title": "Revisar · Batería · Charge 5 · My charge 5 will not stay charged. The battery ...",
-      "category": "bateria",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "d0ce17721fd9c178": {
-      "first_seen": "2026-11-17",
-      "seen_runs": 1,
-      "peak_count": 1,
-      "title": "Sincronización · Charge 5 · Recent app update has killed my Charge 5",
-      "category": "sincronizacion",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "6a1eee9fe743b7a0": {
       "first_seen": "2026-10-21",
-      "seen_runs": 29,
+      "seen_runs": 30,
       "peak_count": 2,
       "title": "Batería · Sense 2 · Battery life dimished to half a day",
       "category": "bateria",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "a921e26642aadff0": {
       "first_seen": "2026-10-27",
-      "seen_runs": 22,
+      "seen_runs": 23,
       "peak_count": 1,
       "title": "Batería · Sense 2 · Sense 2 battery fluctuating up and down rapidly",
       "category": "bateria",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
+    },
+    "2e2fa429b41a2836": {
+      "first_seen": "2026-11-18",
+      "seen_runs": 1,
+      "peak_count": 1,
+      "title": "Revisar · Batería · Charge 5 · App upgrade from fitbit to google app appears to ...",
+      "category": "bateria",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "eabc1c16b562a97d": {
+      "first_seen": "2026-11-13",
+      "seen_runs": 6,
+      "peak_count": 1,
+      "title": "Revisar · Batería · Charge 5 · My charge 5 will not stay charged. The battery ...",
+      "category": "bateria",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "dee81fdd966715ed": {
+      "first_seen": "2026-11-18",
+      "seen_runs": 1,
+      "peak_count": 1,
+      "title": "Batería · Versa 4 · Versa 4 since Google merger doesn't work ...",
+      "category": "bateria",
+      "polarity": "mala",
+      "last_seen": "2026-11-18"
+    },
+    "73d21af4cde33796": {
+      "first_seen": "2026-11-03",
+      "seen_runs": 16,
+      "peak_count": 4,
+      "title": "Batería · Charge 5 · Fitbit Charge 5 battery draining in minutes",
+      "category": "bateria",
+      "polarity": "mala",
+      "last_seen": "2026-11-18"
+    },
+    "335f3f7800c7c202": {
+      "first_seen": "2026-11-04",
+      "seen_runs": 15,
+      "peak_count": 1,
+      "title": "Batería · Charge 5 · Charge 5 battery drain over around 12 hours",
+      "category": "bateria",
+      "polarity": "mala",
+      "last_seen": "2026-11-18"
+    },
+    "213f05b6df5696f2": {
+      "first_seen": "2026-11-18",
+      "seen_runs": 1,
+      "peak_count": 1,
+      "title": "Carga · Charge 5 · Charge 5 overheats and won't charge",
+      "category": "carga",
+      "polarity": "mala",
+      "last_seen": "2026-11-18"
+    },
+    "6c1d708e0ceb2ad3": {
+      "first_seen": "2026-11-18",
+      "seen_runs": 1,
+      "peak_count": 5,
+      "title": "Batería · Charge 6 · Charge 6 Battery Draining in 2 Days After 8 ...",
+      "category": "bateria",
+      "polarity": "mala",
+      "last_seen": "2026-11-18"
+    },
+    "fc467c0c350c183a": {
+      "first_seen": "2026-11-13",
+      "seen_runs": 6,
+      "peak_count": 2,
+      "title": "Revisar · Batería · Charge 6 · Charge 6 not holding charge",
+      "category": "bateria",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "25d77d894ca07558": {
+      "first_seen": "2026-10-28",
+      "seen_runs": 22,
+      "peak_count": 4,
+      "title": "Batería · Sin modelo · How to find out what is eating up my battery life ...",
+      "category": "bateria",
+      "polarity": "mala",
+      "last_seen": "2026-11-18"
     },
     "e6457f4f906479a8": {
       "first_seen": "2026-11-13",
-      "seen_runs": 5,
+      "seen_runs": 6,
       "peak_count": 1,
       "title": "Batería · Sense · Fitbit Sense battery no longer accepts recharge ...",
       "category": "bateria",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
-    "2d2a72a7457ee465": {
-      "first_seen": "2026-11-17",
+    "de14c3d5af20adb6": {
+      "first_seen": "2026-11-18",
       "seen_runs": 1,
       "peak_count": 1,
-      "title": "Revisar · Batería · Sense 2 · I would like to replace old sense 2 with a new ...",
+      "title": "Revisar · Batería · Sense 2 · ... sense 2. old sense 2 battery only lasts 2 days ...",
       "category": "bateria",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "38054807d00547b2": {
       "first_seen": "2026-11-03",
-      "seen_runs": 15,
+      "seen_runs": 16,
       "peak_count": 3,
-      "title": "Sincronización · Charge 6 · Fitbit Charge 6 Won't Sync Data? 9 Ways to Fix It",
+      "title": "Sincronización · Charge 6 · My charge 6 will not sync in google health Fitbit",
       "category": "sincronizacion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "d304eb4e971f6051": {
       "first_seen": "2026-11-17",
-      "seen_runs": 1,
+      "seen_runs": 2,
       "peak_count": 2,
       "title": "Sincronización · Charge 6 · Charge 6 no longer syncing and now not pairing",
       "category": "sincronizacion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "2fa01125126bfb05": {
       "first_seen": "2026-11-17",
-      "seen_runs": 1,
+      "seen_runs": 2,
       "peak_count": 1,
       "title": "Sincronización · Charge 6 · number of steps on Iphone and charge 6 not the ...",
       "category": "sincronizacion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "b5ef1df67d130b61": {
       "first_seen": "2026-11-04",
-      "seen_runs": 14,
+      "seen_runs": 15,
       "peak_count": 1,
       "title": "Sincronización · Charge 6 · Mobile app says \"synced just now\" but charge 6 won't stop flashing \"S…",
       "category": "sincronizacion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "4a9b413b4a656e07": {
       "first_seen": "2026-10-27",
-      "seen_runs": 22,
+      "seen_runs": 23,
       "peak_count": 6,
       "title": "Sincronización · Sin modelo · Fitbit won't sync",
       "category": "sincronizacion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "62f46909e926ee8e": {
       "first_seen": "2026-11-13",
-      "seen_runs": 5,
+      "seen_runs": 6,
       "peak_count": 1,
       "title": "Sincronización · Sin modelo · Google health app migration loop",
       "category": "sincronizacion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "77844c7229503488": {
       "first_seen": "2026-11-17",
-      "seen_runs": 1,
+      "seen_runs": 2,
       "peak_count": 1,
       "title": "Sincronización · Sin modelo · since the new update 5.07 the app no longer ...",
       "category": "sincronizacion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "2695504612e61f46": {
-      "first_seen": "2026-11-15",
-      "seen_runs": 3,
-      "peak_count": 1,
-      "title": "Sincronización · Sin modelo · Legacy Fitbit Web API returning HTTP 500 ...",
-      "category": "sincronizacion",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "3cbede8df5895538": {
       "first_seen": "2026-11-13",
-      "seen_runs": 5,
+      "seen_runs": 6,
       "peak_count": 1,
       "title": "Sincronización · Sin modelo · ‘It’s a joke’ — Fitbit users are beyond annoyed with Google Health’s…",
       "category": "sincronizacion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
-    "20f10cde84d3e2fe": {
-      "first_seen": "2026-11-17",
+    "b24fb7071f10e5cb": {
+      "first_seen": "2026-11-18",
       "seen_runs": 1,
       "peak_count": 1,
       "title": "Sincronización · Sin modelo · Google investiga un fallo que oculta métricas de Fitbit en Google Health",
       "category": "sincronizacion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "856afb78c7af1c6d": {
       "first_seen": "2026-11-17",
-      "seen_runs": 1,
+      "seen_runs": 2,
       "peak_count": 1,
       "title": "Sincronización · Sin modelo · Google Health: Version 5.08 macht Google-Konto zur Pflicht und beende…",
       "category": "sincronizacion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "db3c86941b45b09c": {
       "first_seen": "2026-11-17",
-      "seen_runs": 1,
+      "seen_runs": 2,
       "peak_count": 1,
       "title": "Sincronización · Sin modelo · Google Health 5.08: Fitbit-Migration endet, Google-Konto wird Pflicht",
       "category": "sincronizacion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "22438d8c66b1dd38": {
       "first_seen": "2026-10-12",
-      "seen_runs": 44,
+      "seen_runs": 45,
       "peak_count": 1,
       "title": "Sincronización · Sin modelo · ‘None of the features I liked from Fitbit’s app are left’: Google is…",
       "category": "sincronizacion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "95e121ba78033305": {
       "first_seen": "2026-11-17",
-      "seen_runs": 1,
+      "seen_runs": 2,
       "peak_count": 1,
       "title": "Sincronización · Sin modelo · ‘Ridiculous that a multi-trillion-dollar company can’t fix an issue’:…",
       "category": "sincronizacion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "28df883ea8369ba6": {
       "first_seen": "2026-10-13",
-      "seen_runs": 37,
+      "seen_runs": 38,
       "peak_count": 1,
       "title": "Sincronización · Sin modelo · 'Google Health Coach onboarding incorporates explicit consent': I ask…",
       "category": "sincronizacion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "c2ff4c399cdacd6e": {
       "first_seen": "2026-11-13",
-      "seen_runs": 5,
+      "seen_runs": 6,
       "peak_count": 1,
       "title": "Sincronización · Sin modelo · @mehul4795 We’re sorry to hear this, and thanks for the screenshot. F…",
       "category": "sincronizacion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "200218c57277e2f1": {
-      "first_seen": "2026-11-15",
-      "seen_runs": 3,
-      "peak_count": 1,
-      "title": "Sincronización · Sin modelo · Worst app ever. Google is the worst.",
-      "category": "sincronizacion",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "61252831fb8f3580": {
-      "first_seen": "2026-10-26",
-      "seen_runs": 23,
-      "peak_count": 1,
-      "title": "Sincronización · Sin modelo · Missing My Sleep Animal, the Bear",
-      "category": "sincronizacion",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "d172da7e18f16c7c": {
-      "first_seen": "2026-11-09",
-      "seen_runs": 9,
-      "peak_count": 1,
-      "title": "Sincronización · Sin modelo · Google arruinaste la mejor app y dispositivo",
-      "category": "sincronizacion",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "aef19d5184a29ff8": {
-      "first_seen": "2026-10-23",
-      "seen_runs": 27,
-      "peak_count": 3,
-      "title": "Sincronización · Sin modelo · Appleヘルスケアへのアクティブエネルギー同期を改善してほしい",
-      "category": "sincronizacion",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "ff2a73017bece355": {
-      "first_seen": "2026-11-15",
-      "seen_runs": 3,
-      "peak_count": 1,
-      "title": "Sincronización · Sin modelo · Ruined the experience",
-      "category": "sincronizacion",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "3a3f158ae979271b": {
       "first_seen": "2026-11-16",
-      "seen_runs": 2,
+      "seen_runs": 3,
       "peak_count": 2,
       "title": "Sincronización · Sin modelo · Fitbit app had sync problems",
       "category": "sincronizacion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "a915a8c10d05c61a": {
       "first_seen": "2026-11-13",
-      "seen_runs": 5,
+      "seen_runs": 6,
       "peak_count": 3,
       "title": "Sincronización · Versa 4 · Versa 4 won't show clockface stuck on sync with ...",
       "category": "sincronizacion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
-    "c68e001f6dfbf4bb": {
-      "first_seen": "2026-11-15",
-      "seen_runs": 3,
-      "peak_count": 1,
-      "title": "Buena noticia · Sincronización · Sin modelo · Google Health app 5.09 update",
-      "category": "sincronizacion",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
-    },
-    "07e592a3b9a8351b": {
-      "first_seen": "2026-11-17",
+    "b3ffef048cac622e": {
+      "first_seen": "2026-11-18",
       "seen_runs": 1,
       "peak_count": 1,
-      "title": "Buena noticia · Sincronización · Sin modelo · Google confirma bug que esconde sinais vitais diários no app Google H…",
+      "title": "Revisar · Sincronización · Sin modelo · Google Health app 5.12 update",
       "category": "sincronizacion",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
-    },
-    "88346c181d7b8209": {
-      "first_seen": "2026-11-17",
-      "seen_runs": 1,
-      "peak_count": 1,
-      "title": "Buena noticia · Sincronización · Sin modelo · Google Health s’améliore enfin : cette mise à jour corrige plusieurs…",
-      "category": "sincronizacion",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
-    },
-    "16ebd596c5997b58": {
-      "first_seen": "2026-11-17",
-      "seen_runs": 1,
-      "peak_count": 1,
-      "title": "Buena noticia · Sincronización · Sin modelo · Des utilisateurs de Fitbit signalent l’absence de données de santé ré…",
-      "category": "sincronizacion",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
-    },
-    "172a95705f749a7b": {
-      "first_seen": "2026-10-12",
-      "seen_runs": 44,
-      "peak_count": 1,
-      "title": "Buena noticia · Sincronización · Sin modelo · Google Health gets better workout logging, improved maps, and Health…",
-      "category": "sincronizacion",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
     },
     "4ae10222bc36762b": {
       "first_seen": "2026-11-14",
-      "seen_runs": 4,
+      "seen_runs": 5,
       "peak_count": 1,
       "title": "Revisar · Sincronización · Sin modelo · Sharing upcoming roadmap and improvements",
       "category": "sincronizacion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "8f809eb47f2b441e": {
-      "first_seen": "2026-11-17",
-      "seen_runs": 1,
-      "peak_count": 1,
-      "title": "Revisar · Sincronización · Sin modelo · Has my data on fitbit app been lost after the ...",
-      "category": "sincronizacion",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "9afa49a3e5aaae7d": {
-      "first_seen": "2026-11-17",
-      "seen_runs": 1,
-      "peak_count": 1,
-      "title": "Revisar · Sincronización · Sin modelo · Trying to sync Starfit scale to Fitbit 6",
-      "category": "sincronizacion",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "850a5b04b453d545": {
       "first_seen": "2026-11-05",
-      "seen_runs": 13,
+      "seen_runs": 14,
       "peak_count": 1,
       "title": "Revisar · Sincronización · Sin modelo · Google Health makes using two Fitbit devices unnecessarily complicate…",
       "category": "sincronizacion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "3a5db92ac21f9dbf": {
       "first_seen": "2026-11-11",
-      "seen_runs": 7,
+      "seen_runs": 8,
       "peak_count": 2,
       "title": "Revisar · Sincronización · Sin modelo · Fitbit Sens 2 is stuck won \"Sync from the Fitbit mobile app\"",
       "category": "sincronizacion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "2faf6cb51796d782": {
-      "first_seen": "2026-11-13",
-      "seen_runs": 5,
-      "peak_count": 1,
-      "title": "Revisar · Sincronización · Sin modelo · Application bien conçue, mais des dysfonctionnements inadmissibles !",
-      "category": "sincronizacion",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "32b32b338e10fdf5": {
       "first_seen": "2026-11-03",
-      "seen_runs": 15,
+      "seen_runs": 16,
       "peak_count": 1,
       "title": "Opinión · Sense 2 · Fitbit data vanished?",
       "category": "opinion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "d22bafb7a31bf746": {
       "first_seen": "2026-10-27",
-      "seen_runs": 22,
+      "seen_runs": 23,
       "peak_count": 1,
       "title": "Opinión · Sense 2 · Google's Update Killed My Fitbit Sense 2 — Extremely Disappointed",
       "category": "opinion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "76ecd5879881bb10": {
       "first_seen": "2026-11-03",
-      "seen_runs": 15,
+      "seen_runs": 16,
       "peak_count": 1,
       "title": "Opinión · Luxe · Why did my old Fitbit Luxe (already migrated ...",
       "category": "opinion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "a8ad23c1a4421b50": {
       "first_seen": "2026-11-16",
-      "seen_runs": 2,
+      "seen_runs": 3,
       "peak_count": 1,
       "title": "Opinión · Sin modelo · I can't move migrate my account!",
       "category": "opinion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "c63d4d1866642615": {
       "first_seen": "2026-11-14",
-      "seen_runs": 4,
+      "seen_runs": 5,
       "peak_count": 1,
       "title": "Opinión · Sin modelo · Loss of Fitbit History After Inadequate Transfer ...",
       "category": "opinion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "bf47b8ca3a1ee0ec": {
-      "first_seen": "2026-11-12",
-      "seen_runs": 6,
-      "peak_count": 1,
-      "title": "Software / app · Luxe · Sleep tracker stops working after 3hours of sleep",
-      "category": "software",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "273b5fe17e72a86a": {
       "first_seen": "2026-11-17",
-      "seen_runs": 1,
+      "seen_runs": 2,
       "peak_count": 1,
       "title": "Software / app · Sin modelo · Bug in Health app and keeps crashing.",
       "category": "software",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "e8a5b8c4ec8b1b2e": {
       "first_seen": "2026-10-28",
-      "seen_runs": 21,
+      "seen_runs": 22,
       "peak_count": 1,
       "title": "Software / app · Sin modelo · I thought I'd love the $180 Fitbit Edge. 7 days later, I'm just disap…",
       "category": "software",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "e819a65d3fae448c": {
-      "first_seen": "2026-11-17",
-      "seen_runs": 1,
-      "peak_count": 1,
-      "title": "Software / app · Sin modelo · 4 Common Issues With Fitbit Devices",
-      "category": "software",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "5f24a55b3f852241": {
       "first_seen": "2026-11-17",
-      "seen_runs": 1,
+      "seen_runs": 2,
       "peak_count": 1,
       "title": "Software / app · Sin modelo · Google admite que não tem previsão para corrigir falha que esconde da…",
       "category": "software",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "02c2fa79f0b83ed7": {
       "first_seen": "2026-10-12",
-      "seen_runs": 44,
+      "seen_runs": 45,
       "peak_count": 1,
       "title": "Software / app · Sin modelo · The classic Fitbit app is finally dead",
       "category": "software",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "a739ecaceb4466d5": {
       "first_seen": "2026-10-12",
-      "seen_runs": 44,
+      "seen_runs": 45,
       "peak_count": 1,
       "title": "Software / app · Sin modelo · Google has closed the retired Fitbit app workaround.",
       "category": "software",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "fae65ceb1f7e7a1d": {
       "first_seen": "2026-10-16",
-      "seen_runs": 34,
+      "seen_runs": 35,
       "peak_count": 2,
       "title": "Software / app · Sin modelo · The original Fitbit app is finally disappearing for its remaining users",
       "category": "software",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "8297a16b226cbedf": {
       "first_seen": "2026-10-12",
-      "seen_runs": 43,
+      "seen_runs": 44,
       "peak_count": 1,
       "title": "Software / app · Sin modelo · Google Health no longer lets users log in with Fitbit",
       "category": "software",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
+    },
+    "96b826da120433dc": {
+      "first_seen": "2026-11-18",
+      "seen_runs": 1,
+      "peak_count": 1,
+      "title": "Software / app · Sin modelo · Fitbit Edge Reviews: LOVE vs HATE ⌚ Google's $179.99 Tracker #FitbitE…",
+      "category": "software",
+      "polarity": "mala",
+      "last_seen": "2026-11-18"
     },
     "8bc228621d970f04": {
       "first_seen": "2026-11-13",
-      "seen_runs": 5,
+      "seen_runs": 6,
       "peak_count": 1,
       "title": "Software / app · Sin modelo · Fitbit Edge 2 semana después: ¿han corregido el problema?",
       "category": "software",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "28ceac3bd7b1dfbb": {
       "first_seen": "2026-10-15",
-      "seen_runs": 35,
+      "seen_runs": 36,
       "peak_count": 1,
       "title": "Software / app · Sin modelo · ⌚ Google presentó la Fitbit Edge, una pulsera inteligente con GPS y b…",
       "category": "software",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "d7ee47398219c324": {
-      "first_seen": "2026-11-12",
-      "seen_runs": 6,
-      "peak_count": 1,
-      "title": "Software / app · Sin modelo · Review #3 now #4. So many things WRONG with this app.",
-      "category": "software",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "7aab206fbe52e2d8": {
       "first_seen": "2026-11-16",
-      "seen_runs": 2,
+      "seen_runs": 3,
       "peak_count": 1,
       "title": "Software / app · Sin modelo · Extraño la app original de Fitbit",
       "category": "software",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
-    "69120523b630355d": {
-      "first_seen": "2026-11-15",
-      "seen_runs": 3,
+    "bf47b8ca3a1ee0ec": {
+      "first_seen": "2026-11-12",
+      "seen_runs": 7,
       "peak_count": 1,
-      "title": "Buena noticia · Sincronización · Fitbit Air · Fitbit Air consistently fails to connect/sync",
-      "category": "sincronizacion",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
+      "title": "Software / app · Luxe · Sleep tracker stops working after 3hours of sleep",
+      "category": "software",
+      "polarity": "mala",
+      "last_seen": "2026-11-18"
     },
-    "1842f36915e0b786": {
-      "first_seen": "2026-11-02",
-      "seen_runs": 16,
-      "peak_count": 2,
-      "title": "Buena noticia · Sincronización · Fitbit Air · Google Health 5.11 rolling out with Fitbit Air Health Guardian, impro…",
-      "category": "sincronizacion",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
-    },
-    "95755f36a91bc4ea": {
-      "first_seen": "2026-10-29",
-      "seen_runs": 20,
-      "peak_count": 1,
-      "title": "Buena noticia · Sincronización · Fitbit Air · The Discovery Product Launch event on 1 Oct",
-      "category": "sincronizacion",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
-    },
-    "08804276219185a5": {
-      "first_seen": "2026-10-23",
-      "seen_runs": 26,
-      "peak_count": 2,
-      "title": "Revisar · Pantalla · Inspire 3 · Inspire 3 screen",
-      "category": "pantalla",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "8829b6a9f64b83b8": {
-      "first_seen": "2026-11-02",
-      "seen_runs": 16,
-      "peak_count": 1,
-      "title": "Revisar · Sincronización · Inspire 3 · Inspire 3 is unreliable with finding my iPhone.",
-      "category": "sincronizacion",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "5287304a793c27d1": {
-      "first_seen": "2026-11-17",
+    "918e8446db4bf135": {
+      "first_seen": "2026-11-18",
       "seen_runs": 1,
       "peak_count": 1,
-      "title": "Revisar · Sincronización · Inspire 3 · My inspire three did not transfer over to Google ...",
-      "category": "sincronizacion",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "f3c7a9f1554d8010": {
-      "first_seen": "2026-11-17",
-      "seen_runs": 1,
-      "peak_count": 1,
-      "title": "Revisar · Sincronización · Inspire 3 · Fitbit Inspire 3 is NOT correctly measuring ...",
-      "category": "sincronizacion",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "9a6c03a9e7b3fdcd": {
-      "first_seen": "2026-11-16",
-      "seen_runs": 2,
-      "peak_count": 1,
-      "title": "Sincronización · Fitbit Air · Fitbit air isn't autotracking workouts.",
+      "title": "Sincronización · Fitbit Air · Fitbit Air not syncing",
       "category": "sincronizacion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "c131b608eb7ca002": {
       "first_seen": "2026-11-14",
-      "seen_runs": 4,
+      "seen_runs": 5,
       "peak_count": 1,
       "title": "Sincronización · Fitbit Air · Fitbit Air Syncing Error (Error Code 16) on iPhone – Recurring Issue",
       "category": "sincronizacion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "9fe8d5a469c5844f": {
       "first_seen": "2026-11-16",
-      "seen_runs": 2,
+      "seen_runs": 3,
       "peak_count": 1,
       "title": "Sincronización · Fitbit Air · Google Fitbit Air syncing issues leave some iPhone users unable to ac…",
       "category": "sincronizacion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
-    "af9104b61c3dcfa8": {
-      "first_seen": "2026-11-13",
-      "seen_runs": 5,
+    "afb15f66d5ad5d7c": {
+      "first_seen": "2026-11-18",
+      "seen_runs": 1,
       "peak_count": 1,
-      "title": "Sincronización · Fitbit Air · Google Health isn’t showing Fitbit users their daily vitals, and the…",
+      "title": "Sincronización · Fitbit Air · Why is Google Health app so awful with Sleep Score calculation? Devic…",
       "category": "sincronizacion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
-    "76af352a1daa0fe4": {
-      "first_seen": "2026-11-16",
-      "seen_runs": 2,
-      "peak_count": 1,
-      "title": "Batería · Fitbit Air · Fitbit Air Battery does not last more than a day",
-      "category": "bateria",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "4faa91e551eaff79": {
-      "first_seen": "2026-11-16",
-      "seen_runs": 2,
-      "peak_count": 1,
-      "title": "Batería · Fitbit Air · Google fitbit air Battery drain so fast",
-      "category": "bateria",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "07444acf7c74814a": {
-      "first_seen": "2026-11-16",
-      "seen_runs": 2,
+    "08804276219185a5": {
+      "first_seen": "2026-10-23",
+      "seen_runs": 27,
       "peak_count": 2,
-      "title": "Carga · Fitbit Air · Google Fitbit Air Charging Issue",
-      "category": "carga",
+      "title": "Revisar · Pantalla · Inspire 3 · Inspire 3 screen",
+      "category": "pantalla",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "8829b6a9f64b83b8": {
+      "first_seen": "2026-11-02",
+      "seen_runs": 17,
+      "peak_count": 1,
+      "title": "Revisar · Sincronización · Inspire 3 · Inspire 3 is unreliable with finding my iPhone.",
+      "category": "sincronizacion",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "5287304a793c27d1": {
+      "first_seen": "2026-11-17",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Revisar · Sincronización · Inspire 3 · My inspire three did not transfer over to Google ...",
+      "category": "sincronizacion",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "f3c7a9f1554d8010": {
+      "first_seen": "2026-11-17",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Revisar · Sincronización · Inspire 3 · Fitbit Inspire 3 is NOT correctly measuring ...",
+      "category": "sincronizacion",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "abf8771644fe8467": {
+      "first_seen": "2026-11-18",
+      "seen_runs": 1,
+      "peak_count": 1,
+      "title": "Revisar · Sincronización · Inspire 3 · How do I record my height on Inspire 3?",
+      "category": "sincronizacion",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "10763577f2773271": {
+      "first_seen": "2026-11-18",
+      "seen_runs": 1,
+      "peak_count": 1,
+      "title": "Opinión · Fitbit Air · Fitbit Air Basketball Feature",
+      "category": "opinion",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "bf0a3d7ad25684ad": {
       "first_seen": "2026-10-28",
-      "seen_runs": 21,
+      "seen_runs": 22,
       "peak_count": 1,
       "title": "Elogio · Charge · The Fitbit Edge is the best Fitbit Charge I could ever buy",
       "category": "opinion",
       "polarity": "buena",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "ca478b56628dd319": {
       "first_seen": "2026-10-15",
-      "seen_runs": 35,
+      "seen_runs": 36,
       "peak_count": 2,
       "title": "Revisar · Opinión · Fitbit Air · Fitbit Edge Vs Fitbit Air: The Differences Beyond A Screen",
       "category": "opinion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "a3acaa508be277f2": {
       "first_seen": "2026-10-12",
-      "seen_runs": 43,
+      "seen_runs": 44,
       "peak_count": 1,
       "title": "Revisar · Opinión · Fitbit Air · I wore the Google Fitbit Air for 30 days; these are the hidden settin…",
       "category": "opinion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "2d11a398628c8d09": {
       "first_seen": "2026-11-02",
-      "seen_runs": 16,
+      "seen_runs": 17,
       "peak_count": 1,
       "title": "Revisar · Opinión · Fitbit Air · Fitbit Edge vs Fitbit Air: I gave both these Google trackers 5 stars,…",
       "category": "opinion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "f1674119efd5d88a": {
       "first_seen": "2026-11-17",
-      "seen_runs": 1,
+      "seen_runs": 2,
       "peak_count": 1,
       "title": "Revisar · Opinión · Fitbit Air · I tested the Garmin Cirqa and Fitbit Air over 9,000 steps",
       "category": "opinion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "1cf4d57a3a70b7cb": {
       "first_seen": "2026-11-02",
-      "seen_runs": 16,
+      "seen_runs": 17,
       "peak_count": 1,
       "title": "Revisar · Opinión · Fitbit Air · Fitbit Air review: is this screenless tracker worth the money?",
       "category": "opinion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "0aa9256e2e9f2756": {
       "first_seen": "2026-11-17",
-      "seen_runs": 1,
+      "seen_runs": 2,
       "peak_count": 1,
       "title": "Revisar · Opinión · Fitbit Air · Google Fitbit Edge vs Fitbit Air: With or without a screen?",
       "category": "opinion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "d1d7b59a55044b58": {
-      "first_seen": "2026-10-19",
-      "seen_runs": 31,
-      "peak_count": 1,
-      "title": "Revisar · Opinión · Fitbit Air · Google Fitbit Air im Test: 100-Euro-Tracker ohne Abo-Zwang",
-      "category": "opinion",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "9bfa0796ab61a7ad": {
-      "first_seen": "2026-11-17",
-      "seen_runs": 1,
-      "peak_count": 1,
-      "title": "Revisar · Opinión · Fitbit Air · Google Fitbit Edge review: deze 3 problemen maken de goedkopere Fitbi…",
-      "category": "opinion",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "16e3a6ef64e2fe8f": {
       "first_seen": "2026-10-12",
-      "seen_runs": 43,
+      "seen_runs": 44,
       "peak_count": 1,
       "title": "Revisar · Opinión · Fitbit Air · Hands-on review: Is the Fitbit Air the best model yet? I have thought…",
       "category": "opinion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
+    },
+    "d1d7b59a55044b58": {
+      "first_seen": "2026-10-19",
+      "seen_runs": 32,
+      "peak_count": 1,
+      "title": "Revisar · Opinión · Fitbit Air · Google Fitbit Air im Test: 100-Euro-Tracker ohne Abo-Zwang",
+      "category": "opinion",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "9bfa0796ab61a7ad": {
+      "first_seen": "2026-11-17",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Revisar · Opinión · Fitbit Air · Google Fitbit Edge review: deze 3 problemen maken de goedkopere Fitbi…",
+      "category": "opinion",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
     },
     "d8d07c9a594e1ff0": {
       "first_seen": "2026-10-28",
-      "seen_runs": 21,
+      "seen_runs": 22,
       "peak_count": 2,
       "title": "Revisar · Opinión · Fitbit Air · Fitbit Edge vs Fitbit Air: Which health features do you actually get?",
       "category": "opinion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "0e8193b12bc2c660": {
       "first_seen": "2026-10-12",
-      "seen_runs": 43,
+      "seen_runs": 44,
       "peak_count": 2,
       "title": "Revisar · Opinión · Fitbit Air · Fitbit Air review: The tracker that disappears on your wrist",
       "category": "opinion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "5d404cbe51b69093": {
       "first_seen": "2026-11-04",
-      "seen_runs": 14,
+      "seen_runs": 15,
       "peak_count": 2,
       "title": "Revisar · Opinión · Fitbit Air · Google Fitbit Air review: Serious health tracking without any distrac…",
       "category": "opinion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "64697ab8f00f8308": {
       "first_seen": "2026-10-12",
-      "seen_runs": 43,
+      "seen_runs": 44,
       "peak_count": 1,
       "title": "Revisar · Opinión · Fitbit Air · Google lanza la pulsera Fitbit Air Special Edition de Pokémon Sleep c…",
       "category": "opinion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "00f525f546697668": {
       "first_seen": "2026-10-16",
-      "seen_runs": 34,
+      "seen_runs": 35,
       "peak_count": 1,
       "title": "Revisar · Opinión · Fitbit Air · Review Google Fitbit Air",
       "category": "opinion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "d5b769f0bf2de98f": {
       "first_seen": "2026-10-13",
-      "seen_runs": 37,
+      "seen_runs": 38,
       "peak_count": 2,
       "title": "Revisar · Opinión · Fitbit Air · Google’s Fitbit Edge ⌚ 📱 1.34\" AMOLED screen 📍 Built-in GPS ❤️ ECG, S…",
       "category": "opinion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "80de24ea76618479": {
       "first_seen": "2026-11-13",
-      "seen_runs": 5,
+      "seen_runs": 6,
       "peak_count": 1,
       "title": "Revisar · Opinión · Fitbit Air · I Tested Google’s Fitbit Air for Weeks—and It’s the Rare Fitness Trac…",
       "category": "opinion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "bf63eb5c2d4c1f82": {
       "first_seen": "2026-10-12",
-      "seen_runs": 43,
+      "seen_runs": 44,
       "peak_count": 2,
       "title": "Revisar · Opinión · Fitbit Air · DA MIEDO!🤯GOOGLE FITBIT AIR: REVIEW tras 2 MESES de USO REAL",
       "category": "opinion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "3c7dc1b9707a83b3": {
       "first_seen": "2026-11-14",
-      "seen_runs": 4,
+      "seen_runs": 5,
       "peak_count": 1,
       "title": "Revisar · Opinión · Fitbit Air · Xiaomi Band 11 vs Fitbit Air: qual você realmente precisa?",
       "category": "opinion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
-    "f2087510975ba03a": {
-      "first_seen": "2026-11-15",
-      "seen_runs": 3,
+    "d73c520b823cbf1b": {
+      "first_seen": "2026-11-18",
+      "seen_runs": 1,
       "peak_count": 2,
       "title": "Revisar · Opinión · Fitbit Air · Fitbit Air vs Oura Ring: Wer schläft besser? #shorts",
       "category": "opinion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "e42d43c8a41c9fc5": {
-      "first_seen": "2026-10-30",
-      "seen_runs": 19,
-      "peak_count": 1,
-      "title": "Revisar · Opinión · Fitbit Air · Fitbit Air vs Bevel",
-      "category": "opinion",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "4b1d24ba0a2eefbe": {
       "first_seen": "2026-11-14",
-      "seen_runs": 4,
+      "seen_runs": 5,
       "peak_count": 3,
       "title": "Revisar · Opinión · Fitbit Air · Fitbit Edge",
       "category": "opinion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "b547a17b94c251e7": {
       "first_seen": "2026-11-13",
-      "seen_runs": 5,
+      "seen_runs": 6,
       "peak_count": 2,
       "title": "Revisar · Opinión · Fitbit Air · Google Fitbit Edge Review",
       "category": "opinion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
-    "ccd162cc75ae2c06": {
-      "first_seen": "2026-11-17",
+    "8f4aed069eb10a4a": {
+      "first_seen": "2026-11-18",
       "seen_runs": 1,
       "peak_count": 2,
       "title": "Revisar · Opinión · Fitbit Air · Fitbit Air vs Garmin Cirqa vs Hume Band 2.0: Which One's Best?",
       "category": "opinion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "9e89717a4a26bcbf": {
       "first_seen": "2026-10-28",
-      "seen_runs": 21,
+      "seen_runs": 22,
       "peak_count": 2,
       "title": "Revisar · Opinión · Fitbit Air · I Wore Both for 2 Weeks",
       "category": "opinion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "93d30f2253cb96b4": {
       "first_seen": "2026-11-15",
-      "seen_runs": 3,
+      "seen_runs": 4,
       "peak_count": 1,
       "title": "Revisar · Opinión · Fitbit Air · Fitbit Air Rival With ZERO Subscription",
       "category": "opinion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
-    "3c2713520026da59": {
-      "first_seen": "2026-11-17",
+    "eebc4c2bfb3213c4": {
+      "first_seen": "2026-11-18",
       "seen_runs": 1,
       "peak_count": 1,
-      "title": "Revisar · Opinión · Fitbit Air · Huawei Watch Gt 6 Pro Vs Google Fitbit Air",
+      "title": "Revisar · Opinión · Fitbit Air · Fitbit Air vs Hume Band 2.0: Only One Is Worth Buying",
       "category": "opinion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
-    "2151865e745c99b8": {
-      "first_seen": "2026-10-12",
-      "seen_runs": 44,
-      "peak_count": 1,
-      "title": "Elogio · Sin modelo · I spent months testing Google's Fitbit fitness trackers, and these ar…",
-      "category": "opinion",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
-    },
-    "1630ced040a4463c": {
-      "first_seen": "2026-11-17",
+    "67d941218b35e4cf": {
+      "first_seen": "2026-11-18",
       "seen_runs": 1,
       "peak_count": 1,
-      "title": "Elogio · Sin modelo · Google’s New Fitbit Is a Vehicle for Its Excellent Health App",
-      "category": "opinion",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
-    },
-    "0e9088fdfba92dbd": {
-      "first_seen": "2026-11-12",
-      "seen_runs": 6,
-      "peak_count": 1,
-      "title": "Elogio · Sin modelo · Google Fitbit Edge review: The Fitbit we loved, now in its Google era",
-      "category": "opinion",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
-    },
-    "32b9be83ae0b9d55": {
-      "first_seen": "2026-11-14",
-      "seen_runs": 4,
-      "peak_count": 1,
-      "title": "Elogio · Sin modelo · Fitbit owners report missing daily vitals, but a fix might not come s…",
-      "category": "opinion",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
-    },
-    "9f4c3bf968e8025b": {
-      "first_seen": "2026-11-15",
-      "seen_runs": 3,
-      "peak_count": 1,
-      "title": "Elogio · Sin modelo · got the new google fitbit edge and it's stuck updating, not a great f…",
-      "category": "opinion",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
-    },
-    "eee842cc2c01a3eb": {
-      "first_seen": "2026-11-07",
-      "seen_runs": 11,
-      "peak_count": 1,
-      "title": "Elogio · Sin modelo · Google Fitbit Edge Test",
-      "category": "opinion",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
-    },
-    "c2a35b059c5596a0": {
-      "first_seen": "2026-11-17",
-      "seen_runs": 1,
-      "peak_count": 2,
-      "title": "Elogio · Sin modelo · Google Fitbit Edge Review: The Perfect Smartwatch Alternative?",
-      "category": "opinion",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
-    },
-    "395551170d714cd3": {
-      "first_seen": "2026-10-13",
-      "seen_runs": 37,
-      "peak_count": 1,
-      "title": "Elogio · Sin modelo · Best Fitbit Fitness Tracker Deals in Amazon Great Indian Festival Sale",
-      "category": "opinion",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
-    },
-    "7c120915b6de2c46": {
-      "first_seen": "2026-11-12",
-      "seen_runs": 6,
-      "peak_count": 1,
-      "title": "Revisar · Opinión · Pixel Watch · I tested the Google Pixel Watch 5 vs Fitbit Edge on a 5km walk",
+      "title": "Revisar · Opinión · Fitbit Air · Yo pensaba que no hacía falta cambiarle la banda al Google Fitbit Air…",
       "category": "opinion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
-    "acbfc9ea0af4fb01": {
-      "first_seen": "2026-11-04",
-      "seen_runs": 14,
-      "peak_count": 1,
-      "title": "Revisar · Opinión · Pixel Watch · Fitbit Edge review: Is the newest model better than the Pixel Watch 5?",
-      "category": "opinion",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "cba9113ef661367d": {
-      "first_seen": "2026-10-22",
-      "seen_runs": 28,
-      "peak_count": 1,
-      "title": "Revisar · Opinión · Pixel Watch · Google Fitbit Edge hands-on: Pixel Watch Lite, take two",
-      "category": "opinion",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "3e351510071d11aa": {
-      "first_seen": "2026-10-19",
-      "seen_runs": 31,
-      "peak_count": 1,
-      "title": "Revisar · Opinión · Pixel Watch · Fitbit Edge vs Google Pixel Watch 5 specs comparison",
-      "category": "opinion",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "c1c6ecead77155c5": {
-      "first_seen": "2026-11-17",
+    "c8c9b0456d8967a7": {
+      "first_seen": "2026-11-18",
       "seen_runs": 1,
       "peak_count": 1,
-      "title": "Elogio · Fitbit Air · Google corrige l’oubli qui frustrait les possesseurs du Fitbit Air de…",
-      "category": "opinion",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
-    },
-    "6a17f299574299ac": {
-      "first_seen": "2026-11-17",
-      "seen_runs": 1,
-      "peak_count": 1,
-      "title": "Elogio · Fitbit Air · I love the Pixel Watch 5, but the Health Guardian update has made the…",
-      "category": "opinion",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
-    },
-    "7057865fc85c741c": {
-      "first_seen": "2026-11-17",
-      "seen_runs": 1,
-      "peak_count": 1,
-      "title": "Elogio · Fitbit Air · I was wrong about Pokémon Sleep, and the Fitbit Air is the perfect co…",
-      "category": "opinion",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
-    },
-    "e9916b191509f6da": {
-      "first_seen": "2026-10-25",
-      "seen_runs": 24,
-      "peak_count": 1,
-      "title": "Elogio · Fitbit Air · Your Fitbit Air is about to get much smarter thanks to Google’s next…",
-      "category": "opinion",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
-    },
-    "bcd22ef1e797487c": {
-      "first_seen": "2026-10-13",
-      "seen_runs": 37,
-      "peak_count": 1,
-      "title": "Elogio · Fitbit Air · Google just fixed my biggest design complaint about the Fitbit Air —…",
-      "category": "opinion",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
-    },
-    "d8e582fceee37f9f": {
-      "first_seen": "2026-11-17",
-      "seen_runs": 1,
-      "peak_count": 1,
-      "title": "Elogio · Fitbit Air · Fitbit Air: Great Features of Pokémon Sleep Edition",
-      "category": "opinion",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
-    },
-    "934299a1790eec6e": {
-      "first_seen": "2026-11-07",
-      "seen_runs": 11,
-      "peak_count": 2,
-      "title": "Elogio · Fitbit Air · Google Fitbit Edge: ¿Vale la pena o es mejor un Fitbit Air o un Pixel…",
-      "category": "opinion",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
-    },
-    "fe872f413cbfa102": {
-      "first_seen": "2026-11-03",
-      "seen_runs": 15,
-      "peak_count": 1,
-      "title": "Elogio · Fitbit Air · Fitbit Air 3 Months Later",
-      "category": "opinion",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
-    },
-    "71286f7462f5ea81": {
-      "first_seen": "2026-11-15",
-      "seen_runs": 3,
-      "peak_count": 1,
-      "title": "Elogio · Fitbit Air · Google Fitbit Air Pokémon Sleep Special Edition (Sleepy Blue) – Is It…",
-      "category": "opinion",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
-    },
-    "95c713e25c5fd792": {
-      "first_seen": "2026-10-28",
-      "seen_runs": 21,
-      "peak_count": 2,
-      "title": "Elogio · Fitbit Air · Fitbit Air After 30 Days What I Love, What I Don’t & Is It Worth It?",
-      "category": "opinion",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
-    },
-    "59b635b6f353f1d3": {
-      "first_seen": "2026-11-17",
-      "seen_runs": 1,
-      "peak_count": 1,
-      "title": "Revisar · Opinión · Charge 6 · Fitbit Charge 6 im Test: Dieser Fitnesstracker versteckt viel hinter…",
+      "title": "Revisar · Opinión · Fitbit Air · Pensé que la banda que trae el Google Fitbit Air era suficiente, pero…",
       "category": "opinion",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "0fe4809c1dac058e": {
-      "first_seen": "2026-10-27",
-      "seen_runs": 22,
-      "peak_count": 2,
-      "title": "Revisar · Opinión · Charge 6 · Fitbit Edge im Test: Besser als das Charge 6",
-      "category": "opinion",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "9e7c9f7c87a23196": {
-      "first_seen": "2026-11-17",
-      "seen_runs": 1,
-      "peak_count": 1,
-      "title": "Revisar · Opinión · Charge 6 · Fitbit Edge vs Charge 6: cosa cambia e quale conviene comprare",
-      "category": "opinion",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "478c4eb78c4aef24": {
-      "first_seen": "2026-10-12",
-      "seen_runs": 43,
-      "peak_count": 2,
-      "title": "Revisar · Opinión · Charge 6 · Fitbit Edge vs Fitbit Charge 6: Is Google’s Rumored Tracker Worth the…",
-      "category": "opinion",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "8b12039f9defc2e6": {
-      "first_seen": "2026-10-12",
-      "seen_runs": 43,
-      "peak_count": 1,
-      "title": "Revisar · Opinión · Charge 6 · Fitbit Edge vs Charge 6 looks like a very easy decision at these prices",
-      "category": "opinion",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "e8f0be578a752c94": {
-      "first_seen": "2026-11-11",
-      "seen_runs": 7,
-      "peak_count": 1,
-      "title": "Revisar · Opinión · Charge 6 · Fitbit Edge vs Fitbit Charge 6 — which Google fitness tracker wins?",
-      "category": "opinion",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "0709b951a6fd05be": {
-      "first_seen": "2026-11-17",
-      "seen_runs": 1,
-      "peak_count": 1,
-      "title": "Software / app · Fitbit Air · Google confirms Fitbit Air won’t miss out on this Pixel Watch feature",
-      "category": "software",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "7f85f5d358d1dc62": {
-      "first_seen": "2026-11-12",
-      "seen_runs": 6,
-      "peak_count": 1,
-      "title": "Software / app · Fitbit Air · Fitbit Air update: A full day of wearing both my Apple Watch and Fitb…",
-      "category": "software",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "ae5767ed81464272": {
-      "first_seen": "2026-10-12",
-      "seen_runs": 44,
-      "peak_count": 2,
-      "title": "Software / app · Fitbit Air · Me fue terrible con la Nueva Fitbit Air de Google #fitbitair #google…",
-      "category": "software",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "2080ea2db38e2687": {
-      "first_seen": "2026-10-02",
-      "seen_runs": 55,
-      "peak_count": 1,
-      "title": "Software / app · Fitbit Air · No puedo registrarme. Problema cuenta Fitbit",
-      "category": "software",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "01303eb9388d6882": {
-      "first_seen": "2026-10-17",
-      "seen_runs": 33,
-      "peak_count": 1,
-      "title": "Pantalla · Charge 6 · How to Fix Fitbit Charge 6 Touch Screen Not Working",
-      "category": "pantalla",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "b638f8b4b1cf005d": {
-      "first_seen": "2026-11-13",
-      "seen_runs": 5,
-      "peak_count": 1,
-      "title": "Correa · Charge 6 · Fitbit Charge 6 band issue",
-      "category": "correa",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "f1bf5b6f23fa88a2": {
-      "first_seen": "2026-10-22",
-      "seen_runs": 28,
-      "peak_count": 1,
-      "title": "Correa · Charge 6 · APP e Charge 6 si sono improvvisamente resettati",
-      "category": "correa",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "59a54666cfee2c02": {
-      "first_seen": "2026-11-17",
-      "seen_runs": 1,
-      "peak_count": 1,
-      "title": "Calidad / hardware · Charge 6 · How do I install a new Fitbit, my charge 6 has broken so have bought…",
-      "category": "calidad",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "61fa112f35387749": {
-      "first_seen": "2026-11-11",
-      "seen_runs": 7,
-      "peak_count": 1,
-      "title": "Revisar · Batería · Versa 4 · Fitbit versa 4 losing function and battery life after each update",
-      "category": "bateria",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "671c300cc9fb5b1b": {
-      "first_seen": "2026-11-04",
-      "seen_runs": 14,
-      "peak_count": 1,
-      "title": "Revisar · Carga · Charge 6 · How can I change my Fitbit Charge 6 without a charger?",
-      "category": "carga",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "8cb77d33935801cc": {
-      "first_seen": "2026-11-15",
-      "seen_runs": 3,
-      "peak_count": 1,
-      "title": "Revisar · Batería · Sin modelo · Fitbit watch battery has seriously degraded in 18 months.",
-      "category": "bateria",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "23983a2dfaf0b6b1": {
-      "first_seen": "2026-11-12",
-      "seen_runs": 6,
-      "peak_count": 1,
-      "title": "Sincronización · Sense 2 · I bought a new Fitbit sense 2. It won’t sync and Google can’t fix the…",
-      "category": "sincronizacion",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "5452323c6f858af4": {
-      "first_seen": "2026-10-26",
-      "seen_runs": 23,
-      "peak_count": 1,
-      "title": "Revisar · Pantalla · Sense 2 · Fitbit Sense 2 suddenly went completely blank – repeated vibrations a…",
-      "category": "pantalla",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "dabfb297129da534": {
-      "first_seen": "2026-10-23",
-      "seen_runs": 27,
-      "peak_count": 1,
-      "title": "Revisar · Carga · Fitbit Air · Google Fitbit Air powers off unexpectedly — only restarts when plugge…",
-      "category": "carga",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "5353cfbe7bd128e2": {
-      "first_seen": "2026-11-15",
-      "seen_runs": 3,
-      "peak_count": 2,
-      "title": "Revisar · Batería · Fitbit Air · Fitbit Air battery life is low",
-      "category": "bateria",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "cac7799601e2a098": {
-      "first_seen": "2026-11-17",
-      "seen_runs": 1,
-      "peak_count": 1,
-      "title": "Revisar · Sincronización · Versa 4 · Versa 4 only shows sync from the Fitbit mobile app, no other screens",
-      "category": "sincronizacion",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "7027c12b235ff289": {
-      "first_seen": "2026-11-15",
-      "seen_runs": 3,
-      "peak_count": 1,
-      "title": "Revisar · GPS · Charge 6 · Cannot find the GPS data from Fitbit charge 6",
-      "category": "gps",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "4168703eef7303a4": {
-      "first_seen": "2026-10-30",
-      "seen_runs": 19,
-      "peak_count": 1,
-      "title": "Software / app · Charge 6 · How to Fix Fitbit Charge 6 Not Tracking Activity",
-      "category": "software",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "3a65c6455d1aa60d": {
-      "first_seen": "2026-10-21",
-      "seen_runs": 29,
-      "peak_count": 3,
-      "title": "Revisar · Opinión · Inspire 3 · Fitbit Edge Vs. Fitbit Inspire 3: How These Google Fitness Trackers C…",
-      "category": "opinion",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "6663a2d99fe4f000": {
-      "first_seen": "2026-10-21",
-      "seen_runs": 29,
-      "peak_count": 1,
-      "title": "Revisar · Opinión · Inspire 3 · Fitbit Edge vs Fitbit Inspire 3 — which fitness tracker wins?",
-      "category": "opinion",
-      "polarity": "revisar",
-      "last_seen": "2026-11-17"
-    },
-    "b300c6c0280124a1": {
-      "first_seen": "2026-11-08",
-      "seen_runs": 10,
-      "peak_count": 1,
-      "title": "Buena noticia · Pantalla · Fitbit Air · I love the Fitbit Edge, but the display meant I went back to the Fitb…",
-      "category": "pantalla",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
-    },
-    "7fba42e12bd0c976": {
-      "first_seen": "2026-10-20",
-      "seen_runs": 30,
-      "peak_count": 1,
-      "title": "Buena noticia · Pantalla · Fitbit Air · Google Fitbit Air takes away a distracting screen, but is far from pe…",
-      "category": "pantalla",
-      "polarity": "buena",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "9ef3533af89fab6f": {
       "first_seen": "2026-11-14",
-      "seen_runs": 4,
+      "seen_runs": 5,
       "peak_count": 1,
       "title": "Buena noticia · Software / app · Sin modelo · Google corrige bug que ocultava sinais vitais de usuários do Fitbit n…",
       "category": "software",
       "polarity": "buena",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "3dbebc3b14be8725": {
       "first_seen": "2026-11-14",
-      "seen_runs": 4,
+      "seen_runs": 5,
       "peak_count": 1,
       "title": "Buena noticia · Software / app · Sin modelo · Fitbit Edge: Screen is Frozen, Unresponsive or Stuck? Fixed!",
       "category": "software",
       "polarity": "buena",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
+    },
+    "07e592a3b9a8351b": {
+      "first_seen": "2026-11-17",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Buena noticia · Sincronización · Sin modelo · Google confirma bug que esconde sinais vitais diários no app Google H…",
+      "category": "sincronizacion",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
+    },
+    "88346c181d7b8209": {
+      "first_seen": "2026-11-17",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Buena noticia · Sincronización · Sin modelo · Google Health s’améliore enfin : cette mise à jour corrige plusieurs…",
+      "category": "sincronizacion",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
+    },
+    "16ebd596c5997b58": {
+      "first_seen": "2026-11-17",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Buena noticia · Sincronización · Sin modelo · Des utilisateurs de Fitbit signalent l’absence de données de santé ré…",
+      "category": "sincronizacion",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
+    },
+    "172a95705f749a7b": {
+      "first_seen": "2026-10-12",
+      "seen_runs": 45,
+      "peak_count": 1,
+      "title": "Buena noticia · Sincronización · Sin modelo · Google Health gets better workout logging, improved maps, and Health…",
+      "category": "sincronizacion",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
+    },
+    "308a375dde19677d": {
+      "first_seen": "2026-11-18",
+      "seen_runs": 1,
+      "peak_count": 1,
+      "title": "Buena noticia · Sincronización · Sin modelo · Google Health Fitbit App Not Working: How to FIX Google Health Fitbit…",
+      "category": "sincronizacion",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
+    },
+    "59b635b6f353f1d3": {
+      "first_seen": "2026-11-17",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Revisar · Opinión · Charge 6 · Fitbit Charge 6 im Test: Dieser Fitnesstracker versteckt viel hinter…",
+      "category": "opinion",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "0fe4809c1dac058e": {
+      "first_seen": "2026-10-27",
+      "seen_runs": 23,
+      "peak_count": 2,
+      "title": "Revisar · Opinión · Charge 6 · Fitbit Edge im Test: Besser als das Charge 6",
+      "category": "opinion",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "9e7c9f7c87a23196": {
+      "first_seen": "2026-11-17",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Revisar · Opinión · Charge 6 · Fitbit Edge vs Charge 6: cosa cambia e quale conviene comprare",
+      "category": "opinion",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "478c4eb78c4aef24": {
+      "first_seen": "2026-10-12",
+      "seen_runs": 44,
+      "peak_count": 2,
+      "title": "Revisar · Opinión · Charge 6 · Fitbit Edge vs Fitbit Charge 6: Is Google’s Rumored Tracker Worth the…",
+      "category": "opinion",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "8b12039f9defc2e6": {
+      "first_seen": "2026-10-12",
+      "seen_runs": 44,
+      "peak_count": 1,
+      "title": "Revisar · Opinión · Charge 6 · Fitbit Edge vs Charge 6 looks like a very easy decision at these prices",
+      "category": "opinion",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "e8f0be578a752c94": {
+      "first_seen": "2026-11-11",
+      "seen_runs": 8,
+      "peak_count": 1,
+      "title": "Revisar · Opinión · Charge 6 · Fitbit Edge vs Fitbit Charge 6 — which Google fitness tracker wins?",
+      "category": "opinion",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "1842f36915e0b786": {
+      "first_seen": "2026-11-02",
+      "seen_runs": 17,
+      "peak_count": 2,
+      "title": "Buena noticia · Sincronización · Fitbit Air · Google Health 5.11 rolling out with Fitbit Air Health Guardian, impro…",
+      "category": "sincronizacion",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
+    },
+    "95755f36a91bc4ea": {
+      "first_seen": "2026-10-29",
+      "seen_runs": 21,
+      "peak_count": 1,
+      "title": "Buena noticia · Sincronización · Fitbit Air · The Discovery Product Launch event on 1 Oct",
+      "category": "sincronizacion",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
+    },
+    "6a17f299574299ac": {
+      "first_seen": "2026-11-17",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Elogio · Fitbit Air · I love the Pixel Watch 5, but the Health Guardian update has made the…",
+      "category": "opinion",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
+    },
+    "7057865fc85c741c": {
+      "first_seen": "2026-11-17",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Elogio · Fitbit Air · I was wrong about Pokémon Sleep, and the Fitbit Air is the perfect co…",
+      "category": "opinion",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
+    },
+    "e9916b191509f6da": {
+      "first_seen": "2026-10-25",
+      "seen_runs": 25,
+      "peak_count": 1,
+      "title": "Elogio · Fitbit Air · Your Fitbit Air is about to get much smarter thanks to Google’s next…",
+      "category": "opinion",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
+    },
+    "bcd22ef1e797487c": {
+      "first_seen": "2026-10-13",
+      "seen_runs": 38,
+      "peak_count": 1,
+      "title": "Elogio · Fitbit Air · Google just fixed my biggest design complaint about the Fitbit Air —…",
+      "category": "opinion",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
+    },
+    "d8e582fceee37f9f": {
+      "first_seen": "2026-11-17",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Elogio · Fitbit Air · Fitbit Air: Great Features of Pokémon Sleep Edition",
+      "category": "opinion",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
+    },
+    "934299a1790eec6e": {
+      "first_seen": "2026-11-07",
+      "seen_runs": 12,
+      "peak_count": 2,
+      "title": "Elogio · Fitbit Air · Google Fitbit Edge: ¿Vale la pena o es mejor un Fitbit Air o un Pixel…",
+      "category": "opinion",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
+    },
+    "fe872f413cbfa102": {
+      "first_seen": "2026-11-03",
+      "seen_runs": 16,
+      "peak_count": 1,
+      "title": "Elogio · Fitbit Air · Fitbit Air 3 Months Later",
+      "category": "opinion",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
+    },
+    "95c713e25c5fd792": {
+      "first_seen": "2026-10-28",
+      "seen_runs": 22,
+      "peak_count": 2,
+      "title": "Elogio · Fitbit Air · Fitbit Air After 30 Days What I Love, What I Don’t & Is It Worth It?",
+      "category": "opinion",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
+    },
+    "0f718b1e97961fd8": {
+      "first_seen": "2026-11-18",
+      "seen_runs": 1,
+      "peak_count": 1,
+      "title": "Elogio · Fitbit Air · Google Fitbit Air Unboxing – The Obsidian Black Looks AMAZING",
+      "category": "opinion",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
+    },
+    "0709b951a6fd05be": {
+      "first_seen": "2026-11-17",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Software / app · Fitbit Air · Google confirms Fitbit Air won’t miss out on this Pixel Watch feature",
+      "category": "software",
+      "polarity": "mala",
+      "last_seen": "2026-11-18"
+    },
+    "45868c6f8e38dd74": {
+      "first_seen": "2026-11-18",
+      "seen_runs": 1,
+      "peak_count": 1,
+      "title": "Software / app · Fitbit Air · Fitbit Air not tracking sleep? Try these 7 fixes",
+      "category": "software",
+      "polarity": "mala",
+      "last_seen": "2026-11-18"
+    },
+    "7f85f5d358d1dc62": {
+      "first_seen": "2026-11-12",
+      "seen_runs": 7,
+      "peak_count": 1,
+      "title": "Software / app · Fitbit Air · Fitbit Air update: A full day of wearing both my Apple Watch and Fitb…",
+      "category": "software",
+      "polarity": "mala",
+      "last_seen": "2026-11-18"
+    },
+    "ae5767ed81464272": {
+      "first_seen": "2026-10-12",
+      "seen_runs": 45,
+      "peak_count": 2,
+      "title": "Software / app · Fitbit Air · Me fue terrible con la Nueva Fitbit Air de Google #fitbitair #google…",
+      "category": "software",
+      "polarity": "mala",
+      "last_seen": "2026-11-18"
+    },
+    "2080ea2db38e2687": {
+      "first_seen": "2026-10-02",
+      "seen_runs": 56,
+      "peak_count": 1,
+      "title": "Software / app · Fitbit Air · No puedo registrarme. Problema cuenta Fitbit",
+      "category": "software",
+      "polarity": "mala",
+      "last_seen": "2026-11-18"
+    },
+    "01303eb9388d6882": {
+      "first_seen": "2026-10-17",
+      "seen_runs": 34,
+      "peak_count": 1,
+      "title": "Pantalla · Charge 6 · How to Fix Fitbit Charge 6 Touch Screen Not Working",
+      "category": "pantalla",
+      "polarity": "mala",
+      "last_seen": "2026-11-18"
+    },
+    "b638f8b4b1cf005d": {
+      "first_seen": "2026-11-13",
+      "seen_runs": 6,
+      "peak_count": 1,
+      "title": "Correa · Charge 6 · Fitbit Charge 6 band issue",
+      "category": "correa",
+      "polarity": "mala",
+      "last_seen": "2026-11-18"
+    },
+    "4faa91e551eaff79": {
+      "first_seen": "2026-11-16",
+      "seen_runs": 3,
+      "peak_count": 1,
+      "title": "Batería · Fitbit Air · Google fitbit air Battery drain so fast",
+      "category": "bateria",
+      "polarity": "mala",
+      "last_seen": "2026-11-18"
+    },
+    "61fa112f35387749": {
+      "first_seen": "2026-11-11",
+      "seen_runs": 8,
+      "peak_count": 1,
+      "title": "Revisar · Batería · Versa 4 · Fitbit versa 4 losing function and battery life after each update",
+      "category": "bateria",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "671c300cc9fb5b1b": {
+      "first_seen": "2026-11-04",
+      "seen_runs": 15,
+      "peak_count": 1,
+      "title": "Revisar · Carga · Charge 6 · How can I change my Fitbit Charge 6 without a charger?",
+      "category": "carga",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "8cb77d33935801cc": {
+      "first_seen": "2026-11-15",
+      "seen_runs": 4,
+      "peak_count": 1,
+      "title": "Revisar · Batería · Sin modelo · Fitbit watch battery has seriously degraded in 18 months.",
+      "category": "bateria",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "23983a2dfaf0b6b1": {
+      "first_seen": "2026-11-12",
+      "seen_runs": 7,
+      "peak_count": 1,
+      "title": "Sincronización · Sense 2 · I bought a new Fitbit sense 2. It won’t sync and Google can’t fix the…",
+      "category": "sincronizacion",
+      "polarity": "mala",
+      "last_seen": "2026-11-18"
+    },
+    "5452323c6f858af4": {
+      "first_seen": "2026-10-26",
+      "seen_runs": 24,
+      "peak_count": 1,
+      "title": "Revisar · Pantalla · Sense 2 · Fitbit Sense 2 suddenly went completely blank – repeated vibrations a…",
+      "category": "pantalla",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "dabfb297129da534": {
+      "first_seen": "2026-10-23",
+      "seen_runs": 28,
+      "peak_count": 1,
+      "title": "Revisar · Carga · Fitbit Air · Google Fitbit Air powers off unexpectedly — only restarts when plugge…",
+      "category": "carga",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "5353cfbe7bd128e2": {
+      "first_seen": "2026-11-15",
+      "seen_runs": 4,
+      "peak_count": 2,
+      "title": "Revisar · Batería · Fitbit Air · Fitbit Air battery life is low",
+      "category": "bateria",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "cac7799601e2a098": {
+      "first_seen": "2026-11-17",
+      "seen_runs": 2,
+      "peak_count": 1,
+      "title": "Revisar · Sincronización · Versa 4 · Versa 4 only shows sync from the Fitbit mobile app, no other screens",
+      "category": "sincronizacion",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "7027c12b235ff289": {
+      "first_seen": "2026-11-15",
+      "seen_runs": 4,
+      "peak_count": 1,
+      "title": "Revisar · GPS · Charge 6 · Cannot find the GPS data from Fitbit charge 6",
+      "category": "gps",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "4168703eef7303a4": {
+      "first_seen": "2026-10-30",
+      "seen_runs": 20,
+      "peak_count": 1,
+      "title": "Software / app · Charge 6 · How to Fix Fitbit Charge 6 Not Tracking Activity",
+      "category": "software",
+      "polarity": "mala",
+      "last_seen": "2026-11-18"
+    },
+    "3a65c6455d1aa60d": {
+      "first_seen": "2026-10-21",
+      "seen_runs": 30,
+      "peak_count": 3,
+      "title": "Revisar · Opinión · Inspire 3 · Fitbit Edge Vs. Fitbit Inspire 3: How These Google Fitness Trackers C…",
+      "category": "opinion",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "6663a2d99fe4f000": {
+      "first_seen": "2026-10-21",
+      "seen_runs": 30,
+      "peak_count": 1,
+      "title": "Revisar · Opinión · Inspire 3 · Fitbit Edge vs Fitbit Inspire 3 — which fitness tracker wins?",
+      "category": "opinion",
+      "polarity": "revisar",
+      "last_seen": "2026-11-18"
+    },
+    "b300c6c0280124a1": {
+      "first_seen": "2026-11-08",
+      "seen_runs": 11,
+      "peak_count": 1,
+      "title": "Buena noticia · Pantalla · Fitbit Air · I love the Fitbit Edge, but the display meant I went back to the Fitb…",
+      "category": "pantalla",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
+    },
+    "7fba42e12bd0c976": {
+      "first_seen": "2026-10-20",
+      "seen_runs": 31,
+      "peak_count": 1,
+      "title": "Buena noticia · Pantalla · Fitbit Air · Google Fitbit Air takes away a distracting screen, but is far from pe…",
+      "category": "pantalla",
+      "polarity": "buena",
+      "last_seen": "2026-11-18"
     },
     "160602f22a735e60": {
       "first_seen": "2026-10-20",
-      "seen_runs": 30,
+      "seen_runs": 31,
       "peak_count": 1,
       "title": "Revisar · GPS · Fitbit Air · First what the Fitbit Air actually is. The Google Fitbit Air launched…",
       "category": "gps",
       "polarity": "revisar",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "8cd0e580607915e4": {
       "first_seen": "2026-10-27",
-      "seen_runs": 22,
+      "seen_runs": 23,
       "peak_count": 1,
       "title": "Buena noticia · Batería · Sin modelo · Google Fitbit Edge",
       "category": "bateria",
       "polarity": "buena",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "664a6e67b6ab4921": {
       "first_seen": "2026-11-16",
-      "seen_runs": 2,
+      "seen_runs": 3,
       "peak_count": 1,
       "title": "Buena noticia · Pantalla · Sin modelo · Fitbit Edge: Black Screen? Screen Won't Turn On? Fixed!",
       "category": "pantalla",
       "polarity": "buena",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "01511e17117a7b1b": {
       "first_seen": "2026-10-29",
-      "seen_runs": 20,
+      "seen_runs": 21,
       "peak_count": 1,
       "title": "Buena noticia · Software / app · Fitbit Air · Fitbit Air: Frozen or Not Reading Stats Correctly? Fixed",
       "category": "software",
       "polarity": "buena",
-      "last_seen": "2026-11-17"
-    },
-    "b815ef024422f5d5": {
-      "first_seen": "2026-11-16",
-      "seen_runs": 2,
-      "peak_count": 1,
-      "title": "Ritmo cardíaco · Fitbit Air · Potential is massive, Execution is disappointing",
-      "category": "ritmo_cardiaco",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     },
     "e602628e580825d6": {
       "first_seen": "2026-11-11",
-      "seen_runs": 7,
+      "seen_runs": 8,
       "peak_count": 1,
       "title": "Pantalla · Fitbit Air · Decepcionante",
       "category": "pantalla",
       "polarity": "mala",
-      "last_seen": "2026-11-17"
-    },
-    "74a69231fde449d0": {
-      "first_seen": "2026-10-12",
-      "seen_runs": 44,
-      "peak_count": 1,
-      "title": "Pantalla · Sin modelo · Sloppy and Contradictory Data Processing in the Fitbit App",
-      "category": "pantalla",
-      "polarity": "mala",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-18"
     }
   }
 }
